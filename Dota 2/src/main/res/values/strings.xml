@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dota 2</string>
+    <string name="deselect_all">Deselect All</string>
+    <string name="repick">Repick</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Heroes</item>
+        <item>Random Captains Mode</item>
+    </string-array>
+
+    <string name="heroes">Heroes</string>
+    <string name="random_captains_mode">Random Captains Mode</string>
+    <string name="description">Description</string>
+    <string name="ok">OK</string>
+    <string name="tips">Tips</string>
+    <string name="notes">Notes</string>
+    <string name="wiki">Wiki</string>
+    <string name="ability_notes">Ability Notes</string>
+    <string name="ability">Ability</string>
+    <string name="affects">Affects</string>
+    <string name="damage">Damage</string>
+    <string name="ban_1">Ban 1</string>
+    <string name="ban_2">Ban 2</string>
+    <string name="ban_3">Ban 3</string>
+    <string name="ban_4">Ban 4</string>
+    <string name="ban_5">Ban 5</string>
+    <string name="pick_1">Pick 1</string>
+    <string name="pick_2">Pick 2</string>
+    <string name="pick_3">Pick 3</string>
+    <string name="pick_4">Pick 4</string>
+    <string name="pick_5">Pick 5</string>
+
+    <string-array name="hero_attributes">
+        <item>Agility</item>
+        <item>Intelligence</item>
+        <item>Strength</item>
+    </string-array>
+    <string-array name="hero_damage_types">
+        <item>Melee</item>
+        <item>Ranged</item>
+    </string-array>
+    <string-array name="hero_roles">
+        <item>Carry</item>
+        <item>Disabler</item>
+        <item>Escape</item>
+        <item>Intiator</item>
+        <item>Jungler</item>
+        <item>Lane Support</item>
+        <item>Nuker</item>
+        <item>Pusher</item>
+        <item>Support</item>
+    </string-array>
+    <string-array name="heroes_all">
+        <item>Abaddon</item>
+        <item>Alchemist</item>
+        <item>Ancient Apparition</item>
+        <item>Anti-Mage</item>
+        <item>Axe</item>
+        <item>Bane</item>
+        <item>Batrider</item>
+        <item>Beastmaster</item>
+        <item>Bloodseeker</item>
+        <item>Bounty Hunter</item>
+        <item>Brewmaster</item>
+        <item>Bristleback</item>
+        <item>Broodmother</item>
+        <item>Centaur Warrunner</item>
+        <item>Chaos Knight</item>
+        <item>Chen</item>
+        <item>Clinkz</item>
+        <item>Clockwerk</item>
+        <item>Crystal Maiden</item>
+        <item>Dark Seer</item>
+        <item>Dazzle</item>
+        <item>Death Prophet</item>
+        <item>Disruptor</item>
+        <item>Doom</item>
+        <item>Dragon Knight</item>
+        <item>Drow Ranger</item>
+        <item>Earth Spirit</item>
+        <item>Earthshaker</item>
+        <item>Elder Titan</item>
+        <item>Ember Spirit</item>
+        <item>Enchantress</item>
+        <item>Enigma</item>
+        <item>Faceless Void</item>
+        <item>Gyrocopter</item>
+        <item>Huskar</item>
+        <item>Invoker</item>
+        <item>Io</item>
+        <item>Jakiro</item>
+        <item>Juggernaut</item>
+        <item>Keeper of the Light</item>
+        <item>Kunkka</item>
+        <item>Legion Commander</item>
+        <item>Leshrac</item>
+        <item>Lich</item>
+        <item>Lifestealer</item>
+        <item>Lina</item>
+        <item>Lion</item>
+        <item>Lone Druid</item>
+        <item>Luna</item>
+        <item>Lycan</item>
+        <item>Magnus</item>
+        <item>Medusa</item>
+        <item>Meepo</item>
+        <item>Mirana</item>
+        <item>Morphling</item>
+        <item>Naga Siren</item>
+        <item>Nature\'s Prophet</item>
+        <item>Necrophos</item>
+        <item>Night Stalker</item>
+        <item>Nyx Assassin</item>
+        <item>Ogre Magi</item>
+        <item>Omniknight</item>
+        <item>Outworld Devourer</item>
+        <item>Phantom Assassin</item>
+        <item>Phantom Lancer</item>
+        <item>Phoenix</item>
+        <item>Puck</item>
+        <item>Pudge</item>
+        <item>Pugna</item>
+        <item>Queen of Pain</item>
+        <item>Razor</item>
+        <item>Riki</item>
+        <item>Rubick</item>
+        <item>Sand King</item>
+        <item>Shadow Demon</item>
+        <item>Shadow Fiend</item>
+        <item>Shadow Shaman</item>
+        <item>Silencer</item>
+        <item>Skywrath Mage</item>
+        <item>Slardar</item>
+        <item>Slark</item>
+        <item>Sniper</item>
+        <item>Spectre</item>
+        <item>Spirit Breaker</item>
+        <item>Storm Spirit</item>
+        <item>Sven</item>
+        <item>Templar Assassin</item>
+        <item>Terrorblade</item>
+        <item>Tidehunter</item>
+        <item>Timbersaw</item>
+        <item>Tinker</item>
+        <item>Tiny</item>
+        <item>Treant Protector</item>
+        <item>Troll Warlord</item>
+        <item>Tusk</item>
+        <item>Undying</item>
+        <item>Ursa</item>
+        <item>Vengeful Spirit</item>
+        <item>Venomancer</item>
+        <item>Viper</item>
+        <item>Visage</item>
+        <item>Warlock</item>
+        <item>Weaver</item>
+        <item>Windranger</item>
+        <item>Witch Doctor</item>
+        <item>Wraith King</item>
+        <item>Zeus</item>
+    </string-array>
+    <string-array name="heroes_removed">
+        <item>Broodmother</item>
+        <item>Earth Spirit</item>
+        <item>Legion Commander</item>
+        <item>Phoenix</item>
+        <item>Terrorblade</item>
+    </string-array>
+
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_hero_list">HeroListActivity</string>
+
+</resources>

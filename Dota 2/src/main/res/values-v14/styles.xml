@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextColor">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="TextColor.Bold" parent="TextColor">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextColor.Italic" parent="TextColor">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ClickableView">
+        <item name="android:listSelector">@drawable/custom_view</item>
+    </style>
+
+    <style name="Theme.Dotabar" parent="@style/Theme.AppCompat">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_dotabar</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Dotabar</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dotabar</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dotabar</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Dotabar</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Dotabar</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_dotabar</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_dotabar</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Dotabar</item>
+    </style>
+
+    <style name="ActionBar.Solid.Dotabar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_dotabar</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_dotabar</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_dotabar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Dotabar</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Dotabar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_dotabar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Dotabar</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Dotabar.Widget" parent="@style/Theme.AppCompat">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Dotabar</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dotabar</item>
+    </style>
+
+</resources>
