@@ -30,6 +30,7 @@ import java.util.Map;
 public class HeroActivity extends Activity
 {
     private Hero currentHero;
+    private ImageView imageView;
     private TextView textView;
 
     private XmlPullParser parser;
@@ -48,7 +49,6 @@ public class HeroActivity extends Activity
         textView = (TextView)findViewById(R.id.hero_name);
         textView.setText(value);
         getActionBar().setTitle(value);
-        ((ImageView)findViewById(R.id.hero_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
         getHeroInfo();
     }
 
@@ -342,10 +342,12 @@ public class HeroActivity extends Activity
     {
         Log.wtf("printHeroes()", hero.getName());
         ArrayList<Double> stats;
-        ImageView imageView;
 
-        imageView = (ImageView)findViewById(R.id.hero_faction);
-        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("faction", hero.getFaction()), "drawable", getApplicationContext().getPackageName()));
+        textView = (TextView)findViewById(R.id.hero_name);
+        textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(Utilities.nameToDrawable("faction", hero.getFaction()), "drawable", getApplicationContext().getPackageName())), null, null, null);
+
+        imageView = (ImageView)findViewById(R.id.hero_picture);
+        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()), "drawable", getApplicationContext().getPackageName()));
 
         textView = (TextView)findViewById(R.id.hero_damage_type);
         textView.setText(Utilities.formatRoles(hero));

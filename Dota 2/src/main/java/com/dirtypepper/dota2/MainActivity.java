@@ -27,12 +27,6 @@ public class MainActivity extends Activity implements View.OnClickListener
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        return true;
-    }
-
-    @Override
     public void onClick(View view)
     {
         Log.wtf("view.getId()", view.toString());
@@ -46,12 +40,5 @@ public class MainActivity extends Activity implements View.OnClickListener
                 break;
         }
         MainActivity.this.startActivity(intent);
-    }
-
-    @Override
-    public void onBackPressed()
-    {
-        Utilities.parents.pop();
-        finish();
     }
 }
