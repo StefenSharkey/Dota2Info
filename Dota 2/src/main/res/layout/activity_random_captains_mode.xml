@@ -8,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
         <LinearLayout android:id="@+id/ban_hero_1"
             android:layout_width="0dp"
@@ -121,6 +122,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
         <LinearLayout android:id="@+id/pick_hero_2"
             android:layout_width="0dp"
@@ -234,6 +236,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
         <LinearLayout android:id="@+id/pick_hero_3"
             android:layout_width="0dp"
@@ -347,6 +350,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="0dp"

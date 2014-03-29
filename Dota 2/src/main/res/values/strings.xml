@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Dota 2</string>
     <string name="deselect_all">Deselect All</string>
     <string name="repick">Repick</string>
 
-    <string-array name="nav_drawer_items">
-        <item>Heroes</item>
-        <item>Random Captains Mode</item>
-    </string-array>
-
     <string name="heroes">Heroes</string>
     <string name="random_captains_mode">Random Captains Mode</string>
+
     <string name="description">Description</string>
+
     <string name="ok">OK</string>
     <string name="tips">Tips</string>
     <string name="notes">Notes</string>
     <string name="wiki">Wiki</string>
+
     <string name="ability_notes">Ability Notes</string>
+
     <string name="ability">Ability</string>
     <string name="affects">Affects</string>
     <string name="damage">Damage</string>
+
     <string name="ban_1">Ban 1</string>
     <string name="ban_2">Ban 2</string>
     <string name="ban_3">Ban 3</string>
@@ -37,10 +36,12 @@
         <item>Intelligence</item>
         <item>Strength</item>
     </string-array>
+
     <string-array name="hero_damage_types">
         <item>Melee</item>
         <item>Ranged</item>
     </string-array>
+
     <string-array name="hero_roles">
         <item>Carry</item>
         <item>Disabler</item>
@@ -52,6 +53,7 @@
         <item>Pusher</item>
         <item>Support</item>
     </string-array>
+
     <string-array name="heroes_all">
         <item>Abaddon</item>
         <item>Alchemist</item>
@@ -161,6 +163,7 @@
         <item>Wraith King</item>
         <item>Zeus</item>
     </string-array>
+
     <string-array name="heroes_removed">
         <item>Broodmother</item>
         <item>Earth Spirit</item>
@@ -168,18 +171,4 @@
         <item>Phoenix</item>
         <item>Terrorblade</item>
     </string-array>
-
-    <string name="title_activity_main2">MainActivity</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_hero_list">HeroListActivity</string>
-
 </resources>

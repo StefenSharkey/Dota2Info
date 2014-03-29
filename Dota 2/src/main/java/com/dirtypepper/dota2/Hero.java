@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Hero
+class Hero
 {
     private String name;
     private String damageType;
@@ -15,7 +15,7 @@ public class Hero
     private Map<String, ArrayList<Double>> attributes;
     private ArrayList<String> tips;
 
-    public ArrayList<Ability> abilities;
+    private ArrayList<Ability> abilities;
 
     public Hero()
     {

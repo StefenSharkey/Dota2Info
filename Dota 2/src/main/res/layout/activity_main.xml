@@ -8,81 +8,61 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.dirtypepper.dota2.MainActivity">
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:baselineAligned="false"
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/heroes"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:id="@+id/heroes"
-                    android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:clickable="true"
+                android:background="@drawable/custom_view">
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingTop="@dimen/activity_vertical_margin"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:clickable="true"
-                    android:background="@drawable/custom_view">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/hero_abaddon"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/heroes"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"
-                        style="@style/TextColor"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/hero_random_captains_mode"
-                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/hero_abaddon"/>
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/activity_vertical_margin"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:background="@drawable/custom_view">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/hero_abaddon"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/random_captains_mode"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"
-                        style="@style/TextColor"/>
-                </LinearLayout>
+                    android:text="@string/heroes"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    style="@style/TextColor"/>
             </LinearLayout>
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/hero_random_captains_mode"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/custom_view">
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/hero_abaddon"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:text="@string/random_captains_mode"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    style="@style/TextColor"/>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </LinearLayout>

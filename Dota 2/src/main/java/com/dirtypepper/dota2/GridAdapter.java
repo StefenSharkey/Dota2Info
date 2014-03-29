@@ -19,7 +19,7 @@ public class GridAdapter extends BaseAdapter
 {
     private Context context;
 
-    Integer[] images;
+    private Integer[] images;
     private ArrayList<String> names;
 
     public GridAdapter(Context context)

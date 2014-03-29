@@ -10,10 +10,8 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.util.Xml;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,10 +29,10 @@ import java.util.Map;
 
 public class HeroActivity extends Activity
 {
-    Hero currentHero;
-    TextView textView;
+    private Hero currentHero;
+    private TextView textView;
 
-    XmlPullParser parser;
+    private XmlPullParser parser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

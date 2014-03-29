@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,11 +15,9 @@ import java.util.Arrays;
 
 public class HeroListActivity extends Activity implements GridView.OnItemClickListener
 {
-    private final int HERO_WIDTH = 154;
-
     private ArrayList<String> heroesList;
 
-    GridView gridView;
+    private GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

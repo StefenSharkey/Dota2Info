@@ -4,15 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
 public class MainActivity extends Activity implements View.OnClickListener
 {
-    Intent intent;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -32,12 +30,6 @@ public class MainActivity extends Activity implements View.OnClickListener
     public boolean onCreateOptionsMenu(Menu menu)
     {
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
