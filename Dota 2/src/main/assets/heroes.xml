@@ -3118,6 +3118,7 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
+        <description>Disruptor the Stormcrafter is a supportive ranged intelligence Hero. His signature ability is Kinetic Field, a pseudo-disable that traps enemies within a small area for a long duration. Combined with his Static Storm, Disruptor can act as the initiator for a teamfight, or supplement his teammates' initiation very well. Glimpse is another powerful spell that forces enemies to watch their movements, as Disruptor can easily drag them back to a previous location to be focused down. Thunder Strike provides Disruptor with some reliable single-target damage, but more importantly grants vision on the target to prevent jukes and escapes.</description>
         <roles>
             <role>Disabler</role>
             <role>Initiator</role>
@@ -3135,6 +3136,117 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="53"
             baseMoveSpeed="300"
             baseArmor="1.14" />
+        <ability
+            name="Thunder Strike"
+            description="Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius."
+            ability="Target Unit"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="1"
+            diffusalBlade="0"
+            cooldown="16"
+            mana="130">
+            <abilityAttributes
+                name="Range"
+                value="800"/>
+            <abilityAttributes
+                name="Radius"
+                value="240"/>
+            <abilityAttributes
+                name="Duration"
+                value="6"/>
+            <abilityAttributes
+                name="Number of Strikes"
+                value="4"/>
+            <abilityAttributes
+                name="Damage Per Strike"
+                value="40/60/80/100"/>
+            <linkensSphere description="Spell will be blocked if the Hero is the main target. They are still subject to being hit by Thunder Strikes on an adjacent unit." />
+            <altDescription description="Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result." />
+            <note>Gives vision around the target for the duration of the spell.</note>
+            <note>Deals total damage of 160/240/320/400.</note>
+        </ability>
+        <ability
+            name="Glimpse"
+            description="Teleports the target hero back to where it was 4 seconds ago. Instantly kills illusions."
+            ability="Target Unit"
+            affects="Enemy Heroes"
+            blackKingBar="2"
+            linkensSphere="2"
+            diffusalBlade="0"
+            cooldown="65/50/35/20"
+            mana="160/130/100/70">
+            <abilityAttributes
+                name="Range"
+                value="600/1000/1400/1800"/>
+            <altDescription description="Playing with electricity can have unexpected results." />
+            <note>The Glimpse effect has some travel time, the target isn't instantly moved back.</note>
+            <note>If the target hero dies and buys back while still being under the effect of glimpse he will be moved back.</note>
+            <note>It also disrupts any command that is currently active on the player; meaning you will stand still after Glimpse.</note>
+        </ability>
+        <ability
+            name="Kinetic Field"
+            description="After a short formation time, creates a circular barrier of kinetic energy that enemies can't pass."
+            ability="Target Point"
+            affects="Enemies"
+            blackKingBar="2"
+            linkensSphere="2"
+            cooldown="14"
+            mana="70">
+            <abilityAttributes
+                name="Range"
+                value="900"/>
+            <abilityAttributes
+                name="Radius"
+                value="325"/>
+            <abilityAttributes
+                name="Formation Time"
+                value="1.2"/>
+            <abilityAttributes
+                name="Duration"
+                value="2.5/3/3.5/4"/>
+            <altDescription description="The stryder is immune to the gale-force winds that will consume its adversaries." />
+            <note>Magic immune units can travel through the field.</note>
+            <note>Only stops enemies from walking through the barrier, other sorts of movement will not be stopped.</note>
+            <note>Force Staff will not push units through Kinetic Field.</note>
+            <note>Gives flying vision within the field.</note>
+        </ability>
+        <ability
+            name="Static Storm"
+            description="Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but increases in power over the duration."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="0"
+            diffusalBlade="0"
+            cooldown="85"
+            mana="125/175/225">
+            <abilityAttributes
+                name="Range"
+                value="800"/>
+            <abilityAttributes
+                name="Radius"
+                value="450"/>
+            <abilityAttributes
+                name="Duration"
+                value="5 (7*)"/>
+            <abilityAttributes
+                name="Maximum Damage Per Second"
+                value="200/250/300"/>
+            <aghanims description="Static Storm silences items, and lasts an extra 2 seconds." />
+            <altDescription description="A summer squall in Druud is a hardship that only an Oglodi can survive." />
+            <note>Deals total damage of 525/656.25/787.75 (1016/1263/1515*)</note>
+        </ability>
+        <tips>The vision granted on Thunder Strike's target is great for negating jukes, and at later levels Glimpse can ensure an enemy cannot escape.</tips>
+        <tips>If you see an enemy teleporting to a tower, Glimpse can send them right back where they started. This can be crucial to cut off reinforcements when tower-diving.</tips>
+        <tips>But watch out, Glimpse has a really long cooldown even at level 4. So when at teamfights make sure to use it when you really need it.</tips>
+        <tips>Kinetic Field's formation time is significant, so try and combine it with allied disables to ensure capture.</tips>
+        <tips>A mark will indicate where a Glimpsed target will return, so you can cast Kinetic Field around the mark to ensure capture.</tips>
+        <tips>If you can trap 3 or more enemies inside a Kinetic Field/Static Storm combo you will shift the tide of battle greatly in your team's favor as the enemies will be left without their arsenal of spells and will take significant damage over time. This is usually better achieved as a follow up to another initiation such as Magnus's Reverse Polarity.</tips>
+        <tips>Due to its low starting damage, Static Storm will also benefit from an allied initiation before placement.</tips>
+        <tips>Static Storm can act as an instant silence thanks to Disruptor's miniscule castpoint. Use it to interrupt channeling abilities.</tips>
     </hero>
     <hero>
         <name>Doom</name>

@@ -7,7 +7,8 @@
           android:paddingRight="@dimen/grid_view_horizontal_margin"
           android:numColumns="auto_fit"
           android:columnWidth="@dimen/grid_view_width"
-          android:horizontalSpacing="2dp"
+          android:horizontalSpacing="10dp"
+          android:verticalSpacing="5dp"
           android:gravity="center"
           android:stretchMode="columnWidth" >
 

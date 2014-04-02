@@ -68,7 +68,7 @@ public class GridAdapter extends BaseAdapter
         textView.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT, GridView.LayoutParams.WRAP_CONTENT));
         textView.setText(names.get(x));
         textView.setGravity(Gravity.CENTER_HORIZONTAL);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         textView.setTextAppearance(context, R.style.TextColor);
 
         linearLayout.addView(imageView);
@@ -80,6 +80,7 @@ public class GridAdapter extends BaseAdapter
     public void getHeroDrawables()
     {
         for(int x = 0; x < images.length; x++)
-            images[x] = context.getResources().getIdentifier(Utilities.nameToDrawable("hero", names.get(x), "small"), "drawable", context.getPackageName());
+//            images[x] = context.getResources().getIdentifier(Utilities.nameToDrawable("hero", names.get(x), "small"), "drawable", context.getPackageName());
+            images[x] = context.getResources().getIdentifier(Utilities.nameToDrawable("hero", names.get(x)), "drawable", context.getPackageName());
     }
 }

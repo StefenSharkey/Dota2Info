@@ -23,11 +23,13 @@
             android:parentActivityName="com.dirtypepper.dota2.MainActivity" >
         </activity>
         <activity
-            android:name="com.dirtypepper.dota2.HeroActivity" >
+            android:name="com.dirtypepper.dota2.HeroActivity"
+            android:configChanges="orientation|screenSize" >
         </activity>
         <activity
             android:name="com.dirtypepper.dota2.HeroListActivity"
             android:label="@string/heroes"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName="com.dirtypepper.dota2.MainActivity" >
         </activity>
     </application>

@@ -472,12 +472,14 @@ public class HeroActivity extends Activity
 
         heroAbilityOrbOfVenomIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityOrbOfVenomIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
+        heroAbilityOrbOfVenomIcon.setScaleType(ImageView.ScaleType.CENTER);
         if(ability.getOrbOfVenom() != null)
             if(ability.getOrbOfVenom())
                 heroAbilityOrbOfVenomIcon.setImageResource(R.drawable.ability_orb_of_venom);
 
         heroAbilityBlackKingBarIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityBlackKingBarIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
+        heroAbilityBlackKingBarIcon.setScaleType(ImageView.ScaleType.CENTER);
         if(ability.getBlackKingBar() != null)
             switch(ability.getBlackKingBar())
             {
@@ -494,6 +496,7 @@ public class HeroActivity extends Activity
 
         heroAbilityLinkensSphereIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityLinkensSphereIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
+        heroAbilityLinkensSphereIcon.setScaleType(ImageView.ScaleType.CENTER);
         if(ability.getLinkensSphere() != null)
             switch(ability.getLinkensSphere())
             {
@@ -510,6 +513,7 @@ public class HeroActivity extends Activity
 
         heroAbilityDiffusalBladeIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityDiffusalBladeIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
+        heroAbilityDiffusalBladeIcon.setScaleType(ImageView.ScaleType.CENTER);
         if(ability.getDiffusalBlade() != null)
             switch(ability.getDiffusalBlade())
             {
@@ -526,6 +530,7 @@ public class HeroActivity extends Activity
 
         heroAbilityMantaStyleIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityMantaStyleIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
+        heroAbilityMantaStyleIcon.setScaleType(ImageView.ScaleType.CENTER);
         if(ability.getMantaStyle() != null)
         {
             switch(ability.getMantaStyle())
@@ -551,13 +556,13 @@ public class HeroActivity extends Activity
 
         heroAbilityAbilityText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityAbilityText.setGravity(Gravity.CENTER_HORIZONTAL);
-        heroAbilityAbilityText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        heroAbilityAbilityText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         heroAbilityAbilityText.setTextAppearance(getApplicationContext(), R.style.TextColor_Bold);
         heroAbilityAbilityText.setText(R.string.ability);
 
         heroAbilityAbilityValue.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityAbilityValue.setGravity(Gravity.CENTER_HORIZONTAL);
-        heroAbilityAbilityValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        heroAbilityAbilityValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         heroAbilityAbilityValue.setTextAppearance(getApplicationContext(), R.style.TextColor);
         heroAbilityAbilityValue.setText(ability.getAbility());
 
@@ -569,13 +574,13 @@ public class HeroActivity extends Activity
 
             heroAbilityAffectsText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAffectsText.setGravity(Gravity.CENTER_HORIZONTAL);
-            heroAbilityAffectsText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityAffectsText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityAffectsText.setTextAppearance(getApplicationContext(), R.style.TextColor_Bold);
             heroAbilityAffectsText.setText(R.string.affects);
 
             heroAbilityAffectsValue.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAffectsValue.setGravity(Gravity.CENTER_HORIZONTAL);
-            heroAbilityAffectsValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityAffectsValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityAffectsValue.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityAffectsValue.setText(ability.getAffects());
         }
@@ -588,19 +593,19 @@ public class HeroActivity extends Activity
 
             heroAbilityDamageText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityDamageText.setGravity(Gravity.CENTER_HORIZONTAL);
-            heroAbilityDamageText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityDamageText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityDamageText.setTextAppearance(getApplicationContext(), R.style.TextColor_Bold);
             heroAbilityDamageText.setText(R.string.damage);
 
             heroAbilityDamageValue.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityDamageValue.setGravity(Gravity.CENTER_HORIZONTAL);
-            heroAbilityDamageValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityDamageValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityDamageValue.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityDamageValue.setText(ability.getDamage());
         }
 
         heroAbilityDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        heroAbilityDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        heroAbilityDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         heroAbilityDescription.setTextAppearance(getApplicationContext(), R.style.TextColor);
         heroAbilityDescription.setText(ability.getDescription());
 
@@ -639,13 +644,13 @@ public class HeroActivity extends Activity
             heroAbilityAttribute.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityAttributeText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityAttributeText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityAttributeText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityAttributeText.setTextAppearance(getApplicationContext(), R.style.TextColor_Bold);
             heroAbilityAttributeText.setMaxWidth(Utilities.getWidth(getWindowManager())/2);
             heroAbilityAttributeText.setText(attribute.getKey() + ": ");
 
             heroAbilityAttributeValue.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityAttributeValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityAttributeValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityAttributeValue.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityAttributeValue.setText(attribute.getValue());
 
@@ -664,7 +669,7 @@ public class HeroActivity extends Activity
             heroAbilityCooldown.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ability_cooldown, 0, 0, 0);
             heroAbilityCooldown.setCompoundDrawablePadding(Utilities.dpToPx(5, getResources()));
             heroAbilityCooldown.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
-            heroAbilityCooldown.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityCooldown.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityCooldown.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityCooldown.setText(ability.getCooldown());
         }
@@ -675,7 +680,7 @@ public class HeroActivity extends Activity
             heroAbilityMana.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ability_mana, 0, 0, 0);
             heroAbilityMana.setCompoundDrawablePadding(Utilities.dpToPx(5, getResources()));
             heroAbilityMana.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
-            heroAbilityMana.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityMana.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityMana.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityMana.setText(ability.getMana());
         }
@@ -692,7 +697,7 @@ public class HeroActivity extends Activity
             heroAbilityBlackKingBarPicture.setImageDrawable(heroAbilityBlackKingBarIcon.getDrawable());
 
             heroAbilityBlackKingBarDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityBlackKingBarDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityBlackKingBarDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityBlackKingBarDescription.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
             heroAbilityBlackKingBarDescription.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityBlackKingBarDescription.setText(ability.getBlackKingBarDescription());
@@ -710,7 +715,7 @@ public class HeroActivity extends Activity
             heroAbilityLinkensSpherePicture.setImageDrawable(heroAbilityLinkensSphereIcon.getDrawable());
 
             heroAbilityLinkensSphereDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityLinkensSphereDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityLinkensSphereDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityLinkensSphereDescription.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
             heroAbilityLinkensSphereDescription.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityLinkensSphereDescription.setText(ability.getLinkensSphereDescription());
@@ -728,7 +733,7 @@ public class HeroActivity extends Activity
             heroAbilityDiffusalBladePicture.setImageDrawable(heroAbilityDiffusalBladeIcon.getDrawable());
 
             heroAbilityDiffusalBladeDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityDiffusalBladeDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityDiffusalBladeDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityDiffusalBladeDescription.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
             heroAbilityDiffusalBladeDescription.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityDiffusalBladeDescription.setText(ability.getDiffusalBladeDescription());
@@ -746,7 +751,7 @@ public class HeroActivity extends Activity
             heroAbilityMantaStylePicture.setImageDrawable(heroAbilityMantaStyleIcon.getDrawable());
 
             heroAbilityMantaStyleDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityMantaStyleDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityMantaStyleDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityMantaStyleDescription.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
             heroAbilityMantaStyleDescription.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityMantaStyleDescription.setText(ability.getMantaStyleDescription());
@@ -771,7 +776,7 @@ public class HeroActivity extends Activity
         }
 
         heroAbilityAltDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        heroAbilityAltDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        heroAbilityAltDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         heroAbilityAltDescription.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
         heroAbilityAltDescription.setTextAppearance(getApplicationContext(), R.style.TextColor_Italic);
         heroAbilityAltDescription.setText(ability.getAltDescription());
