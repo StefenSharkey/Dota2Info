@@ -29,7 +29,6 @@ public class MainActivity extends Activity implements View.OnClickListener
     @Override
     public void onClick(View view)
     {
-        Log.wtf("view.getId()", view.toString());
         switch(view.getId())
         {
             case R.id.heroes:
