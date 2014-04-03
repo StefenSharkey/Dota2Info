@@ -17,32 +17,32 @@ public class Utilities
 
     public static String nameToDrawable(String name)
     {
-        return name.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase();
+        return name.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase();
     }
 
     public static String nameToDrawable(TextView name)
     {
-        return String.valueOf(name.getText()).replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase();
+        return String.valueOf(name.getText()).replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase();
     }
 
     public static String nameToDrawable(String prefix, String name)
     {
-        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase() + "_" + name.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase();
+        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase() + "_" + name.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase();
     }
 
     public static String nameToDrawable(String prefix, TextView name)
     {
-        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase() + "_" + String.valueOf(name.getText()).replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase();
+        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase() + "_" + String.valueOf(name.getText()).replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase();
     }
 
     public static String nameToDrawable(String prefix, String name, String suffix)
     {
-        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase() + "_" + name.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase() + "_" + suffix;
+        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase() + "_" + name.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase() + "_" + suffix;
     }
 
     public static String nameToDrawable(String prefix, TextView name, String suffix)
     {
-        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase() + "_" + String.valueOf(name.getText()).replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").toLowerCase() + "_" + suffix;
+        return prefix.replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase() + "_" + String.valueOf(name.getText()).replaceAll(" ", "_").replaceAll("-", "_").replaceAll("\'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\\?", "").replaceAll("\\!", "").toLowerCase() + "_" + suffix;
     }
 
     public static String nameToWebsite(String name)

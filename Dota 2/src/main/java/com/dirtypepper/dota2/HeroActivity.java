@@ -455,7 +455,12 @@ public class HeroActivity extends Activity
         heroAbilityPicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 128));
         heroAbilityPicture.setAdjustViewBounds(true);
         Log.wtf("Utilities.nameToDrawable()", Utilities.nameToDrawable(currentHero.getName(), ability.getName()));
-        heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
+        if(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0)
+            heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
+        else if(ability.getName().equals(R.string.spell_immunity))
+            heroAbilityPicture.setImageResource(R.drawable.spell_immunity);
+        else
+            heroAbilityPicture.setImageResource(R.drawable.unknown);
 
         heroAbility.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbility.setOrientation(LinearLayout.VERTICAL);
@@ -748,7 +753,10 @@ public class HeroActivity extends Activity
 
             heroAbilityMantaStylePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityMantaStylePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
-            heroAbilityMantaStylePicture.setImageDrawable(heroAbilityMantaStyleIcon.getDrawable());
+            if(heroAbilityMantaStyleIcon.getDrawable() != null)
+                heroAbilityMantaStylePicture.setImageDrawable(heroAbilityMantaStyleIcon.getDrawable());
+            else
+                heroAbilityMantaStylePicture.setImageResource(R.drawable.ability_manta_style);
 
             heroAbilityMantaStyleDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityMantaStyleDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);

@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/attribute_damage"
-                    android:layout_marginRight="12dp"/>
+                    android:layout_marginRight="6dp"/>
                 <TextView
                     android:id="@+id/hero_damage"
                     android:layout_width="match_parent"
@@ -111,11 +111,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:paddingLeft="3dp"
                 android:orientation="horizontal">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/attribute_speed"/>
+                    android:src="@drawable/attribute_speed"
+                    android:layout_marginRight="3dp"/>
                 <TextView
                     android:id="@+id/hero_move_speed"
                     android:layout_width="match_parent"
@@ -159,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/attribute_defense"
-                    android:layout_marginRight="17dp"/>
+                    android:layout_marginRight="7dp"/>
                 <TextView
                     android:id="@+id/hero_armor"
                     android:layout_width="match_parent"

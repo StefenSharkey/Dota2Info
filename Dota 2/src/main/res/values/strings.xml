@@ -20,6 +20,9 @@
     <string name="affects">Affects</string>
     <string name="damage">Damage</string>
 
+    <string name="spell_immunity">Spell Immunity</string>
+    <string name="unknown">Unknown</string>
+
     <string name="ban_1">Ban 1</string>
     <string name="ban_2">Ban 2</string>
     <string name="ban_3">Ban 3</string>

@@ -3253,6 +3253,7 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
+        <description>Lucifer the Doom is a melee strength Hero with strong farming capabilities, good versatility, and one of the strongest single-target spells in the game. His very low starting armor makes him vulnerable to harassment, but his abilities and high health allow him to lane or even jungle quite effectively. A ruthless demon, he possesses malicious abilities revolving around greed, fire, and death. His Devour ability allows him to consume creeps, providing additional gold and allowing him to absorb any powers that creep had, which potentially allows him to have up to six total hero skills. Because there are numerous neutral creep abilities to choose from to supplement his other skills, the role that he chooses to play is quite flexible. Scorched Earth serves numerous purposes, allowing him to chase, escape, regenerate, and slowly burn his enemies all at once. LVL? Death is a spammable nuke that does either modest or massive damage to the enemy, depending on the enemy's level. Finally, his namesake ult Doom serves as one of the strongest single target lockdown abilities in the game. A unit afflicted with Doom takes intense damage over a lengthy duration, while having all his active abilities - even those from items - completely silenced. With numerous expensive items in his arsenal and a key enemy hero rendered useless for a teamfight, a farmed Doom ensures that nobody can extinguish his flame.</description>
         <roles>
             <role>Carry</role>
             <role>Durable</role>
@@ -3269,12 +3270,129 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="69"
             baseMoveSpeed="290"
             baseArmor="0.57" />
+        <ability
+            name="Devour"
+            description="Consumes an enemy or neutral creep, acquiring any special abilities that it possessed."
+            ability="Target Unit"
+            affects="Creeps"
+            blackKingBar="0"
+            diffusalBlade="0"
+            cooldown="70/60/50/40"
+            mana="60/50/40/30">
+            <abilityAttributes
+                name="Range"
+                value="300"/>
+            <abilityAttributes
+                name="Gold Bonus"
+                value="25/50/75/100"/>
+            <altDescription description="Lucifer's appetite and greed are never sated." />
+            <note>Can target all creeps other than Ancient, Mechanical or Hero-Creeps (like Warlock's Golem or Visage's Familiars).</note>
+            <note>Can only gain the abilities of neutral creeps.</note>
+            <note>Does not go through Magic Immunity. Therefore, Golems cannot be devoured.</note>
+            <note>If a neutral creep who possesses abilities is targeted, you gain all its active and passive abilities until you replace them with another creep's abilities. If you devour a creep without abilities, you will keep the abilities you had previously.</note>
+            <note>Gives Doom the original bounty, as well as the bonus gold corresponding to each level of the skill.</note>
+            <note>Doom devours at a speed of 20HP/sec.</note>
+            <note>Thus, eating creeps with more than 1400/1200/1000/800 HP will give Devour a longer cooldown, thus reducing its usefulness.</note>
+        </ability>
+        <ability
+            name="Scorched Earth"
+            description="Carpets the nearby earth in flames, damaging enemies while Doom gains bonus HP regen and increased movement speed."
+            ability="No Target"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="0"
+            diffusalBlade="0"
+            cooldown="60/55/50/45"
+            mana="60/50/40/30">
+            <abilityAttributes
+                name="Radius"
+                value="600"/>
+            <abilityAttributes
+                name="Duration"
+                value="10/12/14/16 seconds"/>
+            <abilityAttributes
+                name="Damage/Heal Per Second"
+                value="12/18/24/30"/>
+            <abilityAttributes
+                name="Movement Speed Bonus"
+                value="16%"/>
+            <mantaStyle description="Illusions benefit from health regeneration." />
+            <altDescription description="The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him." />
+            <note>The flames follow Doom for the duration of the ability.</note>
+            <note>The regeneration and increased move speed from Scorched Earth are also conferred upon other units Doom controls.</note>
+            <note>Total damage dealt/healed: 120/216/336/480</note>
+        </ability>
+        <ability
+            name="LVL? Death"
+            description="Dissipates a piece of an enemy Hero's soul, mini-stunning and dealing bonus damage equal to 20% of the target's maximum health when the enemy's level is a multiple of a specific number or 25."
+            ability="Target Unit"
+            affects="Enemy Heroes"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="2"
+            cooldown="8"
+            mana="110">
+            <abilityAttributes
+                name="Range"
+                value="600"/>
+            <abilityAttributes
+                name="Damage"
+                value="125/165/225/275 (+ Bonus damage equal to 20% of the target's max health)"/>
+            <abilityAttributes
+                name="Level Multiple"
+                value="6/5/4/3 or 25"/>
+            <altDescription description="Lucifer shares the fire branding bestowed upon him at the time of his exile." />
+            <note>Mini-stun from LVL? Death interrupts channeling abilities.</note>
+        </ability>
+        <ability
+            name="Doom"
+            description="Inflicts a curse that prevents an enemy Hero from casting spells or using items, while taking damage over time. Doom also disables most passive abilities."
+            ability="Target Unit"
+            affects="Enemies"
+            damage="Universal"
+            blackKingBar="0"
+            linkensSphere="2"
+            mantaStyle="0"
+            cooldown="100"
+            mana="150/200/250">
+            <abilityAttributes
+                name="Range"
+                value="550"/>
+            <abilityAttributes
+                name="Duration"
+                value="15 (16*)"/>
+            <abilityAttributes
+                name="Damage Per Second"
+                value="30/50/70 (50/80/110*)"/>
+            <aghanims description="Increases damage and duration. Duration doesn't count down while the target is within 900 range of Doom." />
+            <altDescription description="When a name is tolled from the bell of Vashundol, doom is sure to follow." />
+            <note>Units afflicted by Doom can be denied when their HP drops below 25%.</note>
+            <note>Unlike other silences, Doom prevents the target from using items and disables many passive abilities.</note>
+            <note>List of abilities disabled by Doom can be found here.</note>
+            <note>Total damage dealt over time: 450/750/1050 (800/1280/1760*).</note>
+            <note>Removes positive buffs on the target before applying the debuff.</note>
+            <note>Doomed units still can pick/throw items or take runes.</note>
+        </ability>
+        <tips>Doom has very poor Agility gain and one of the lowest starting armor in the game so it is essential to tank him up with armor items such as Assault Cuirass and Shiva's Guard to make his high HP go farther against physical attacks.</tips>
+        <tips>Be aware of heroes that commonly build Linken's Sphere as casting Doom on them will result in it being completely wasted. Cast LVL? Death on them first to burn the Linken's Sphere cooldown before casting Doom.</tips>
+        <tips>Cast Doom early in teamfights - the huge 15 second duration can render spell-dependent nukers such as Zeus or Lina virtually useless. Alternatively, if you can catch a hero carrying key support items like Mekansm and Pipe of Insight you can prevent those items from being used during the subsequent fight.</tips>
+        <tips>Make use of Devour's ability steal to give yourself and your team useful neutral creep abilities like stuns, slows, ensnares, or different types of auras.</tips>
+        <tips>Dark Troll Summoner is one of the best creeps to devour for a jungling Doom in early game. It gives Raise Dead, allowing you to summon two skeleton warriors who can tank creeps for you.</tips>
+        <tips>Another useful creep for jungling is Satyr Tormenter, its Unholy Aura provides great health regeneration (4 health/second), and can also be used while laning to help you and allies hold lane longer. The Shockwave nuke has a high mana cost, but has good range and moderate cooldown, which you can use to finish off fleeing enemies with low health. In the early stages of the game, it can also be used to effectively harass your opponents in-lane.</tips>
+        <tips>Hill Troll Priest's heal and mana regeneration aura are good for laning as well. The low mana cost healing spell can be useful against heroes who deal damage over time like Venomancer, Viper, Axe etc.</tips>
+        <tips>In midgame, you may opt for more powerful spells such as War Stomp (from Centaur Conqueror), or Ensnare (Dark Troll Summoner). A Satyr Trickster gives you a Purge spell on a very low (5 seconds) cooldown, it is a very versatile skill and is another strong choice. Remember that it has very short cast range of 200, only a little over melee range.</tips>
+        <tips>In lategame, one of the best options is an Alpha Wolf with passive critical hit chance (20% for 2x damage) and 30% bonus damage aura.</tips>
+        <tips>A Kobold Foreman's movement speed aura can also be useful for pushing, ganking, chasing and fleeing.</tips>
+        <tips>Necronomicon is a very strong item on Doom, since Scorched Earth will heal your summons as well. The item also gives Doom valuable intelligence.</tips>
+        <tips>Unlike other melee heroes, Doom has 150 attack range (while the normal melee hero has 128 attack range).</tips>
     </hero>
     <hero>
         <name>Dragon Knight</name>
         <damageType>Melee/Ranged</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
+        <description>Davion the Dragon Knight is a very tough melee strength hero with a relatively versatile skill set. Dragon Knight has a nuke and a stun, giving him an advantage in ganks. Dragon Knight has no real escape ability, though his Dragon Blood ability and armor make him capable of withstanding strong hits and recovering quickly. He is still very vulnerable in the early game, however, and needs to farm and stay alive in order to be effective in later stages. If he has enough levels and farm, Dragon Knight is very formidable late game due to his strong ultimate, transforming into a legendary dragon, turning him into one of the most dangerous beasts in late game, capable of eliminating multiple enemies at once.</description>
         <roles>
             <role>Carry</role>
             <role>Disabler</role>
@@ -3292,12 +3410,105 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="52"
             baseMoveSpeed="290"
             baseArmor="3.71" />
+        <ability
+            name="Breathe Fire"
+            description="Unleashes a breath of fire on enemy units in a line in front of Dragon Knight."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="0"
+            cooldown="12"
+            mana="100/110/120/130">
+            <abilityAttributes
+                name="Range"
+                value="500"/>
+            <abilityAttributes
+                name="Radius"
+                value="150 (Starting radius) / 200 (Distance) / 250 (Final radius)"/>
+            <abilityAttributes
+                name="Damage"
+                value="90/170/240/300"/>
+            <altDescription description="Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp." />
+            <note>Affects mechanical units.</note>
+            <note>Hits units up to 900 away.</note>
+        </ability>
+        <ability
+            name="Dragon Tail"
+            description="Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage. When in Elder Dragon Form, the cast range increases to 400."
+            ability="Target Unit"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="2"
+            cooldown="12/11/10/9"
+            mana="100">
+            <abilityAttributes
+                name="Range"
+                value="150 (400 while in Elder Dragon Form)"/>
+            <abilityAttributes
+                name="Stun Duration"
+                value="2.5/2.75/3/3.25"/>
+            <abilityAttributes
+                name="Damage"
+                value="25/50/75/100"/>
+            <altDescription description="Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat." />
+        </ability>
+        <ability
+            name="Dragon Blood"
+            description="The life blood of the Dragon improves health regeneration and strengthens armor."
+            ability="Passive"
+            affects="Self"
+            mantaStyle="0">
+            <abilityAttributes
+                name="Health Regen"
+                value="2/3/4/5"/>
+            <abilityAttributes
+                name="Bonus Armor"
+                value="3/6/9/12"/>
+            <altDescription description="Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight." />
+        </ability>
+        <ability
+            name="Elder Dragon Form"
+            description="Dragon Knight can take the form of three powerful elder dragons. LEVEL 1 - Green Dragon: Short poison damage over time on attack. LEVEL 2 - Red Dragon: Splash damage on attack. LEVEL 3 - Blue Dragon: Splash damage and frost attack that slows enemy units."
+            ability="No Target"
+            affects="Self"
+            blackKingBar="1"
+            linkensSphere="0"
+            diffusalBlade="1"
+            mantaStyle="2"
+            cooldown="115"
+            mana="50">
+            <abilityAttributes
+                name="Duration"
+                value="60"/>
+            <abilityAttributes
+                name="Bonus Sped"
+                value="25"/>
+            <abilityAttributes
+                name="Bonus Attack Range"
+                value="372"/>
+            <blackKingBar description="Splash attack and level 3 MS/AS slows goes through magic immunity." />
+            <diffusalBlade description="Corrosive Breath and Frost Breath can be purged, the actual form can't." />
+            <altDescription description="The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm." />
+            <note>Elder Dragon Form increases the range of Dragon Tail.</note>
+            <note>Dragon Knight has 315 base movement speed, 500 attack range, 1.7 Base Attack Time and 0.5/0.4 attack animation while in the Dragon Form. The projectile has a 900 missile speed.</note>
+            <note>The Level 1 Elder Dragon is a Green Dragon that has the skill: Corrosive Breath. Corrosive Breath deals 20 damage per second for 5 seconds and is non-lethal (target is left with 1 HP). Works on structures. Damage type: magical.</note>
+            <note>The Level 2 Elder Dragon is a Red Dragon that has Corrosive Breath (same as Lvl 1) and Splash Attack. Splash Attack deals 100% damage in a 100 AOE, 75% damage in a 200 AOE and 50% damage in a 250 AOE. Corrosive Breath is applied to the main target only.</note>
+            <note>The Level 3 Elder Dragon is a Blue Dragon that has Splash Attack (same as Lvl 2) and Frost Breath. Frost Breath slows units for 30% movement speed and 20% attack speed, lasting for 3 seconds.</note>
+            <note>Unique Attack Modifiers such as lifesteal and Eye of Skadi stack with the Breath attack.</note>
+        </ability>
+        <tips>Dragon Knight is one of the few heroes with no cast-time on his abilities, so spellcasts can be squeezed in between attacks on the backswing animation.</tips>
+        <tips>Dragon Tail is a powerful ability to have and should be taken before other skills, but it levels poorly. Some players even choose to take Attribute Bonus over further ranks in it.</tips>
+        <tips>Many guides recommend not levelling Elder Dragon Form at lvl 11, but those guides are outdated. Prior to version 6.78, the Red Dragon did not carry over the corrosive effect from the Green Dragon, which made it inferior at pushing down towers. Due to the recent patch, it is no longer necessary to skip levelling the ultimate at lvl 11.</tips>
+        <tips>Soul Ring is a useful item on Dragon Knight, as it allows him to farm using Breathe Fire constantly, and the extra regeneration from Soul Ring and Dragon Blood offsets the health loss.</tips>
     </hero>
     <hero>
         <name>Drow Ranger</name>
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
+        <description>Traxex the Drow Ranger is a ranged agility hero whose greatest assets are her incredible damage and ability to keep threats at bay. Traxex is a carry who, though lacking survivability, provides a worthwhile contribution through her damage alone. The Drow Ranger can be extremely powerful at any given point in the game. As an agility hero, Traxex's damage is based largely off her auto attacks and is among the greatest largely due to the massive amounts of agility she gains from her passive ultimate, Marksmanship. The Drow Ranger also adds ranged damage to teammates with her global Precision Aura. Despite her lack of escape spells, Drow Ranger can keep herself relatively safe from enemy spellcasters and melee heroes using her Gust and her Frost Arrows, respectively. Frost Arrows infuses her attacks with ice, greatly slowing down her enemies. Since it can be manually cast, Frost Arrows can be used to harass her foes in the early game without drawing the creeps' attention. Gust is a great counter to enemy spellcasters as well as melee heroes as Gust pushes heroes away from Drow and prevents them from casting spells, who might threaten her life in battles. Position is of utmost importance as Traxex is quite vulnerable in close combat and the agility bonus from Marksmanship is removed when enemies come near her. This means she struggles against melee heroes with high mobility, such as Anti-Mage and Faceless Void.</description>
         <roles>
             <role>Carry</role>
         </roles>
@@ -3312,12 +3523,113 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="55"
             baseMoveSpeed="300"
             baseArmor="0.71" />
+        <ability
+            name="Frost Arrows"
+            description="Adds a freezing effect to Drow's attacks, slowing enemy movement. Lasts 1.5 seconds on Heroes, and 7 seconds on creeps."
+            ability="Auto-Cast"
+            affects="Enemies"
+            orbOfVenom="1"
+            blackKingBar="2"
+            linkensSphere="0"
+            diffusalBlade="2"
+            cooldown="0"
+            mana="12">
+            <abilityAttributes
+                name="Range"
+                value="625"/>
+            <abilityAttributes
+                name="Duration"
+                value="1.5 (7 on creeps)"/>
+            <abilityAttributes
+                name="Movement Speed Slow"
+                value="11%/24%/37%/60%"/>
+            <altDescription description="Ice-encased arrows pierce the silence, chilling their victims to the core." />
+            <note>The slow will not increase by successive casts, it will only be refreshed.</note>
+            <note>The slow is a unique attack modifier and conflicts with lifesteal, both when used automatically and when used manually.</note>
+            <note>It works on siege creeps.</note>
+        </ability>
+        <ability
+            name="Gust"
+            description="Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to you."
+            ability="Target Point"
+            affects="Enemy Units"
+            blackKingBar="2"
+            linkensSphere="0"
+            diffusalBlade="2"
+            cooldown="13"
+            mana="90">
+            <abilityAttributes
+                name="Range"
+                value="900"/>
+            <abilityAttributes
+                name="Radius"
+                value="250"/>
+            <abilityAttributes
+                name="Duration"
+                value="3/4/5/6"/>
+            <abilityAttributes
+                name="Knockback Duration"
+                value="0.2"/>
+            <altDescription description="Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi." />
+            <note>Doesn't stop usage of items.</note>
+            <note>Knockback distance is inversely proportional to travel range, 350 at closest, 0 at 900.</note>
+            <note>Does not interrupt channeling of items.</note>
+            <note>As with most silences, it will not stop Wraith King's Reincarnation.</note>
+            <note>Disables Permanent Invisibility.</note>
+        </ability>
+        <ability
+            name="Precision Aura"
+            description="Adds bonus damage to the physical attack of allied, ranged Hero units on the map based on a percentage of Drow's agility. Affects creeps for 30 seconds when cast."
+            ability="No Target"
+            affects="Allies"
+            mantaStyle="1"
+            cooldown="120">
+            <abilityAttributes
+                name="Radius"
+                value="Global"/>
+            <abilityAttributes
+                name="Range Damage Bonus"
+                value="18%/24%/30%/36%"/>
+            <abilityAttributes
+                name="Duration"
+                value="30"/>
+            <mantaStyle description="Illusions can carry the aura, but can't make use of the bonus damage." />
+            <altDescription description="Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi." />
+            <note>Only affects ranged units.</note>
+            <note>Can be cast manually to affect creeps globally for 30 seconds, with a 120 seconds cooldown.</note>
+            <note>Bonus damage is NOT considered base damage (contrary to what the buff tooltip says).</note>
+        </ability>
+        <ability
+            name="Marksmanship"
+            description="Passively provides bonus agility. If there are nearby enemy heroes, the bonus agility is removed."
+            ability="Passive"
+            affects="Self"
+            mantaStyle="0">
+            <abilityAttributes
+                name="Agility Bonus"
+                value="40/60/80"/>
+            <abilityAttributes
+                name="Deactivation Radius"
+                value="400"/>
+            <altDescription description="The Drow Ranger is the epitome of archery prowess." />
+            <note>Effectively gives Drow Ranger 40/60/80 attack speed, 40/60/80 attack damage and 5.6/8.4/11.2 armor, as well as an additional 14.4/21.6/28.8 damage from level 4 Precision Aura.</note>
+            <note>An icy particle effect is visible on Drow Ranger while Marksmanship is active.</note>
+            <note>Bonus agility and particle effect is lost if an enemy hero comes within 400 range of Drow Ranger.</note>
+        </ability>
+        <tips>Manually casting Frost Arrows (known as orbwalking) will prevent Traxex from drawing creep/tower aggro. Traxex can also use this to kite and escape from enemies when caught out.</tips>
+        <tips>An early level of Gust can be crucial to defend against spellcasters.</tips>
+        <tips>Due to the mechanics of Marksmanship, positioning is the key for Traxex. Traxex needs to be at least 400 units away from enemies to enable Marksmanship, or else it won't be active and won't give Traxex the ever needed bonus agility.</tips>
+        <tips>Marksmanship will have a noticeable particle effect that emanates from Traxex's body. If Traxex is too close to an enemy hero, the particle effect will disappear, meaning Traxex will not receive the bonus Agility. This also occurs when invisible units are nearby.</tips>
+        <tips>If during a team fight the enemy heroes get close to each other, using Gust in many or even all of them can simply turn the battle aside. This can make Traxex not just a great carry, but also a powerful disabler/initiator too.</tips>
+        <tips>When in possession of Shadow Blade, Traxex can effectively gank by taking a shot to break the invisibility and immediately using Gust, leaving the target: slowed, damaged, silenced, and being completely unable to react (apart from using items).</tips>
+        <tips>Because of the removal of the bonus agility when there is an enemy hero near Traxex, it is advised to avoid picking her when the enemy carries are especially mobile (Antimage, Faceless Void) or otherwise employ powerful slows that can match Frost Arrow (Viper, Phantom Assassin).</tips>
     </hero>
     <hero>
         <name>Earthshaker</name>
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
+        <description>Raigor Stonehoof the Earthshaker is a melee Strength Hero with several area of effect disables, commonly played as a ganker or initiator. Unlike most Strength heroes, he is played more like an Intelligence caster hero and is almost entirely reliant on his spells to inflict heavy damage. His Fissure is a versatile spell that affects enemies in a line, used to stun, inflict decent damage, and create an impassable wall of earth for a significant duration. Good usage of this can cut off chokepoints, leaving enemies with no escape routes or preventing them from chasing after endangered allies. Enchant Totem massively boosts his attack damage for one attack, and has a very short cooldown. Aftershock lets the Earthshaker deal additional damage and stun in a small area around him everytime he uses one of his spells, and combos particularly well with Enchant Totem. Earthshaker's heavy AoE-centric kit is most powerful when his enemies are in large numbers and in close proximity. With his Echo Slam, he can deal heavy damage to clusters of enemies. All of Earthshaker's spells (with the exception of his ultimate) have a long casting animation, but with proper positioning, an adept Earthshaker can wreak havoc with his area-of-effect spells. Blink Dagger is an essential item for Earthshaker to be able to properly land Echo Slam within a cluster of enemies. At the same time, because of the high mana costs of his spells, he needs some form of mana sustenance. With his tremendous seismic power, the Earthshaker is never one that should be taken lightly even when he is heavily outnumbered.</description>
         <roles>
             <role>Disabler</role>
             <role>Initiator</role>
@@ -3335,12 +3647,102 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="56"
             baseMoveSpeed="310"
             baseArmor="2.71" />
+        <ability
+            name="Fissure"
+            description="Slams the ground with a mighty totem, fissuring the earth while stunning and damaging enemy units in a line. Creates an impassable ridge of stone."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="2"
+            cooldown="15"
+            mana="125/140/155/170">
+            <abilityAttributes
+                name="Range"
+                value="1400"/>
+            <abilityAttributes
+                name="Radius"
+                value="225"/>
+            <abilityAttributes
+                name="Fissure Duration"
+                value="8"/>
+            <abilityAttributes
+                name="Stun Duration"
+                value="1/1.25/1.5/1.75"/>
+            <abilityAttributes
+                name="Damage"
+                value="125/175/225/275"/>
+            <linkensSphere description="Only blocked for holder." />
+            <altDescription description="The Nishian totem splits the earth to its core with tectonic force." />
+            <note>Fissure does not benefit from the extra stun duration from Aftershock. Damage bonus still applies if in the area of effect of both spells.</note>
+        </ability>
+        <ability
+            name="Enchant Totem"
+            description="Empowers Earthshaker's totem, causing it to deal extra damage on the next attack."
+            ability="No Target"
+            affects="Self"
+            blackKingBar="0"
+            linkensSphere="0"
+            diffusalBlade="2"
+            cooldown="5"
+            mana="50">
+            <abilityAttributes
+                name="Bonus"
+                value="100%/200%/300%/400%"/>
+            <abilityAttributes
+                name="Duration"
+                value="14 seconds or 1 attack"/>
+            <altDescription description="Raigor's gorilla strength can destroy mountains." />
+            <note>Only increases base damage and additional damage given by the primary attribute. Bonus damage is not increased.</note>
+            <note>Bonus damage buff is used when denying allied units.</note>
+        </ability>
+        <ability
+            name="Echo Slam"
+            description="Shockwaves travel through the ground, damaging enemy units. Each enemy hit causes an echo to damage nearby units. Upgradable by Aghanim's Scepter."
+            ability="No Target"
+            affects="Enemies"
+            damage="Universal/Magical"
+            blackKingBar="1"
+            linkensSphere="0"
+            cooldown="150/130/110"
+            mana="145/205/265">
+            <abilityAttributes
+                name="Radius"
+                value="525"/>
+            <abilityAttributes
+                name="Echo Damage"
+                value="40/55/70"/>
+            <abilityAttributes
+                name="Damage"
+                value="160/210/270"/>
+            <blackKingBar description="Initial damage is not blocked. Magic immune units also makes echoes." />
+            <aghanims description="Causes each initial hero hit to echo twice." />
+            <altDescription description="Tectonic plates crack, mountains fold, and foes are crushed by the Echo Slam." />
+            <note>Unlike Earthshaker's other spells, Echo Slam has an instant cast time.</note>
+            <note>The initial damage will go through magic immunity, the additional damage will not.</note>
+            <note>The initial damage is dealt in an radius of 525 around Earthshaker.</note>
+            <note>Each unit within the initial blast will produce an echo wave, dealing damage to units within a 500 radius around itself (including itself).</note>
+            <note>Illusions are counted as heroes for the Aghanim's ult.</note>
+            <note>Creeps killed by Echo Slam's initial damage will still give off echo wave damage.</note>
+            <note>Does not hit invisible units. (including units in Fog Of War).</note>
+        </ability>
+        <tips>Fissure creates an impassable barrier, which can be effective for stopping enemies from escaping.</tips>
+        <tips>It is important to keep in mind, however, that this barrier is also impassible to yourself and allies. Be careful of how you position yourself and the Fissure wall.</tips>
+        <tips>Use Enchant Totem in conjunction with Aftershock to stop escaping enemies, even when Fissure is unavailable.</tips>
+        <tips>Upon initiating, Aftershock allows for your Enchant Totem and Echo slam to disable the enemy team for longer periods of time.</tips>
+        <tips>Because of the echo damage, Echo Slam is best used in the middle of the enemy team, especially when they have a large amount of units near them.</tips>
+        <tips>A Blink Dagger or Force Staff will help you get into position to use Echo Slam. Note that it might not always be best to initiate and it can sometimes be best to wait for the enemy team to start the fight and group up.</tips>
+        <tips>Try to find a balance between building items that help you be the team's initiator and those which increase your mana, Icon Int.png Intelligence and or Icon Str.png Strength so that you can remain effective throughout the game.</tips>
+        <tips>Soul Ring is often a particularly effective item on Earthshaker, as it provides both health and mana regeneration while giving you the option for mana whenever needed.</tips>
+        <tips>Arcane Boots give Earthshaker more team utility through active mana regeneration, increased movement speed, and an increased mana pool to allow you to cast more spells.</tips>
+        <tips>Because of Echo Slam, it is a fatal mistake to push against an Earthshaker without taking precautions to not get caught while grouped up. Echo Slam's damage has no upper limit and so Earthshaker has the potential to wipe out an entire team of heroes instantly if there are enough bodies present.</tips>
     </hero>
     <hero>
         <name>Earth Spirit</name>
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
+        <description>Kaolin the Earth Spirit is a highly adaptable strength hero with great utility, able to effectively fill the role of a support, ganker, or offlaner, while still having a large game presence due to his strong initiation. Unlike most heroes, his abilities revolve around an innate ability, Stone Remnant. Because of Stone Remnant's synergy with his other abilities, Earth Spirit has an incredibly high skill ceiling, and can be challenging to master. He can be surprisingly mobile, owing to his Rolling Boulder, and can use this in combination with his other skills to position himself to disable multiple enemies, save allies from certain death and generally become a commanding presence in a teamfight, even without a great deal of farm. With good timing he can initiate fights from a distance, and given the right circumstances can deal a surprising amount of damage to both single and multiple targets, all the while disrupting enemy positioning allowing for easy kills. A useful ally and a dangerous enemy, the Earth Spirit's versatility and flexibility make him an ideal hero in almost any lineup or lane.</description>
         <attributes
             strengthBase="21"
             strengthGain="2.9"
@@ -3352,12 +3754,169 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="56"
             baseMoveSpeed="305"
             baseArmor="3.43" />
+        <ability
+            name="Boulder Smash"
+            description="Earth Spirit smashes the target enemy, ally, or Stone Remnant, knocking it back in the direction he is facing. The knocked back target deals damage to all units it hits. If the target was a Stone Remnant, damaged targets are also stunned, and the travel distance is improved."
+            ability="Target Unit"
+            affects="Units"
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="1"
+            cooldown="22/18/14/10"
+            mana="100">
+            <abilityAttributes
+                name="Range"
+                value="150"/>
+            <abilityAttributes
+                name="Radius"
+                value="200"/>
+            <abilityAttributes
+                name="Slam Distance"
+                value="500/600/700/800 (2000 when using Stone Remnant)"/>
+            <abilityAttributes
+                name="Slam Speed"
+                value="1200"/>
+            <abilityAttributes
+                name="Damage"
+                value="125"/>
+            <abilityAttributes
+                name="Stun Duration"
+                value="0.75/1.25/1.75/2.25 seconds (only when using Stone Remnant)"/>
+            <linkensSphere description="Boulder Smash using stone is not blocked." />
+            <altDescription description="It is with the power of a mountain that Earth Spirit strikes his enemies." />
+            <note>Destroys trees.</note>
+            <note>Targeting the spell on the ground will knock a Stone Remnant within 180 units of the target point in that direction.</note>
+            <note>The knockback does not interrupt channeling abilities or casting times. The knocked back unit can take actions normally during the knockback.</note>
+            <note>If the unit finishes casting a teleport spell during the knockback (such as Town Portal Scroll or Nature's Prophet's Teleportation), the unit will be teleported and the knockback will end immediately.</note>
+            <note>The slammed remnant or unit hits invisible units.</note>
+        </ability>
+        <ability
+            name="Rolling Boulder"
+            description="After a 0.6s delay, Earth Spirit becomes a boulder, rolling in the direction he is facing and damaging enemy units, stopping if he collides with an enemy hero or is stunned. If the boulder rolls over a Stone Remnant, the Stone Remnant is consumed and travel distance and speed are improved, and impacted enemies have their movement and attack speed slowed."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="1"
+            linkensSphere="0"
+            diffusalBlade="2"
+            cooldown="16/12/8/4"
+            mana="50">
+            <abilityAttributes
+                name="Range"
+                value="800 (1600 when using a Stone Remnant)"/>
+            <abilityAttributes
+                name="Radius"
+                value="150"/>
+            <abilityAttributes
+                name="Damage"
+                value="90 (135 when using a Stone Remnant)"/>
+            <abilityAttributes
+                name="Movement and Attack Speed Slow"
+                value="80% for 2 seconds (only when using a Stone Remnant)"/>
+            <blackKingBar description="Kaolin collides with the unit without dealing damage. Slow still works when stone is used." />
+            <altDescription description="Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances." />
+            <note>The boulder moves at a speed of 800, 1600 when using a Stone Remnant.</note>
+            <note>This skill will always go the full distance, you cannot choose a shorter distance. It stops on the opposite side of the first hero it impacts.</note>
+            <note>Earth Spirit can use abilities and items during the Rolling Boulder animation. (except blink dagger; rolling boulder makes Kaolin rooted, just like ensnare/entangle does).</note>
+            <note>Can be interrupted if Earth Spirit gets disabled during the initial 0.6 second rolling charge, as well as while rolling.</note>
+            <note>Gives Kaolin flying vision.</note>
+            <note>Does hit invisible enemy heroes.</note>
+        </ability>
+        <ability
+            name="Geomagnetic Grip"
+            description="Earth Spirit pulls the target allied unit or Stone Remnant to his location. Enemies struck by the flying target will be silenced, and take damage if the flying target is a Stone Remnant."
+            ability="Target Unit"
+            affects="Allies"
+            blackKingBar="2"
+            linkensSphere="0"
+            diffusalBlade="2"
+            cooldown="13"
+            mana="75">
+            <abilityAttributes
+                name="Range"
+                value="1100"/>
+            <abilityAttributes
+                name="Radius"
+                value="180"/>
+            <abilityAttributes
+                name="Pull Speed"
+                value="1000"/>
+            <abilityAttributes
+                name="Silence Duration"
+                value="2/3/4/5"/>
+            <abilityAttributes
+                name="Stone Remnant Damage"
+                value="100/150/200/250"/>
+            <altDescription description="Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit." />
+            <note>Destroys trees along the path of a pulled ally hero.</note>
+            <note>Can grip targets while they are knocked back by Boulder Smash.</note>
+            <note>Gripping an ally does not interrupt channeling abilities or casting times. The gripped ally can take actions normally during the grip.</note>
+            <note>If the ally finishes casting a teleport spell during the grip (such as Town Portal Scroll or Furion's Teleportation), the ally will be teleported and the grip will end immediately.</note>
+            <note>Gripping an ally Batrider during Flaming Lasso will not break the lasso and Flaming Lasso's target will be pulled along.</note>
+        </ability>
+        <ability
+            name="Stone Remnant"
+            description="Call a Stone Remnant at the target location. Stones Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities. Calling a Stone Remnant consumes a charge, which recharge over time. Earth Spirit can have 6 Stone Remnants active at one time."
+            ability="Target Point">
+            <abilityAttributes
+                name="Max Charges"
+                value="6"/>
+            <abilityAttributes
+                name="Charge Restore Time"
+                value="35"/>
+            <abilityAttributes
+                name="Duration"
+                value="120"/>
+            <abilityAttributes
+                name="Range"
+                value="1400"/>
+            <altDescription description="Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth." />
+            <note>Innate ability that doesn't do anything on its own but is used by other abilities.</note>
+            <note>Kaolin begins the game with and cannot have more than six Stone Charges.</note>
+            <note>When killed, Kaolin will continue to replenish Stone Charges.</note>
+            <note>Stone Remnants are invulnerable and have zero collision (they can be stacked).</note>
+            <note>Is not considered an ability, and therefore does not interact with Magic Stick, Curse of the Silent, etc.</note>
+        </ability>
+        <ability
+            name="Magnetize"
+            description="Magnetizes enemy units in a small nearby area, causing them to take damage over time for a short duration. Any magnetized units cause nearby Stone Remnants to become energized and explode, applying/refreshing the magnetize debuff on all enemy units near the Stone Remnant. This process can repeat multiple times. Stone Remnants are destroyed in this process. If an enemy hero is affected by silence or slows as a result of Rolling Boulder or Boulder Smash, all magnetized heroes share the effects."
+            ability="No Target"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="1"
+            linkensSphere="0"
+            diffusalBlade="0"
+            cooldown="80"
+            mana="100">
+            <abilityAttributes
+                name="Cast Radius"
+                value="300"/>
+            <abilityAttributes
+                name="Search Radius"
+                value="300"/>
+            <abilityAttributes
+                name="Explosion Radius"
+                value="600"/>
+            <abilityAttributes
+                name="Duration"
+                value="6"/>
+            <abilityAttributes
+                name="Damage Per Second"
+                value="50/75/100"/>
+            <blackKingBar description="The damage is blocked, the debuff is still applied." />
+            <altDescription description="At the Earth Spirit’s call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in." />
+            <note>When a Stone Remnant is within range of Magnetize, it doesn't immediately disappear, it becomes static and then disappears after 5 seconds (can still be used by your other spells in the meantime).</note>
+            <note>Without any Stone Remnant detonation, total damage of 300/450/600.</note>
+            <note>Damages every 0.5 second.</note>
+            <note>Invisible units are not affected by the initial cast. Also, units becoming invisible after being magnetized does not interact with stone remnant.</note>
+        </ability>
     </hero>
     <hero>
         <name>Elder Titan</name>
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
+        <description>The Elder Titan is a durable melee strength hero who plays the role of initiator. His Astral Spirit and Echo Stomp abilities allow him to disable large groups of enemies from afar, making him one of the few initiators that does not require a Blink Dagger. This combination creates a perfect setup for his powerful ultimate Earth Splitter, which damages enemies based on their maximum HP. This, along with his ability to lower his enemies' physical and magical resistance, makes Elder Titan scale well through his abilities and be effective at all stages of the game. As the progenitor of this world, Elder Titan reshapes the battlefield on a whim and can turn any teamfight in his favor.</description>
         <roles>
             <role>Durable</role>
             <role>Initiator</role>
@@ -3373,6 +3932,142 @@ q        <tips>When playing Brewmaster, try to gain an advantage for your team e
             damageMaximum="57"
             baseMoveSpeed="315"
             baseArmor="3.0" />
+        <ability
+            name="Echo Stomp"
+            description="Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations. The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage. Unconscious enemies will wake if they take player based damage."
+            ability="No Target"
+            affects="Enemies"
+            damage="Physical/Magical"
+            blackKingBar="1"
+            cooldown="15"
+            mana="100/115/130/145">
+            <abilityAttributes
+                name="Channel Time"
+                value="1.4"/>
+            <abilityAttributes
+                name="Radius"
+                value="475"/>
+            <abilityAttributes
+                name="Knock-Out Duration"
+                value="2/3/4/5"/>
+            <abilityAttributes
+                name="Damage"
+                value="80 (physical) / 80 (magical)"/>
+            <blackKingBar description="Sleep and damage from Astral Spirit are blocked, damage from Elder Titan is not." />
+            <altDescription description="The force of creation still echoes in the stomp of the Titan." />
+            <note>If you use this ability while Astral Spirit is not summoned, he will appear at Elder Titan's position and augment his Echo Stomp with magical damage. The area of effect is not changed or increased, and the Spirit disappears after the cast.</note>
+            <note>80 magical damage is done even if Astral Spirit is not learnt.</note>
+            <note>This is a channeled ability.</note>
+        </ability>
+        <ability
+            name="Astral Spirit"
+            description="Elder Titan sends forth his Astral Spirit, damaging any units it passes through. When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it damaged. The Astral Spirit possesses the Echo Stomp, Return Spirit, and Natural Order abilities."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Magical"
+            blackKingBar="1"
+            cooldown="16"
+            mana="110">
+            <abilityAttributes
+                name="Radius"
+                value="275"/>
+            <abilityAttributes
+                name="Casting Range"
+                value="1200"/>
+            <abilityAttributes
+                name="Duration"
+                value="8"/>
+            <abilityAttributes
+                name="Buff Duration"
+                value="9"/>
+            <abilityAttributes
+                name="Damage"
+                value="60/100/140/180"/>
+            <abilityAttributes
+                name="Bonus Movement Speed"
+                value="1% per Creep + 5% per Hero"/>
+            <abilityAttributes
+                name="Bonus Damage"
+                value="3/6/9/12 per Creep + 10/20/30/40 per Hero"/>
+            <blackKingBar description="Damage is blocked, but bonus from per unit can be stacked." />
+            <altDescription description="Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need." />
+            <note>The spirit spawns at a target location up to a distance of 1200 from Elder Titan.</note>
+            <note>The spirit is controllable by Elder Titan until the end of its duration.</note>
+            <note>The spirit can move over impassable terrain.</note>
+            <note>The spirit cannot intercept Pudge's Meat Hook, Mirana's Sacred Arrow, Clockwerk's Hookshot.</note>
+            <note>It's possible to teleport to the spirit using Boots of Travel.</note>
+            <note>The spirit has the same movement speed as Elder Titan has when he casted the spell.</note>
+            <note>The spirit has 450 AoE vision.</note>
+        </ability>
+        <ability
+            name="Return Astral Spirit"
+            description="Returns the Astral Spirit to Elder Titan."
+            ability="No Target">
+        </ability>
+        <ability
+            name="Natural Order"
+            description="Reduces all elements to their basic levels, removing base armor and magic resistance from nearby enemy units."
+            ability="Aura"
+            affects="Enemies"
+            blackKingBar="0">
+            <abilityAttributes
+                name="Radius"
+                value="275"/>
+            <abilityAttributes
+                name="Armor Reduction"
+                value="25%/50%/75%/100%"/>
+            <abilityAttributes
+                name="Magical Damage Amplification"
+                value="8%/16%/25%/33%"/>
+            <altDescription description="As it was at the beginning, Elder Titan makes it so again." />
+            <note>Armor reduction only applies to base armor and armor gained via agility.</note>
+            <note>33% bonus magical damage, will essentially negate natural magic resistance of enemy heroes.</note>
+        </ability>
+        <ability
+            name="Earth Splitter"
+            description="Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing and pulling enemies towards the crack while dealing damage based on the maximum life of units caught in the area."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Physical/Magical"
+            blackKingBar="1"
+            linkensSphere="1"
+            cooldown="100"
+            mana="175">
+            <abilityAttributes
+                name="Area"
+                value="300 (width) / 2400 (distance)"/>
+            <abilityAttributes
+                name="Casting Range"
+                value="1600"/>
+            <abilityAttributes
+                name="Movement Speed Slow"
+                value="30%/40%/50%"/>
+            <abilityAttributes
+                name="Slow Duration"
+                value="3/4/5"/>
+            <abilityAttributes
+                name="Damage"
+                value="35% of target's maximum health"/>
+            <blackKingBar description="Slow and pull are blocked, damage is only half blocked." />
+            <linkensSphere description="Blocks slow, but neither damage nor pull is blocked." />
+            <altDescription description="That which he created, the titan tears asunder." />
+            <note>Damage type: magical (50%), physical (50%)</note>
+            <note>The crack extends with a speed of 900.</note>
+        </ability>
+        <tips>Depending on your team composition and level of play, Elder Titan's skills have differing priorities to max. Level Echo Stomp to increase the sleep's duration, making it easier for Elder Titan and his team to set up their own area-of-effect spells without disturbance. Astral Spirit provides the highest overall damage increase. Maxing Natural Order early massively increases its effectiveness, as enemy heroes will have little to no bonus defenses and will thus be taking almost full damage.</tips>
+        <tips>Astral Spirit spawns at a target location up to a distance of 1200 away from Elder Titan and can then be moved further away from there. Elder Titan can use this to initiate by casting Astral Spirit in the middle of an enemy team followed immediately by Echo Stomp; if the enemy team was unaware of Elder Titan's location beforehand they usually won't have time to react before Echo Stomp's cast time is finished. If Echo Stomp's level is high enough the enemies should be stunned for the entire 3 seconds it takes for Earth Splitter to form and activate, assuming they don't take any damage that breaks the stun.</tips>
+        <tips>Astral Spirit is an effective harassing and pushing tool throughout the early game that can be used without putting Elder Titan in danger.</tips>
+        <tips>Be careful, though: it costs 110 mana per use. This mana cost can be remedied if your lane partner or you build Arcane Boots.</tips>
+        <tips>Although unmentioned, a Refresher Orb is a fairly good choice for the Elder Titan; two casts of Earth Splitter will both severely damage the enemy and slow them for an extended duration, if both hit. Be aware that you need items to augment your mana pool, though.</tips>
+        <tips>Elder Titan can excel even with just one or two core items. Eul's Scepter of Divinity, for example, solves his mana problems while giving a reliable disable to set up an Echo Stomp or Earth Splitter.</tips>
+        <tips>Due to his tankiness, Elder Titan can carry auras effectively. Items like Ring of Basilius, Drum of Endurance, Mekansm, Pipe of Insight, Vladmir's Offering and Assault Cuirass can help the whole team, as long as Elder Titan stays alive and close to his allies.</tips>
+        <tips>Power Treads will make you able to land more hits after the Spirit returns, and switching to Intelligence can help with the low mana pool; Phase Boots pair well with the movement speed bonus granted by the Astral Spirit; Arcane Boots give much more mana to spam spells; later in the game, Boots of Travel can be used to counter-push or counter-gank.</tips>
+        <tips>While Elder Titan makes a great initiator, he is also great at breaking enemy team initiations. If you can react fast enough and use a long range Echo Stomp through your spirit the moment your allies get initiated on you will open the way for your allies to reorganize and re-position to follow up on your Earth Splitter.</tips>
+        <tips>In later stages of the game when your team sieges and pushes towers Astral Spirit makes a magnificent tool in scouting ahead to check enemy positions without putting anyone on your team in danger. To better control your spirit you can actually assign it to a group so you can immediately select it whenever it is available.</tips>
+        <tips>Remember that the sleep from Echo Stomp is not a stun and enemy units will immediately wake up if they take any sort of hero damage. If an allied Elder Titan is preparing to initiate make sure you do not attack the enemy until his Earth Splitter activates and maims the enemy team.</tips>
+        <tips>Early game in certain cases you can use the mechanics of Echo Stomp to your advantage. Consider the fact that only player based damage awakens sleeping units if you perhaps can knockout an enemy in the range of your tower for example you can do considerable damage.</tips>
+        <tips>Refresher Orb is an item which can allow you to deal 70% of enemies' HP in a team fight by casting Earth Splitter twice in succession, severely crippling them within moments. This set up will need careful coordination with your team and a successfully executed Echo Stomp.</tips>
+        <tips>An early Soul Ring will allow you to spam Astral Spirit constantly while still in the laning phase, adding a considerable amount of harassment potential to Elder Titan.</tips>
     </hero>
     <hero>
         <name>Ember Spirit</name>
