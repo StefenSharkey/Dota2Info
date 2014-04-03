@@ -777,7 +777,7 @@ public class HeroActivity extends Activity
             heroAbilityAghanimsScepterPicture.setImageResource(R.drawable.ability_aghanims_scepter);
 
             heroAbilityAghanimsScepterDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityAghanimsScepterDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+            heroAbilityAghanimsScepterDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityAghanimsScepterDescription.setPadding(0, 0, Utilities.dpToPx(10, getResources()), 0);
             heroAbilityAghanimsScepterDescription.setTextAppearance(getApplicationContext(), R.style.TextColor);
             heroAbilityAghanimsScepterDescription.setText(ability.getAghanims());

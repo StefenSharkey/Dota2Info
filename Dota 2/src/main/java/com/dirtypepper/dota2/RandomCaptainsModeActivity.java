@@ -20,6 +20,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
 {
     private ArrayList<String> heroesList;
     private ArrayList<String> removedHeroesList;
+    private ArrayList<String> checkedHeroesList;
     private Random random;
 
     private Button button;
@@ -31,6 +32,8 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_captains_mode);
+
+        checkedHeroesList = new ArrayList<String>();
 
         Utilities.parents.push(getClass());
 
@@ -130,72 +133,132 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             case R.id.ban_hero_1_checkbox:
                 button = (Button)findViewById(R.id.ban_hero_1_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_1_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_1_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_1_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.ban_hero_2_checkbox:
                 button = (Button)findViewById(R.id.ban_hero_2_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_2_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_2_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_2_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.ban_hero_3_checkbox:
                 button = (Button)findViewById(R.id.ban_hero_3_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_3_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_3_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_3_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.ban_hero_4_checkbox:
                 button = (Button)findViewById(R.id.ban_hero_4_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_4_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_4_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_4_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.ban_hero_5_checkbox:
                 button = (Button)findViewById(R.id.ban_hero_5_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_5_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_5_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_5_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.pick_hero_1_checkbox:
                 button = (Button)findViewById(R.id.pick_hero_1_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_1_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_1_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_1_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.pick_hero_2_checkbox:
                 button = (Button)findViewById(R.id.pick_hero_2_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_2_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.pick_hero_3_checkbox:
                 button = (Button)findViewById(R.id.pick_hero_3_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_3_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_3_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_3_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.pick_hero_4_checkbox:
                 button = (Button)findViewById(R.id.pick_hero_4_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_4_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_4_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_4_name)));
                     button.setEnabled(true);
+                }
                 break;
             case R.id.pick_hero_5_checkbox:
                 button = (Button)findViewById(R.id.pick_hero_5_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_5_checkbox)).isChecked())
+                {
+                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_5_name)));
                     button.setEnabled(false);
+                }
                 else
+                {
+                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_5_name)));
                     button.setEnabled(true);
+                }
                 break;
 
             case R.id.ban_hero_1_picture:
@@ -389,6 +452,8 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
         heroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
         removedHeroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_removed)));
         for(String s : removedHeroesList)
+            heroesList.remove(s);
+        for(String s : checkedHeroesList)
             heroesList.remove(s);
     }
 }
