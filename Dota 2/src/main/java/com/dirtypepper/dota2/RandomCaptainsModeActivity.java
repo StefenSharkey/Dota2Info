@@ -19,8 +19,8 @@ import java.util.Random;
 public class RandomCaptainsModeActivity extends Activity implements View.OnClickListener
 {
     private ArrayList<String> heroesList;
+    private ArrayList<String> currentHeroesList;
     private ArrayList<String> removedHeroesList;
-    private ArrayList<String> checkedHeroesList;
     private Random random;
 
     private Button button;
@@ -33,7 +33,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_captains_mode);
 
-        checkedHeroesList = new ArrayList<String>();
+        currentHeroesList = new ArrayList<String>();
 
         Utilities.parents.push(getClass());
 
@@ -134,12 +134,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.ban_hero_1_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_1_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_1_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_1_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_1_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_1_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -147,12 +147,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.ban_hero_2_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_2_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_2_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_2_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_2_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_2_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -160,12 +160,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.ban_hero_3_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_3_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_3_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_3_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_3_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_3_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -173,12 +173,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.ban_hero_4_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_4_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_4_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_4_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_4_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_4_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -186,12 +186,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.ban_hero_5_repick);
                 if(((CheckBox)findViewById(R.id.ban_hero_5_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_5_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.ban_hero_5_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_5_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.ban_hero_5_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -199,12 +199,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.pick_hero_1_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_1_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_1_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_1_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_1_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -212,12 +212,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.pick_hero_2_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_2_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_2_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -225,12 +225,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.pick_hero_3_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_3_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_3_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_3_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_3_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_3_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -238,12 +238,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.pick_hero_4_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_4_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_4_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_4_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_4_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_4_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -251,12 +251,12 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
                 button = (Button)findViewById(R.id.pick_hero_5_repick);
                 if(((CheckBox)findViewById(R.id.pick_hero_5_checkbox)).isChecked())
                 {
-                    checkedHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_5_name)));
+                    currentHeroesList.add(String.valueOf(getResources().getText(R.id.pick_hero_5_name)));
                     button.setEnabled(false);
                 }
                 else
                 {
-                    checkedHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_5_name)));
+                    currentHeroesList.remove(String.valueOf(getResources().getText(R.id.pick_hero_5_name)));
                     button.setEnabled(true);
                 }
                 break;
@@ -372,79 +372,112 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
         if(!((CheckBox)findViewById(R.id.ban_hero_1_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.ban_hero_1_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.ban_hero_1_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.ban_hero_2_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.ban_hero_2_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.ban_hero_2_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.ban_hero_3_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.ban_hero_3_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.ban_hero_3_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.ban_hero_4_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.ban_hero_4_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.ban_hero_4_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.ban_hero_5_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.ban_hero_5_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.ban_hero_5_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.pick_hero_1_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.pick_hero_1_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.pick_hero_1_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.pick_hero_2_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.pick_hero_2_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.pick_hero_2_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.pick_hero_3_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.pick_hero_3_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.pick_hero_3_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.pick_hero_4_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.pick_hero_4_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.pick_hero_4_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
         if(!((CheckBox)findViewById(R.id.pick_hero_5_checkbox)).isChecked())
         {
             textView = (TextView)findViewById(R.id.pick_hero_5_name);
+            if(textView.getText() != null)
+                currentHeroesList.remove(String.valueOf(textView.getText()));
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView)findViewById(R.id.pick_hero_5_picture)).setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+            currentHeroesList.add(String.valueOf(textView.getText()));
         }
     }
 
     public void randomizeHeroes(TextView textView, ImageView imageView)
     {
         heroesList.add(String.valueOf(textView.getText()));
+        if(textView.getText() != null)
+            currentHeroesList.remove(String.valueOf(textView.getText()));
         textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
         imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+        currentHeroesList.add(String.valueOf(textView.getText()));
     }
 
     public void refillHeroesList()
@@ -453,7 +486,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
         removedHeroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_removed)));
         for(String s : removedHeroesList)
             heroesList.remove(s);
-        for(String s : checkedHeroesList)
+        for(String s : currentHeroesList)
             heroesList.remove(s);
     }
 }
