@@ -33,8 +33,6 @@ keystore
 ### Eclipse ###
 *.pydevproject
 .metadata
-.gradle
-tmp/
 *.tmp
 *.bak
 *.swp
