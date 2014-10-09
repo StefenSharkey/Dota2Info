@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="C:\Users\Stefen\AndroidStudioProjects\Dota2" />
-            <option value="C:\Users\Stefen\AndroidStudioProjects\Dota2\Dota 2" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Dota 2" />
           </set>
         </option>
       </GradleProjectSettings>
