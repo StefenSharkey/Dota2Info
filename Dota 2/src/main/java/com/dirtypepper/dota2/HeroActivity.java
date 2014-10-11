@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
-import android.util.Xml;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,8 +31,6 @@ public class HeroActivity extends Activity {
     private Hero currentHero;
     private ImageView imageView;
     private TextView textView;
-
-    private XmlPullParser parser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,12 +122,8 @@ public class HeroActivity extends Activity {
     }
 
     public void getHeroInfo() {
-        Log.wtf("getHeroInfo()", "Hello");
-        parser = Xml.newPullParser();
-
-        XmlPullParserFactory pullParserFactory;
         try {
-            pullParserFactory = XmlPullParserFactory.newInstance();
+            XmlPullParserFactory pullParserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = pullParserFactory.newPullParser();
             InputStream inputStream = getApplicationContext().getAssets().open("heroes.xml");
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -144,7 +137,6 @@ public class HeroActivity extends Activity {
     }
 
     private void parseHeroXML(XmlPullParser parser) throws XmlPullParserException, IOException {
-        Log.wtf("parseHeroXML()", "Hello");
         int eventType = parser.getEventType();
         currentHero = null;
 

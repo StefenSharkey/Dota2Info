@@ -3,7 +3,6 @@ package com.dirtypepper.dota2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,8 +54,6 @@ public class HeroListActivity extends Activity implements GridView.OnItemClickLi
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        Log.wtf("view", String.valueOf(position));
-
         Intent intent = new Intent(HeroListActivity.this, HeroActivity.class);
         intent.putExtra("hero", heroesList.get(position));
         HeroListActivity.this.startActivity(intent);

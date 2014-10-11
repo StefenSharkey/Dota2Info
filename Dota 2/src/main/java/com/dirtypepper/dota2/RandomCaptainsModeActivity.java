@@ -341,8 +341,6 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
     public void randomizeHeroes() {
         refillHeroesList();
 
-//        Log.wtf("TextView Contents", String.valueOf(textView.getText()));
-
         if (!((CheckBox) findViewById(R.id.ban_hero_1_checkbox)).isChecked()) {
             textView = (TextView) findViewById(R.id.ban_hero_1_name);
             if (textView.getText() != null) {
