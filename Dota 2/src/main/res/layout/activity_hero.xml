@@ -60,13 +60,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginRight="10dp">
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp">
 
                 <ImageView
                     android:id="@+id/hero_strength_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:src="@drawable/attribute_strength" />
 
                 <TextView
@@ -87,7 +89,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/attribute_damage"
-                    android:layout_marginRight="6dp" />
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp" />
 
                 <TextView
                     android:id="@+id/hero_damage"
@@ -108,13 +111,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginRight="5dp">
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp">
 
                 <ImageView
                     android:id="@+id/hero_agility_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:src="@drawable/attribute_agility" />
 
                 <TextView
@@ -129,14 +134,16 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingLeft="3dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/attribute_speed"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp" />
 
                 <TextView
                     android:id="@+id/hero_move_speed"
@@ -158,14 +165,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginRight="12dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:paddingBottom="5dp">
 
                 <ImageView
                     android:id="@+id/hero_intelligence_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:src="@drawable/attribute_intelligence" />
 
                 <TextView
@@ -187,7 +196,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/attribute_defense"
-                    android:layout_marginRight="7dp" />
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp" />
 
                 <TextView
                     android:id="@+id/hero_armor"
