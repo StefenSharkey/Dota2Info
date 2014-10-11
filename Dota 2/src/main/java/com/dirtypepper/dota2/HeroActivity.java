@@ -93,7 +93,8 @@ public class HeroActivity extends Activity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
-                        builder1.setTitle(currentHero.getName() + " " + getResources().getString(R.string.ability_notes));
+                        builder1.setTitle(
+                            currentHero.getName() + " " + getResources().getString(R.string.ability_notes));
                         builder1.setMessage(formatNotes());
                         builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
@@ -315,7 +316,8 @@ public class HeroActivity extends Activity {
         textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(Utilities.nameToDrawable("faction", hero.getFaction()), "drawable", getApplicationContext().getPackageName())), null, null, null);
 
         imageView = (ImageView) findViewById(R.id.hero_picture);
-        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()), "drawable", getApplicationContext().getPackageName()));
+        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()),
+                                                                "drawable", getApplicationContext().getPackageName()));
 
         textView = (TextView) findViewById(R.id.hero_damage_type);
         textView.setText(Utilities.formatRoles(hero));
@@ -327,7 +329,9 @@ public class HeroActivity extends Activity {
         } else if (hero.getAttribute().equals("Intelligence")) {
             imageView = (ImageView) findViewById(R.id.hero_intelligence_icon);
         }
-        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("attribute", hero.getAttribute(), "main"), "drawable", getApplicationContext().getPackageName()));
+        imageView.setImageResource(getResources().getIdentifier(
+            Utilities.nameToDrawable("attribute", hero.getAttribute(), "main"), "drawable",
+            getApplicationContext().getPackageName()));
 
         stats = hero.getAttributes("strength");
         if (stats != null) {
@@ -422,7 +426,7 @@ public class HeroActivity extends Activity {
         Log.wtf("Utilities.nameToDrawable()", Utilities.nameToDrawable(currentHero.getName(), ability.getName()));
         if (getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0) {
             heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
-        } else if (ability.getName().equals(R.string.spell_immunity)) {
+        } else if (ability.getName().equals(getResources().getString(R.string.spell_immunity))) {
             heroAbilityPicture.setImageResource(R.drawable.spell_immunity);
         } else {
             heroAbilityPicture.setImageResource(R.drawable.unknown);
