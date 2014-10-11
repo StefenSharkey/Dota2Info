@@ -1,11 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.dirtypepper.dota2.RandomCaptainsModeActivity" >
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.dirtypepper.dota2.RandomCaptainsModeActivity">
     <item android:id="@+id/action_refresh"
-        android:title="@string/repick"
-        android:icon="@android:drawable/stat_notify_sync"
-        android:showAsAction="ifRoom" />
+          android:title="@string/repick"
+          android:icon="@android:drawable/stat_notify_sync"
+          android:showAsAction="ifRoom"/>
     <item android:id="@+id/deselect_all"
           android:title="@string/deselect_all"
-          android:showAsAction="never" />
+          android:showAsAction="never"/>
 </menu>

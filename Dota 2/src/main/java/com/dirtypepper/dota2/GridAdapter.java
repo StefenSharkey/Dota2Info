@@ -15,44 +15,40 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class GridAdapter extends BaseAdapter
-{
+public class GridAdapter extends BaseAdapter {
+
     private Context context;
 
     private Integer[] images;
     private ArrayList<String> names;
 
-    public GridAdapter(Context context)
-    {
+    public GridAdapter(Context context) {
         this.context = context;
         names = new ArrayList<String>(Arrays.asList(context.getResources().getStringArray(R.array.heroes_all)));
-        for(String s : names)
+        for (String s : names) {
             Log.wtf("Hero", s);
+        }
         images = new Integer[names.size()];
         getHeroDrawables();
     }
 
     @Override
-    public int getCount()
-    {
+    public int getCount() {
         return images.length;
     }
 
     @Override
-    public Object getItem(int x)
-    {
+    public Object getItem(int x) {
         return images[x];
     }
 
     @Override
-    public long getItemId(int x)
-    {
+    public long getItemId(int x) {
         return 0;
     }
 
     @Override
-    public View getView(int x, View view, ViewGroup viewGroup)
-    {
+    public View getView(int x, View view, ViewGroup viewGroup) {
         LinearLayout linearLayout = new LinearLayout(context);
         ImageView imageView = new ImageView(context);
         TextView textView = new TextView(context);
@@ -77,10 +73,9 @@ public class GridAdapter extends BaseAdapter
         return linearLayout;
     }
 
-    public void getHeroDrawables()
-    {
-        for(int x = 0; x < images.length; x++)
-//            images[x] = context.getResources().getIdentifier(Utilities.nameToDrawable("hero", names.get(x), "small"), "drawable", context.getPackageName());
+    public void getHeroDrawables() {
+        for (int x = 0; x < images.length; x++) {
             images[x] = context.getResources().getIdentifier(Utilities.nameToDrawable("hero", names.get(x)), "drawable", context.getPackageName());
+        }
     }
 }

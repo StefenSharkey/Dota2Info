@@ -27,8 +27,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class HeroActivity extends Activity
-{
+public class HeroActivity extends Activity {
+
     private Hero currentHero;
     private ImageView imageView;
     private TextView textView;
@@ -36,8 +36,7 @@ public class HeroActivity extends Activity
     private XmlPullParser parser;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hero);
         Utilities.parents.push(getClass());
@@ -46,26 +45,23 @@ public class HeroActivity extends Activity
         Intent intent = getIntent();
         String value = intent.getStringExtra("hero");
         Log.wtf("Hero Value", value);
-        textView = (TextView)findViewById(R.id.hero_name);
+        textView = (TextView) findViewById(R.id.hero_name);
         textView.setText(value);
         getActionBar().setTitle(value);
         getHeroInfo();
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.hero, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         Utilities.printStack();
         int id = item.getItemId();
-        switch(id)
-        {
+        switch (id) {
             case android.R.id.home:
                 Utilities.parents.pop();
                 Intent parentActivityIntent = new Intent(this, Utilities.parents.pop());
@@ -78,49 +74,39 @@ public class HeroActivity extends Activity
                 builder.setTitle(currentHero.getName() + " " + getResources().getString(R.string.description));
                 Log.wtf("currentHero.getDescription()", currentHero.getDescription());
                 builder.setMessage(currentHero.getDescription());
-                builder.setNegativeButton(R.string.tips, new DialogInterface.OnClickListener()
-                {
+                builder.setNegativeButton(R.string.tips, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i)
-                    {
+                    public void onClick(DialogInterface dialogInterface, int i) {
                         AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
                         builder1.setTitle(currentHero.getName() + " " + getResources().getString(R.string.tips));
                         builder1.setMessage(formatTips());
-                        builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener()
-                        {
+                        builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i)
-                            {
+                            public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
                             }
                         });
                         builder1.create().show();
                     }
                 });
-                builder.setNeutralButton(R.string.notes, new DialogInterface.OnClickListener()
-                {
+                builder.setNeutralButton(R.string.notes, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i)
-                    {
+                    public void onClick(DialogInterface dialogInterface, int i) {
                         AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
                         builder1.setTitle(currentHero.getName() + " " + getResources().getString(R.string.ability_notes));
                         builder1.setMessage(formatNotes());
-                        builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener()
-                        {
+                        builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i)
-                            {
+                            public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
                             }
                         });
                         builder1.create().show();
                     }
                 });
-                builder.setPositiveButton(R.string.wiki, new DialogInterface.OnClickListener()
-                {
+                builder.setPositiveButton(R.string.wiki, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i)
-                    {
+                    public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://dota2.gamepedia.com/" + Utilities.nameToWebsite(currentHero.getName())));
                         startActivity(intent);
                     }
@@ -132,37 +118,31 @@ public class HeroActivity extends Activity
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         Utilities.parents.pop();
         finish();
     }
 
-    public void getHeroInfo()
-    {
+    public void getHeroInfo() {
         Log.wtf("getHeroInfo()", "Hello");
         parser = Xml.newPullParser();
 
         XmlPullParserFactory pullParserFactory;
-        try
-        {
+        try {
             pullParserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = pullParserFactory.newPullParser();
             InputStream inputStream = getApplicationContext().getAssets().open("heroes.xml");
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             parser.setInput(inputStream, null);
             parseHeroXML(parser);
-        } catch(XmlPullParserException e)
-        {
+        } catch (XmlPullParserException e) {
             e.printStackTrace();
-        } catch(IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void parseHeroXML(XmlPullParser parser) throws XmlPullParserException, IOException
-    {
+    private void parseHeroXML(XmlPullParser parser) throws XmlPullParserException, IOException {
         Log.wtf("parseHeroXML()", "Hello");
         int eventType = parser.getEventType();
         currentHero = null;
@@ -188,29 +168,27 @@ public class HeroActivity extends Activity
         String aghanims = null;
         ArrayList<String> notes = new ArrayList<String>();
 
-        while(eventType != XmlPullParser.END_DOCUMENT)
-        {
+        while (eventType != XmlPullParser.END_DOCUMENT) {
             String heroName;
-            switch(eventType) {
+            switch (eventType) {
                 case XmlPullParser.START_TAG:
                     heroName = parser.getName();
-                    if (heroName.equals("hero"))
+                    if (heroName.equals("hero")) {
                         currentHero = new Hero();
-                    else if (currentHero != null) {
-                        if (heroName.equals("name"))
+                    } else if (currentHero != null) {
+                        if (heroName.equals("name")) {
                             currentHero.setName(parser.nextText());
-                        else if(heroName.equals("damageType") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("damageType") && currentHero.getName().equals(textView.getText())) {
                             currentHero.setDamageType(parser.nextText());
-                        else if(heroName.equals("attribute") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("attribute") && currentHero.getName().equals(textView.getText())) {
                             currentHero.setAttribute(parser.nextText());
-                        else if(heroName.equals("faction") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("faction") && currentHero.getName().equals(textView.getText())) {
                             currentHero.setFaction(parser.nextText());
-                        else if(heroName.equals("description") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("description") && currentHero.getName().equals(textView.getText())) {
                             currentHero.setDescription(parser.nextText());
-                        else if(heroName.equals("role") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("role") && currentHero.getName().equals(textView.getText())) {
                             currentHero.addRole(parser.nextText());
-                        else if(heroName.equals("attributes") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("attributes") && currentHero.getName().equals(textView.getText())) {
                             ArrayList<Double> tmp = new ArrayList<Double>();
                             tmp.add(Double.parseDouble(parser.getAttributeValue(null, "strengthBase")));
                             tmp.add(Double.parseDouble(parser.getAttributeValue(null, "strengthGain")));
@@ -235,81 +213,72 @@ public class HeroActivity extends Activity
                             tmp.add(Double.parseDouble(parser.getAttributeValue(null, "baseMoveSpeed")));
                             tmp.add(Double.parseDouble(parser.getAttributeValue(null, "baseArmor")));
                             currentHero.addAttributes("baseStats", tmp);
-                        }
-                        else if(heroName.equals("tips") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("tips") && currentHero.getName().equals(textView.getText())) {
                             currentHero.addTip(parser.nextText());
-                        else if(heroName.equals("ability") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("ability") && currentHero.getName().equals(textView.getText())) {
                             name = parser.getAttributeValue(null, "name");
                             description = parser.getAttributeValue(null, "description");
                             ability = parser.getAttributeValue(null, "ability");
                             affects = parser.getAttributeValue(null, "affects");
-                            if(parser.getAttributeValue(null, "damage") != null)
+                            if (parser.getAttributeValue(null, "damage") != null) {
                                 damage = parser.getAttributeValue(null, "damage");
-                            if(parser.getAttributeValue(null, "orbOfVenom") != null)
+                            }
+                            if (parser.getAttributeValue(null, "orbOfVenom") != null) {
                                 orbOfVenom = Integer.parseInt(parser.getAttributeValue(null, "orbOfVenom")) == 1;
-                            if(parser.getAttributeValue(null, "blackKingBar") != null)
+                            }
+                            if (parser.getAttributeValue(null, "blackKingBar") != null) {
                                 blackKingBar = Integer.parseInt(parser.getAttributeValue(null, "blackKingBar"));
-                            if(parser.getAttributeValue(null, "linkensSphere") != null)
+                            }
+                            if (parser.getAttributeValue(null, "linkensSphere") != null) {
                                 linkensSphere = Integer.parseInt(parser.getAttributeValue(null, "linkensSphere"));
-                            if(parser.getAttributeValue(null, "diffusalBlade") != null)
+                            }
+                            if (parser.getAttributeValue(null, "diffusalBlade") != null) {
                                 diffusalBlade = Integer.parseInt(parser.getAttributeValue(null, "diffusalBlade"));
-                            if(parser.getAttributeValue(null, "mantaStyle") != null)
+                            }
+                            if (parser.getAttributeValue(null, "mantaStyle") != null) {
                                 mantaStyle = Integer.parseInt(parser.getAttributeValue(null, "mantaStyle"));
-                            if(parser.getAttributeValue(null, "cooldown") != null)
+                            }
+                            if (parser.getAttributeValue(null, "cooldown") != null) {
                                 cooldown = parser.getAttributeValue(null, "cooldown");
-                            if(parser.getAttributeValue(null, "mana") != null)
+                            }
+                            if (parser.getAttributeValue(null, "mana") != null) {
                                 mana = parser.getAttributeValue(null, "mana");
-                        }
-                        else if(heroName.equals("abilityAttributes") && currentHero.getName().equals(textView.getText()))
-                        {
+                            }
+                        } else if (heroName.equals("abilityAttributes") && currentHero.getName().equals(textView.getText())) {
                             Log.wtf("name", parser.getAttributeValue(null, "name"));
                             Log.wtf("value", parser.getAttributeValue(null, "value"));
                             attributes.put(parser.getAttributeValue(null, "name"), parser.getAttributeValue(null, "value"));
-                        }
-                        else if(heroName.equals("blackKingBar") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("blackKingBar") && currentHero.getName().equals(textView.getText())) {
                             blackKingBarDescription = parser.getAttributeValue(null, "description");
                             Log.wtf("Ability.toString()", description);
-                        }
-                        else if(heroName.equals("linkensSphere") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("linkensSphere") && currentHero.getName().equals(textView.getText())) {
                             linkensSphereDescription = parser.getAttributeValue(null, "description");
                             Log.wtf("Ability.toString()", description);
-                        }
-                        else if(heroName.equals("diffusalBlade") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("diffusalBlade") && currentHero.getName().equals(textView.getText())) {
                             diffusalBladeDescription = parser.getAttributeValue(null, "description");
                             Log.wtf("Ability.toString()", description);
-                        }
-                        else if(heroName.equals("mantaStyle") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("mantaStyle") && currentHero.getName().equals(textView.getText())) {
                             mantaStyleDescription = parser.getAttributeValue(null, "description");
                             Log.wtf("Ability.toString()", description);
-                        }
-                        else if(heroName.equals("altDescription") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("altDescription") && currentHero.getName().equals(textView.getText())) {
                             altDescription = parser.getAttributeValue(null, "description");
                             Log.wtf("Ability.toString()", description);
-                        }
-                        else if(heroName.equals("aghanims") && currentHero.getName().equals(textView.getText()))
-                        {
+                        } else if (heroName.equals("aghanims") && currentHero.getName().equals(textView.getText())) {
                             aghanims = parser.getAttributeValue(null, "description");
                             Log.wtf("Ability.toString()", description);
-                        }
-                        else if(heroName.equals("note") && currentHero.getName().equals(textView.getText()))
+                        } else if (heroName.equals("note") && currentHero.getName().equals(textView.getText())) {
                             notes.add(parser.nextText());
+                        }
                     }
                     break;
                 case XmlPullParser.END_TAG:
                     heroName = parser.getName();
-                    if (heroName.equalsIgnoreCase("hero") && currentHero != null && currentHero.getName().equals(textView.getText()))
-                    {
+                    if (heroName.equalsIgnoreCase("hero") && currentHero != null && currentHero.getName()
+                        .equals(textView.getText())) {
                         printHeroes(currentHero);
                         return;
-                    }
-                    else if (heroName.equalsIgnoreCase("ability") && currentHero != null && currentHero.getName().equals(textView.getText()))
-                    {
+                    } else if (heroName.equalsIgnoreCase("ability") && currentHero != null && currentHero.getName()
+                        .equals(textView.getText())) {
                         currentHero.addAbility(name, description, ability, affects, damage, attributes, orbOfVenom, blackKingBar, linkensSphere, diffusalBlade, mantaStyle, cooldown, mana, blackKingBarDescription, diffusalBladeDescription, linkensSphereDescription, mantaStyleDescription, altDescription, aghanims, notes);
 
                         name = null;
@@ -338,59 +307,54 @@ public class HeroActivity extends Activity
         }
     }
 
-    private void printHeroes(Hero hero)
-    {
+    private void printHeroes(Hero hero) {
         Log.wtf("printHeroes()", hero.getName());
         ArrayList<Double> stats;
 
-        textView = (TextView)findViewById(R.id.hero_name);
+        textView = (TextView) findViewById(R.id.hero_name);
         textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(Utilities.nameToDrawable("faction", hero.getFaction()), "drawable", getApplicationContext().getPackageName())), null, null, null);
 
-        imageView = (ImageView)findViewById(R.id.hero_picture);
+        imageView = (ImageView) findViewById(R.id.hero_picture);
         imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()), "drawable", getApplicationContext().getPackageName()));
 
-        textView = (TextView)findViewById(R.id.hero_damage_type);
+        textView = (TextView) findViewById(R.id.hero_damage_type);
         textView.setText(Utilities.formatRoles(hero));
 
-        if(hero.getAttribute().equals("Strength"))
-            imageView = (ImageView)findViewById(R.id.hero_strength_icon);
-        else if(hero.getAttribute().equals("Agility"))
-            imageView = (ImageView)findViewById(R.id.hero_agility_icon);
-        else if(hero.getAttribute().equals("Intelligence"))
-            imageView = (ImageView)findViewById(R.id.hero_intelligence_icon);
+        if (hero.getAttribute().equals("Strength")) {
+            imageView = (ImageView) findViewById(R.id.hero_strength_icon);
+        } else if (hero.getAttribute().equals("Agility")) {
+            imageView = (ImageView) findViewById(R.id.hero_agility_icon);
+        } else if (hero.getAttribute().equals("Intelligence")) {
+            imageView = (ImageView) findViewById(R.id.hero_intelligence_icon);
+        }
         imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("attribute", hero.getAttribute(), "main"), "drawable", getApplicationContext().getPackageName()));
 
         stats = hero.getAttributes("strength");
-        if(stats != null)
-        {
+        if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_strength);
             textView.setText(Utilities.formatStats(stats));
         }
 
         stats = hero.getAttributes("agility");
-        if(stats != null)
-        {
+        if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_agility);
             textView.setText(Utilities.formatStats(stats));
         }
 
         stats = hero.getAttributes("intelligence");
-        if(stats != null)
-        {
+        if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_intelligence);
             textView.setText(Utilities.formatStats(stats));
         }
 
         stats = hero.getAttributes("damage");
-        if(stats != null)
-        {
+        if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_damage);
             textView.setText(Utilities.formatDamage(stats));
         }
 
         stats = hero.getAttributes("baseStats");
-        if(stats != null)
-        {
+        if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_move_speed);
             textView.setText(Utilities.formatSpeed(stats.get(0).toString()));
 
@@ -398,15 +362,16 @@ public class HeroActivity extends Activity
             textView.setText(stats.get(1).toString());
         }
 
-        if(hero.getAbilities() != null)
-            for(Ability ability : hero.getAbilities())
+        if (hero.getAbilities() != null) {
+            for (Ability ability : hero.getAbilities()) {
                 printAbility(ability);
+            }
+        }
     }
 
-    public void printAbility(Ability ability)
-    {
+    public void printAbility(Ability ability) {
         Log.wtf("printAbility()", ability.getName());
-        LinearLayout heroAbilityParent = (LinearLayout)findViewById(R.id.hero_ability_parent);
+        LinearLayout heroAbilityParent = (LinearLayout) findViewById(R.id.hero_ability_parent);
         LinearLayout heroAbilityContainer = new LinearLayout(this);
         ImageView heroAbilityPicture = new ImageView(this);
         LinearLayout heroAbility = new LinearLayout(this);
@@ -455,12 +420,13 @@ public class HeroActivity extends Activity
         heroAbilityPicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 128));
         heroAbilityPicture.setAdjustViewBounds(true);
         Log.wtf("Utilities.nameToDrawable()", Utilities.nameToDrawable(currentHero.getName(), ability.getName()));
-        if(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0)
+        if (getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0) {
             heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
-        else if(ability.getName().equals(R.string.spell_immunity))
+        } else if (ability.getName().equals(R.string.spell_immunity)) {
             heroAbilityPicture.setImageResource(R.drawable.spell_immunity);
-        else
+        } else {
             heroAbilityPicture.setImageResource(R.drawable.unknown);
+        }
 
         heroAbility.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbility.setOrientation(LinearLayout.VERTICAL);
@@ -478,16 +444,17 @@ public class HeroActivity extends Activity
         heroAbilityOrbOfVenomIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityOrbOfVenomIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityOrbOfVenomIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if(ability.getOrbOfVenom() != null)
-            if(ability.getOrbOfVenom())
+        if (ability.getOrbOfVenom() != null) {
+            if (ability.getOrbOfVenom()) {
                 heroAbilityOrbOfVenomIcon.setImageResource(R.drawable.ability_orb_of_venom);
+            }
+        }
 
         heroAbilityBlackKingBarIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityBlackKingBarIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityBlackKingBarIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if(ability.getBlackKingBar() != null)
-            switch(ability.getBlackKingBar())
-            {
+        if (ability.getBlackKingBar() != null) {
+            switch (ability.getBlackKingBar()) {
                 case 0:
                     heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar_none);
                     break;
@@ -498,13 +465,13 @@ public class HeroActivity extends Activity
                     heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar);
                     break;
             }
+        }
 
         heroAbilityLinkensSphereIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityLinkensSphereIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityLinkensSphereIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if(ability.getLinkensSphere() != null)
-            switch(ability.getLinkensSphere())
-            {
+        if (ability.getLinkensSphere() != null) {
+            switch (ability.getLinkensSphere()) {
                 case 0:
                     heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere_none);
                     break;
@@ -515,13 +482,13 @@ public class HeroActivity extends Activity
                     heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere);
                     break;
             }
+        }
 
         heroAbilityDiffusalBladeIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityDiffusalBladeIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityDiffusalBladeIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if(ability.getDiffusalBlade() != null)
-            switch(ability.getDiffusalBlade())
-            {
+        if (ability.getDiffusalBlade() != null) {
+            switch (ability.getDiffusalBlade()) {
                 case 0:
                     heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade_none);
                     break;
@@ -532,14 +499,13 @@ public class HeroActivity extends Activity
                     heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade);
                     break;
             }
+        }
 
         heroAbilityMantaStyleIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityMantaStyleIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityMantaStyleIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if(ability.getMantaStyle() != null)
-        {
-            switch(ability.getMantaStyle())
-            {
+        if (ability.getMantaStyle() != null) {
+            switch (ability.getMantaStyle()) {
                 case 0:
                     heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style_none);
                     break;
@@ -571,11 +537,11 @@ public class HeroActivity extends Activity
         heroAbilityAbilityValue.setTextAppearance(getApplicationContext(), R.style.TextColor);
         heroAbilityAbilityValue.setText(ability.getAbility());
 
-        if(ability.getAffects() != null)
-        {
+        if (ability.getAffects() != null) {
             heroAbilityAffects.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAffects.setOrientation(LinearLayout.VERTICAL);
-            heroAbilityAffects.setPadding(Utilities.dpToPx(5, getResources()), 0, Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityAffects
+                .setPadding(Utilities.dpToPx(5, getResources()), 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityAffectsText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAffectsText.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -590,8 +556,7 @@ public class HeroActivity extends Activity
             heroAbilityAffectsValue.setText(ability.getAffects());
         }
 
-        if(ability.getDamage() != null)
-        {
+        if (ability.getDamage() != null) {
             heroAbilityDamage.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityDamage.setOrientation(LinearLayout.VERTICAL);
             heroAbilityDamage.setPadding(Utilities.dpToPx(5, getResources()), 0, Utilities.dpToPx(5, getResources()), 0);
@@ -624,22 +589,26 @@ public class HeroActivity extends Activity
         heroAbilityAbilityParent.addView(heroAbilityAffects);
         heroAbilityAbilityParent.addView(heroAbilityDamage);
         heroAbilityTitle.addView(heroAbilityName);
-        if(ability.getOrbOfVenom() != null)
+        if (ability.getOrbOfVenom() != null) {
             heroAbilityTitle.addView(heroAbilityOrbOfVenomIcon);
-        if(ability.getBlackKingBar() != null)
+        }
+        if (ability.getBlackKingBar() != null) {
             heroAbilityTitle.addView(heroAbilityBlackKingBarIcon);
-        if(ability.getLinkensSphere() != null)
+        }
+        if (ability.getLinkensSphere() != null) {
             heroAbilityTitle.addView(heroAbilityLinkensSphereIcon);
-        if(ability.getDiffusalBlade() != null)
+        }
+        if (ability.getDiffusalBlade() != null) {
             heroAbilityTitle.addView(heroAbilityDiffusalBladeIcon);
-        if(ability.getMantaStyle() != null)
+        }
+        if (ability.getMantaStyle() != null) {
             heroAbilityTitle.addView(heroAbilityMantaStyleIcon);
+        }
         heroAbility.addView(heroAbilityTitle);
         heroAbility.addView(heroAbilityAbilityParent);
         heroAbility.addView(heroAbilityDescription);
 
-        for(Map.Entry<String, String> attribute : ability.getAttributes().entrySet())
-        {
+        for (Map.Entry<String, String> attribute : ability.getAttributes().entrySet()) {
             LinearLayout heroAbilityAttribute = new LinearLayout(this);
             TextView heroAbilityAttributeText = new TextView(this);
             TextView heroAbilityAttributeValue = new TextView(this);
@@ -651,7 +620,7 @@ public class HeroActivity extends Activity
             heroAbilityAttributeText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAttributeText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
             heroAbilityAttributeText.setTextAppearance(getApplicationContext(), R.style.TextColor_Bold);
-            heroAbilityAttributeText.setMaxWidth(Utilities.getWidth(getWindowManager())/2);
+            heroAbilityAttributeText.setMaxWidth(Utilities.getWidth(getWindowManager()) / 2);
             heroAbilityAttributeText.setText(attribute.getKey() + ": ");
 
             heroAbilityAttributeValue.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -668,8 +637,7 @@ public class HeroActivity extends Activity
         heroAbilityMisc.setOrientation(LinearLayout.HORIZONTAL);
         heroAbilityMisc.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
-        if(ability.getCooldown() != null)
-        {
+        if (ability.getCooldown() != null) {
             heroAbilityCooldown.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityCooldown.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ability_cooldown, 0, 0, 0);
             heroAbilityCooldown.setCompoundDrawablePadding(Utilities.dpToPx(5, getResources()));
@@ -679,8 +647,7 @@ public class HeroActivity extends Activity
             heroAbilityCooldown.setText(ability.getCooldown());
         }
 
-        if(ability.getMana() != null)
-        {
+        if (ability.getMana() != null) {
             heroAbilityMana.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityMana.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ability_mana, 0, 0, 0);
             heroAbilityMana.setCompoundDrawablePadding(Utilities.dpToPx(5, getResources()));
@@ -690,8 +657,7 @@ public class HeroActivity extends Activity
             heroAbilityMana.setText(ability.getMana());
         }
 
-        if(ability.getBlackKingBarDescription() != null)
-        {
+        if (ability.getBlackKingBarDescription() != null) {
             heroAbilityBlackKingBar.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityBlackKingBar.setOrientation(LinearLayout.HORIZONTAL);
             heroAbilityBlackKingBar.setGravity(Gravity.CENTER_VERTICAL);
@@ -708,15 +674,15 @@ public class HeroActivity extends Activity
             heroAbilityBlackKingBarDescription.setText(ability.getBlackKingBarDescription());
         }
 
-        if(ability.getLinkensSphereDescription() != null)
-        {
+        if (ability.getLinkensSphereDescription() != null) {
             heroAbilityLinkensSphere.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityLinkensSphere.setOrientation(LinearLayout.HORIZONTAL);
             heroAbilityLinkensSphere.setGravity(Gravity.CENTER_VERTICAL);
             heroAbilityLinkensSphere.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityLinkensSpherePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityLinkensSpherePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityLinkensSpherePicture
+                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             heroAbilityLinkensSpherePicture.setImageDrawable(heroAbilityLinkensSphereIcon.getDrawable());
 
             heroAbilityLinkensSphereDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -726,15 +692,15 @@ public class HeroActivity extends Activity
             heroAbilityLinkensSphereDescription.setText(ability.getLinkensSphereDescription());
         }
 
-        if(ability.getDiffusalBladeDescription() != null)
-        {
+        if (ability.getDiffusalBladeDescription() != null) {
             heroAbilityDiffusalBlade.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityDiffusalBlade.setOrientation(LinearLayout.HORIZONTAL);
             heroAbilityDiffusalBlade.setGravity(Gravity.CENTER_VERTICAL);
             heroAbilityDiffusalBlade.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityDiffusalBladePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityDiffusalBladePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityDiffusalBladePicture
+                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             heroAbilityDiffusalBladePicture.setImageDrawable(heroAbilityDiffusalBladeIcon.getDrawable());
 
             heroAbilityDiffusalBladeDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -744,19 +710,20 @@ public class HeroActivity extends Activity
             heroAbilityDiffusalBladeDescription.setText(ability.getDiffusalBladeDescription());
         }
 
-        if(ability.getMantaStyleDescription() != null)
-        {
+        if (ability.getMantaStyleDescription() != null) {
             heroAbilityMantaStyle.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityMantaStyle.setOrientation(LinearLayout.HORIZONTAL);
             heroAbilityMantaStyle.setGravity(Gravity.CENTER_VERTICAL);
             heroAbilityMantaStyle.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityMantaStylePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityMantaStylePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
-            if(heroAbilityMantaStyleIcon.getDrawable() != null)
+            heroAbilityMantaStylePicture
+                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            if (heroAbilityMantaStyleIcon.getDrawable() != null) {
                 heroAbilityMantaStylePicture.setImageDrawable(heroAbilityMantaStyleIcon.getDrawable());
-            else
+            } else {
                 heroAbilityMantaStylePicture.setImageResource(R.drawable.ability_manta_style);
+            }
 
             heroAbilityMantaStyleDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityMantaStyleDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
@@ -765,15 +732,15 @@ public class HeroActivity extends Activity
             heroAbilityMantaStyleDescription.setText(ability.getMantaStyleDescription());
         }
 
-        if(ability.getAghanims() != null)
-        {
+        if (ability.getAghanims() != null) {
             heroAbilityAghanimsScepter.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAghanimsScepter.setOrientation(LinearLayout.HORIZONTAL);
             heroAbilityAghanimsScepter.setGravity(Gravity.CENTER_VERTICAL);
             heroAbilityAghanimsScepter.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityAghanimsScepterPicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityAghanimsScepterPicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityAghanimsScepterPicture
+                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             heroAbilityAghanimsScepterPicture.setImageResource(R.drawable.ability_aghanims_scepter);
 
             heroAbilityAghanimsScepterDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -789,70 +756,69 @@ public class HeroActivity extends Activity
         heroAbilityAltDescription.setTextAppearance(getApplicationContext(), R.style.TextColor_Italic);
         heroAbilityAltDescription.setText(ability.getAltDescription());
 
-        if(ability.getCooldown() != null || (ability.getCooldown() == null && ability.getMana() != null))
+        if (ability.getCooldown() != null || (ability.getCooldown() == null && ability.getMana() != null)) {
             heroAbilityMisc.addView(heroAbilityCooldown);
-        if(ability.getMana() != null)
+        }
+        if (ability.getMana() != null) {
             heroAbilityMisc.addView(heroAbilityMana);
+        }
         heroAbility.addView(heroAbilityMisc);
-        if(ability.getBlackKingBarDescription() != null)
-        {
+        if (ability.getBlackKingBarDescription() != null) {
             heroAbilityBlackKingBar.addView(heroAbilityBlackKingBarPicture);
             heroAbilityBlackKingBar.addView(heroAbilityBlackKingBarDescription);
             heroAbility.addView(heroAbilityBlackKingBar);
         }
-        if(ability.getLinkensSphereDescription() != null)
-        {
+        if (ability.getLinkensSphereDescription() != null) {
             heroAbilityLinkensSphere.addView(heroAbilityLinkensSpherePicture);
             heroAbilityLinkensSphere.addView(heroAbilityLinkensSphereDescription);
             heroAbility.addView(heroAbilityLinkensSphere);
         }
-        if(ability.getDiffusalBladeDescription() != null)
-        {
+        if (ability.getDiffusalBladeDescription() != null) {
             heroAbilityDiffusalBlade.addView(heroAbilityDiffusalBladePicture);
             heroAbilityDiffusalBlade.addView(heroAbilityDiffusalBladeDescription);
             heroAbility.addView(heroAbilityDiffusalBlade);
         }
-        if(ability.getMantaStyleDescription() != null)
-        {
+        if (ability.getMantaStyleDescription() != null) {
             heroAbilityMantaStyle.addView(heroAbilityMantaStylePicture);
             heroAbilityMantaStyle.addView(heroAbilityMantaStyleDescription);
             heroAbility.addView(heroAbilityMantaStyle);
         }
-        if(ability.getAghanims() != null)
-        {
+        if (ability.getAghanims() != null) {
             heroAbilityAghanimsScepter.addView(heroAbilityAghanimsScepterPicture);
             heroAbilityAghanimsScepter.addView(heroAbilityAghanimsScepterDescription);
             heroAbility.addView(heroAbilityAghanimsScepter);
         }
-        if(ability.getAltDescription() != null)
+        if (ability.getAltDescription() != null) {
             heroAbility.addView(heroAbilityAltDescription);
+        }
         heroAbilityContainer.addView(heroAbilityPicture);
         heroAbilityContainer.addView(heroAbility);
         heroAbilityParent.addView(heroAbilityContainer);
     }
 
-    public String formatNotes()
-    {
+    public String formatNotes() {
         String notes = "";
-        if(currentHero.getAbilities().size() == 0)
+        if (currentHero.getAbilities().size() == 0) {
             return notes;
-        for(Ability ability : currentHero.getAbilities())
-        {
+        }
+        for (Ability ability : currentHero.getAbilities()) {
             notes += ability.getName() + ":\n";
-            for(String s : ability.getNotes())
+            for (String s : ability.getNotes()) {
                 notes += "* " + s + "\n";
+            }
             notes += "\n";
         }
-        return notes.substring(0, notes.length()-2);
+        return notes.substring(0, notes.length() - 2);
     }
 
-    public String formatTips()
-    {
+    public String formatTips() {
         String tips = "";
-        if(currentHero.getTips().size() == 0)
+        if (currentHero.getTips().size() == 0) {
             return tips;
-        for(String tip : currentHero.getTips())
+        }
+        for (String tip : currentHero.getTips()) {
             tips += "*" + tip + "\n\n";
-        return tips.substring(0, tips.length()-4);
+        }
+        return tips.substring(0, tips.length() - 4);
     }
 }

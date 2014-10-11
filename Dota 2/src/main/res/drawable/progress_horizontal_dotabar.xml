@@ -2,16 +2,16 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@android:id/background"
-          android:drawable="@drawable/progress_bg_dotabar" />
+          android:drawable="@drawable/progress_bg_dotabar"/>
 
     <item android:id="@android:id/secondaryProgress">
         <scale android:scaleWidth="100%"
-               android:drawable="@drawable/progress_secondary_dotabar" />
+               android:drawable="@drawable/progress_secondary_dotabar"/>
     </item>
 
     <item android:id="@android:id/progress">
         <scale android:scaleWidth="100%"
-               android:drawable="@drawable/progress_primary_dotabar" />
+               android:drawable="@drawable/progress_primary_dotabar"/>
     </item>
 
 </layer-list>

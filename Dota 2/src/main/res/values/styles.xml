@@ -39,11 +39,11 @@
         <item name="background">@drawable/ab_transparent_dotabar</item>
         <item name="progressBarStyle">@style/ProgressBar.Dotabar</item>
     </style>
-	
-    <style name="PopupMenu.Dotabar" parent="@style/Widget.AppCompat.PopupMenu">	
-        <item name="android:popupBackground">@drawable/menu_dropdown_panel_dotabar</item>	
+
+    <style name="PopupMenu.Dotabar" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_dotabar</item>
     </style>
-	
+
     <style name="DropDownListView.Dotabar" parent="@style/Widget.AppCompat.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_dotabar</item>
     </style>
@@ -51,21 +51,21 @@
     <style name="ActionBarTabStyle.Dotabar" parent="@style/Widget.AppCompat.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_dotabar</item>
     </style>
-	
+
     <style name="DropDownNav.Dotabar" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
         <item name="android:background">@drawable/spinner_background_ab_dotabar</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_dotabar</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_dotabar</item>
     </style>
-    
+
     <style name="ProgressBar.Dotabar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_dotabar</item>
     </style>
-    
+
     <style name="ActionButton.CloseMode.Dotabar" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_dotabar</item>
     </style>
-    
+
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Dotabar.Widget" parent="@style/Theme.AppCompat">
         <item name="popupMenuStyle">@style/PopupMenu.Dotabar</item>

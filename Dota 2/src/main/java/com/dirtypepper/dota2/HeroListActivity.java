@@ -13,39 +13,35 @@ import android.widget.GridView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class HeroListActivity extends Activity implements GridView.OnItemClickListener
-{
+public class HeroListActivity extends Activity implements GridView.OnItemClickListener {
+
     private ArrayList<String> heroesList;
 
     private GridView gridView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hero_list);
         Utilities.parents.push(getClass());
 
         heroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
 
-        gridView = (GridView)findViewById(R.id.grid_view);
+        gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(new GridAdapter(getApplicationContext()));
 
         gridView.setOnItemClickListener(this);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch(id)
-        {
+        switch (id) {
             case android.R.id.home:
                 Utilities.parents.pop();
                 Intent parentActivityIntent = new Intent(this, Utilities.parents.pop());
@@ -58,8 +54,7 @@ public class HeroListActivity extends Activity implements GridView.OnItemClickLi
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
-    {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
         Log.wtf("view", String.valueOf(position));
 
         Intent intent = new Intent(HeroListActivity.this, HeroActivity.class);
@@ -68,8 +63,7 @@ public class HeroListActivity extends Activity implements GridView.OnItemClickLi
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         Utilities.parents.pop();
         finish();
     }

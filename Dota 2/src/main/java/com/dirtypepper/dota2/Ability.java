@@ -3,8 +3,8 @@ package com.dirtypepper.dota2;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Ability
-{
+public class Ability {
+
     private String name;
     private String description;
     private String ability;
@@ -26,8 +26,7 @@ public class Ability
     private String aghanims;
     private ArrayList<String> notes;
 
-    public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, Boolean orbOfVenom, Integer blacKingBar, Integer linkensSphere, Integer diffusalBlade, Integer mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes)
-    {
+    public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, Boolean orbOfVenom, Integer blacKingBar, Integer linkensSphere, Integer diffusalBlade, Integer mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
         this.name = name;
         this.description = description;
         this.ability = ability;
@@ -50,108 +49,87 @@ public class Ability
         this.notes = notes;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public String getDescription()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public String getAbility()
-    {
+    public String getAbility() {
         return ability;
     }
 
-    public String getAffects()
-    {
+    public String getAffects() {
         return affects;
     }
 
-    public String getDamage()
-    {
+    public String getDamage() {
         return damage;
     }
 
-    public Map<String, String> getAttributes()
-    {
+    public Map<String, String> getAttributes() {
         return attributes;
     }
 
-    public Boolean getOrbOfVenom()
-    {
+    public Boolean getOrbOfVenom() {
         return orbOfVenom;
     }
 
-    public Integer getBlackKingBar()
-    {
+    public Integer getBlackKingBar() {
         return blackKingBar;
     }
 
-    public Integer getLinkensSphere()
-    {
+    public Integer getLinkensSphere() {
         return linkensSphere;
     }
 
-    public Integer getDiffusalBlade()
-    {
+    public Integer getDiffusalBlade() {
         return diffusalBlade;
     }
 
-    public Integer getMantaStyle()
-    {
+    public Integer getMantaStyle() {
         return mantaStyle;
     }
 
-    public String getCooldown()
-    {
+    public String getCooldown() {
         return cooldown;
     }
 
-    public String getMana()
-    {
+    public String getMana() {
         return mana;
     }
 
-    public String getBlackKingBarDescription()
-    {
+    public String getBlackKingBarDescription() {
         return blackKingBarDescription;
     }
 
-    public String getLinkensSphereDescription()
-    {
+    public String getLinkensSphereDescription() {
         return linkensSphereDescription;
     }
 
-    public String getDiffusalBladeDescription()
-    {
+    public String getDiffusalBladeDescription() {
         return diffusalBladeDescription;
     }
 
-    public String getMantaStyleDescription()
-    {
+    public String getMantaStyleDescription() {
         return mantaStyleDescription;
     }
 
-    public String getAltDescription()
-    {
+    public String getAltDescription() {
         return altDescription;
     }
 
-    public String getAghanims()
-    {
+    public String getAghanims() {
         return aghanims;
     }
 
-    public ArrayList<String> getNotes()
-    {
+    public ArrayList<String> getNotes() {
         return notes;
     }
 
-    public String toString()
-    {
+    public String toString() {
         return getName() + " | " + getDescription() + " | " + getAbility() + " | " + getAffects() + " | " + getDamage();
     }
 }

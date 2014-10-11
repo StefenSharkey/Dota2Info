@@ -39,7 +39,7 @@
         <item name="android:background">@drawable/ab_transparent_dotabar</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Dotabar</item>
     </style>
-    
+
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Dotabar.Widget" parent="@style/Theme.AppCompat">
         <item name="android:popupMenuStyle">@style/PopupMenu.Dotabar</item>

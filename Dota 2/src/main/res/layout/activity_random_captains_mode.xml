@@ -7,33 +7,33 @@
               android:paddingLeft="5dp"
               android:paddingRight="5dp">
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
+            android:layout_height="match_parent">
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:baselineAligned="false"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:baselineAligned="false"
+                        android:orientation="vertical">
                     <LinearLayout android:id="@+id/ban_hero_1"
                                   android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
                                   android:orientation="vertical">
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            style="@style/TextColor"
-                            android:text="@string/ban_1"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/ban_1"/>
                         <ImageView android:id="@+id/ban_hero_1_picture"
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"/>
@@ -44,12 +44,12 @@
                                   style="@style/TextColor"
                                   android:textSize="14sp"/>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
                             <CheckBox android:id="@+id/ban_hero_1_checkbox"
                                       android:layout_width="wrap_content"
-                                      android:layout_height="wrap_content" />
+                                      android:layout_height="wrap_content"/>
                             <Button android:id="@+id/ban_hero_1_repick"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -63,12 +63,12 @@
                                   android:layout_height="wrap_content"
                                   android:orientation="vertical">
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            style="@style/TextColor"
-                            android:text="@string/ban_2"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/ban_2"/>
                         <ImageView android:id="@+id/ban_hero_2_picture"
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"/>
@@ -79,12 +79,12 @@
                                   style="@style/TextColor"
                                   android:textSize="14sp"/>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
                             <CheckBox android:id="@+id/ban_hero_2_checkbox"
                                       android:layout_width="wrap_content"
-                                      android:layout_height="wrap_content" />
+                                      android:layout_height="wrap_content"/>
                             <Button android:id="@+id/ban_hero_2_repick"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -95,32 +95,32 @@
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
                         android:layout_weight="1"
                         android:orientation="vertical">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                         <LinearLayout android:id="@+id/pick_hero_1"
                                       android:layout_width="match_parent"
                                       android:layout_height="wrap_content"
                                       android:layout_weight="1"
                                       android:orientation="vertical">
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_1"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="14sp"
+                                    style="@style/TextColor"
+                                    android:text="@string/pick_1"/>
                             <ImageView android:id="@+id/pick_hero_1_picture"
                                        android:layout_width="match_parent"
                                        android:layout_height="wrap_content"/>
@@ -131,12 +131,12 @@
                                       style="@style/TextColor"
                                       android:textSize="14sp"/>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
                                 <CheckBox android:id="@+id/pick_hero_1_checkbox"
                                           android:layout_width="wrap_content"
-                                          android:layout_height="wrap_content" />
+                                          android:layout_height="wrap_content"/>
                                 <Button android:id="@+id/pick_hero_1_repick"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -151,12 +151,12 @@
                                       android:layout_weight="1"
                                       android:orientation="vertical">
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_2"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="14sp"
+                                    style="@style/TextColor"
+                                    android:text="@string/pick_2"/>
                             <ImageView android:id="@+id/pick_hero_2_picture"
                                        android:layout_width="match_parent"
                                        android:layout_height="wrap_content"/>
@@ -167,12 +167,12 @@
                                       style="@style/TextColor"
                                       android:textSize="14sp"/>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
                                 <CheckBox android:id="@+id/pick_hero_2_checkbox"
                                           android:layout_width="wrap_content"
-                                          android:layout_height="wrap_content" />
+                                          android:layout_height="wrap_content"/>
                                 <Button android:id="@+id/pick_hero_2_repick"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -183,34 +183,34 @@
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:baselineAligned="false"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:baselineAligned="false"
+                        android:orientation="vertical">
                     <LinearLayout android:id="@+id/ban_hero_3"
                                   android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
                                   android:orientation="vertical">
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            style="@style/TextColor"
-                            android:text="@string/ban_3"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/ban_3"/>
                         <ImageView android:id="@+id/ban_hero_3_picture"
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"/>
@@ -221,12 +221,12 @@
                                   style="@style/TextColor"
                                   android:textSize="14sp"/>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
                             <CheckBox android:id="@+id/ban_hero_3_checkbox"
                                       android:layout_width="wrap_content"
-                                      android:layout_height="wrap_content" />
+                                      android:layout_height="wrap_content"/>
                             <Button android:id="@+id/ban_hero_3_repick"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -240,12 +240,12 @@
                                   android:layout_height="wrap_content"
                                   android:orientation="vertical">
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            style="@style/TextColor"
-                            android:text="@string/ban_4"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/ban_4"/>
                         <ImageView android:id="@+id/ban_hero_4_picture"
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"/>
@@ -256,12 +256,12 @@
                                   style="@style/TextColor"
                                   android:textSize="14sp"/>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
                             <CheckBox android:id="@+id/ban_hero_4_checkbox"
                                       android:layout_width="wrap_content"
-                                      android:layout_height="wrap_content" />
+                                      android:layout_height="wrap_content"/>
                             <Button android:id="@+id/ban_hero_4_repick"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -272,32 +272,32 @@
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
                         android:layout_weight="1"
                         android:orientation="vertical">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                         <LinearLayout android:id="@+id/pick_hero_3"
                                       android:layout_width="match_parent"
                                       android:layout_height="wrap_content"
                                       android:layout_weight="1"
                                       android:orientation="vertical">
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_3"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="14sp"
+                                    style="@style/TextColor"
+                                    android:text="@string/pick_3"/>
                             <ImageView android:id="@+id/pick_hero_3_picture"
                                        android:layout_width="match_parent"
                                        android:layout_height="wrap_content"/>
@@ -308,12 +308,12 @@
                                       style="@style/TextColor"
                                       android:textSize="14sp"/>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
                                 <CheckBox android:id="@+id/pick_hero_3_checkbox"
                                           android:layout_width="wrap_content"
-                                          android:layout_height="wrap_content" />
+                                          android:layout_height="wrap_content"/>
                                 <Button android:id="@+id/pick_hero_3_repick"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -328,12 +328,12 @@
                                       android:layout_weight="1"
                                       android:orientation="vertical">
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_4"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="14sp"
+                                    style="@style/TextColor"
+                                    android:text="@string/pick_4"/>
                             <ImageView android:id="@+id/pick_hero_4_picture"
                                        android:layout_width="match_parent"
                                        android:layout_height="wrap_content"/>
@@ -344,12 +344,12 @@
                                       style="@style/TextColor"
                                       android:textSize="14sp"/>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
                                 <CheckBox android:id="@+id/pick_hero_4_checkbox"
                                           android:layout_width="wrap_content"
-                                          android:layout_height="wrap_content" />
+                                          android:layout_height="wrap_content"/>
                                 <Button android:id="@+id/pick_hero_4_repick"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -360,34 +360,34 @@
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:baselineAligned="false"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:baselineAligned="false"
+                        android:orientation="vertical">
                     <LinearLayout android:id="@+id/ban_hero_5"
                                   android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
                                   android:orientation="vertical">
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            style="@style/TextColor"
-                            android:text="@string/ban_5"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/ban_5"/>
                         <ImageView android:id="@+id/ban_hero_5_picture"
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"/>
@@ -398,12 +398,12 @@
                                   style="@style/TextColor"
                                   android:textSize="14sp"/>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
                             <CheckBox android:id="@+id/ban_hero_5_checkbox"
                                       android:layout_width="wrap_content"
-                                      android:layout_height="wrap_content" />
+                                      android:layout_height="wrap_content"/>
                             <Button android:id="@+id/ban_hero_5_repick"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -414,19 +414,19 @@
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1">
-                        <LinearLayout
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                    <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2">
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2">
                         </LinearLayout>
                         <LinearLayout android:id="@+id/pick_hero_5"
                                       android:layout_width="match_parent"
@@ -434,12 +434,12 @@
                                       android:layout_weight="1"
                                       android:orientation="vertical">
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_5"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="14sp"
+                                    style="@style/TextColor"
+                                    android:text="@string/pick_5"/>
                             <ImageView android:id="@+id/pick_hero_5_picture"
                                        android:layout_width="match_parent"
                                        android:layout_height="wrap_content"/>
@@ -450,12 +450,12 @@
                                       style="@style/TextColor"
                                       android:textSize="14sp"/>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
                                 <CheckBox android:id="@+id/pick_hero_5_checkbox"
                                           android:layout_width="wrap_content"
-                                          android:layout_height="wrap_content" />
+                                          android:layout_height="wrap_content"/>
                                 <Button android:id="@+id/pick_hero_5_repick"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -465,9 +465,9 @@
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="2">
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2">
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
