@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Non focused states -->
-    <item android:state_focused="false" android:state_selected="false" android:state_pressed="false"
-          android:drawable="@drawable/tab_unselected_dotabar"/>
-    <item android:state_focused="false" android:state_selected="true" android:state_pressed="false"
-          android:drawable="@drawable/tab_selected_dotabar"/>
+    <item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_unselected_dotabar" />
+    <item android:state_focused="false" android:state_selected="true" android:state_pressed="false" android:drawable="@drawable/tab_selected_dotabar" />
 
     <!-- Focused states -->
-    <item android:state_focused="true" android:state_selected="false" android:state_pressed="false"
-          android:drawable="@drawable/tab_unselected_focused_dotabar"/>
-    <item android:state_focused="true" android:state_selected="true" android:state_pressed="false"
-          android:drawable="@drawable/tab_selected_focused_dotabar"/>
+    <item android:state_focused="true" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_unselected_focused_dotabar" />
+    <item android:state_focused="true" android:state_selected="true" android:state_pressed="false" android:drawable="@drawable/tab_selected_focused_dotabar" />
 
     <!-- Pressed -->
     <!--    Non focused states -->
-    <item android:state_focused="false" android:state_selected="false" android:state_pressed="true"
-          android:drawable="@drawable/tab_unselected_pressed_dotabar"/>
-    <item android:state_focused="false" android:state_selected="true" android:state_pressed="true"
-          android:drawable="@drawable/tab_selected_pressed_dotabar"/>
+    <item android:state_focused="false" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_unselected_pressed_dotabar" />
+    <item android:state_focused="false" android:state_selected="true" android:state_pressed="true" android:drawable="@drawable/tab_selected_pressed_dotabar" />
 
     <!--    Focused states -->
-    <item android:state_focused="true" android:state_selected="false" android:state_pressed="true"
-          android:drawable="@drawable/tab_unselected_pressed_dotabar"/>
-    <item android:state_focused="true" android:state_selected="true" android:state_pressed="true"
-          android:drawable="@drawable/tab_selected_pressed_dotabar"/>
+    <item android:state_focused="true" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_unselected_pressed_dotabar" />
+    <item android:state_focused="true" android:state_selected="true" android:state_pressed="true" android:drawable="@drawable/tab_selected_pressed_dotabar" />
 </selector>
