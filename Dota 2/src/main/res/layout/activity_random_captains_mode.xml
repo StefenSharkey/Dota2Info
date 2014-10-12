@@ -29,13 +29,14 @@
                     android:baselineAligned="false"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/ban_hero_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/ban_hero_1_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -45,44 +46,52 @@
 
                         <ImageView
                             android:id="@+id/ban_hero_1_picture"
+                            android:layout_below="@id/ban_hero_1_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                         <TextView
                             android:id="@+id/ban_hero_1_name"
+                            android:layout_below="@id/ban_hero_1_picture"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             style="@style/TextColor"
                             android:textSize="14sp" />
 
-                        <LinearLayout
+                        <RelativeLayout
+                            android:layout_below="@id/ban_hero_1_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <CheckBox
-                                android:id="@+id/ban_hero_1_checkbox"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
                             <Button
                                 android:id="@+id/ban_hero_1_repick"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
                                 android:textSize="14sp"
                                 style="@style/TextColor"
                                 android:text="@string/repick" />
-                        </LinearLayout>
-                    </LinearLayout>
 
-                    <LinearLayout
+                            <CheckBox
+                                android:id="@+id/ban_hero_1_checkbox"
+                                android:layout_toStartOf="@id/ban_hero_1_repick"
+                                android:layout_toLeftOf="@id/ban_hero_1_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:id="@+id/ban_hero_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/ban_hero_2_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -92,158 +101,164 @@
 
                         <ImageView
                             android:id="@+id/ban_hero_2_picture"
+                            android:layout_below="@id/ban_hero_2_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                         <TextView
                             android:id="@+id/ban_hero_2_name"
+                            android:layout_below="@id/ban_hero_2_picture"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             style="@style/TextColor"
                             android:textSize="14sp" />
 
-                        <LinearLayout
+                        <RelativeLayout
+                            android:layout_below="@id/ban_hero_2_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <CheckBox
-                                android:id="@+id/ban_hero_2_checkbox"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
                             <Button
                                 android:id="@+id/ban_hero_2_repick"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
                                 android:textSize="14sp"
                                 style="@style/TextColor"
                                 android:text="@string/repick" />
-                        </LinearLayout>
-                    </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/ban_hero_2_checkbox"
+                                android:layout_toStartOf="@id/ban_hero_2_repick"
+                                android:layout_toLeftOf="@id/ban_hero_2_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:baselineAligned="false"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_weight="1">
 
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/pick_hero_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:orientation="vertical"></LinearLayout>
+                        android:orientation="vertical">
 
-                    <LinearLayout
-                        android:baselineAligned="false"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:id="@+id/pick_hero_1"
+                        <TextView
+                            android:id="@+id/pick_hero_1_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            style="@style/TextColor"
+                            android:text="@string/pick_1" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_1" />
+                        <ImageView
+                            android:id="@+id/pick_hero_1_picture"
+                            android:layout_below="@id/pick_hero_1_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
 
-                            <ImageView
-                                android:id="@+id/pick_hero_1_picture"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <TextView
-                                android:id="@+id/pick_hero_1_name"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                style="@style/TextColor"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:id="@+id/pick_hero_1_checkbox"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                                <Button
-                                    android:id="@+id/pick_hero_1_repick"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    style="@style/TextColor"
-                                    android:text="@string/repick" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/pick_hero_2"
+                        <TextView
+                            android:id="@+id/pick_hero_1_name"
+                            android:layout_below="@id/pick_hero_1_picture"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            style="@style/TextColor"
+                            android:textSize="14sp" />
 
-                            <TextView
-                                android:layout_width="match_parent"
+                        <RelativeLayout
+                            android:layout_below="@id/pick_hero_1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/pick_hero_1_repick"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
+                                android:layout_centerInParent="true"
                                 android:textSize="14sp"
                                 style="@style/TextColor"
-                                android:text="@string/pick_2" />
+                                android:text="@string/repick" />
 
-                            <ImageView
-                                android:id="@+id/pick_hero_2_picture"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <TextView
-                                android:id="@+id/pick_hero_2_name"
-                                android:layout_width="match_parent"
+                            <CheckBox
+                                android:id="@+id/pick_hero_1_checkbox"
+                                android:layout_toStartOf="@id/pick_hero_1_repick"
+                                android:layout_toLeftOf="@id/pick_hero_1_repick"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                style="@style/TextColor"
-                                android:textSize="14sp" />
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:id="@+id/pick_hero_2_checkbox"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                                <Button
-                                    android:id="@+id/pick_hero_2_repick"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    style="@style/TextColor"
-                                    android:text="@string/repick" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/pick_hero_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:orientation="vertical"></LinearLayout>
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pick_hero_2_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            style="@style/TextColor"
+                            android:text="@string/pick_2" />
+
+                        <ImageView
+                            android:id="@+id/pick_hero_2_picture"
+                            android:layout_below="@id/pick_hero_2_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/pick_hero_2_name"
+                            android:layout_below="@id/pick_hero_2_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            style="@style/TextColor"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_below="@id/pick_hero_2_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/pick_hero_2_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/repick" />
+
+                            <CheckBox
+                                android:id="@+id/pick_hero_2_checkbox"
+                                android:layout_toStartOf="@id/pick_hero_2_repick"
+                                android:layout_toLeftOf="@id/pick_hero_2_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
 
@@ -260,13 +275,14 @@
                     android:baselineAligned="false"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/ban_hero_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/ban_hero_3_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -276,44 +292,52 @@
 
                         <ImageView
                             android:id="@+id/ban_hero_3_picture"
+                            android:layout_below="@id/ban_hero_3_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                         <TextView
                             android:id="@+id/ban_hero_3_name"
+                            android:layout_below="@id/ban_hero_3_picture"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             style="@style/TextColor"
                             android:textSize="14sp" />
 
-                        <LinearLayout
+                        <RelativeLayout
+                            android:layout_below="@id/ban_hero_3_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <CheckBox
-                                android:id="@+id/ban_hero_3_checkbox"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
                             <Button
                                 android:id="@+id/ban_hero_3_repick"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
                                 android:textSize="14sp"
                                 style="@style/TextColor"
                                 android:text="@string/repick" />
-                        </LinearLayout>
-                    </LinearLayout>
 
-                    <LinearLayout
+                            <CheckBox
+                                android:id="@+id/ban_hero_3_checkbox"
+                                android:layout_toStartOf="@id/ban_hero_3_repick"
+                                android:layout_toLeftOf="@id/ban_hero_3_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:id="@+id/ban_hero_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/ban_hero_4_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -323,158 +347,164 @@
 
                         <ImageView
                             android:id="@+id/ban_hero_4_picture"
+                            android:layout_below="@id/ban_hero_4_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                         <TextView
                             android:id="@+id/ban_hero_4_name"
+                            android:layout_below="@id/ban_hero_4_picture"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             style="@style/TextColor"
                             android:textSize="14sp" />
 
-                        <LinearLayout
+                        <RelativeLayout
+                            android:layout_below="@id/ban_hero_4_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <CheckBox
-                                android:id="@+id/ban_hero_4_checkbox"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
                             <Button
                                 android:id="@+id/ban_hero_4_repick"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
                                 android:textSize="14sp"
                                 style="@style/TextColor"
                                 android:text="@string/repick" />
-                        </LinearLayout>
-                    </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/ban_hero_4_checkbox"
+                                android:layout_toStartOf="@id/ban_hero_4_repick"
+                                android:layout_toLeftOf="@id/ban_hero_4_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:baselineAligned="false"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_weight="1">
 
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/pick_hero_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:orientation="vertical"></LinearLayout>
+                        android:orientation="vertical">
 
-                    <LinearLayout
-                        android:baselineAligned="false"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:id="@+id/pick_hero_3"
+                        <TextView
+                            android:id="@+id/pick_hero_3_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            style="@style/TextColor"
+                            android:text="@string/pick_3" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_3" />
+                        <ImageView
+                            android:id="@+id/pick_hero_3_picture"
+                            android:layout_below="@id/pick_hero_3_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
 
-                            <ImageView
-                                android:id="@+id/pick_hero_3_picture"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <TextView
-                                android:id="@+id/pick_hero_3_name"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                style="@style/TextColor"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:id="@+id/pick_hero_3_checkbox"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                                <Button
-                                    android:id="@+id/pick_hero_3_repick"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    style="@style/TextColor"
-                                    android:text="@string/repick" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/pick_hero_4"
+                        <TextView
+                            android:id="@+id/pick_hero_3_name"
+                            android:layout_below="@id/pick_hero_3_picture"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            style="@style/TextColor"
+                            android:textSize="14sp" />
 
-                            <TextView
-                                android:layout_width="match_parent"
+                        <RelativeLayout
+                            android:layout_below="@id/pick_hero_3_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/pick_hero_3_repick"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
+                                android:layout_centerInParent="true"
                                 android:textSize="14sp"
                                 style="@style/TextColor"
-                                android:text="@string/pick_4" />
+                                android:text="@string/repick" />
 
-                            <ImageView
-                                android:id="@+id/pick_hero_4_picture"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <TextView
-                                android:id="@+id/pick_hero_4_name"
-                                android:layout_width="match_parent"
+                            <CheckBox
+                                android:id="@+id/pick_hero_3_checkbox"
+                                android:layout_toStartOf="@id/pick_hero_3_repick"
+                                android:layout_toLeftOf="@id/pick_hero_3_repick"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                style="@style/TextColor"
-                                android:textSize="14sp" />
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:id="@+id/pick_hero_4_checkbox"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                                <Button
-                                    android:id="@+id/pick_hero_4_repick"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    style="@style/TextColor"
-                                    android:text="@string/repick" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/pick_hero_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:orientation="vertical"></LinearLayout>
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pick_hero_4_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            style="@style/TextColor"
+                            android:text="@string/pick_4" />
+
+                        <ImageView
+                            android:id="@+id/pick_hero_4_picture"
+                            android:layout_below="@id/pick_hero_4_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/pick_hero_4_name"
+                            android:layout_below="@id/pick_hero_4_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            style="@style/TextColor"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_below="@id/pick_hero_4_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/pick_hero_4_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textSize="14sp"
+                                style="@style/TextColor"
+                                android:text="@string/repick" />
+
+                            <CheckBox
+                                android:id="@+id/pick_hero_4_checkbox"
+                                android:layout_toStartOf="@id/pick_hero_4_repick"
+                                android:layout_toLeftOf="@id/pick_hero_4_repick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
 
@@ -491,52 +521,50 @@
                     android:baselineAligned="false"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:id="@+id/ban_hero_5"
+                    <TextView
+                        android:id="@+id/ban_hero_5_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        style="@style/TextColor"
+                        android:text="@string/ban_5" />
 
-                        <TextView
-                            android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/ban_hero_5_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/ban_hero_5_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        style="@style/TextColor"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ban_hero_5_repick"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:layout_centerInParent="true"
                             android:textSize="14sp"
                             style="@style/TextColor"
-                            android:text="@string/ban_5" />
+                            android:text="@string/repick" />
 
-                        <ImageView
-                            android:id="@+id/ban_hero_5_picture"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/ban_hero_5_name"
-                            android:layout_width="match_parent"
+                        <CheckBox
+                            android:id="@+id/ban_hero_5_checkbox"
+                            android:layout_toStartOf="@id/ban_hero_5_repick"
+                            android:layout_toLeftOf="@id/ban_hero_5_repick"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            style="@style/TextColor"
-                            android:textSize="14sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <CheckBox
-                                android:id="@+id/ban_hero_5_checkbox"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                            <Button
-                                android:id="@+id/ban_hero_5_repick"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/repick" />
-                        </LinearLayout>
-                    </LinearLayout>
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -546,70 +574,51 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:baselineAligned="false"
+                    <TextView
+                        android:id="@+id/pick_hero_5_text"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1">
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        style="@style/TextColor"
+                        android:text="@string/pick_5" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/pick_hero_5_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/pick_hero_5_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        style="@style/TextColor"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_below="@id/pick_hero_5_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/pick_hero_5_repick"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2" />
+                            android:layout_centerInParent="true"
+                            android:textSize="14sp"
+                            style="@style/TextColor"
+                            android:text="@string/repick" />
 
-                        <LinearLayout
-                            android:id="@+id/pick_hero_5"
-                            android:layout_width="match_parent"
+                        <CheckBox
+                            android:id="@+id/pick_hero_5_checkbox"
+                            android:layout_toStartOf="@id/pick_hero_5_repick"
+                            android:layout_toLeftOf="@id/pick_hero_5_repick"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:textSize="14sp"
-                                style="@style/TextColor"
-                                android:text="@string/pick_5" />
-
-                            <ImageView
-                                android:id="@+id/pick_hero_5_picture"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <TextView
-                                android:id="@+id/pick_hero_5_name"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                style="@style/TextColor"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:id="@+id/pick_hero_5_checkbox"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                                <Button
-                                    android:id="@+id/pick_hero_5_repick"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    style="@style/TextColor"
-                                    android:text="@string/repick" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="2" />
-                    </LinearLayout>
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
