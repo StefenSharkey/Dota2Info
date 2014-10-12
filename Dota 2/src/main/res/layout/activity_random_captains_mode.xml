@@ -597,7 +597,6 @@
                         android:textSize="14sp" />
 
                     <RelativeLayout
-                        android:layout_below="@id/pick_hero_5_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
