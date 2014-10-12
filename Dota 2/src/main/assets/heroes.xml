@@ -782,7 +782,7 @@
             <damageMinimum>55</damageMinimum>
             <damageMaximum>61</damageMaximum>
             <baseMoveSpeed>315</baseMoveSpeed>
-            <baseArmor>4.14</baseArmor>
+            <baseArmor>4.08</baseArmor>
         </attributes>
         <ability
             name="Enfeeble"
@@ -806,7 +806,7 @@
             <blackKingBar description="Blocked by magic immunity, but can't be dispelled by it." />
             <altDescription description="Even the mightiest of warriors crumble before the terror of Atropos." />
             <note>Unable to target Ancients</note>
-            <note>Even if Black King Bar can block it, this spell can't be dispelled.</note>
+            <note>Cannot be dispelled.</note>
         </ability>
         <ability
             name="Brain Sap"
@@ -826,13 +826,14 @@
                 value="90/160/230/300"/>
             <altDescription description="Atropos finds no greater pleasure than to harvest the fear he creates." />
             <note>Bane always receives the full amount of health, regardless of the amount of damage dealt.</note>
+            <note>Deals damage before heal.</note>
         </ability>
         <ability
             name="Nightmare"
             description="Puts the target enemy or friendly Hero to sleep and deals damage per second. Sleeping units are awakened when attacked, but the Nightmare passes to the attacking unit."
             ability="Target Unit"
             affects="Units"
-            damage="HP Removal"
+            damage="Pure"
             blackKingBar="2"
             linkensSphere="2"
             diffusalBlade="0"
@@ -848,12 +849,13 @@
                 name="Health Drain per Second"
                 value="20"/>
             <altDescription description="A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep." />
-            <note>The target will wake up on receiving any type of damage other than HP Removal.</note>
-            <note>Nightmare deals damage to allies and himself, so it can be used to deny heroes or himself.</note>
-            <note>Any source of damage except Nightmare will awaken the unit, but only physical attacks cause the Nightmare to be transferred.</note>
+            <note>The target will wake up on receiving any type of damage other than Pure.</note>
+            <note>Nightmare can be used to deny heroes.</note>
+            <note>Only physical attacks cause the Nightmare to be transferred.</note>
             <note>In the first second of Nightmare, the unit is invulnerable.</note>
-            <note>Bane can wake himself up from Nightmare.</note>
+            <note>When Bane is in nightmare, he gains Nightmare End which can wake himself up from Nightmare.</note>
             <note>Deal a total of 80/100/120/140 damage.</note>
+            <note>Every time Nightmare is passed to another unit, its duration is refreshed.</note>
         </ability>
         <ability
             name="Nightmare End"
@@ -867,7 +869,7 @@
             ability="Channeled"
             affects="Enemies"
             damage="Magical"
-            blackKingBar="1"
+            blackKingBar="0"
             linkensSphere="2"
             diffusalBlade="0"
             cooldown="100"
@@ -883,30 +885,30 @@
                 value="100/155/215 (155/215/270*)"/>
             <abilityAttributes
                 name="Mana Transfer per Second"
-                value="5% (10%) of target's max mana"/>
-            <blackKingBar description="Will do no damage." />
-            <aghanims description="Increases damage per second, mana drain, and duration." />
+                value="5% (10%*) of target's max mana"/>
+            <aghanims description="Increases damage per second, mana drain, and duration. Anyone who attacks Bane while he is channeling will be afflicted with Nightmare." />
             <altDescription description="Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares." />
-            <note>Using Fiend's Grip on a magic immune unit will still disable and drain mana, but no damage will be dealt to the targeted unit.</note>
-            <note>Deal a total of 500/775/1075 (1085/1505/1890*) damage.</note>
+            <note>Using Fiend's Grip on a spell immune unit will still disable and drain mana.</note>
+            <note>Deal a total of 500/775/1075 (1085/1505/1890*) damage and drain a total of 25% (70%*) of the target's max mana.</note>
         </ability>
-        <tips>Between levels 6-12 Bane is comparatively a very powerful hero, and assuming you maxed his Brain Sap (as you should under all circumstances) you will be able to solo most heroes by means of Fiend's Grip followed by Brain Sap. It is necessary to get kills during this phase of the game; as if Bane is not well-geared and leveled up later in the game, he will be relegated to a support unit.</tips>
+        <tips>Between levels 6-12 Bane is comparatively a very powerful hero. If you maxed Brain Sap you will be able to solo kill most heroes by means of Fiend's Grip followed by Brain Sap. It is necessary to get kills during this phase of the game; as if Bane is not well-geared and leveled up later in the game, he will be relegated to a support unit.</tips>
         <tips>It is important for the player to judge when to change roles; as mentioned above, Bane should gank constantly in the middle of the game to gain a gold advantage and avoid getting shut down or subjugated to a conservative support role. A well-managed Bane can change the outcome of a team fight in the late game with effective use of items such as Necronomicon, Scythe of Vyse, and Aghanim's Scepter.</tips>
-        <tips>New or unseasoned players have a tendency to attack targets under Nightmare. Before the game starts, make sure to warn them about it.</tips>
         <tips>Bane is not an initiator; despite having two disables, he is far too delicate to withstand the initial retaliation. Instead, he should hide until such time as his abilities become crucial when the team fight has ensued(preventing escapes, finishing off enemy heroes with Brain Sap, etc.).</tips>
+        <tips>He can however initiate on out-of-position heroes with nightmare, wait for allies to get in position, take the nightmare and wake himself up.</tips>
         <tips>Avoid heroes with stuns, as they can interrupt Fiend's Grip. If you must deal with them, incapacitate them via Nightmare, a Scythe of Vyse, or Fiend's Grip itself. Picking Bane in a match against several heroes with disables is unwise. Black King Bar is typically an effective first major item to build on Bane if you need to help your team disable someone before they retaliate.</tips>
-        <tips>If the enemy team lack area-of-effect stuns or interrupts, a Shadow Blade can make your ultimate harder to stop, since your opponents must first reveal you and then interrupt you. As with all similar abilities, you can activate invisibility without breaking your channel. While Shadow Blade is also effective for ganking solo heroes and escaping, you should still get Black King Bar instead if the enemy team have ranged AoE interrupts such as those possessed by Lina, Drow, Dark Seer, Death Prophet etcetera.</tips>
+        <tips>If the enemy team lack area-of-effect stuns or interrupts, a Shadow Blade can make your ultimate harder to stop, since your opponents must first reveal you and then interrupt you. As with all similar abilities, you can activate invisibility without breaking your channel. While Shadow Blade is also effective for ganking solo heroes and escaping, you should still get Black King Bar instead if the enemy team have ranged AoE interrupts such as those possessed by Lina, Drow, Dark Seer, or Death Prophet, for example.</tips>
+        <tips>Bane is a strong mid-lane character. Enfeeble can severely weaken heroes reliant on physical damage to last hit, while Bane's strong ultimate and nuke allow him to solo almost any hero, while ganking should be no problem. Mid-lane also allows Bane to farm up his core items.</tips>
     </hero>
     <hero>
         <name>Batrider</name>
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <description>Batrider is a ranged intelligence hero who excels in lane control and harassing enemies, especially in the early phase of the game. Usually Batrider is played as a heavy support, items are not needed to utilise his abilties. Batrider is a mobile burst damage raider, capable of dealing enormous amounts of damage on stacks, at a risky close range. Before moving in for the kill, the Batrider hinders his targets with Sticky Napalm, a stacking debuff skill that slows his enemies and amplifies the damage taken from Batrider himself, be it with attacks, spells, or items. When his enemies are greatly crippled, he is ready to attack. With Flamebreak, he launches an explosive cocktail which damages and knocks back enemies in a targeted area. Then, the Batrider activates his Firefly ability, allowing the Batrider to fly high in the sky, creating a burning trail of liquid fire, scorching enemies who dare to go in his path, while giving him the ability to cross and phase through impassable grounds. With Sticky Napalm stacked, he is capable of amplifying and inflicting massive damage quickly, burning them with Flamebreak and Firefly. The Batrider then uses his ultimate, Flaming Lasso, which catches a target with a lasso, shackling and pulling them to his Firefly trail or to the clutches of his merciless allies. When these spells are used altogether, the Batrider is a dangerous enemy that enemies should be aware of, risking his own safety, but enough to cause fiery chaos and mass destruction.</description>
-        <role>Disabler</role>
-        <role>Escape</role>
+        <description>Batrider is a ranged intelligence hero who excels in lane control and harassing enemies, especially in the early phase of the game. Usually Batrider is played as a heavy support, items are not needed to utilise his abilties. Batrider is a mobile burst damage raider, capable of dealing enormous amounts of damage on stacks, at a risky close range. Before moving in for the kill, the Batrider hinders his targets with Sticky Napalm, a stacking debuff ability that slows his enemies and amplifies the damage taken from Batrider himself, be it with attacks, spells, or items. When his enemies are greatly crippled, he is ready to attack. With Flamebreak, he launches an explosive cocktail which damages and knocks back enemies in a targeted area. Then, the Batrider activates his Firefly ability, allowing the Batrider to fly high in the sky, creating a burning trail of liquid fire, scorching enemies who dare to go in his path, while giving him the ability to cross and phase through impassable grounds. With Sticky Napalm stacked, he is capable of amplifying and inflicting massive damage quickly, burning them with Flamebreak and Firefly. The Batrider then uses his ultimate, Flaming Lasso, which catches a target with a lasso, shackling and pulling them to his Firefly trail or to the clutches of his merciless allies. When these spells are used altogether, the Batrider is a dangerous enemy that enemies should be aware of, risking his own safety, but enough to cause fiery chaos and mass destruction.</description>
         <role>Initiator</role>
+        <role>Disabler</role>
         <role>Nuker</role>
+        <role>Escape</role>
         <attributes>
             <strengthBase>23</strengthBase>
             <strengthGain>2.4</strengthGain>
@@ -917,17 +919,17 @@
             <damageMinimum>38</damageMinimum>
             <damageMaximum>42</damageMaximum>
             <baseMoveSpeed>290</baseMoveSpeed>
-            <baseArmor>2.14</baseArmor>
+            <baseArmor>2.1</baseArmor>
         </attributes>
         <ability
             name="Sticky Napalm"
-            description="Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 stacks."
+            description="Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 stacks. The extra damage is halved against creeps."
             ability="Target Point"
             affects="Enemies"
             damage="Magical"
             blackKingBar="2"
             linkensSphere="0"
-            diffusalBlade="0"
+            diffusalBlade="2"
             cooldown="3"
             mana="20">
             <abilityAttributes
@@ -954,6 +956,8 @@
             <note>Sticky Napalm damage is calculated as extra damage per instance, meaning that if damage is calculated per tick (0.1 seconds) it will deal extra damage per tick.</note>
             <note>Damage from Sticky Napalm is dealt as a separate instance from each instance of damage it amplifies. This makes the ability exceptionally strong at tearing apart Templar Assassin's Refraction, and makes it stack with other amplification, such as Shadow Demon's Soul Catcher especially well.</note>
             <note>Provides vision around the target point.</note>
+            <note>Bonus damage is halved against non-hero units.</note>
+            <note>1 stack from sticky napalm gives the full turn-rate slow.</note>
         </ability>
         <ability
             name="Flamebreak"
@@ -982,7 +986,7 @@
         </ability>
         <ability
             name="Firefly"
-            description="Batrider takes to the skies, laying down a flaming trail from the air. While flying, the trail of fire destroys trees and damages enemies in its path, and Batrider gains the movement capabilities of a flying unit."
+            description="Batrider takes to the skies, laying down a trail of flames from the air. The fire damages any enemies it touches, and destroys trees below Batrider. While flying, Batrider gains unobstructed movement and vision."
             ability="No Target"
             affects="Enemies"
             damage="Magical"
@@ -1006,6 +1010,8 @@
             <note>The fire destroys trees when flying above them.</note>
             <note>Grants Batrider unobstructed vision, allowing him to see past trees and other obstacles.</note>
             <note>Can stack with itself.</note>
+            <note>The trail persists through Batrider's death.</note>
+            <note>Batrider neither triggers, nor takes damage from Land Mines during Firefly.</note>
         </ability>
         <ability
             name="Flaming Lasso"
@@ -1015,8 +1021,8 @@
             blackKingBar="0"
             linkensSphere="2"
             diffusalBlade="0"
-            cooldown="90/70/50"
-            mana="150">
+            cooldown="90/75/50"
+            mana="225">
             <abilityAttributes
                 name="Range"
                 value="100"/>
@@ -1027,6 +1033,7 @@
             <note>Killing Batrider or the target will break the lasso before its expiration.</note>
             <note>If Batrider moves more than 400 units in 0.05s the lasso breaks.</note>
             <note>Batrider cannot attack while using Flaming Lasso.</note>
+            <note>Target can be freed with Aphotic Shield or Press The Attack.</note>
         </ability>
     </hero>
     <hero>
@@ -1034,10 +1041,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <description>Karroch the Beastmaster is a melee strength hero whose unique power takes the form of summons with exaggerated unit utility. His thralls provide extreme amounts of sight and have ability to reduce the attackspeed of targeted units. In addition, he has the longest lasting single reliable stun in the game. He is an effective support with good disabling ability in team fights. His strengths lie primarily in the slow debuff his Boar inflicts and ability to easily provide vision at crucial locations on the map. His ultimate, the stunning Primal Roar and Wild Axes allow him to deal massive damage at a distance. Though he is able to easily take down undefended targets in the early game, most of his abilities do not directly combo with each other, although the debiliating effects he brings to a fight can greatly assist allies (along with his passive attack speed boost aura).</description>
+        <description>Karroch the Beastmaster is a melee strength hero whose versatility allows him to take on multiple roles. His hawks provide free flying vision and his boars can harass, slow, and stack jungle camps. His ultimate, Primal Roar, is the longest lasting single reliable stun in the game. He is an effective support with good disabling ability in team fights. His strengths lie primarily in the slow debuff his Boar inflicts and ability to easily provide vision at crucial locations on the map. His ultimate, the stunning Primal Roar and Wild Axes allow him to deal massive damage at a distance. Though he is able to easily take down undefended targets in the early game, most of his abilities do not directly combo with each other, although the debiliating effects he brings to a fight can greatly assist allies (along with his passive attack speed boost aura).</description>
+        <role>Initiator</role>
         <role>Disabler</role>
         <role>Durable</role>
-        <role>Initiator</role>
         <attributes>
             <strengthBase>23</strengthBase>
             <strengthGain>2.2</strengthGain>
@@ -1045,17 +1052,17 @@
             <agilityGain>1.6</agilityGain>
             <intelligenceBase>16</intelligenceBase>
             <intelligenceGain>1.9</intelligenceGain>
-            <damageMinimum>56</damageMinimum>
-            <damageMaximum>60</damageMaximum>
+            <damageMinimum>60</damageMinimum>
+            <damageMaximum>64</damageMaximum>
             <baseMoveSpeed>310</baseMoveSpeed>
-            <baseArmor>4.57</baseArmor>
+            <baseArmor>4.52</baseArmor>
         </attributes>
         <ability
             name="Wild Axes"
             description="Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once."
             ability="Target Point"
             affects="Enemies"
-            damage="Composite"
+            damage="Physical"
             blackKingBar="0"
             linkensSphere="0"
             cooldown="13"
@@ -1065,18 +1072,32 @@
                 value="1300"/>
             <abilityAttributes
                 name="Damage"
-                value="90/120/150/180"/>
+                value="70/100/130/160"/>
             <altDescription description="While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries." />
             <note>This ability destroys trees.</note>
+            <note>Doesn't damage ethereal units.</note>
+            <note>Damage is not blocked by damage block.</note>
             <note>The flying axes give flying vision.</note>
         </ability>
         <ability
             name="Call of the Wild (Hawk)"
-            description="Beastmaster calls allies in the form of a watchful Hawk. Level 1: Summons a Scout Hawk. Level 2: Summons a Scout Hawk. Level 3: Summons a Greater Hawk. Level 4: Summons a Greater Hawk."
+            description="Beastmaster calls a watchful Hawk."
             ability="No Target"
             affects="Self"
             cooldown="40"
             mana="15">
+            <abilityAttributes
+                name="Level 1"
+                value="Summons a Scout Hawk."/>
+            <abilityAttributes
+                name="Level 2"
+                value="Summons a Scout Hawk."/>
+            <abilityAttributes
+                name="Level 3"
+                value="Summons a Greater Hawk."/>
+            <abilityAttributes
+                name="Level 4"
+                value="Summons a Greater Hawk."/>
             <abilityAttributes
                 name="Hawk Duration"
                 value="60"/>
@@ -1084,17 +1105,30 @@
             <note>The hawk gives 30/30/65/65 gold.</note>
             <note>Uses a 0.3 cast point instead of the normal 0.5 cast point.</note>
             <note>Will not destroy a previous summon if this ability is used again before the Hawk's duration expires.</note>
+            <note>Neither triggers, nor takes damage from Land Mines.</note>
         </ability>
         <ability
             name="Call of the Wild (Boar)"
-            description="Beastmaster calls allies in the form of a powerful Boar. Level 1: Not Available. Level 2: Summons a Lesser Boar. Level 3: Summons a Lesser Boar. Level 4: Summons a Greater Boar."
+            description="Beastmaster calls a powerful Boar."
             ability="No Target"
             affects="Self"
             cooldown="40"
             mana="15">
             <abilityAttributes
+                name="Level 1"
+                value="Not available."/>
+            <abilityAttributes
+                name="Level 2"
+                value="Summons a Lesser Boar."/>
+            <abilityAttributes
+                name="Level 3"
+                value="Summons a Lesser Boar."/>
+            <abilityAttributes
+                name="Level 4"
+                value="Summons a Greater Boar."/>
+            <abilityAttributes
                 name="Boar Duration"
-                value="60"/>
+                value="0/60/60/60"/>
             <altDescription description="After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need." />
             <note>The boar gives 26-38 gold.</note>
             <note>Uses a 0.3 cast point instead of the normal 0.5 cast point.</note>
@@ -1112,6 +1146,7 @@
                 name="Bonus Attack Speed"
                 value="15/25/35/45"/>
             <altDescription description="Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom." />
+            <note>Affects all summons and illusions.</note>
         </ability>
         <ability
             name="Primal Roar"
@@ -1120,7 +1155,7 @@
             affects="Enemies"
             damage="Magical"
             blackKingBar="1"
-            linkensSphere="2"
+            linkensSphere="1"
             diffusalBlade="1"
             cooldown="80/75/70 (45*)"
             mana="150/175/200">
@@ -1132,7 +1167,7 @@
                 value="3/3.5/4"/>
             <abilityAttributes
                 name="Radius"
-                value="250"/>
+                value="300"/>
             <abilityAttributes
                 name="Movement Slow"
                 value="50%"/>
@@ -1145,29 +1180,28 @@
             <abilityAttributes
                 name="Damage"
                 value="200/250/300"/>
-            <abilityAttributes
-                name="Side Damage"
-                value="100/200/300"/>
-            <blackKingBar description="The damage is blocked, the stun or the push is not." />
-            <linkensSphere description="Blocked if user is target." />
-            <diffusalBlade description="Side target's slow can be purged, the main target's stun cannot." />
+            <blackKingBar description="Secondary targets under effect of Spell Immunity will be knocked back but not slowed." />
+            <linkensSphere description="Blocked on primary target. No interaction otherwise." />
+            <diffusalBlade description="Side target's slow can be purged." />
             <aghanims description="Decreases cooldown, increases cast range." />
-            <altDescription description="Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom." />
-            <note>The slow and stun go through magic immunity, but the damage does not.</note>
+            <altDescription description="The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies." />
             <note>Only enemy units are shoved aside from the path of the roar.</note>
-            <note>Primal Roar can be used on Couriers, but won't do any damage since couriers are magic immune.</note>
+            <note>Primal Roar can be used on Couriers to stun it, but it won't be damaged. Couriers are also not a valid target for the pushback.</note>
+            <note>Knockback speed is 500ms and distance is 300 units, so the knockback duration is 0.6 seconds.</note>
+            <note>The pushback and slow have a dynamic range, based on the distance between you and the primary target. The further away the target, the further the pushback and slow will reach beyond the target, and even a bit behind Beastmaster.</note>
         </ability>
         <tips>His Wild Axes skill is a powerful farming tool.</tips>
-        <tips>Beastmaster can stack/farm ancients incredibly effectively with Wild Axes since it can affect magic immune units.</tips>
-        <tips>Although his skills have a long range, Blink Dagger is still useful for lining up Primal Roar.</tips>
-        <tips>Beastmaster works well alongside carries who already have attack power but lack attack speed (Like Sven and Tiny) due to his attack speed boosting aura.</tips>
+        <tips>Beastmaster can stack/farm ancients incredibly effectively with Wild Axes since it can affect magic immune units. This can be very effectively used in Dire offlane (bottom), as he doesn't need to leave the lane to do so.</tips>
+        <tips>Although his abilities have a long range, Blink Dagger is still useful for lining up Primal Roar.</tips>
+        <tips>Beastmaster works well alongside carries who already have attack power but lack attack speed (Like Sven Sven and Tiny Tiny) due to his attack speed boosting aura.</tips>
+        <tips>If you buy Assault Cuirass, it will allow your main carry to focus on raw damage items, as he will already have 65 bonus attack speed from Beastmaster. It will also increase your whole team's survivability and physical damage output.</tips>
     </hero>
     <hero>
         <name>Bloodseeker</name>
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <description>Strygwyr the Bloodseeker is a melee agility hero imbued with dreadful powers to fuel violence and rip enemies apart in the heat of close combat. He can drive targets into a maddened Bloodrage, increasing the damage of their attacks, preventing them from casting spells and bleeding their life in the frenzy. His speed is unmatched when he senses the blood of the dying, and from this perception none can escape. His own health is never a problem, as he can salve his wounds merely by bathing in the blood of the fallen. His ultimate, Rupture, sunders the skin of his victims, causing them to trail their life force behind if they dare to flee.</description>
+        <description>Strygwyr the Bloodseeker is a melee agility hero imbued with dreadful powers to fuel violence and rip enemies apart in the heat of close combat. He can drive targets into a maddened Bloodrage, increasing the damage of their attacks, and allowing them to heal their wounds by killing their enemies. His speed is unmatched when he senses the blood of the dying, and from this perception none can escape. By using Blood Rite, he can create a ritual field where his foes will be silenced and damaged in the process. His ultimate, Rupture, sunders the skin of his victims, causing them to trail their life force behind if they dare to flee.</description>
         <role>Carry</role>
         <role>Jungler</role>
         <attributes>
@@ -1179,58 +1213,66 @@
             <intelligenceGain>1.7</intelligenceGain>
             <damageMinimum>53</damageMinimum>
             <damageMaximum>59</damageMaximum>
-            <baseMoveSpeed>300</baseMoveSpeed>
-            <baseArmor>3.43</baseArmor>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>3.36</baseArmor>
         </attributes>
         <ability
             name="Bloodrage"
-            description="Drives a unit into a bloodthirsty rage, during which it has higher attack damage, but cannot cast spells and takes damage every second. Bloodrage dispels the target before applying its buff."
+            description="Drives a unit into a bloodthirsty rage during which a unit deals, and takes, increased damage. Heroes affected by Bloodrage will be healed for 25% of the max health of any units they kill. Heroes affected by Bloodrage when killed will heal 25% of their max health to their killer."
             ability="Target Unit"
             affects="Units"
             damage="Magical"
             blackKingBar="2"
             linkensSphere="2"
             diffusalBlade="1"
-            cooldown="12/10/8/6"
-            mana="80">
+            cooldown="12/10/8/6">
             <abilityAttributes
                 name="Range"
                 value="800"/>
             <abilityAttributes
                 name="Duration"
-                value="6/7/8/9"/>
+                value="9/10/11/12"/>
             <abilityAttributes
-                name="Increased Damage"
-                value="30%/60%/90%/120%"/>
-            <abilityAttributes
-                name="Damage Per Second"
-                value="20"/>
-            <diffusalBlade description="Not purgeable by allies." />
+                name="Amplified Damage"
+                value="25%/30%/35%/40%"/>
             <altDescription description="Strygwyr shares his animalistic thirst for bloodshed." />
-            <note>Can be used to deny self or allies.</note>
-            <note>Purges the target and removes the ethereal state from enemies.</note>
-            <note>Does not amplify damage directly gained from items (such as Radiance), only base damage and damage gained from the hero's primary attribute.</note>
-            <note>Deals a total of 120/140/160/180 damage to the target unit.</note>
+            <note>Has a cast point of 0.2 second.</note>
+            <note>Bloodrage can be cast on enemy and allied units, as well as Bloodseeker himself.</note>
+            <note>Amplifies all damage taken and dealt by the buffed unit, including damage from spells and items.</note>
+            <note>The cooldown is shorter than the duration, this allows you to have Bloodrage on up to 2 units.</note>
+            <note>Having max level Bloodrage simultaneously on Bloodseeker and the enemy allows for up to 96% amplification.</note>
+            <note>Does not change the values of abilities that use an independent source of damage.</note>
         </ability>
         <ability
-            name="Blood Bath"
-            description="Bloodseeker revels in combat, gaining health with every unit he kills or an enemy hero dies within a 325 radius of Bloodseeker. The health gained is a percentage of the killed unit's maximum HP."
-            ability="Passive"
-            affects="Self"
-            mantaStyle="2">
+            name="Blood Rite"
+            description="Bloodseeker baptizes an area in sacred blood. After 3 seconds the ritual completes, causing any enemies caught in the area to take damage and become silenced."
+            ability="Target Point"
+            affects="Enemies"
+            damage="Pure"
+            blackKingBar="2"
+            diffusalBlade="2">
             <abilityAttributes
-                name="Regeneration from Hero's maximum HP"
-                value="10%/20%/30%/40%"/>
+                name="Range"
+                value="1500"/>
             <abilityAttributes
-                name="Regeneration from Creep's maximum HP"
-                value="10%/15%/20%/25%"/>
-            <altDescription description="Flayed ones bathing in the blood of the recently fallen is a terrifying sight on the field of battle." />
-            <note>Denied creeps and heroes will trigger Bloodbath, but illusions will not.</note>
-            <note>Bloodseeker will regenerate hp regardless of how he killed the unit, be it with spells, items or attacks.</note>
+                name="Radius"
+                value="600"/>
+            <abilityAttributes
+                name="Silence Duration"
+                value="3/4/5/6"/>
+            <abilityAttributes
+                name="Damage"
+                value="120/160/200/240"/>
+            <altDescription description="The Flayed Twins are ever willing to aid those who spill blood upon the field of battle." />
+            <note>The affected area is visible to enemies.</note>
+            <note>Grants vision over the center of the affected area for its duration.</note>
+            <note>The delay consists of 0.4 seconds cast time +2.6 seconds effect delay.</note>
+            <note>With Max level Bloodrage on Bloodseeker Blood Rite deals 168/224/280/336 pure damage.</note>
+            <note>With Max level Bloodrage applied on both Bloodseeker and the enemy unit Blood Rite deals 235/313/392/470 pure damage.</note>
         </ability>
         <ability
             name="Thirst"
-            description="Enables Bloodseeker to sense enemy Heroes with health below a certain percentage, giving him vision of that unit, increased movement speed and increased damage. Bonuses stack per Hero. Bloodseeker gains True Sight of enemy heroes below half their visiblity threshold."
+            description="Enables Bloodseeker to sense enemy Heroes whose health is below a certain percentage wherever they are, giving him True Sight on that unit, increased movement speed and increased damage. Bonuses stack per Hero."
             ability="Passive"
             affects="Self"
             mantaStyle="0">
@@ -1242,72 +1284,65 @@
                 value="Until no nearby valid target exists"/>
             <abilityAttributes
                 name="Bonus Movement Speed"
-                value="5%/15%/25%/35%"/>
+                value="10%/20%/30%/40%"/>
             <abilityAttributes
                 name="Bonus damage"
-                value="5/15/25/35"/>
+                value="10/20/30/40"/>
             <abilityAttributes
                 name="Thirst HP percentage detection"
-                value="50% of target HP (True sight is 25%)"/>
+                value="30% of target HP"/>
             <altDescription description="Strygwyr becomes frenzied when blood is spilled." />
             <note>Thirst is not triggered by Illusions.</note>
-            <note>When active, movement speed cap is removed on your hero.</note>
-            <note>Bonus stacks for each unit within HP threshold.</note>
-            <note>Does not grant full vision on detected enemy heroes, it only shows their model.</note>
+            <note>When active, Bloodseeker can go above the normal movement speed cap of 522.</note>
+            <note>Does not grant full vision on detected enemy heroes, it only shows their model and their icon on the minimap.</note>
+            <note>Thirst shows a debuff and a visible effect to the enemy when they are revealed.</note>
+            <note>Thirst scales linearly from 0 bonus at 100% health to full bonus at 1% health.</note>
+            <note>Thirst bonuses are independent of vision granted at 30%.</note>
         </ability>
         <ability
             name="Rupture"
-            description="Causes an enemy unit's skin to rupture, dealing massive damage. If the unit moves while under the effect of Rupture, it takes a percentage of the distance traveled as damage."
+            description="Causes an enemy unit's skin to rupture. If the unit moves, it takes a percentage of the distance traveled as damage. The damage is dealt through spell immunity."
             ability="Target Unit"
             affects="Enemies"
-            damage="HP Removal"
+            damage="Pure"
             blackKingBar="0"
             linkensSphere="2"
             diffusalBlade="0"
-            cooldown="70/60/50"
+            cooldown="60"
             mana="150/200/250">
             <abilityAttributes
                 name="Range"
                 value="1000"/>
             <abilityAttributes
                 name="Duration"
-                value="7/8/9"/>
-            <abilityAttributes
-                name="Initial Damage"
-                value="150/250/350"/>
+                value="12"/>
             <abilityAttributes
                 name="Distance Moved Damage"
                 value="20%/40%/60%"/>
             <altDescription description="When the Bloodseeker hunts you, injuries become fatalities." />
+            <note>Has a cast point of 0.6 seconds.</note>
             <note>If the affected unit moves more than 1300 distance in 0.25 seconds, it will not receive any damage.</note>
+            <note>Using Force Staff on affected unit will deal 120/240/360 damage.</note>
         </ability>
         <tips>Bloodseeker, whilst being an efficient jungler and dual laner, is also a prime choice for solo mid, as it gives him easy access to the side lanes for ganking.</tips>
         <tips>Reaching level six as quickly as possible should be a priority of the player; ganks should not usually be attempted before he has his ultimate.</tips>
-        <tips>Blood Bath gives Bloodseeker significant staying power in lane, healing him whenever he last hits or denies a creep.</tips>
-        <tips>An early Quelling Blade will help you get the most benefit out of Blood Bath.</tips>
-        <tips>Thirst is especially useful for allowing for clear targets on a team with no map vision or communication. Otherwise, its best for greatly increasing the risk under which weakened enemies move out or providing conditional speed.</tips>
-        <tips>Leveling Bloodrage causes it to turn into a steroid with a more powerful attack damage buff on every level, but it also serves as a powerful early game nuke and disable. The steroid effect on a fully-leveled Bloodrage is very powerful, often on par with the full arsenal of buffs carried by a given team.</tips>
-        <tips>Bloodrage should be cast on enemies beginning an engagement to prevent nukes. If Bloodseeker is laning against supports it is an extremely useful spell. Late game, it becomes a dedicated steroid for Bloodseeker or other carries or to twitch disable big caster threats such as Enigma or Earthshaker.</tips>
-        <tips>At level 3 it can be used almost continuously, since it has a short casting animation.</tips>
-        <tips>Rupture is one of the best skills to intercept an enemy hero that is chasing you or your allies, especially since it goes through magic immunity and does full damage regardless of armor and magic resistance. Heroes with high mobility like Anti-Mage, Lycan, Luna, Queen of Pain or Night Stalker suffer devastating damage when Ruptured as they are chasing or running away.</tips>
-        <tips>When ganking it is sometimes best to save your Rupture for when your target begins running away rather than right at the beginning of the gank. You may want to follow up on an allied disable using Bloodrage to silence the target and saving Rupture should the target not die during the initial damage done.</tips>
-        <tips>Bloodseeker is the fastest hero in the game when Thirst is level 4 with 5 heroes below 50% of their max hp.</tips>
+        <tips>Rupture is one of the best abilities to intercept an enemy hero that is chasing you or your allies, especially since it goes through spell immunity and does full damage regardless of armor and magic resistance. Heroes with high mobility like Anti-Mage, Lycan, Luna, Queen of Pain or Night Stalker suffer devastating damage when Ruptured as they are chasing or running away.</tips>
+        <tips>When ganking it is sometimes best to save your Rupture for when your target begins running away rather than right at the beginning of the gank.</tips>
+        <tips>Using Blood Rite in conjunction with Rupture allows for more precise aiming of the skill.</tips>
         <tips>Each individual Meepo will add to the Thirst bonus stack.</tips>
-        <tips>Maximum speed with Thirst is 1852. To reach it, you need Eul's Scepter of Divinity, Sange and Yasha, Boots of Travel, Phase Boots, Mask of Madness, Shadow Blade (on Bloodseeker, activate items in order MoM-Shadow Blade-Phase Boots), Kobold Foreman's Speed Aura, Spirit Breaker's Empowering Haste Aura, Io's Tether, Sven's Warcry, Ogre Magi's Bloodlust, Necronomicon Archer's Attack Speed and Movement Aura and activated Drum of Endurance.</tips>
-        <tips>Due to the passive Blood Bath being able to heal you upon killing any enemy unit. It is advisable not to spend gold on Morbid Mask, skipping therefore on Lifesteal items. Moreover, Bloodseeker should have a high damage output in order for faster killing, which subsequently gives faster healing.</tips>
-        <tips>Skull Basher or Abyssal Blade can opt to be taken if your team lacks disables and your enemies are using Teleportation spells like Town Portal Scrolls to escape your onslaught.</tips>
+        <tips>Skull Basher or Abyssal Blade and even Eul's Scepter of Divinity can opt to be taken if your team lacks disables and your enemies are using Teleportation spells like Town Portal Scrolls to escape your onslaught.</tips>
         <tips>Force Staff, in conjunction with Rupture can cause significant burst damage (120/240/360) to enemy heroes by forcing them to move. It also serves as a quick escape tool, something that Bloodseeker does not naturally possess. However, it should be noted that the burst damage is relatively little to the level of your enemies and the level of your ultimate, and may just potentially push your target to safety.</tips>
         <tips>Helm of the Dominator can introduce interesting new utility if Bloodrage is used as a steroid.</tips>
         <tips>Armlet of Mordiggian can be picked up if you are confident in your killing power. It synergizes well with Blood Bath and Bloodrage's damage increase, but can also make you easier to kill, especially when focused.</tips>
         <tips>Rod of Atos can give Bloodseeker even better chasing ability and can be bought if you don't want to rely on Sange's random Maim chance. However, the 25 bonus Intelligence is wasted on Bloodseeker.</tips>
         <tips>Shadow Blade can be used to surprise your enemies, especially when they are alone. Backstab damage, movement speed and attack speed boosts your hunting ability along with your Thirst.</tips>
-        <tips>Bloodseeker is really good counter for Slark due to Thirst. You will make him unable to regen from Shadow Dance everywhere on map when his hp is below 50%.</tips>
     </hero>
     <hero>
         <name>Bounty Hunter</name>
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
+        <description>Gondar the Bounty Hunter is a melee agility Hero that excels in dealing high amounts of damage to single targets. Bounty Hunter can easily gank other lanes, using his Shadow Walk to sneak up on enemies and get easy kills. Shadow Walk also allows him to escape from dangerous situations, making him very elusive. Bounty Hunter can be played as a carry, though it is not recommended. Bounty Hunter is also extremely deadly as an offlaner, thanks to Track, which will grant True Sight, movement speed, and bonus gold, and Jinada, which amplifies the damage of his next attack every few seconds.</description>
         <role>Carry</role>
         <role>Escape</role>
         <role>Nuker</role>
@@ -1321,16 +1356,16 @@
             <damageMinimum>45</damageMinimum>
             <damageMaximum>59</damageMaximum>
             <baseMoveSpeed>315</baseMoveSpeed>
-            <baseArmor>6.0</baseArmor>
+            <baseArmor>5.94</baseArmor>
         </attributes>
         <ability
             name="Shuriken Toss"
-            description="Hurls a deadly shuriken at an enemy unit, dealing damage and ministunning the target."
+            description="Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce between any Tracked units who are within a 900 radius of each other."
             ability="Target Unit"
             affects="Enemies"
             damage="Magical"
             blackKingBar="2"
-            linkensSphere="2"
+            linkensSphere="1"
             cooldown="10"
             mana="90/115/135/155">
             <abilityAttributes
@@ -1339,8 +1374,10 @@
             <abilityAttributes
                 name="Damage"
                 value="100/200/250/325"/>
+            <linkensSphere description="Fully blocked if Linken's holder is the primary target (no subsequent bounces to tracked units). No interaction if bounced while tracked." />
             <altDescription description="While the shuriken may be small, Gondar's precise aim can cause critical damage." />
             <note>Mini-stuns the target on impact.</note>
+            <note>Bounces to all Tracked units within a 900 range. The initial target does not have to be tracked for this effect to occur. It only bounces to each Tracked unit once.</note>
         </ability>
         <ability
             name="Jinada"
@@ -1377,10 +1414,11 @@
             blackKingBar="0"
             linkensSphere="0"
             diffusalBlade="0"
-            cooldown="15">
+            cooldown="15"
+            mana="50">
             <abilityAttributes
                 name="Duration"
-                value="15/20/25/30"/>
+                value="20/25/30/35"/>
             <abilityAttributes
                 name="Bonus Damage"
                 value="30/60/90/120"/>
@@ -1390,7 +1428,8 @@
             <altDescription description="The court jesters present during King Goff's assassination can recount no other image than a dancing shadow." />
             <note>Will not break most channeling of spells upon activation.</note>
             <note>The bonus damage is dealt as a separate non-crittable damage instance.</note>
-            <note>Invisibility is broken as soon as you start an attack, or start casting any spell.</note>
+            <note>The bonus damage will be applied during fade time without removing Shadow Walk, allowing for multiple hits.</note>
+            <note>Invisibility is broken as soon as Bounty Hunter starts an attack, or starts casting any spell.</note>
             <note>Items and abilities used during the fade time will not stop Bounty Hunter from going invisible.</note>
         </ability>
         <ability
@@ -1398,7 +1437,7 @@
             description="Tracks an enemy hero and grants a gain in movement speed to allies near the hunted. If the target dies, Bounty Hunter and nearby heroes collect a bounty in gold."
             ability="Target Unit"
             affects="Enemy Heroes"
-            blackKingBar="1"
+            blackKingBar="0"
             linkensSphere="2"
             diffusalBlade="2"
             mantaStyle="2"
@@ -1406,7 +1445,7 @@
             mana="50">
             <abilityAttributes
                 name="Range"
-                value="900/1050/1200"/>
+                value="1200"/>
             <abilityAttributes
                 name="Speed Radius"
                 value="900"/>
@@ -1422,18 +1461,17 @@
             <abilityAttributes
                 name="Bonus Gold for Allies"
                 value="50/100/150"/>
+            <mantaStyle description="Illusions gain movement speed bonus." />
             <altDescription description="Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success." />
             <note>Bounty Hunter will get the bonus gold if the target dies while the spell is still active, regardless of how it dies.</note>
             <note>Gives True Sight of the target.</note>
             <note>Bonus gold will be added as reliable gold.</note>
             <note>Can be used to illusions.</note>
-            <note>The track animation is hidden from enemies, although they can see the debuff on their status bar and the animation on nearby enemy units.</note>
+            <note>The track particle effect is hidden from enemies, although they can see the debuff on their status bar and the bonus movement speed effect on nearby enemy units.</note>
             <note>Allies will only gain bonus gold if they are within 900 radius of the tracked target.</note>
         </ability>
         <tips>Track provides a great deal of benefits to the team, the vision and movement speed help with ganking enemies as well as with avoiding enemy ganks, and the bonus gold will provide a big advantage over the enemy team if you get kills. You should try to cast it on every enemy hero, though priority targets should be carries as well as those that can go invisible.</tips>
         <tips>Despite being classified a carry, Bounty Hunter is also a strong ganker. Your abilities give you a great deal of power in the mid game, you should use this time to gank enemies as the bonus gold from Track more than makes up for the farm you may miss.</tips>
-        <tips>Although it provides a great deal of benefits, Battle Fury is not always the best item to get since its main purpose is to farm. It may be better to opt for an Orchid Malevolence, Medallion of Courage, or other such items that will help you gank better early on.</tips>
-        <tips>Although not always recommended, Shadow Blade can be useful for damage stacking. Using it and quickly Shadow Walking will give you +270 on your next attack, combining that with Jinada can heavily wound an enemy.</tips>
         <tips>It is possible to get the bonus damage of Shadow Walk twice by attacking once during the fade time and once to break the invisibility. This can help securing last hits or harassing.</tips>
         <tips>Getting an Orb of Venom is an extremely effective item when ganking in the early phase of the game as the 12% slow together with the slow from Jinada can make your opponent much easier to kill.</tips>
     </hero>
@@ -1442,6 +1480,7 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
+        <description>Mangix the Brewmaster is a melee strength hero that can fill almost any role, though he is primarily seen as a carry, ganker, tank or initiator. He fits well into any lane, but is very experience dependent, which means he is often seen on the offlane or the midlane. His core abilities make him a respectable physical damage dealer and an especially good duelist, since he has abilities that involve negating opposing auto-attacks while strengthening his own. However, his true power lies in his ultimate, Primal Split, which, if used properly, can by itself turn the tide of a team fight. Each of the three aspects of the Brewmaster are exceptionally powerful, with exceptional disables, survivability against magic and physical attacks, and damage; they are also able to charge recklessly into the enemy since the damage they take is not permanent, and very rarely will all three die before Primal Split ends. For this reason, Brewmaster is almost always built to fully maximize the potential of this ultimate, getting items such as Blink Dagger so that he can combo into his ultimate without risk of being initiated on, Heart of Tarrasque to ensure he can survive the first wave of stuns and burst in order to cast his ultimate, and of course Aghanim's Scepter to give his spirits his abilities, Thunder Clap to Earth, Drunken Haze to Storm, and Drunken Brawler to Fire, all independent of the original brewmaster's cooldowns for his abilities.</description>
         <role>Carry</role>
         <role>Durable</role>
         <role>Initiator</role>
@@ -1456,7 +1495,7 @@
             <damageMinimum>52</damageMinimum>
             <damageMaximum>59</damageMaximum>
             <baseMoveSpeed>300</baseMoveSpeed>
-            <baseArmor>4.14</baseArmor>
+            <baseArmor>4.08</baseArmor>
         </attributes>
         <ability
             name="Thunder Clap"
@@ -1489,8 +1528,8 @@
         </ability>
         <ability
             name="Drunken Haze"
-            description="Drenches a small area in alcohol, causing their movement speed to be reduced, and causing their attacks to have a chance to miss."
-            ability="Target Units"
+            description="Drenches a small area in alcohol, causing enemies in the areas movement speed to be reduced, and causing their attacks to have a chance to miss.."
+            ability="Target Unit"
             affects="Enemies"
             blackKingBar="2"
             linkensSphere="2"
@@ -1512,14 +1551,14 @@
             <abilityAttributes
                 name="Miss Chance"
                 value="45%/55%/65%/75%"/>
+            <linkensSphere description="Will be blocked even if Linken's holder wasn't the primary target." />
             <altDescription description="The Order of the Oyo's solution to all problems - another round!" />
-            <note>Drunken Haze cannot be disjointed.</note>
-            <note>Affects a 200 AoE around the target.</note>
             <note>Given to Storm when holding Aghanim's Scepter, at the same level as the original Brewmaster.</note>
+            <note>Despite the visual effect, Drunken Haze does not use a projectile and is instant, and thus cannot be disjointed.</note>
         </ability>
         <ability
             name="Drunken Brawler"
-            description="Gives a chance to avoid attacks and to deal critical damage."
+            description="Gives a chance to avoid attacks and to deal critical damage. Drunken Brawler will always activate if you have not attacked, or have been attacked, in the last several seconds."
             ability="Passive"
             affects="Self"
             blackKingBar="0"
@@ -1534,11 +1573,17 @@
                 value="10%/15%/20%/25%"/>
             <abilityAttributes
                 name="Critical Damage"
-                value="2x"/>
+                value="200%"/>
+            <abilityAttributes
+                name="Certain Trigger Timer"
+                value="16/14/12/10"/>
             <mantaStyle description="Red critical numbers are before illusion and armor reduction." />
             <altDescription description="When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation." />
-            <note>Stacks with evasion from items diminishingly.</note>
             <note>Given to Fire when holding Aghanim's Scepter, at the same level as the original Brewmaster.</note>
+            <note>Drunken Brawler does stack with other sources of evasion.</note>
+            <note>The guaranteed critical attack and guaranteed dodge chance are on separate timers.</note>
+            <note>If Brewmaster is guaranteed to evade the next attack on him, the icon will turn orange, and he will gain a shimmering effect around him. If he is guaranteed to preform a critical strike on his next attack, a red streak will appear on the icon, and he will gain a red shimmering affect around his shoulders and weapon.</note>
+            <note>Illusions will also have the guaranteed critical hit and evasion.</note>
         </ability>
         <ability
             name="Primal Split"
@@ -1552,11 +1597,17 @@
                 value="15/17/19"/>
             <aghanims description="Gives Thunder Clap to Earth, Drunken Haze to Storm, and Drunken Brawler to Fire, at the same level as the original Brewmaster and with independent cooldowns from the original Brewmaster." />
             <altDescription description="It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor." />
-            <note>When the spell ends, the Brewmaster takes Earth's place. If Earth is dead he takes Storm's place, and if Storm is dead he takes Fire's place.</note>
-            <note>All of the warriors possess the Resistant Skin passive ability. Skills that have separate effects for heroes and creeps (such as Enchantress' Enchant) will use the Hero effects when targeting the warriors. Skills that affect only creeps (such as Doom Bringer's Devour) or only Heroes (such as Witch Doctor's Death Ward) will not affect the warriors.</note>
-            <note>Warriors are not considered summons. Thus, it does not take summon bonus damage.</note>
-            <note>The Earth warrior has every aura of the Brewmaster (Such as Vladmir's Offering or Assault Cuirass). If the Earth warrior dies, the auras will move to Storm, then Fire. This is true for all items with an area of effect (such as Gem or Drum of Endurance).</note>
-            <note>The Warriors are affected by Enigma's Black Hole.</note>
+            <note>The split time is 0.85 seconds during which Brewmaster is invulnerable.</note>
+            <note>During Primal Split, Brewmaster is periodically moved to Earth's position. If Earth dies, to Storm's and if Storm dies, to Fire. This affects multiple things such as:</note>
+            <note>When Primal Split ends, Brewmaster will appear at the Earth's location. When Earth is dead, at Storm's and when Storm is dead, at Fire's location.</note>
+            <note>Every aura Brewmaster has (Including Gem of True Sight and Radiance) affects units around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire.</note>
+            <note>Effects which react on heroes' presence, such as Smoke of Deceit, Marksmanship or Blur will react on Earth's presence, when Earth is dead, on Storm, when Storm is dead, on Fire's.</note>
+            <note>Teleporting effect like Test of Faith (Teleport) or Relocate causes the periodic moving of Brewmaster to get canceled, so that the 3 notes above don't apply anymore.</note>
+            <note>Primal Split does not change Brewmaster's hp and does not stop any regeneration. So Brewmaster will return with the hp and mana he had before the split + what he could regenerate during it.</note>
+            <note>Primal Split will not dispell buffs or debuffs.</note>
+            <note>The Storm, Earth and Fire spirits are treated like heroes by most spells. This means that they cannot be dominated or converted (Holy Persuasion, Hand of Midas, Enchant will slow instead), buffs and debuffs last as long as they last on heroes and most heroes-only targeted spells can target them (I.E. Shallow Grave).</note>
+            <note>The spirits also do not take summon bonus damage (I.E. Arcane Orb, Diffusal Blade.</note>
+            <note>The spirits are affected by Enigma's Black Hole.</note>
         </ability>
         <ability
             name="Hurl Boulder"
@@ -1577,6 +1628,8 @@
             <abilityAttributes
                 name="Damage"
                 value="100"/>
+            <note>Can be disjointed.</note>
+            <note>The projectile's speed is 800.</note>
         </ability>
         <ability
             name="Spell Immunity"
@@ -1589,16 +1642,20 @@
             description="Provides a chance to do damage in a small radius."
             ability="Passive"
             affects="Enemies"
-            damage="Magical">
+            damage="Magical"
+            blackKingBar="2"
+            linkensSphere="0">
             <abilityAttributes
                 name="Radius"
                 value="150/250"/>
             <abilityAttributes
                 name="Damage"
-                value="40/20"/>
+                value="20/40"/>
             <abilityAttributes
                 name="Chance"
                 value="20%"/>
+            <note>Occurs when Earth attacks an enemy.</note>
+            <note>The AOE is centered around Earth.</note>
         </ability>
         <ability
             name="Dispel Magic"
@@ -1613,11 +1670,12 @@
                 name="Range"
                 value="500"/>
             <abilityAttributes
-                name="Area"
+                name="Radius"
                 value="200"/>
             <abilityAttributes
                 name="Damage to summons"
                 value="200"/>
+            <note>Affects magic immune allies, but not magic immune enemies and thus can't dispel Repel from enemies.</note>
         </ability>
         <ability
             name="Cyclone"
@@ -1626,6 +1684,7 @@
             affects="Enemy Units"
             blackKingBar="2"
             linkensSphere="2"
+            diffusalBlade="2"
             cooldown="8"
             mana="150">
             <abilityAttributes
@@ -1634,7 +1693,8 @@
             <abilityAttributes
                 name="Duration"
                 value="6 on heroes (20 on creeps)"/>
-            <note>Warlock Golem is disabled for 6 seconds as it's a hero summons.</note>
+            <note>Unlike other cyclones it does not dispel buffs or debuffs.</note>
+            <note>Cyclone can be ended prematurely using Dispel Magic, or other purging effects.</note>
         </ability>
         <ability
             name="Wind Walk"
@@ -1653,6 +1713,9 @@
             <abilityAttributes
                 name="Bonus Movement Speed"
                 value="50%"/>
+            <note>Unlike other windwalk abilities with Backstab, the attack out of this Wind Walk does not have true strike.</note>
+            <note>Also unlike other Windwalk abilities, this Windwalk can be dispelled.</note>
+            <note>Storm will not auto-attack while invisible.</note>
         </ability>
         <ability
             name="Permanent Immolation"
@@ -1660,22 +1723,24 @@
             ability="Passive"
             affects="Self"
             damage="Magical"
-            blackKingBar="2">
+            blackKingBar="2"
+            linkensSphere="0">
             <abilityAttributes
                 name="Damage per Second"
                 value="15/30/45"/>
             <abilityAttributes
-                name="Area"
+                name="Radius"
                 value="220"/>
+            <note>Is an aura and thus the debuff lingers for 0.5 seconds.</note>
+            <note>Damages in 1 second intervals.</note>
         </ability>
         <tips>Brewmaster is strong against auto-attack heroes; Thunder Clap slows down attack speed, Drunken Haze causes them to miss, and Drunken Brawler helps him dodge attacks and deal critical damage.</tips>
         <tips>Thunder Clap is extremely strong at the early stages of the game, acting as his area-of-effect cripple. It is generally leveled up first.</tips>
-        <tips>Neither Drunken Haze nor Drunken Brawler are exceptionally useful at levels 2 and 4, so it is not uncommon to opt for stats instead.</tips>
         <tips>Against extremely strong physical harassment (such as Sniper or Weaver), consider going for a Drunken Haze and Drunken Brawler build to maximize your dodge chance.</tips>
-        <tips>Although Phase Boots are recommended, many opt for Arcane Boots instead if the hero is being played in a ganking or initiator role, as it can allow you to use Thunder Clap and Primal Split in succession much earlier and solve mana issues.</tips>
+        <tips>Many players opt for Arcane Boots if the hero is being played in a ganking or initiator role, as it can allow you to use Thunder Clap and Primal Split in succession much earlier and solve mana issues.</tips>
         <tips>Use Primal Split sparingly, as it has an extremely long cooldown. Try to avoid using it to run away if at all possible.</tips>
         <tips>If Brewmaster is being played more in the semi-carry role, consider using his ultimate as a life saver to keep yourself in the fight when you would normally die. The utility of the Brewlings works excellently for finishing off opponents as well as initiation.</tips>
-        <tips>When playing Brewmaster, try to gain an advantage for your team early before anybody on the enemy carry can build a Black King Bar. Against magic immunity, both his anti-carry abilities and Primal Split abilities are rendered useless and must be focused on another target.</tips>
+        <tips>When playing Brewmaster, try to gain an advantage for your team early before anybody on the enemy team, particularly the carry, can build a Black King Bar. Against magic immunity, both his anti-carry abilities and Primal Split abilities are rendered useless and must be focused on another target.</tips>
     </hero>
     <hero>
         <name>Bristleback</name>
@@ -1685,6 +1750,7 @@
         <description>Rigwarl the Bristleback is a melee Strength hero famous for his array of synergistic spells with low mana cost and cooldown. He is able to slow his enemies down and reduce their armor with Viscous Nasal Goo, then hit them with a barrage of Quill Sprays, making him an effective chaser when ganking enemies. His low strength gain makes him less tanky than most strength heroes, but he becomes substantially more durable when he turns around due to his passive Bristleback, which reduces damage taken from behind. In the right hands, Bristleback is a powerful ganker in the early stages of the game, and a powerful hard carry in the later stages depending on how much farm he gets.</description>
         <role>Durable</role>
         <role>Initiator</role>
+        <role>disabler</role>
         <attributes>
             <strengthBase>22</strengthBase>
             <strengthGain>2.2</strengthGain>
@@ -1695,7 +1761,7 @@
             <damageMinimum>48</damageMinimum>
             <damageMaximum>58</damageMaximum>
             <baseMoveSpeed>295</baseMoveSpeed>
-            <baseArmor>3.43</baseArmor>
+            <baseArmor>3.38</baseArmor>
         </attributes>
         <ability
             name="Vicious Nasal Goo"
@@ -1712,16 +1778,24 @@
                 value="600"/>
             <abilityAttributes
                 name="Duration"
-                value="5"/>
+                value="5 (10 on creeps)"/>
             <abilityAttributes
-                name="Armor Reduction"
+                name="Armor Reduction per Stack"
                 value="1/1/2/2"/>
             <abilityAttributes
-                name="Movement Speed Reduction per Cast"
-                value="20% and +3%/+6%/+9%/+12%"/>
+                name="Base Movement Speed Slow"
+                value="20%"/>
+            <abilityAttributes
+                name="Movement Speed Slow per Stack"
+                value="3%/6%/9%/12%"/>
+            <abilityAttributes
+                name="Stack Limit"
+                value="4"/>
             <altDescription description="Having caught a cold while stuck in the snow, Bristleback turns it to his advantage." />
-            <note>Stacks a maximum of 4 times, meaning it can at most reduce armor by 4/4/8/8 and movement speed by 32/44/56/68%.</note>
-            <note>Stacks are immediately removed if the unit becomes Magic Immune.</note>
+            <note>Can be disjointed.</note>
+            <note>Goo travels with 1000ms.</note>
+            <note>Can reduce up to 4/4/8/8 armor and 32/44/56/68% movement speed.</note>
+            <note>Each recast on the same target refreshes the duration of all current stacks on it.</note>
         </ability>
         <ability
             name="Quill Spray"
@@ -1729,6 +1803,7 @@
             ability="No Target"
             affects="Enemies"
             damage="Physical"
+            blackKingBar="0"
             diffusalBlade="0"
             cooldown="3"
             mana="35">
@@ -1739,20 +1814,28 @@
                 name="Duration"
                 value="14"/>
             <abilityAttributes
-                name="Base Damage"
+                name="Quill Base Damage"
                 value="20/40/60/80"/>
             <abilityAttributes
-                name="Stack Damage"
+                name="Quill Stack Damage"
                 value="30"/>
             <abilityAttributes
-                name="Damage Cap"
+                name="Stack Duration"
+                value="14"/>
+            <abilityAttributes
+                name="Max Damage"
                 value="400"/>
             <altDescription description="An enforcer's honor can be a prickly thing. So can his quills." />
-            <note>Quill Spray damage is not reduced by damage block abilities. (such as Vanguard, Kraken Shell.)</note>
-            <note>Stacks are independent, not refreshing, which means that normally Bristleback can deal at most (14s duration / 3s cooldown) 120 bonus damage. To reach the damage cap you need additional Quill Sprays from Bristleback passive.</note>
-            <note>The stacks cannot be removed by Purge or other buff removing abilities such as Kraken Shell.</note>
-            <note>13/12/12/11 stacks are required to reach the 400 damage cap, which so require 9/8/8/7 sprays from Bristleback (which takes 2500/2250/2250/2000 damage taken from the rear), since only 4 stacks can be achieved with Quill Spray alone.</note>
             <note>Has an instant cast time.</note>
+            <note>Despite the visual effects, the damage is applied instantly in the area.</note>
+            <note>Quill Spray damage is not reduced by damage block abilities.</note>
+            <note>Places 1 debuff on each hit enemy, which shows the number of current stacks (a number is visible on the icon).</note>
+            <note>The Stacks' durations are independent, not refreshing each other.</note>
+            <note>This means that normally Bristleback can stack it up to 5 times. But the stack from the 1st cast expires 1 second before the 5th cast's cooldown finishes, so the maximum possible bonus damage is 120. To reach the damage cap, additional Quill Sprays from Bristleback passive are needed.</note>
+            <note>13/12/12/11 stacks are required to reach the 400 damage cap, which so require 9/8/8/7 sprays from Bristleback.</note>
+            <note>The debuff is removable by death only.</note>
+            <note>Fully affects magic immune units.</note>
+            <note>Though it does not damage ethereal units, it still places the debuff and adds stacks to them.</note>
         </ability>
         <ability
             name="Bristleback"
@@ -1760,60 +1843,60 @@
             ability="Passive"
             mantaStyle="1">
             <abilityAttributes
-                name="Reduced Damage (Rear)"
+                name="Back Damage Reduction"
                 value="16%/24%/32%/40%"/>
             <abilityAttributes
-                name="Reduced Damage (Side)"
+                name="Side Damage Reduction"
                 value="8%/12%/16%/20%"/>
             <mantaStyle description="Illusions benefit damage reduction, but not quill spray procs." />
             <altDescription description="Turning his back to a fight might be just the thing." />
-            <note>Bristleback's rear is considered to be within 70 degrees from the back.</note>
-            <note>Bristleback's side is considered to be within 110 degrees from the back.</note>
+            <note>Bristleback's rear is considered to be within 70 degrees from the back. A sound and visual effect procs on Bristleback whenever his back takes damage.</note>
+            <note>Bristleback's side is considered to be within 110 degrees from the back. A visual effect procs on Bristleback whenever his sides take damage.</note>
             <note>Bristleback takes less damage from all damage types except HP removal.</note>
-            <note>Damage reduction (and Quill Spray triggers) are calculated by comparing the location of the damage instance's source to Bristleback's orientation. This applies to damage over time ticks as well.</note>
-            <note>The amount of damage considered towards buff removal proc is the one actually done to Rigwarl, and is reset after a passive Quill Spray from Bristleback occurs.</note>
-            <note>Passive Quill Spray proc does not cost mana.</note>
-            <note>Bristleback does not work against towers.</note>
-            <note>Ability is disabled by Doom, Chronosphere, Hexes.</note>
-            <note>Animation shows Quill Spray procs even if the Quill Spray is not learnt, but it does not damage.</note>
+            <note>When taking rear damage, Bristleback's effective health will be increased by 19.05%/31.58%/47.06%/66.67%</note>
+            <note>When taking side damage, Bristleback's effective health will be increased by 8.70%/13.64%/19.05%/25%</note>
+            <note>Does not work against towers.</note>
+            <note>Checks the damage source's current position and compares it to Bristleback's facing angle on each damage instance. This also goes for every tick of damage of time effects.</note>
+            <note>Passive Quill Spray procs when Bristleback's back (not sides) takes 250 damage (after all reductions) and the damage counter is reset once the spray occurs.</note>
+            <note>Passive Quill Spray proc does not cost mana and has no cooldown.</note>
+            <note>Doom fully disables this ability, while Chronosphere and hexes only disable the passive Quill Spray.</note>
+            <note>When Quill Spray is not learnt, passive Quill Sprays will still proc, but deal no damage.</note>
         </ability>
         <ability
             name="Warpath"
-            description="Bristleback works himself up into a fury every time he casts a spell, increasing his movement speed and damage. The first stack (base) provides larger bonuses."
+            description="Bristleback works himself up into a fury every time he casts a spell, increasing his movement speed and damage."
             ability="Passive"
-            affects="Self">
+            affects="Self"
+            diffusalBlade="0"
+            mantaStyle="0">
             <abilityAttributes
-                name="Duration"
+                name="Damage per Stack"
+                value="20/25/30"/>
+            <abilityAttributes
+                name="Movement per Stack"
+                value="3%/4%/5%"/>
+            <abilityAttributes
+                name="Stack Duration"
                 value="14"/>
-            <abilityAttributes
-                name="Base Bonus Movement Speed"
-                value="8%/12%/16%/20%"/>
-            <abilityAttributes
-                name="Base Bonus Damage"
-                value="20/25/30"/>
-            <abilityAttributes
-                name="Stack Bonus Movement Speed"
-                value="1%/2%/3%"/>
-            <abilityAttributes
-                name="Stack Bonus Damage"
-                value="20/25/30"/>
             <abilityAttributes
                 name="Max Stacks"
                 value="5/6/7"/>
             <altDescription description="'Temper, temper,' his mum always chided. But in a fight, a temper can come in handy." />
-            <note>Bristleback's Illusions will receive the bonuses.</note>
-            <note>Stacks up to 5/6/7 times, meaning it can give at most 9/17/28% movement speed and 100/150/210 attack damage.</note>
+            <note>Bristleback's size will increase and more particles will fly around him the more stacks he has.</note>
+            <note>Stacks up to 5/6/7 times, meaning it can give at most 15/24/35% movement speed and 100/150/210 attack damage.</note>
+            <note>Each stack has its own duration, gaining another stack does not refresh the duration of previous stacks.</note>
+            <note>Places 1 buff on Bristleback, which shows how many stacks he currently has (a number is visible on the icon).</note>
+            <note>Illusions owned by Bristleback gain a stack everytime Bristleback himself gains a stack. They fully benifit from it (although illusions can't make use of the bonus damage).</note>
             <note>Using items does not trigger Warpath.</note>
-            <note>Gaining a stack of Warpath does not refresh the duration of previous stacks, i.e. each stack has its own duration.</note>
             <note>Quill Spray triggers from Bristleback do not trigger Warpath.</note>
         </ability>
-        <tips>Use your passive skill Bristleback to your advantage; anticipate enemy attacks and turn your back on them, so that you can reduce as much damage as you can.</tips>
-        <tips>An early skill point on this skill during the laning phase can help you stay in the lane a while longer, especially if you are having trouble against auto-attacks.</tips>
+        <tips>Use your passive ability Bristleback to your advantage; anticipate enemy attacks and turn your back on them, so that you can reduce as much damage as you can.</tips>
+        <tips>An early ability point on this ability during the laning phase can help you stay in the lane a while longer, especially if you are having trouble against auto-attacks.</tips>
         <tips>Even if your enemies can easily defend against you with a Magic Wand, you can still heavily damage them with Warpath; as long as you're stacking your spells against them, the bonus damage will do its job.</tips>
         <tips>Viscous Nasal Goo is an extremely useful cripple, provided that you keep casting it against your target, as it slows their movement speed for 32/44/56/68%. The cripple's duration is up to you, since you can continuously cast it to refresh the duration, and its cooldown is only 1.5 seconds. However, this ability has a significant backswing, so when you're chasing, be sure to issue a walk or attack command immediately after you see the snot come out.</tips>
-        <tips>This skill is very effective when combined with Warlock's Fatal Bonds, as the damage inflicted on the crippled target from other bound creeps or heroes is applied to the armor reduced hero at said reduced value. This makes the Bristleback/Warlock lane combination very potent, even into the late game. When combined with area of effect items and attacks, a lot of damage can be dealt very quickly.</tips>
-        <tips>Bristleback's mana woes can easily be remedied by a Sage's Mask or a Ring of Basilius, since his skills have extremely low mana costs.</tips>
-        <tips>One of Bristleback's main weaknesses is his lack of disables, meaning he cannot silence or interrupt an enemy from casting spells. You can either rely on your teammates for disables, or create an item of your own, so long as it benefits him in some way (a good example would be a Scythe of Vyse, since it gives him good mana regeneration for his skills, and a devastating hex disable).</tips>
+        <tips>This ability is very effective when combined with Warlock's Fatal Bonds, as the damage inflicted on the crippled target from other bound creeps or heroes is applied to the armor reduced hero at said reduced value. This makes the Bristleback/Warlock lane combination very potent, even into the late game. When combined with area of effect items and attacks, a lot of damage can be dealt very quickly.</tips>
+        <tips>Bristleback's mana woes can easily be remedied by a Sage's Mask or a Ring of Basilius, since his abilities have extremely low mana costs.</tips>
+        <tips>One of Bristleback's main weaknesses is his lack of disables, meaning he cannot silence or interrupt an enemy from casting spells. You can either rely on your teammates for disables, or create an item of your own, so long as it benefits him in some way (a good example would be a Scythe of Vyse, since it gives him good mana regeneration for his abilities, and a devastating hex disable).</tips>
     </hero>
     <hero>
         <name>Broodmother</name>
@@ -1821,9 +1904,9 @@
         <attribute>Agility</attribute>
         <faction>Dire</faction>
         <tips>Black Arachnia the Broodmother is a melee agility hero who is a notably powerful pusher. Her trademark spiderlings, as both an asset and a liability, define her play style. While a possible additional source of income, experience and lane pushes, spiderlings can easily feed opponents when not handled with deft micro and great awareness. Broodmother's abilities allow her to summon those spiderlings to do her bidding, to conceal herself and her spiderlings in an area, and to slow and kill heroes with relative ease if caught off guard, all while staying as elusive as possible with her webs and passives. She spends most of the early game pressuring a lane with little concern, due to her spiderlings and her invisibility/added HP regeneration, but she can also transition into a difficult to kill melee carry, which can dive in on and rapidly kill lone enemies with the right items later on.</tips>
+        <role>Pusher</role>
         <role>Carry</role>
-    <role>Escape</role>
-    <role>Pusher</role>
+        <role>Escape</role>
         <attributes>
             <strengthBase>17</strengthBase>
             <strengthGain>2.5</strengthGain>
@@ -1834,7 +1917,7 @@
             <damageMinimum>44</damageMinimum>
             <damageMaximum>50</damageMaximum>
             <baseMoveSpeed>295</baseMoveSpeed>
-            <baseArmor>2.57</baseArmor>
+            <baseArmor>2.52</baseArmor>
         </attributes>
         <ability
             name="Spawn Spiderlings"
@@ -1842,6 +1925,7 @@
             ability="Target Unit"
             affects="Enemies"
             damage="Magical"
+            blackKingBar="2"
             cooldown="10"
             mana="120">
             <abilityAttributes
@@ -1855,15 +1939,14 @@
                 value="1/2/3/4"/>
             <altDescription description="Black Arachnia continues to raise her young, even amidst the field of combat. The brood quickly learns how to support their mother." />
             <note>Units from which the Spiderlings spawn leave no corpse on death.</note>
-            <note>If the target is killed within 2 seconds of being hit by this skill, regardless of what the killer is, the Spiderlings will spawn (This includes denying an "infected" ally or committing suicide).</note>
+            <note>If the target is killed within 2 seconds of being hit by this ability, regardless of what the killer is, the Spiderlings will spawn (This includes denying an "infected" ally or committing suicide).</note>
             <note>Units killed by Spiderlings will then give birth to Spiderites, smaller and less powerful versions of the Spiderlings.</note>
         </ability>
         <ability
             name="Spin Web"
-            description="Throws out a web that renders Broodmother invisible in its vicinity, while also boosting regeneration, and granting a passive movement speed increase."
+            description="Spins a large web that renders Broodmother invisible, grants a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. When invisible in a web, the movement speed bonus doubles. Spin Web charges restore every 40 seconds. Free movement is disabled for 6 seconds if damage is taken. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears."
             ability="Target Point"
             mantaStyle="0"
-            cooldown="30"
             mana="50">
             <abilityAttributes
                 name="Range"
@@ -1871,6 +1954,9 @@
             <abilityAttributes
                 name="Radius"
                 value="900"/>
+            <abilityAttributes
+                name="Spin Web Charges"
+                value="1/2/3/4"/>
             <abilityAttributes
                 name="Maximum Webs"
                 value="2/4/6/8"/>
@@ -1880,16 +1966,26 @@
             <abilityAttributes
                 name="Bonus Movement Speed"
                 value="20%/25%/30%/35%"/>
+            <abilityAttributes
+                name="Bonus Movement Speed While Invisible"
+                value="40%/50%/60%/70%"/>
+            <abilityAttributes
+                name="Recharge Time"
+                value="40"/>
             <altDescription description="Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of foreboding." />
             <note>Has an invisibility fade time of 2 seconds, but invisibility is instantly lost outside the web.</note>
             <note>Movement speed and health regeneration are instantly granted and lost when moving in or out of the web.</note>
             <note>Also affects Spiderlings and Spiderites.</note>
             <note>If more webs are spawned than allowed, the oldest one will disappear.</note>
             <note>Webs are marked by icons on the minimap.</note>
-            <note>If no enemy has vision over Broodmother, she gains unobstructed movement within the web (can walk over cliffs, trees, etc) with no collision box.</note>
-            <note>Spiderlings and Spiderites do not get unobstructed movement; however, they get their collision box removed.</note>
+            <note>Broodmother gains unobstructed movement within the web (can walk over cliffs, trees, etc) with no collision box.</note>
+            <note>Unobstructed movement is disabled for 6 seconds when she takes damage.</note>
             <note>Has a 0.4 cast point (slower than default).</note>
             <note>Broodmother will not be able to become invisible while muted, but will not lose her invisibility if she is already on a web. Other components behave normally.</note>
+            <note>The web will distinctly twitch whenever Broodmother walks on it, indicating her position.</note>
+            <note>Spin Web can be cast from anywhere as long as the new web touches another.</note>
+            <note>Whenever Broodmother is taken out of Spin Web's free pathing, she destroys nearby trees.</note>
+            <note>Spin Webs are selectable and have an ability to destroy themselves.</note>
         </ability>
         <ability
             name="Incapacitating Bite"
@@ -1918,6 +2014,7 @@
             description="A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack."
             ability="No Target"
             affects="Self"
+            diffusalBlade="2"
             cooldown="45"
             mana="100">
             <abilityAttributes
@@ -1925,13 +2022,52 @@
                 value="60/80/100"/>
             <abilityAttributes
                 name="Lifesteal"
-                value="40%/60%/80%"/>
+                value="60%/80%/100%"/>
             <abilityAttributes
                 name="Duration"
                 value="14"/>
             <altDescription description="While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes." />
             <note>Fully stacks with all items providing lifesteal (both Unique Attack Modifiers and auras).</note>
-            <note>Can only be removed by Purge (from Diffusal Blade, Stone Gaze, Demonic Purge, Unstable Current, or the Satyr Trickster).</note>
+            <note>Can only be removed by Purge (from Diffusal Blade, Demonic Purge, Unstable Current, or the Satyr Trickster).</note>
+        </ability>
+        <ability
+            name="Destroy Spin Web"
+            description="Destroys the selected Spin Web."
+            ability="Self">
+            <note>This is cast from the web itself, allowing Broodmother to destroy webs individually instead of having the oldest one destroyed.</note>
+        </ability>
+        <ability
+            name="Poison Sting"
+            description="Poisons enemies on attack."
+            ability="Passive"
+            affects="Enemies">
+            <abilityAttributes
+                name="Duration on Hero"
+                value="2"/>
+            <abilityAttributes
+                name="Duration on Unit"
+                value="6"/>
+            <abilityAttributes
+                name="Damage per Second"
+                value="8"/>
+            <abilityAttributes
+                name="Movement Speed Slow"
+                value="15%"/>
+            <altDescription description="While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes." />
+            <note>Goes through magic immunity, currently bugged as of 29/04/2014 (6.81) as it deals 16 dps in two damage instances of 8.</note>
+        </ability>
+        <ability
+            name="Spawn Spiderite"
+            description="Applies debuff on attack. If debuffed unit dies, a spiderite will spawn."
+            ability="Passive"
+            affects="Enemies">
+            <abilityAttributes
+                name="Spiderite Duration"
+                value="60"/>
+            <abilityAttributes
+                name="Debuff Duration"
+                value="2"/>
+            <note>Only Spiderlings can spawn Spiderites, Spiderites cannot spawn other Spiderites (Spiderites don't have the passive).</note>
         </ability>
         <tips>Spin Web and Spawn Spiderlings should almost always be maxed first, before points are put into any other ability. Both Incapacitating Bite and Insatiable Hunger are only useful once Broodmother has gotten her farm.</tips>
         <tips>Going into a solo lane is a viable option for Broodmother as webs give her the survivability and the pushing power from the spiderlings can overwhelm a lane without need of her being babysat by an additional hero.</tips>
@@ -1941,6 +2077,8 @@
         <tips>Casting Spin Web on top of an enemy tower makes it easy to dive in on weak heroes. The regen and movespeed bonus combined with Broodmother's slow is very effective for diving on heroes with no reliable escape or stun.</tips>
         <tips>Broodmother is very effective against solitary targets, but against multiple enemies she suffers; as her lifesteal can generally only replenish the damage taken from a solitary foe.</tips>
         <tips>A quick Yasha will give her more movement speed to evade ganks and remain a threat for that lane. Then this can be made into a Manta Style which will give her a way to remove dust and confuse the enemy to escape ganks and waste their crowd control spells.</tips>
+        <tips>Be cautious when the enemy has picked an Earthshaker as Echo Slam will annihilate her if multiple spiderlings are present.</tips>
+        <tips>Legion Commander's first ability, Overwhelming Odds, scales off how many units are in the AoE. It will destroy her spiderlings and do a huge amount of damage to Broodmother.</tips>
     </hero>
     <hero>
         <name>Centaur Warrunner</name>
