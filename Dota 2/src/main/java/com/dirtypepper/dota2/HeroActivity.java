@@ -29,7 +29,6 @@ import java.util.Map;
 public class HeroActivity extends Activity {
 
     private Hero currentHero;
-    private ImageView imageView;
     private TextView textView;
 
     @Override
@@ -301,46 +300,55 @@ public class HeroActivity extends Activity {
     }
 
     private void printHeroes(Hero hero) {
-        Log.wtf("printHeroes()", hero.getName());
+        ImageView heroPicture = (ImageView) findViewById(R.id.hero_picture);
         ArrayList<Double> stats;
 
-        textView = (TextView) findViewById(R.id.hero_name);
-        textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(Utilities.nameToDrawable("faction", hero.getFaction()), "drawable", getApplicationContext().getPackageName())), null, null, null);
+        Log.wtf("printHeroes()", hero.getName());
 
-        imageView = (ImageView) findViewById(R.id.hero_picture);
-        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()),
-                                                                "drawable", getApplicationContext().getPackageName()));
+        textView = (TextView) findViewById(R.id.hero_name);
+        textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
+            Utilities.nameToDrawable("faction", hero.getFaction()), "drawable",
+            getApplicationContext().getPackageName())), null, null, null);
+
+        heroPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()), "drawable", getApplicationContext().getPackageName()));
 
         textView = (TextView) findViewById(R.id.hero_damage_type);
         textView.setText(Utilities.formatRoles(hero));
-
-        if (hero.getAttribute().equals("Strength")) {
-            imageView = (ImageView) findViewById(R.id.hero_strength_icon);
-        } else if (hero.getAttribute().equals("Agility")) {
-            imageView = (ImageView) findViewById(R.id.hero_agility_icon);
-        } else if (hero.getAttribute().equals("Intelligence")) {
-            imageView = (ImageView) findViewById(R.id.hero_intelligence_icon);
-        }
-        imageView.setImageResource(getResources().getIdentifier(
-            Utilities.nameToDrawable("attribute", hero.getAttribute(), "main"), "drawable",
-            getApplicationContext().getPackageName()));
 
         stats = hero.getAttributes("strength");
         if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_strength);
             textView.setText(Utilities.formatStats(stats));
+
+            textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
+                (hero.getAttribute().equals("Strength")
+                 ? Utilities.nameToDrawable("attribute", hero.getAttribute(), "main")
+                 : Utilities.nameToDrawable("attribute_strength")),
+                "drawable", getApplicationContext().getPackageName())), null, null, null);
         }
 
         stats = hero.getAttributes("agility");
         if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_agility);
             textView.setText(Utilities.formatStats(stats));
+
+            textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
+                (hero.getAttribute().equals("Agility")
+                 ? Utilities.nameToDrawable("attribute", hero.getAttribute(), "main")
+                 : Utilities.nameToDrawable("attribute_agility")),
+                "drawable", getApplicationContext().getPackageName())), null, null, null);
         }
 
         stats = hero.getAttributes("intelligence");
         if (stats != null) {
             textView = (TextView) findViewById(R.id.hero_intelligence);
             textView.setText(Utilities.formatStats(stats));
+
+            textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
+                (hero.getAttribute().equals("Intelligence")
+                 ? Utilities.nameToDrawable("attribute", hero.getAttribute(), "main")
+                 : Utilities.nameToDrawable("attribute_intelligence")),
+                "drawable", getApplicationContext().getPackageName())), null, null, null);
         }
 
         stats = hero.getAttributes("damage");

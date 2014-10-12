@@ -63,20 +63,15 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp">
 
-                <ImageView
-                    android:id="@+id/hero_strength_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="5dp"
-                    android:src="@drawable/attribute_strength" />
-
                 <TextView
                     android:id="@+id/hero_strength"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
+                    android:drawableStart="@drawable/attribute_strength"
+                    android:drawableLeft="@drawable/attribute_strength"
+                    android:drawablePadding="5dp"
                     style="@style/TextColor" />
             </LinearLayout>
 
@@ -85,19 +80,17 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/attribute_damage"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginEnd="7dp" />
-
                 <TextView
                     android:id="@+id/hero_damage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
+                    android:paddingStart="7dp"
+                    android:paddingLeft="7dp"
+                    android:drawableStart="@drawable/attribute_damage"
+                    android:drawableLeft="@drawable/attribute_damage"
+                    android:drawablePadding="7dp"
                     style="@style/TextColor" />
             </LinearLayout>
         </LinearLayout>
@@ -114,20 +107,15 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp">
 
-                <ImageView
-                    android:id="@+id/hero_agility_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="5dp"
-                    android:src="@drawable/attribute_agility" />
-
                 <TextView
                     android:id="@+id/hero_agility"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
+                    android:drawableStart="@drawable/attribute_agility"
+                    android:drawableLeft="@drawable/attribute_agility"
+                    android:drawablePadding="5dp"
                     style="@style/TextColor" />
             </LinearLayout>
 
@@ -138,19 +126,15 @@
                 android:paddingEnd="3dp"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/attribute_speed"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginEnd="3dp" />
-
                 <TextView
                     android:id="@+id/hero_move_speed"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
+                    android:drawableStart="@drawable/attribute_speed"
+                    android:drawableLeft="@drawable/attribute_speed"
+                    android:drawablePadding="3dp"
                     style="@style/TextColor" />
             </LinearLayout>
         </LinearLayout>
@@ -169,20 +153,15 @@
                 android:layout_marginEnd="5dp"
                 android:paddingBottom="5dp">
 
-                <ImageView
-                    android:id="@+id/hero_intelligence_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="5dp"
-                    android:src="@drawable/attribute_intelligence" />
-
                 <TextView
                     android:id="@+id/hero_intelligence"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
+                    android:drawableStart="@drawable/attribute_intelligence"
+                    android:drawableLeft="@drawable/attribute_intelligence"
+                    android:drawablePadding="5dp"
                     style="@style/TextColor" />
             </LinearLayout>
 
@@ -192,19 +171,17 @@
                 android:orientation="horizontal"
                 android:paddingBottom="5dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/attribute_defense"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginEnd="9dp" />
-
                 <TextView
                     android:id="@+id/hero_armor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
+                    android:paddingStart="9dp"
+                    android:paddingLeft="9dp"
+                    android:drawableStart="@drawable/attribute_defense"
+                    android:drawableLeft="@drawable/attribute_defense"
+                    android:drawablePadding="9dp"
                     style="@style/TextColor" />
             </LinearLayout>
         </LinearLayout>
