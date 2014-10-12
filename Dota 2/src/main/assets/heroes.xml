@@ -9,17 +9,18 @@
         <role>Durable</role>
         <role>Support</role>
         <role>Carry</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.7"
-            agilityBase="17"
-            agilityGain="1.5"
-            intelligenceBase="21"
-            intelligenceGain="2.0"
-            damageMinimum="55"
-            damageMaximum="65"
-            baseMoveSpeed="310"
-            baseArmor="1.38" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.7</strengthGain>
+            <agilityBase>17</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>21</intelligenceBase>
+            <intelligenceGain>2.0</intelligenceGain>
+            <damageMinimum>55</damageMinimum>
+            <damageMaximum>65</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>1.38</baseArmor>
+        </attributes>
         <ability
             name="Mist Coil"
             description="Abaddon releases a coil of death that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health."
@@ -160,17 +161,18 @@
         <role>Durable</role>
         <role>Carry</role>
         <role>Disabler</role>
-        <attributes
-            strengthBase="25"
-            strengthGain="1.8"
-            agilityBase="11"
-            agilityGain="1.2"
-            intelligenceBase="25"
-            intelligenceGain="1.8"
-            damageMinimum="49"
-            damageMaximum="58"
-            baseMoveSpeed="295"
-            baseArmor="1.54" />
+        <attributes>
+            <strengthBase>25</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>11</agilityBase>
+            <agilityGain>1.2</agilityGain>
+            <intelligenceBase>25</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>58</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>1.54</baseArmor>
+        </attributes>
         <ability
             name="Acid Spray"
             description="Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take mixed damage per second and have their armor reduced."
@@ -330,17 +332,18 @@
         <description>Kaldr the Ancient Apparition is a ranged intelligence hero. This spell-caster elemental being possesses high range, great attributes and strong semi-spammable spells. He is commonly played as a ganker or support role and due to his high agility and an attack enhancing spell, he can be played as a Semi-Carry too. His ultimate is one of the most devastating spells in the game as it can hit multiple units, has global range, freezes health regeneration, and instantly kill units if low on life.</description>
         <role>Support</role>
         <role>Disabler</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="1.4"
-            agilityBase="20"
-            agilityGain="2.2"
-            intelligenceBase="25"
-            intelligenceGain="2.6"
-            damageMinimum="44"
-            damageMaximum="54"
-            baseMoveSpeed="295"
-            baseArmor="1.80" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>1.4</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>25</intelligenceBase>
+            <intelligenceGain>2.6</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>1.80</baseArmor>
+        </attributes>
         <ability
             name="Cold Feet"
             description="Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 4 seconds."
@@ -495,17 +498,18 @@
         <description>Anti-Mage is a fast melee Agility Carry with an emphasis on disabling and killing high-mana enemies. He has notably high agility and low base attack time, giving him high damage and scaling with his basic attacks. His signature ability is Mana Break, a passive attack modifier that makes him a huge threat to mana-reliant heroes, mainly Intelligence-based casters. In addition to granting substantial bonus damage on each attacks, its mana burn sets enemies up to be devastated by his ultimate ability, Mana Void. Blink is a highly versatile ability that allows Anti-Mage to instantly teleport short distances, thereby allowing him to escape, chase, and even farm with ease. Combined with his high base movement speed, this makes Anti-Mage a highly mobile hero at all points in the game. Spell Shield greatly increases Anti-Mage's magic resistance, allowing him to sustain more damage from enemy casters. Finally, Mana Void finishes off targets after their mana has been burnt, inflicting heavy damage to both the target and enemies surrounding the target. The damage Mana Void can potentially deal scales extremely well into the late game, as enemies' mana pools only grow larger over time. His naturally fast basic attacks combined with his powerful abilities make him extremely dangerous in the late game, allowing him to devastate enemies with ease if he is allowed to farm as a hard carry.</description>
         <role>Carry</role>
         <role>Escape</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="1.2"
-            agilityBase="22"
-            agilityGain="2.8"
-            intelligenceBase="15"
-            intelligenceGain="1.8"
-            damageMinimum="49"
-            damageMaximum="53"
-            baseMoveSpeed="315"
-            baseArmor="2.08" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>1.2</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>2.8</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>2.08</baseArmor>
+        </attributes>
         <ability
             name="Mana Break"
             description="Burns an opponent's mana on each attack. Mana Break deals 60% of the mana burned as damage to the target."
@@ -610,17 +614,18 @@
         <role>Durable</role>
         <role>Initiator</role>
         <role>Jungler</role>
-        <attributes
-            strengthBase="25"
-            strengthGain="2.5"
-            agilityBase="20"
-            agilityGain="2.2"
-            intelligenceBase="18"
-            intelligenceGain="1.6"
-            damageMinimum="49"
-            damageMaximum="53"
-            baseMoveSpeed="290"
-            baseArmor="1.80" />
+        <attributes>
+            <strengthBase>25</strengthBase>
+            <strengthGain>2.5</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>1.80</baseArmor>
+        </attributes>
         <ability
             name="Berserker's Call"
             description="Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration."
@@ -767,17 +772,18 @@
         <role>Disabler</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.1"
-            agilityBase="22"
-            agilityGain="2.1"
-            intelligenceBase="22"
-            intelligenceGain="2.1"
-            damageMinimum="55"
-            damageMaximum="61"
-            baseMoveSpeed="315"
-            baseArmor="4.14" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.1</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>2.1</intelligenceGain>
+            <damageMinimum>55</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>4.14</baseArmor>
+        </attributes>
         <ability
             name="Enfeeble"
             description="Weakens an enemy unit, reducing its physical damage. Lasts 20 seconds."
@@ -901,17 +907,18 @@
         <role>Escape</role>
         <role>Initiator</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.4"
-            agilityBase="15"
-            agilityGain="1.5"
-            intelligenceBase="24"
-            intelligenceGain="2.5"
-            damageMinimum="38"
-            damageMaximum="42"
-            baseMoveSpeed="290"
-            baseArmor="2.14" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.4</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>24</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>38</damageMinimum>
+            <damageMaximum>42</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>2.14</baseArmor>
+        </attributes>
         <ability
             name="Sticky Napalm"
             description="Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 stacks."
@@ -1031,17 +1038,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.2"
-            agilityBase="18"
-            agilityGain="1.6"
-            intelligenceBase="16"
-            intelligenceGain="1.9"
-            damageMinimum="56"
-            damageMaximum="60"
-            baseMoveSpeed="310"
-            baseArmor="4.57" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.2</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>1.6</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.9</intelligenceGain>
+            <damageMinimum>56</damageMinimum>
+            <damageMaximum>60</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>4.57</baseArmor>
+        </attributes>
         <ability
             name="Wild Axes"
             description="Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once."
@@ -1162,17 +1170,18 @@
         <description>Strygwyr the Bloodseeker is a melee agility hero imbued with dreadful powers to fuel violence and rip enemies apart in the heat of close combat. He can drive targets into a maddened Bloodrage, increasing the damage of their attacks, preventing them from casting spells and bleeding their life in the frenzy. His speed is unmatched when he senses the blood of the dying, and from this perception none can escape. His own health is never a problem, as he can salve his wounds merely by bathing in the blood of the fallen. His ultimate, Rupture, sunders the skin of his victims, causing them to trail their life force behind if they dare to flee.</description>
         <role>Carry</role>
         <role>Jungler</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.0"
-            agilityBase="24"
-            agilityGain="3.0"
-            intelligenceBase="18"
-            intelligenceGain="1.7"
-            damageMinimum="53"
-            damageMaximum="59"
-            baseMoveSpeed="300"
-            baseArmor="3.43" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>24</agilityBase>
+            <agilityGain>3.0</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.7</intelligenceGain>
+            <damageMinimum>53</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>3.43</baseArmor>
+        </attributes>
         <ability
             name="Bloodrage"
             description="Drives a unit into a bloodthirsty rage, during which it has higher attack damage, but cannot cast spells and takes damage every second. Bloodrage dispels the target before applying its buff."
@@ -1302,17 +1311,18 @@
         <role>Carry</role>
         <role>Escape</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="1.8"
-            agilityBase="21"
-            agilityGain="3.0"
-            intelligenceBase="19"
-            intelligenceGain="1.4"
-            damageMinimum="45"
-            damageMaximum="59"
-            baseMoveSpeed="315"
-            baseArmor="6.0" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>3.0</agilityGain>
+            <intelligenceBase>19</intelligenceBase>
+            <intelligenceGain>1.4</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>6.0</baseArmor>
+        </attributes>
         <ability
             name="Shuriken Toss"
             description="Hurls a deadly shuriken at an enemy unit, dealing damage and ministunning the target."
@@ -1436,17 +1446,18 @@
         <role>Durable</role>
         <role>Initiator</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.9"
-            agilityBase="22"
-            agilityGain="1.95"
-            intelligenceBase="14"
-            intelligenceGain="1.25"
-            damageMinimum="52"
-            damageMaximum="59"
-            baseMoveSpeed="300"
-            baseArmor="4.14" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>1.95</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.25</intelligenceGain>
+            <damageMinimum>52</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>4.14</baseArmor>
+        </attributes>
         <ability
             name="Thunder Clap"
             description="Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy land units."
@@ -1674,17 +1685,18 @@
         <description>Rigwarl the Bristleback is a melee Strength hero famous for his array of synergistic spells with low mana cost and cooldown. He is able to slow his enemies down and reduce their armor with Viscous Nasal Goo, then hit them with a barrage of Quill Sprays, making him an effective chaser when ganking enemies. His low strength gain makes him less tanky than most strength heroes, but he becomes substantially more durable when he turns around due to his passive Bristleback, which reduces damage taken from behind. In the right hands, Bristleback is a powerful ganker in the early stages of the game, and a powerful hard carry in the later stages depending on how much farm he gets.</description>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.2"
-            agilityBase="17"
-            agilityGain="1.8"
-            intelligenceBase="14"
-            intelligenceGain="2.8"
-            damageMinimum="48"
-            damageMaximum="58"
-            baseMoveSpeed="295"
-            baseArmor="3.43" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.2</strengthGain>
+            <agilityBase>17</agilityBase>
+            <agilityGain>1.8</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>2.8</intelligenceGain>
+            <damageMinimum>48</damageMinimum>
+            <damageMaximum>58</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>3.43</baseArmor>
+        </attributes>
         <ability
             name="Vicious Nasal Goo"
             description="Covers a target in snot, causing it to have reduced armor and movement speed. Multiple casts stack and refresh the duration."
@@ -1812,17 +1824,18 @@
         <role>Carry</role>
     <role>Escape</role>
     <role>Pusher</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.5"
-            agilityBase="18"
-            agilityGain="2.2"
-            intelligenceBase="18"
-            intelligenceGain="2.0"
-            damageMinimum="44"
-            damageMaximum="50"
-            baseMoveSpeed="295"
-            baseArmor="2.57" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.5</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>2.0</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>50</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>2.57</baseArmor>
+        </attributes>
         <ability
             name="Spawn Spiderlings"
             description="Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence."
@@ -1938,17 +1951,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="3.8"
-            agilityBase="15"
-            agilityGain="2.0"
-            intelligenceBase="15"
-            intelligenceGain="1.6"
-            damageMinimum="55"
-            damageMaximum="57"
-            baseMoveSpeed="300"
-            baseArmor="3.14" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>3.8</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>2.0</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>55</damageMinimum>
+            <damageMaximum>57</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>3.14</baseArmor>
+        </attributes>
         <ability
             name="Hoof Stomp"
             description="Slams the ground, stunning and damaging nearby enemy units."
@@ -2060,17 +2074,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="20"
-            strengthGain="2.9"
-            agilityBase="14"
-            agilityGain="2.1"
-            intelligenceBase="16"
-            intelligenceGain="1.2"
-            damageMinimum="49"
-            damageMaximum="79"
-            baseMoveSpeed="325"
-            baseArmor="4.0" />
+        <attributes>
+            <strengthBase>20</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.2</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>79</damageMaximum>
+            <baseMoveSpeed>325</baseMoveSpeed>
+            <baseArmor>4.0</baseArmor>
+        </attributes>
         <ability
             name="Chaos Bolt"
             description="Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage."
@@ -2182,17 +2197,18 @@
         <role>Jungler</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="20"
-            strengthGain="1.5"
-            agilityBase="15"
-            agilityGain="2.1"
-            intelligenceBase="21"
-            intelligenceGain="2.8"
-            damageMinimum="43"
-            damageMaximum="53"
-            baseMoveSpeed="300"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>20</strengthBase>
+            <strengthGain>1.5</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>21</intelligenceBase>
+            <intelligenceGain>2.8</intelligenceGain>
+            <damageMinimum>43</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
         <ability
             name="Penitence"
             description="Forces an enemy unit to move slower and take more damage from attacks and spells."
@@ -2323,17 +2339,18 @@
         <description>Clinkz, the Bone Fletcher is a ranged agility carry specializing in ambushing lone Heroes with high physical damage and incredible speed. Though frail and easy to kill, Skeleton Walk grants Clinkz stealth and haste to escape and re-position himself. This assassin Strafes around the enemy, launching a flurry of Searing Arrows that greatly injure enemies. To aid his assault, Clinkz can form a Death Pact and absorb a creature's life for greater damage and health, making him not only able to take more hits, but hit harder as well.</description>
         <role>Carry</role>
         <role>Escape</role>
-        <attributes
-            strengthBase="15"
-            strengthGain="1.6"
-            agilityBase="22"
-            agilityGain="3.0"
-            intelligenceBase="16"
-            intelligenceGain="1.55"
-            damageMinimum="37"
-            damageMaximum="43"
-            baseMoveSpeed="300"
-            baseArmor="2.14" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>1.6</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>3.0</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.55</intelligenceGain>
+            <damageMinimum>37</damageMinimum>
+            <damageMaximum>43</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>2.14</baseArmor>
+        </attributes>
         <ability
             name="Strafe"
             description="Clinkz attacks with a barrage of arrows. Dramatically increases attack speed for a short time."
@@ -2433,17 +2450,18 @@
         <description>Rattletrap the Clockwerk is a melee strength hero commonly played as an initiator or ganker. As an initiator, his main purpose is crowd control. However, he also does secondary jobs such as chasing and map control. His abilities are centered around isolating and killing enemies one by one. He does not deal reliable area damage like most initiators, but still he is capable of doing a surprising and devastating entrance. Usually Clockwerk players should initiate onto low health support heroes or enemy heroes with strong team fight ability, such as Warlock, hampering their ability to land solid teamfight spells. Clockwerk can also initiate onto enemy carry heroes, in order to isolate them away from the team fight by forcing them to remain in cogs.</description>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="24"
-            strengthGain="2.7"
-            agilityBase="13"
-            agilityGain="2.3"
-            intelligenceBase="17"
-            intelligenceGain="1.3"
-            damageMinimum="55"
-            damageMaximum="57"
-            baseMoveSpeed="315"
-            baseArmor="1.86" />
+        <attributes>
+            <strengthBase>24</strengthBase>
+            <strengthGain>2.7</strengthGain>
+            <agilityBase>13</agilityBase>
+            <agilityGain>2.3</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>1.3</intelligenceGain>
+            <damageMinimum>55</damageMinimum>
+            <damageMaximum>57</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>1.86</baseArmor>
+        </attributes>
         <ability
             name="Battery Assault"
             description="Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun."
@@ -2587,17 +2605,18 @@
         <role>Lane Support</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.7"
-            agilityBase="16"
-            agilityGain="1.6"
-            intelligenceBase="16"
-            intelligenceGain="2.9"
-            damageMinimum="35"
-            damageMaximum="41"
-            baseMoveSpeed="280"
-            baseArmor="1.29" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>1.6</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>2.9</intelligenceGain>
+            <damageMinimum>35</damageMinimum>
+            <damageMaximum>41</damageMaximum>
+            <baseMoveSpeed>280</baseMoveSpeed>
+            <baseArmor>1.29</baseArmor>
+        </attributes>
         <ability
             name="Crystal Nova"
             description="A burst of damaging frost slows enemy movement and attack rate in the targeted area."
@@ -2724,17 +2743,18 @@
         <role>Escape</role>
         <role>Initiator</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.3"
-            agilityBase="12"
-            agilityGain="1.2"
-            intelligenceBase="29"
-            intelligenceGain="2.7"
-            damageMinimum="60"
-            damageMaximum="66"
-            baseMoveSpeed="300"
-            baseArmor="5.71" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.3</strengthGain>
+            <agilityBase>12</agilityBase>
+            <agilityGain>1.2</agilityGain>
+            <intelligenceBase>29</intelligenceBase>
+            <intelligenceGain>2.7</intelligenceGain>
+            <damageMinimum>60</damageMinimum>
+            <damageMaximum>66</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>5.71</baseArmor>
+        </attributes>
         <ability
             name="Vacuum"
             description="Dark Seer creates a vacuum over the target area that sucks in enemy units, disrupting them and dealing damage."
@@ -2862,17 +2882,18 @@
         <description>Dazzle the Shadow Priest is a ranged intelligence Hero exhibiting abilities that bend the sustainability of both his allies and enemies, making him a viable support. While frail, he is capable of keeping his allies and himself from dying, causing his foes to waste time in a fruitless endeavor. Similarly to Slardar, Dazzle boasts abilities that deal physical damage instead of the usual magical. His first ability, Poison Touch, is a strong spammable disable, though mediocre in effects in the first levels. Out of all his abilities, Poison Touch is the only one that cannot pass through Magic immunity, but it will sustain itself when magic immunity is granted after the buff is placed. Shallow Grave is a solid survivability spell, allowing your allied targets to escape during serious encounters. Though it only prevents fatal damage, it cannot be purged, making it a full guarantee that Dazzle's target will survive for the duration. Shadow Wave is a chaining healing ability that dissipates the health gained to damage nearby enemies, having a potential of delivering a huge damage output when good positioning comes to play. His ultimate, Weave, is a large armor bending ability that not only increases his allies' armor, but also decreases his enemies'. With the fact that his abilities deal physical damage and that Dazzle himself has large attack damage, the chaotic combination with armor reduction really makes Dazzle a devastating Hero to go against.</description>
         <role>Lane Support</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.85"
-            agilityBase="21"
-            agilityGain="1.7"
-            intelligenceBase="27"
-            intelligenceGain="3.4"
-            damageMinimum="41"
-            damageMaximum="59"
-            baseMoveSpeed="305"
-            baseArmor="2.0" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.85</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>3.4</intelligenceGain>
+            <damageMinimum>41</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>2.0</baseArmor>
+        </attributes>
         <ability
             name="Poison Touch"
             description="Casts a poisonous spell on an enemy unit, causing damage and slowness over time, and eventual paralysis. Poison Touch mini-stuns on impact. Slow increases per level."
@@ -2995,17 +3016,18 @@
         <role>Durable</role>
         <role>Nuker</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="2.2"
-            agilityBase="14"
-            agilityGain="1.4"
-            intelligenceBase="20"
-            intelligenceGain="3.0"
-            damageMinimum="44"
-            damageMaximum="56"
-            baseMoveSpeed="280"
-            baseArmor="3.0" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>2.2</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.4</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>3.0</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>280</baseMoveSpeed>
+            <baseArmor>3.0</baseArmor>
+        </attributes>
         <ability
             name="Crypt Swarm"
             description="Sends a swarm of winged beasts to savage enemy units in front of Death Prophet."
@@ -3124,17 +3146,18 @@
         <role>Initiator</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.9"
-            agilityBase="15"
-            agilityGain="1.4"
-            intelligenceBase="22"
-            intelligenceGain="2.5"
-            damageMinimum="49"
-            damageMaximum="53"
-            baseMoveSpeed="300"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.4</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
         <ability
             name="Thunder Strike"
             description="Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius."
@@ -3256,17 +3279,18 @@
         <role>Carry</role>
         <role>Durable</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="26"
-            strengthGain="3.2"
-            agilityBase="11"
-            agilityGain="0.9"
-            intelligenceBase="13"
-            intelligenceGain="2.1"
-            damageMinimum="53"
-            damageMaximum="69"
-            baseMoveSpeed="290"
-            baseArmor="0.57" />
+        <attributes>
+            <strengthBase>26</strengthBase>
+            <strengthGain>3.2</strengthGain>
+            <agilityBase>11</agilityBase>
+            <agilityGain>0.9</agilityGain>
+            <intelligenceBase>13</intelligenceBase>
+            <intelligenceGain>2.1</intelligenceGain>
+            <damageMinimum>53</damageMinimum>
+            <damageMaximum>69</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>0.57</baseArmor>
+        </attributes>
         <ability
             name="Devour"
             description="Consumes an enemy or neutral creep, acquiring any special abilities that it possessed."
@@ -3394,17 +3418,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="2.8"
-            agilityBase="19"
-            agilityGain="2.2"
-            intelligenceBase="15"
-            intelligenceGain="1.7"
-            damageMinimum="46"
-            damageMaximum="52"
-            baseMoveSpeed="290"
-            baseArmor="3.71" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>2.8</strengthGain>
+            <agilityBase>19</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.7</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>52</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>3.71</baseArmor>
+        </attributes>
         <ability
             name="Breathe Fire"
             description="Unleashes a breath of fire on enemy units in a line in front of Dragon Knight."
@@ -3505,17 +3530,18 @@
         <faction>Radiant</faction>
         <description>Traxex the Drow Ranger is a ranged agility hero whose greatest assets are her incredible damage and ability to keep threats at bay. Traxex is a carry who, though lacking survivability, provides a worthwhile contribution through her damage alone. The Drow Ranger can be extremely powerful at any given point in the game. As an agility hero, Traxex's damage is based largely off her auto attacks and is among the greatest largely due to the massive amounts of agility she gains from her passive ultimate, Marksmanship. The Drow Ranger also adds ranged damage to teammates with her global Precision Aura. Despite her lack of escape spells, Drow Ranger can keep herself relatively safe from enemy spellcasters and melee heroes using her Gust and her Frost Arrows, respectively. Frost Arrows infuses her attacks with ice, greatly slowing down her enemies. Since it can be manually cast, Frost Arrows can be used to harass her foes in the early game without drawing the creeps' attention. Gust is a great counter to enemy spellcasters as well as melee heroes as Gust pushes heroes away from Drow and prevents them from casting spells, who might threaten her life in battles. Position is of utmost importance as Traxex is quite vulnerable in close combat and the agility bonus from Marksmanship is removed when enemies come near her. This means she struggles against melee heroes with high mobility, such as Anti-Mage and Faceless Void.</description>
         <role>Carry</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="1.9"
-            agilityBase="26"
-            agilityGain="1.9"
-            intelligenceBase="15"
-            intelligenceGain="1.4"
-            damageMinimum="44"
-            damageMaximum="55"
-            baseMoveSpeed="300"
-            baseArmor="0.71" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>26</agilityBase>
+            <agilityGain>1.9</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.4</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>55</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>0.71</baseArmor>
+        </attributes>
         <ability
             name="Frost Arrows"
             description="Adds a freezing effect to Drow's attacks, slowing enemy movement. Lasts 1.5 seconds on Heroes, and 7 seconds on creeps."
@@ -3627,17 +3653,18 @@
         <role>Initiator</role>
         <role>Lane Support</role>
         <role>Support</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.9"
-            agilityBase="12"
-            agilityGain="1.4"
-            intelligenceBase="16"
-            intelligenceGain="1.8"
-            damageMinimum="46"
-            damageMaximum="56"
-            baseMoveSpeed="310"
-            baseArmor="2.71" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>12</agilityBase>
+            <agilityGain>1.4</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>2.71</baseArmor>
+        </attributes>
         <ability
             name="Fissure"
             description="Slams the ground with a mighty totem, fissuring the earth while stunning and damaging enemy units in a line. Creates an impassable ridge of stone."
@@ -3734,17 +3761,18 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Kaolin the Earth Spirit is a highly adaptable strength hero with great utility, able to effectively fill the role of a support, ganker, or offlaner, while still having a large game presence due to his strong initiation. Unlike most heroes, his abilities revolve around an innate ability, Stone Remnant. Because of Stone Remnant's synergy with his other abilities, Earth Spirit has an incredibly high skill ceiling, and can be challenging to master. He can be surprisingly mobile, owing to his Rolling Boulder, and can use this in combination with his other skills to position himself to disable multiple enemies, save allies from certain death and generally become a commanding presence in a teamfight, even without a great deal of farm. With good timing he can initiate fights from a distance, and given the right circumstances can deal a surprising amount of damage to both single and multiple targets, all the while disrupting enemy positioning allowing for easy kills. A useful ally and a dangerous enemy, the Earth Spirit's versatility and flexibility make him an ideal hero in almost any lineup or lane.</description>
-        <attributes
-            strengthBase="21"
-            strengthGain="2.9"
-            agilityBase="17"
-            agilityGain="1.5"
-            intelligenceBase="18"
-            intelligenceGain="2.4"
-            damageMinimum="46"
-            damageMaximum="56"
-            baseMoveSpeed="305"
-            baseArmor="3.43" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>17</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>2.4</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>3.43</baseArmor>
+        </attributes>
         <ability
             name="Boulder Smash"
             description="Earth Spirit smashes the target enemy, ally, or Stone Remnant, knocking it back in the direction he is facing. The knocked back target deals damage to all units it hits. If the target was a Stone Remnant, damaged targets are also stunned, and the travel distance is improved."
@@ -3910,17 +3938,18 @@
         <description>The Elder Titan is a durable melee strength hero who plays the role of initiator. His Astral Spirit and Echo Stomp abilities allow him to disable large groups of enemies from afar, making him one of the few initiators that does not require a Blink Dagger. This combination creates a perfect setup for his powerful ultimate Earth Splitter, which damages enemies based on their maximum HP. This, along with his ability to lower his enemies' physical and magical resistance, makes Elder Titan scale well through his abilities and be effective at all stages of the game. As the progenitor of this world, Elder Titan reshapes the battlefield on a whim and can turn any teamfight in his favor.</description>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="24"
-            strengthGain="2.3"
-            agilityBase="14"
-            agilityGain="1.5"
-            intelligenceBase="23"
-            intelligenceGain="1.6"
-            damageMinimum="47"
-            damageMaximum="57"
-            baseMoveSpeed="315"
-            baseArmor="3.0" />
+        <attributes>
+            <strengthBase>24</strengthBase>
+            <strengthGain>2.3</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>23</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>47</damageMinimum>
+            <damageMaximum>57</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>3.0</baseArmor>
+        </attributes>
         <ability
             name="Echo Stomp"
             description="Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations. The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage. Unconscious enemies will wake if they take player based damage."
@@ -4063,17 +4092,18 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <attributes
-            strengthBase="19"
-            strengthGain="2.0"
-            agilityBase="22"
-            agilityGain="1.8"
-            intelligenceBase="20"
-            intelligenceGain="1.8"
-            damageMinimum="52"
-            damageMaximum="56"
-            baseMoveSpeed="310"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>1.8</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>52</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
         <ability
             name="Searing Chains"
             description="Ember Spirit unleashes two fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage each second."
@@ -4226,17 +4256,18 @@
         <role>Jungler</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.0"
-            agilityBase="19"
-            agilityGain="1.8"
-            intelligenceBase="16"
-            intelligenceGain="2.8"
-            damageMinimum="47"
-            damageMaximum="57"
-            baseMoveSpeed="310"
-            baseArmor="0.71" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.0</strengthGain>
+            <agilityBase>19</agilityBase>
+            <agilityGain>1.8</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>2.8</intelligenceGain>
+            <damageMinimum>47</damageMinimum>
+            <damageMaximum>57</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>0.71</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Enigma</name>
@@ -4247,17 +4278,18 @@
         <role>Initiator</role>
         <role>Jungler</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.1"
-            agilityBase="14"
-            agilityGain="1.0"
-            intelligenceBase="20"
-            intelligenceGain="3.4"
-            damageMinimum="42"
-            damageMaximum="48"
-            baseMoveSpeed="300"
-            baseArmor="4.0" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.1</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.0</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>3.4</intelligenceGain>
+            <damageMinimum>42</damageMinimum>
+            <damageMaximum>48</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>4.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Faceless Void</name>
@@ -4268,17 +4300,18 @@
             <role>Disabler</role>
             <role>Escape</role>
             <role>Initiator</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="1.6"
-            agilityBase="21"
-            agilityGain="2.65"
-            intelligenceBase="15"
-            intelligenceGain="1.5"
-            damageMinimum="58"
-            damageMaximum="64"
-            baseMoveSpeed="300"
-            baseArmor="4.0" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>1.6</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>2.65</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>58</damageMinimum>
+            <damageMaximum>64</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>4.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Gyrocopter</name>
@@ -4288,17 +4321,18 @@
         <role>Disabler</role>
         <role>Initiator</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="1.8"
-            agilityBase="24"
-            agilityGain="2.8"
-            intelligenceBase="23"
-            intelligenceGain="2.1"
-            damageMinimum="41"
-            damageMaximum="51"
-            baseMoveSpeed="315"
-            baseArmor="4.43" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>24</agilityBase>
+            <agilityGain>2.8</agilityGain>
+            <intelligenceBase>23</intelligenceBase>
+            <intelligenceGain>2.1</intelligenceGain>
+            <damageMinimum>41</damageMinimum>
+            <damageMaximum>51</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>4.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Huskar</name>
@@ -4308,34 +4342,36 @@
         <role>Carry</role>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="21"
-            strengthGain="2.4"
-            agilityBase="15"
-            agilityGain="1.4"
-            intelligenceBase="18"
-            intelligenceGain="1.5"
-            damageMinimum="42"
-            damageMaximum="51"
-            baseMoveSpeed="300"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>2.4</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.4</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>42</damageMinimum>
+            <damageMaximum>51</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Invoker</name>
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
 		<faction>Dire</faction>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.7"
-            agilityBase="20"
-            agilityGain="1.9"
-            intelligenceBase="22"
-            intelligenceGain="2.5"
-            damageMinimum="35"
-            damageMaximum="41"
-            baseMoveSpeed="280"
-            baseArmor="1.86" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>1.9</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>35</damageMinimum>
+            <damageMaximum>41</damageMaximum>
+            <baseMoveSpeed>280</baseMoveSpeed>
+            <baseArmor>1.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Io</name>
@@ -4345,17 +4381,18 @@
         <role>Lane Support</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="1.9"
-            agilityBase="14"
-            agilityGain="1.6"
-            intelligenceBase="23"
-            intelligenceGain="1.7"
-            damageMinimum="43"
-            damageMaximum="52"
-            baseMoveSpeed="295"
-            baseArmor="0.0" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.6</agilityGain>
+            <intelligenceBase>23</intelligenceBase>
+            <intelligenceGain>1.7</intelligenceGain>
+            <damageMinimum>43</damageMinimum>
+            <damageMaximum>52</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>0.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Jakiro</name>
@@ -4366,17 +4403,18 @@
         <role>Lane Support</role>
         <role>Nuker</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="24"
-            strengthGain="2.3"
-            agilityBase="10"
-            agilityGain="1.2"
-            intelligenceBase="28"
-            intelligenceGain="2.8"
-            damageMinimum="46"
-            damageMaximum="54"
-            baseMoveSpeed="290"
-            baseArmor="2.43" />
+        <attributes>
+            <strengthBase>24</strengthBase>
+            <strengthGain>2.3</strengthGain>
+            <agilityBase>10</agilityBase>
+            <agilityGain>1.2</agilityGain>
+            <intelligenceBase>28</intelligenceBase>
+            <intelligenceGain>2.8</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>2.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Juggernaut</name>
@@ -4385,17 +4423,18 @@
         <faction>Radiant</faction>
         <role>Carry</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="20"
-            strengthGain="1.9"
-            agilityBase="20"
-            agilityGain="2.85"
-            intelligenceBase="14"
-            intelligenceGain="1.4"
-            damageMinimum="44"
-            damageMaximum="48"
-            baseMoveSpeed="305"
-            baseArmor="3.86" />
+        <attributes>
+            <strengthBase>20</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>2.85</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.4</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>48</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>3.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Keeper of the Light</name>
@@ -4403,17 +4442,18 @@
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
         <role>Pusher</role>
-        <attributes
-            strengthBase="14"
-            strengthGain="1.8"
-            agilityBase="15"
-            agilityGain="1.6"
-            intelligenceBase="22"
-            intelligenceGain="2.8"
-            damageMinimum="40"
-            damageMaximum="54"
-            baseMoveSpeed="315"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>14</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.6</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>2.8</intelligenceGain>
+            <damageMinimum>40</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Kunkka</name>
@@ -4424,34 +4464,36 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="24"
-            strengthGain="3.0"
-            agilityBase="14"
-            agilityGain="1.3"
-            intelligenceBase="18"
-            intelligenceGain="1.5"
-            damageMinimum="50"
-            damageMaximum="60"
-            baseMoveSpeed="300"
-            baseArmor="2.0" />
+        <attributes>
+            <strengthBase>24</strengthBase>
+            <strengthGain>3.0</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.3</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>50</damageMinimum>
+            <damageMaximum>60</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>2.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Legion Commander</name>
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <attributes
-            strengthBase="26"
-            strengthGain="2.6"
-            agilityBase="18"
-            agilityGain="1.7"
-            intelligenceBase="20"
-            intelligenceGain="2.2"
-            damageMinimum="57"
-            damageMaximum="61"
-            baseMoveSpeed="320"
-            baseArmor="2.57" />
+        <attributes>
+            <strengthBase>26</strengthBase>
+            <strengthGain>2.6</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>2.2</intelligenceGain>
+            <damageMinimum>57</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>320</baseMoveSpeed>
+            <baseArmor>2.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Leshrac</name>
@@ -4462,17 +4504,18 @@
         <role>Nuker</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.6"
-            agilityBase="23"
-            agilityGain="1.7"
-            intelligenceBase="26"
-            intelligenceGain="3.0"
-            damageMinimum="45"
-            damageMaximum="49"
-            baseMoveSpeed="315"
-            baseArmor="3.29" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.6</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>26</intelligenceBase>
+            <intelligenceGain>3.0</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>49</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>3.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Lich</name>
@@ -4482,17 +4525,18 @@
         <role>Lane Support</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="1.55"
-            agilityBase="15"
-            agilityGain="2.0"
-            intelligenceBase="18"
-            intelligenceGain="3.25"
-            damageMinimum="42"
-            damageMaximum="51"
-            baseMoveSpeed="315"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>1.55</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>2.0</agilityGain>/
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>3.25</intelligenceGain>
+            <damageMinimum>42</damageMinimum>
+            <damageMaximum>51</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Lifestealer</name>
@@ -4503,17 +4547,18 @@
         <role>Durable</role>
         <role>Escape</role>
         <role>Jungler</role>
-        <attributes
-            strengthBase="25"
-            strengthGain="2.4"
-            agilityBase="18"
-            agilityGain="1.9"
-            intelligenceBase="15"
-            intelligenceGain="1.75"
-            damageMinimum="57"
-            damageMaximum="67"
-            baseMoveSpeed="315"
-            baseArmor="1.57" />
+        <attributes>
+            <strengthBase>25</strengthBase>
+            <strengthGain>2.4</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>1.9</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.75</intelligenceGain>
+            <damageMinimum>57</damageMinimum>
+            <damageMaximum>67</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>1.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Lina</name>
@@ -4523,17 +4568,18 @@
         <role>Disabler</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="1.5"
-            agilityBase="16"
-            agilityGain="1.5"
-            intelligenceBase="27"
-            intelligenceGain="3.2"
-            damageMinimum="40"
-            damageMaximum="58"
-            baseMoveSpeed="295"
-            baseArmor="1.29" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>1.5</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>3.2</intelligenceGain>
+            <damageMinimum>40</damageMinimum>
+            <damageMaximum>58</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>1.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Lion</name>
@@ -4544,17 +4590,18 @@
         <role>Lane Support</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.7"
-            agilityBase="15"
-            agilityGain="1.5"
-            intelligenceBase="22"
-            intelligenceGain="3.0"
-            damageMinimum="42"
-            damageMaximum="48"
-            baseMoveSpeed="290"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>3.0</intelligenceGain>
+            <damageMinimum>42</damageMinimum>
+            <damageMaximum>48</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Lone Druid</name>
@@ -4565,17 +4612,18 @@
         <role>Durable</role>
         <role>Jungler</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.1"
-            agilityBase="24"
-            agilityGain="2.7"
-            intelligenceBase="13"
-            intelligenceGain="1.4"
-            damageMinimum="46"
-            damageMaximum="50"
-            baseMoveSpeed="325"
-            baseArmor="3.43" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.1</strengthGain>
+            <agilityBase>24</agilityBase>
+            <agilityGain>2.7</agilityGain>
+            <intelligenceBase>13</intelligenceBase>
+            <intelligenceGain>1.4</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>50</damageMaximum>
+            <baseMoveSpeed>325</baseMoveSpeed>
+            <baseArmor>3.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Luna</name>
@@ -4584,17 +4632,18 @@
         <faction>Radiant</faction>
         <role>Carry</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="15"
-            strengthGain="1.9"
-            agilityBase="22"
-            agilityGain="2.8"
-            intelligenceBase="16"
-            intelligenceGain="1.85"
-            damageMinimum="48"
-            damageMaximum="54"
-            baseMoveSpeed="330"
-            baseArmor="3.14" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>2.8</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.85</intelligenceGain>
+            <damageMinimum>48</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>330</baseMoveSpeed>
+            <baseArmor>3.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Lycan</name>
@@ -4605,17 +4654,18 @@
         <role>Durable</role>
         <role>Jungler</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.75"
-            agilityBase="16"
-            agilityGain="1.9"
-            intelligenceBase="17"
-            intelligenceGain="1.55"
-            damageMinimum="58"
-            damageMaximum="63"
-            baseMoveSpeed="305"
-            baseArmor="3.29" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.75</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>1.9</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>1.55</intelligenceGain>
+            <damageMinimum>58</damageMinimum>
+            <damageMaximum>63</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>3.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Magnus</name>
@@ -4626,34 +4676,36 @@
         <role>Disabler</role>
         <role>Initiator</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="21"
-            strengthGain="2.75"
-            agilityBase="15"
-            agilityGain="2.5"
-            intelligenceBase="19"
-            intelligenceGain="1.65"
-            damageMinimum="49"
-            damageMaximum="61"
-            baseMoveSpeed="315"
-            baseArmor="4.14" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>2.75</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>2.5</agilityGain>
+            <intelligenceBase>19</intelligenceBase>
+            <intelligenceGain>1.65</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>4.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Medusa</name>
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
 		<faction>Dire</faction>
-        <attributes
-            strengthBase="14"
-            strengthGain="1.65"
-            agilityBase="20"
-            agilityGain="2.5"
-            intelligenceBase="19"
-            intelligenceGain="1.85"
-            damageMinimum="44"
-            damageMaximum="50"
-            baseMoveSpeed="290"
-            baseArmor="1.86" />
+        <attributes>
+            <strengthBase>14</strengthBase>
+            <strengthGain>1.65</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>2.5</agilityGain>
+            <intelligenceBase>19</intelligenceBase>
+            <intelligenceGain>1.85</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>50</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>1.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Meepo</name>
@@ -4663,17 +4715,18 @@
         <role>Carry</role>
         <role>Disabler</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="1.6"
-            agilityBase="23"
-            agilityGain="1.9"
-            intelligenceBase="20"
-            intelligenceGain="1.6"
-            damageMinimum="39"
-            damageMaximum="45"
-            baseMoveSpeed="305"
-            baseArmor="4.29" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>1.6</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>1.9</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>39</damageMinimum>
+            <damageMaximum>45</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>4.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Mirana</name>
@@ -4684,17 +4737,18 @@
         <role>Disabler</role>
         <role>Escape</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="1.85"
-            agilityBase="20"
-            agilityGain="2.75"
-            intelligenceBase="17"
-            intelligenceGain="1.65"
-            damageMinimum="38"
-            damageMaximum="49"
-            baseMoveSpeed="300"
-            baseArmor="1.86" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>1.85</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>2.75</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>1.65</intelligenceGain>
+            <damageMinimum>38</damageMinimum>
+            <damageMaximum>49</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Morphling</name>
@@ -4704,17 +4758,18 @@
         <role>Disabler</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="2.0"
-            agilityBase="24"
-            agilityGain="3.0"
-            intelligenceBase="17"
-            intelligenceGain="1.5"
-            damageMinimum="37"
-            damageMaximum="46"
-            baseMoveSpeed="285"
-            baseArmor="1.43" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>24</agilityBase>
+            <agilityGain>3.0</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>37</damageMinimum>
+            <damageMaximum>46</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>1.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Naga Siren</name>
@@ -4725,17 +4780,18 @@
         <role>Disabler</role>
         <role>Escape</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="21"
-            strengthGain="2.3"
-            agilityBase="21"
-            agilityGain="2.75"
-            intelligenceBase="18"
-            intelligenceGain="1.95"
-            damageMinimum="44"
-            damageMaximum="46"
-            baseMoveSpeed="320"
-            baseArmor="6.0" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>2.3</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>2.75</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.95</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>46</damageMaximum>
+            <baseMoveSpeed>320</baseMoveSpeed>
+            <baseArmor>6.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Nature's Prophet</name>
@@ -4746,17 +4802,18 @@
         <role>Escape</role>
         <role>Jungler</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.8"
-            agilityBase="18"
-            agilityGain="1.9"
-            intelligenceBase="21"
-            intelligenceGain="2.9"
-            damageMinimum="45"
-            damageMaximum="59"
-            baseMoveSpeed="295"
-            baseArmor="3.57" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>1.9</agilityGain>
+            <intelligenceBase>21</intelligenceBase>
+            <intelligenceGain>2.9</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>3.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Necrophos</name>
@@ -4766,17 +4823,18 @@
         <role>Carry</role>
         <role>Durable</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="2.0"
-            agilityBase="15"
-            agilityGain="1.7"
-            intelligenceBase="22"
-            intelligenceGain="2.5"
-            damageMinimum="44"
-            damageMaximum="48"
-            baseMoveSpeed="290"
-            baseArmor="2.14" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>48</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>2.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Night Stalker</name>
@@ -4785,17 +4843,18 @@
         <faction>Dire</faction>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.8"
-            agilityBase="18"
-            agilityGain="2.25"
-            intelligenceBase="16"
-            intelligenceGain="1.6"
-            damageMinimum="57"
-            damageMaximum="61"
-            baseMoveSpeed="295"
-            baseArmor="5.57" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.8</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>2.25</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>57</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>5.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Nyx Assassin</name>
@@ -4804,17 +4863,18 @@
         <faction>Dire</faction>
         <role>Disabler</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="2.0"
-            agilityBase="19"
-            agilityGain="2.2"
-            intelligenceBase="18"
-            intelligenceGain="2.1"
-            damageMinimum="49"
-            damageMaximum="53"
-            baseMoveSpeed="300"
-            baseArmor="3.71" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>19</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>2.1</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>3.71</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Ogre Magi</name>
@@ -4824,17 +4884,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="3.2"
-            agilityBase="14"
-            agilityGain="1.55"
-            intelligenceBase="17"
-            intelligenceGain="2.4"
-            damageMinimum="58"
-            damageMaximum="64"
-            baseMoveSpeed="295"
-            baseArmor="6.0" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>3.2</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.55</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>2.4</intelligenceGain>
+            <damageMinimum>58</damageMinimum>
+            <damageMaximum>64</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>6.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Omniknight</name>
@@ -4844,17 +4905,18 @@
         <role>Durable</role>
         <role>Lane Support</role>
         <role>Support</role>
-        <attributes
-            strengthBase="20"
-            strengthGain="2.65"
-            agilityBase="15"
-            agilityGain="1.75"
-            intelligenceBase="17"
-            intelligenceGain="1.8"
-            damageMinimum="51"
-            damageMaximum="61"
-            baseMoveSpeed="305"
-            baseArmor="4.14" />
+        <attributes>
+            <strengthBase>20</strengthBase>
+            <strengthGain>2.65</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.75</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>51</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>4.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Outworld Devourer</name>
@@ -4862,17 +4924,18 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <role>Carry</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.85"
-            agilityBase="24"
-            agilityGain="2.0"
-            intelligenceBase="26"
-            intelligenceGain="3.3"
-            damageMinimum="46"
-            damageMaximum="61"
-            baseMoveSpeed="315"
-            baseArmor="5.43" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.85</strengthGain>
+            <agilityBase>24</agilityBase>
+            <agilityGain>2.0</agilityGain>
+            <intelligenceBase>26</intelligenceBase>
+            <intelligenceGain>3.3</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>5.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Phantom Assassin</name>
@@ -4881,17 +4944,18 @@
         <faction>Dire</faction>
         <role>Carry</role>
         <role>Escape</role>
-        <attributes
-            strengthBase="20"
-            strengthGain="1.85"
-            agilityBase="23"
-            agilityGain="3.15"
-            intelligenceBase="13"
-            intelligenceGain="1.0"
-            damageMinimum="46"
-            damageMaximum="48"
-            baseMoveSpeed="310"
-            baseArmor="4.29" />
+        <attributes>
+            <strengthBase>20</strengthBase>
+            <strengthGain>1.85</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>3.15</agilityGain>
+            <intelligenceBase>13</intelligenceBase>
+            <intelligenceGain>1.0</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>48</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>4.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Phantom Lancer</name>
@@ -4901,68 +4965,72 @@
         <role>Carry</role>
         <role>Escape</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="2.7"
-            agilityBase="23"
-            agilityGain="4.2"
-            intelligenceBase="21"
-            intelligenceGain="2.0"
-            damageMinimum="45"
-            damageMaximum="67"
-            baseMoveSpeed="290"
-            baseArmor="3.29" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>2.7</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>4.2</agilityGain>
+            <intelligenceBase>21</intelligenceBase>
+            <intelligenceGain>2.0</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>67</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>3.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Phoenix</name>
         <damageType>Ranged</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.9"
-            agilityBase="12"
-            agilityGain="1.3"
-            intelligenceBase="18"
-            intelligenceGain="1.8"
-            damageMinimum="43"
-            damageMaximum="53"
-            baseMoveSpeed="285"
-            baseArmor="-0.29" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>12</agilityBase>
+            <agilityGain>1.3</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>43</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>-0.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Puck</name>
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <attributes
-            strengthBase="15"
-            strengthGain="1.7"
-            agilityBase="22"
-            agilityGain="1.7"
-            intelligenceBase="25"
-            intelligenceGain="2.4"
-            damageMinimum="47"
-            damageMaximum="58"
-            baseMoveSpeed="295"
-            baseArmor="2.14" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>25</intelligenceBase>
+            <intelligenceGain>2.4</intelligenceGain>
+            <damageMinimum>47</damageMinimum>
+            <damageMaximum>58</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>2.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Pudge</name>
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
 		<faction>Dire</faction>
-        <attributes
-            strengthBase="25"
-            strengthGain="3.2"
-            agilityBase="14"
-            agilityGain="1.5"
-            intelligenceBase="14"
-            intelligenceGain="1.5"
-            damageMinimum="52"
-            damageMaximum="58"
-            baseMoveSpeed="285"
-            baseArmor="1.0" />
+        <attributes>
+            <strengthBase>25</strengthBase>
+            <strengthGain>3.2</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>52</damageMinimum>
+            <damageMaximum>58</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>1.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Pugna</name>
@@ -4972,17 +5040,18 @@
         <role>Nuker</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="1.2"
-            agilityBase="16"
-            agilityGain="1.0"
-            intelligenceBase="26"
-            intelligenceGain="4.0"
-            damageMinimum="45"
-            damageMaximum="53"
-            baseMoveSpeed="320"
-            baseArmor="1.29" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>1.2</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>1.0</agilityGain>
+            <intelligenceBase>26</intelligenceBase>
+            <intelligenceGain>4.0</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>320</baseMoveSpeed>
+            <baseArmor>1.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Queen of Pain</name>
@@ -4992,17 +5061,18 @@
         <role>Carry</role>
         <role>Escape</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.7"
-            agilityBase="18"
-            agilityGain="2.0"
-            intelligenceBase="24"
-            intelligenceGain="2.5"
-            damageMinimum="49"
-            damageMaximum="57"
-            baseMoveSpeed="300"
-            baseArmor="1.57" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>2.0</agilityGain>
+            <intelligenceBase>24</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>57</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Razor</name>
@@ -5012,17 +5082,18 @@
         <role>Carry</role>
         <role>Durable</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="21"
-            strengthGain="1.7"
-            agilityBase="22"
-            agilityGain="2.0"
-            intelligenceBase="19"
-            intelligenceGain="1.8"
-            damageMinimum="45"
-            damageMaximum="47"
-            baseMoveSpeed="295"
-            baseArmor="2.14" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>2.0</agilityGain>
+            <intelligenceBase>19</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>47</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>2.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Riki</name>
@@ -5031,17 +5102,18 @@
         <faction>Radiant</faction>
         <role>Carry</role>
         <role>Escape</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.0"
-            agilityBase="34"
-            agilityGain="2.9"
-            intelligenceBase="14"
-            intelligenceGain="1.3"
-            damageMinimum="48"
-            damageMaximum="52"
-            baseMoveSpeed="300"
-            baseArmor="5.86" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>34</agilityBase>
+            <agilityGain>2.9</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.3</intelligenceGain>
+            <damageMinimum>48</damageMinimum>
+            <damageMaximum>52</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>5.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Rubick</name>
@@ -5050,17 +5122,18 @@
         <faction>Radiant</faction>
         <role>Disabler</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.5"
-            agilityBase="14"
-            agilityGain="1.6"
-            intelligenceBase="27"
-            intelligenceGain="2.4"
-            damageMinimum="44"
-            damageMaximum="54"
-            baseMoveSpeed="290"
-            baseArmor="1.0" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.5</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>1.6</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>2.4</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>1.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Sand King</name>
@@ -5070,17 +5143,18 @@
         <role>Disabler</role>
         <role>Initiator</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="2.6"
-            agilityBase="19"
-            agilityGain="2.1"
-            intelligenceBase="16"
-            intelligenceGain="1.8"
-            damageMinimum="43"
-            damageMaximum="59"
-            baseMoveSpeed="300"
-            baseArmor="2.71" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>2.6</strengthGain>
+            <agilityBase>19</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>43</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>2.71</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Shadow Demon</name>
@@ -5090,17 +5164,18 @@
         <role>Disabler</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="1.9"
-            agilityBase="18"
-            agilityGain="2.2"
-            intelligenceBase="23"
-            intelligenceGain="2.7"
-            damageMinimum="50"
-            damageMaximum="54"
-            baseMoveSpeed="295"
-            baseArmor="2.57" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>23</intelligenceBase>
+            <intelligenceGain>2.7</intelligenceGain>
+            <damageMinimum>50</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>2.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Shadow Fiend</name>
@@ -5109,17 +5184,18 @@
         <faction>Dire</faction>
         <role>Carry</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="15"
-            strengthGain="2.0"
-            agilityBase="20"
-            agilityGain="2.9"
-            intelligenceBase="18"
-            intelligenceGain="2.0"
-            damageMinimum="35"
-            damageMaximum="41"
-            baseMoveSpeed="305"
-            baseArmor="1.86" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>20</agilityBase>
+            <agilityGain>2.9</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>2.0</intelligenceGain>
+            <damageMinimum>35</damageMinimum>
+            <damageMaximum>41</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>1.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Shadow Shaman</name>
@@ -5130,17 +5206,18 @@
         <role>Nuker</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.6"
-            agilityBase="16"
-            agilityGain="1.6"
-            intelligenceBase="21"
-            intelligenceGain="3.0"
-            damageMinimum="47"
-            damageMaximum="54"
-            baseMoveSpeed="285"
-            baseArmor="1.29" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.6</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>1.6</agilityGain>
+            <intelligenceBase>21</intelligenceBase>
+            <intelligenceGain>3.0</intelligenceGain>
+            <damageMinimum>47</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>1.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Silencer</name>
@@ -5150,17 +5227,18 @@
         <role>Carry</role>
         <role>Initiator</role>
         <role>Support</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.2"
-            agilityBase="16"
-            agilityGain="2.1"
-            intelligenceBase="27"
-            intelligenceGain="2.5"
-            damageMinimum="43"
-            damageMaximum="57"
-            baseMoveSpeed="300"
-            baseArmor="1.29" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.2</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>43</damageMinimum>
+            <damageMaximum>57</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Skywrath Mage</name>
@@ -5170,17 +5248,18 @@
         <role>Nuker</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.5"
-            agilityBase="18"
-            agilityGain="0.8"
-            intelligenceBase="27"
-            intelligenceGain="3.6"
-            damageMinimum="39"
-            damageMaximum="49"
-            baseMoveSpeed="315"
-            baseArmor="0.57" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.5</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>0.8</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>3.6</intelligenceGain>
+            <damageMinimum>39</damageMinimum>
+            <damageMaximum>49</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>0.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Slardar</name>
@@ -5191,17 +5270,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="21"
-            strengthGain="2.8"
-            agilityBase="17"
-            agilityGain="2.4"
-            intelligenceBase="15"
-            intelligenceGain="1.5"
-            damageMinimum="51"
-            damageMaximum="59"
-            baseMoveSpeed="300"
-            baseArmor="5.43" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>2.8</strengthGain>
+            <agilityBase>17</agilityBase>
+            <agilityGain>2.4</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>51</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>5.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Slark</name>
@@ -5209,17 +5289,18 @@
         <attribute>Agility</attribute>
         <faction>Dire</faction>
         <role>Escape</role>
-        <attributes
-            strengthBase="21"
-            strengthGain="1.8"
-            agilityBase="21"
-            agilityGain="1.5"
-            intelligenceBase="16"
-            intelligenceGain="1.9"
-            damageMinimum="54"
-            damageMaximum="62"
-            baseMoveSpeed="305"
-            baseArmor="2.0" />
+        <attributes>
+            <strengthBase>21</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.9</intelligenceGain>
+            <damageMinimum>54</damageMinimum>
+            <damageMaximum>62</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>2.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Sniper</name>
@@ -5227,17 +5308,18 @@
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
         <role>Carry</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.7"
-            agilityBase="21"
-            agilityGain="2.9"
-            intelligenceBase="15"
-            intelligenceGain="2.6"
-            damageMinimum="36"
-            damageMaximum="42"
-            baseMoveSpeed="290"
-            baseArmor="2.0" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.7</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>2.9</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>2.6</intelligenceGain>
+            <damageMinimum>36</damageMinimum>
+            <damageMaximum>42</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>2.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Spectre</name>
@@ -5246,17 +5328,18 @@
         <faction>Dire</faction>
         <role>Carry</role>
         <role>Durable</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="2.0"
-            agilityBase="23"
-            agilityGain="2.2"
-            intelligenceBase="16"
-            intelligenceGain="1.9"
-            damageMinimum="46"
-            damageMaximum="50"
-            baseMoveSpeed="295"
-            baseArmor="3.29" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>2.2</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.9</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>50</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>3.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Spirit Breaker</name>
@@ -5267,17 +5350,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="29"
-            strengthGain="2.4"
-            agilityBase="17"
-            agilityGain="1.7"
-            intelligenceBase="14"
-            intelligenceGain="1.8"
-            damageMinimum="60"
-            damageMaximum="70"
-            baseMoveSpeed="290"
-            baseArmor="5.43" />
+        <attributes>
+            <strengthBase>29</strengthBase>
+            <strengthGain>2.4</strengthGain>
+            <agilityBase>17</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>60</damageMinimum>
+            <damageMaximum>70</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>5.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Storm Spirit</name>
@@ -5288,17 +5372,18 @@
         <role>Disabler</role>
         <role>Escape</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="1.5"
-            agilityBase="22"
-            agilityGain="1.8"
-            intelligenceBase="23"
-            intelligenceGain="2.6"
-            damageMinimum="45"
-            damageMaximum="55"
-            baseMoveSpeed="290"
-            baseArmor="5.14" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>1.5</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>1.8</agilityGain>
+            <intelligenceBase>23</intelligenceBase>
+            <intelligenceGain>2.6</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>55</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>5.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Sven</name>
@@ -5309,17 +5394,18 @@
         <role>Disabler</role>
         <role>Initiator</role>
         <role>Support</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.7"
-            agilityBase="21"
-            agilityGain="2.0"
-            intelligenceBase="14"
-            intelligenceGain="1.3"
-            damageMinimum="54"
-            damageMaximum="56"
-            baseMoveSpeed="295"
-            baseArmor="5.0" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.7</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>2.0</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.3</intelligenceGain>
+            <damageMinimum>54</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>5.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Templar Assassin</name>
@@ -5328,34 +5414,36 @@
         <faction>Radiant</faction>
         <role>Carry</role>
         <role>Escape</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="2.1"
-            agilityBase="23"
-            agilityGain="2.7"
-            intelligenceBase="20"
-            intelligenceGain="2.0"
-            damageMinimum="53"
-            damageMaximum="59"
-            baseMoveSpeed="305"
-            baseArmor="4.29" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>2.1</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>2.7</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>2.0</intelligenceGain>
+            <damageMinimum>53</damageMinimum>
+            <damageMaximum>59</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>4.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Terrorblade</name>
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
 		<faction>Dire</faction>
-        <attributes
-            strengthBase="15"
-            strengthGain="1.9"
-            agilityBase="22"
-            agilityGain="3.2"
-            intelligenceBase="19"
-            intelligenceGain="1.75"
-            damageMinimum="48"
-            damageMaximum="54"
-            baseMoveSpeed="315"
-            baseArmor="7.14" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>3.2</agilityGain>
+            <intelligenceBase>19</intelligenceBase>
+            <intelligenceGain>1.75</intelligenceGain>
+            <damageMinimum>48</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>315</baseMoveSpeed>
+            <baseArmor>7.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Tidehunter</name>
@@ -5366,17 +5454,18 @@
         <role>Durable</role>
         <role>Initiator</role>
         <role>Support</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="3.0"
-            agilityBase="15"
-            agilityGain="1.5"
-            intelligenceBase="16"
-            intelligenceGain="1.7"
-            damageMinimum="47"
-            damageMaximum="53"
-            baseMoveSpeed="310"
-            baseArmor="3.14" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>3.0</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>1.5</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.7</intelligenceGain>
+            <damageMinimum>47</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>3.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Timbersaw</name>
@@ -5385,17 +5474,18 @@
         <faction>Radiant</faction>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-        strengthBase="22"
-        strengthGain="2.1"
-        agilityBase="16"
-        agilityGain="1.3"
-        intelligenceBase="21"
-        intelligenceGain="2.4"
-        damageMinimum="48"
-        damageMaximum="52"
-        baseMoveSpeed="290"
-        baseArmor="0.29" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.1</strengthGain>
+            <agilityBase>16</agilityBase>
+            <agilityGain>1.3</agilityGain>
+            <intelligenceBase>21</intelligenceBase>
+            <intelligenceGain>2.4</intelligenceGain>
+            <damageMinimum>48</damageMinimum>
+            <damageMaximum>52</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>0.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Tinker</name>
@@ -5404,17 +5494,18 @@
         <faction>Radiant</faction>
         <role>Nuker</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.0"
-            agilityBase="13"
-            agilityGain="1.2"
-            intelligenceBase="27"
-            intelligenceGain="2.2"
-            damageMinimum="49"
-            damageMaximum="55"
-            baseMoveSpeed="305"
-            baseArmor="3.86" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.0</strengthGain>
+            <agilityBase>13</agilityBase>
+            <agilityGain>1.2</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>2.2</intelligenceGain>
+            <damageMinimum>49</damageMinimum>
+            <damageMaximum>55</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>3.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Tiny</name>
@@ -5425,17 +5516,18 @@
         <role>Durable</role>
         <role>Initiator</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="24"
-            strengthGain="3.0"
-            agilityBase="9"
-            agilityGain="0.9"
-            intelligenceBase="14"
-            intelligenceGain="1.6"
-            damageMinimum="61"
-            damageMaximum="67"
-            baseMoveSpeed="285"
-            baseArmor="0.29" />
+        <attributes>
+            <strengthBase>24</strengthBase>
+            <strengthGain>3.0</strengthGain>
+            <agilityBase>9</agilityBase>
+            <agilityGain>0.9</agilityGain>
+            <intelligenceBase>14</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>61</damageMinimum>
+            <damageMaximum>67</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>0.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Treant Protector</name>
@@ -5446,34 +5538,36 @@
         <role>Durable</role>
         <role>Initiator</role>
         <role>Lane Support</role>
-        <attributes
-            strengthBase="25"
-            strengthGain="3.3"
-            agilityBase="15"
-            agilityGain="2.0"
-            intelligenceBase="17"
-            intelligenceGain="1.8"
-            damageMinimum="81"
-            damageMaximum="89"
-            baseMoveSpeed="300"
-            baseArmor="1.14" />
+        <attributes>
+            <strengthBase>25</strengthBase>
+            <strengthGain>3.3</strengthGain>
+            <agilityBase>15</agilityBase>
+            <agilityGain>2.0</agilityGain>
+            <intelligenceBase>17</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>81</damageMinimum>
+            <damageMaximum>89</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>1.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Troll Warlord</name>
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <attributes
-            strengthBase="17"
-            strengthGain="2.2"
-            agilityBase="21"
-            agilityGain="2.75"
-            intelligenceBase="13"
-            intelligenceGain="1.0"
-            damageMinimum="38"
-            damageMaximum="56"
-            baseMoveSpeed="300"
-            baseArmor="2.0" />
+        <attributes>
+            <strengthBase>17</strengthBase>
+            <strengthGain>2.2</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>2.75</agilityGain>
+            <intelligenceBase>13</intelligenceBase>
+            <intelligenceGain>1.0</intelligenceGain>
+            <damageMinimum>38</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>2.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Tusk</name>
@@ -5482,17 +5576,18 @@
         <faction>Radiant</faction>
         <role>Durable</role>
         <role>Initiator</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.3"
-            agilityBase="23"
-            agilityGain="2.1"
-            intelligenceBase="18"
-            intelligenceGain="1.7"
-            damageMinimum="50"
-            damageMaximum="54"
-            baseMoveSpeed="305"
-            baseArmor="3.29" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.3</strengthGain>
+            <agilityBase>23</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.7</intelligenceGain>
+            <damageMinimum>50</damageMinimum>
+            <damageMaximum>54</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>3.29</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Undying</name>
@@ -5503,17 +5598,18 @@
         <role>Durable</role>
         <role>Initiator</role>
         <role>Pusher</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.1"
-            agilityBase="10"
-            agilityGain="0.8"
-            intelligenceBase="27"
-            intelligenceGain="2.0"
-            damageMinimum="57"
-            damageMaximum="65"
-            baseMoveSpeed="310"
-            baseArmor="3.43" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.1</strengthGain>
+            <agilityBase>10</agilityBase>
+            <agilityGain>0.8</agilityGain>
+            <intelligenceBase>27</intelligenceBase>
+            <intelligenceGain>2.0</intelligenceGain>
+            <damageMinimum>57</damageMinimum>
+            <damageMaximum>65</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>3.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Ursa</name>
@@ -5523,17 +5619,18 @@
         <role>Carry</role>
         <role>Durable</role>
         <role>Jungler</role>
-        <attributes
-            strengthBase="23"
-            strengthGain="2.9"
-            agilityBase="18"
-            agilityGain="2.1"
-            intelligenceBase="16"
-            intelligenceGain="1.5"
-            damageMinimum="45"
-            damageMaximum="49"
-            baseMoveSpeed="310"
-            baseArmor="5.57" />
+        <attributes>
+            <strengthBase>23</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>2.1</agilityGain>
+            <intelligenceBase>16</intelligenceBase>
+            <intelligenceGain>1.5</intelligenceGain>
+            <damageMinimum>45</damageMinimum>
+            <damageMaximum>49</damageMaximum>
+            <baseMoveSpeed>310</baseMoveSpeed>
+            <baseArmor>5.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Vengeful Spirit</name>
@@ -5544,17 +5641,18 @@
         <role>Initiator</role>
         <role>Lane Support</role>
         <role>Support</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="2.6"
-            agilityBase="27"
-            agilityGain="2.8"
-            intelligenceBase="15"
-            intelligenceGain="1.75"
-            damageMinimum="39"
-            damageMaximum="53"
-            baseMoveSpeed="295"
-            baseArmor="3.86" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>2.6</strengthGain>
+            <agilityBase>27</agilityBase>
+            <agilityGain>2.8</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.75</intelligenceGain>
+            <damageMinimum>39</damageMinimum>
+            <damageMaximum>53</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>3.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Venomancer</name>
@@ -5565,17 +5663,18 @@
         <role>Nuker</role>
         <role>Pusher</role>
         <role>Support</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="1.85"
-            agilityBase="22"
-            agilityGain="2.6"
-            intelligenceBase="15"
-            intelligenceGain="1.75"
-            damageMinimum="41"
-            damageMaximum="43"
-            baseMoveSpeed="285"
-            baseArmor="3.14" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>1.85</strengthGain>
+            <agilityBase>22</agilityBase>
+            <agilityGain>2.6</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.75</intelligenceGain>
+            <damageMinimum>41</damageMinimum>
+            <damageMaximum>43</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>3.14</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Viper</name>
@@ -5584,17 +5683,18 @@
         <faction>Dire</faction>
         <role>Carry</role>
         <role>Durable</role>
-        <attributes
-            strengthBase="20"
-            strengthGain="1.9"
-            agilityBase="21"
-            agilityGain="2.5"
-            intelligenceBase="15"
-            intelligenceGain="1.8"
-            damageMinimum="44"
-            damageMaximum="46"
-            baseMoveSpeed="285"
-            baseArmor="2.0" />
+        <attributes>
+            <strengthBase>20</strengthBase>
+            <strengthGain>1.9</strengthGain>
+            <agilityBase>21</agilityBase>
+            <agilityGain>2.5</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>46</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>2.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Visage</name>
@@ -5604,17 +5704,18 @@
         <role>Disabler</role>
         <role>Durable</role>
         <role>Nuker</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.4"
-            agilityBase="11"
-            agilityGain="1.3"
-            intelligenceBase="24"
-            intelligenceGain="2.5"
-            damageMinimum="48"
-            damageMaximum="58"
-            baseMoveSpeed="285"
-            baseArmor="-0.43" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.4</strengthGain>
+            <agilityBase>11</agilityBase>
+            <agilityGain>1.3</agilityGain>
+            <intelligenceBase>24</intelligenceBase>
+            <intelligenceGain>2.5</intelligenceGain>
+            <damageMinimum>48</damageMinimum>
+            <damageMaximum>58</damageMaximum>
+            <baseMoveSpeed>285</baseMoveSpeed>
+            <baseArmor>-0.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Warlock</name>
@@ -5625,17 +5726,18 @@
         <role>Initiator</role>
         <role>Lane Support</role>
         <role>Support</role>
-        <attributes
-            strengthBase="18"
-            strengthGain="2.5"
-            agilityBase="10"
-            agilityGain="1.0"
-            intelligenceBase="24"
-            intelligenceGain="2.7"
-            damageMinimum="46"
-            damageMaximum="56"
-            baseMoveSpeed="295"
-            baseArmor="2.43" />
+        <attributes>
+            <strengthBase>18</strengthBase>
+            <strengthGain>2.5</strengthGain>
+            <agilityBase>10</agilityBase>
+            <agilityGain>1.0</agilityGain>
+            <intelligenceBase>24</intelligenceBase>
+            <intelligenceGain>2.7</intelligenceGain>
+            <damageMinimum>46</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>2.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Weaver</name>
@@ -5644,17 +5746,18 @@
         <faction>Dire</faction>
         <role>Carry</role>
         <role>Escape</role>
-        <attributes
-            strengthBase="15"
-            strengthGain="1.5"
-            agilityBase="14"
-            agilityGain="2.5"
-            intelligenceBase="15"
-            intelligenceGain="1.8"
-            damageMinimum="50"
-            damageMaximum="60"
-            baseMoveSpeed="290"
-            baseArmor="1.0" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>1.5</strengthGain>
+            <agilityBase>14</agilityBase>
+            <agilityGain>2.5</agilityGain>
+            <intelligenceBase>15</intelligenceBase>
+            <intelligenceGain>1.8</intelligenceGain>
+            <damageMinimum>50</damageMinimum>
+            <damageMaximum>60</damageMaximum>
+            <baseMoveSpeed>290</baseMoveSpeed>
+            <baseArmor>1.0</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Windranger</name>
@@ -5665,17 +5768,18 @@
         <role>Escape</role>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="15"
-            strengthGain="2.5"
-            agilityBase="17"
-            agilityGain="1.4"
-            intelligenceBase="22"
-            intelligenceGain="2.6"
-            damageMinimum="44"
-            damageMaximum="56"
-            baseMoveSpeed="295"
-            baseArmor="1.43" />
+        <attributes>
+            <strengthBase>15</strengthBase>
+            <strengthGain>2.5</strengthGain>
+            <agilityBase>17</agilityBase>
+            <agilityGain>1.4</agilityGain>
+            <intelligenceBase>22</intelligenceBase>
+            <intelligenceGain>2.6</intelligenceGain>
+            <damageMinimum>44</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>1.43</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Witch Doctor</name>
@@ -5684,17 +5788,18 @@
         <faction>Dire</faction>
         <role>Disabler</role>
         <role>Support</role>
-        <attributes
-            strengthBase="16"
-            strengthGain="1.8"
-            agilityBase="13"
-            agilityGain="1.4"
-            intelligenceBase="24"
-            intelligenceGain="2.9"
-            damageMinimum="51"
-            damageMaximum="61"
-            baseMoveSpeed="305"
-            baseArmor="0.86" />
+        <attributes>
+            <strengthBase>16</strengthBase>
+            <strengthGain>1.8</strengthGain>
+            <agilityBase>13</agilityBase>
+            <agilityGain>1.4</agilityGain>
+            <intelligenceBase>24</intelligenceBase>
+            <intelligenceGain>2.9</intelligenceGain>
+            <damageMinimum>51</damageMinimum>
+            <damageMaximum>61</damageMaximum>
+            <baseMoveSpeed>305</baseMoveSpeed>
+            <baseArmor>0.86</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Wraith King</name>
@@ -5704,17 +5809,18 @@
         <role>Carry</role>
         <role>Disabler</role>
         <role>Durable</role>
-        <attributes
-            strengthBase="22"
-            strengthGain="2.9"
-            agilityBase="18"
-            agilityGain="1.7"
-            intelligenceBase="18"
-            intelligenceGain="1.6"
-            damageMinimum="54"
-            damageMaximum="56"
-            baseMoveSpeed="300"
-            baseArmor="3.57" />
+        <attributes>
+            <strengthBase>22</strengthBase>
+            <strengthGain>2.9</strengthGain>
+            <agilityBase>18</agilityBase>
+            <agilityGain>1.7</agilityGain>
+            <intelligenceBase>18</intelligenceBase>
+            <intelligenceGain>1.6</intelligenceGain>
+            <damageMinimum>54</damageMinimum>
+            <damageMaximum>56</damageMaximum>
+            <baseMoveSpeed>300</baseMoveSpeed>
+            <baseArmor>3.57</baseArmor>
+        </attributes>
     </hero>
     <hero>
         <name>Zeus</name>
@@ -5723,16 +5829,17 @@
         <faction>Radiant</faction>
         <role>Nuker</role>
         <role>Support</role>
-        <attributes
-            strengthBase="19"
-            strengthGain="2.3"
-            agilityBase="11"
-            agilityGain="1.2"
-            intelligenceBase="20"
-            intelligenceGain="2.7"
-            damageMinimum="41"
-            damageMaximum="49"
-            baseMoveSpeed="295"
-            baseArmor="1.57" />
+        <attributes>
+            <strengthBase>19</strengthBase>
+            <strengthGain>2.3</strengthGain>
+            <agilityBase>11</agilityBase>
+            <agilityGain>1.2</agilityGain>
+            <intelligenceBase>20</intelligenceBase>
+            <intelligenceGain>2.7</intelligenceGain>
+            <damageMinimum>41</damageMinimum>
+            <damageMaximum>49</damageMaximum>
+            <baseMoveSpeed>295</baseMoveSpeed>
+            <baseArmor>1.57</baseArmor>
+        </attributes>
     </hero>
 </heroes>

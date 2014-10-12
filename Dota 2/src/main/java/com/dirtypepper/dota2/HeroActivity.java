@@ -158,6 +158,12 @@ public class HeroActivity extends Activity {
         String mantaStyleDescription = null;
         String altDescription = null;
         String aghanims = null;
+
+        ArrayList<Double> strength = new ArrayList<Double>();
+        ArrayList<Double> agility = new ArrayList<Double>();
+        ArrayList<Double> intelligence = new ArrayList<Double>();
+        ArrayList<Double> damageAttr = new ArrayList<Double>();
+        ArrayList<Double> misc = new ArrayList<Double>();
         ArrayList<String> notes = new ArrayList<String>();
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
@@ -170,103 +176,107 @@ public class HeroActivity extends Activity {
                     } else if (currentHero != null) {
                         if (heroName.equals("name")) {
                             currentHero.setName(parser.nextText());
-                        } else if (heroName.equals("damageType") && currentHero.getName().equals(textView.getText())) {
-                            currentHero.setDamageType(parser.nextText());
-                        } else if (heroName.equals("attribute") && currentHero.getName().equals(textView.getText())) {
-                            currentHero.setAttribute(parser.nextText());
-                        } else if (heroName.equals("faction") && currentHero.getName().equals(textView.getText())) {
-                            currentHero.setFaction(parser.nextText());
-                        } else if (heroName.equals("description") && currentHero.getName().equals(textView.getText())) {
-                            currentHero.setDescription(parser.nextText());
-                        } else if (heroName.equals("role") && currentHero.getName().equals(textView.getText())) {
-                            currentHero.addRole(parser.nextText());
-                        } else if (heroName.equals("attributes") && currentHero.getName().equals(textView.getText())) {
-                            ArrayList<Double> tmp = new ArrayList<Double>();
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "strengthBase")));
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "strengthGain")));
-                            currentHero.addAttributes("strength", tmp);
+                        }
 
-                            tmp = new ArrayList<Double>();
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "agilityBase")));
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "agilityGain")));
-                            currentHero.addAttributes("agility", tmp);
-
-                            tmp = new ArrayList<Double>();
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "intelligenceBase")));
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "intelligenceGain")));
-                            currentHero.addAttributes("intelligence", tmp);
-
-                            tmp = new ArrayList<Double>();
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "damageMinimum")));
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "damageMaximum")));
-                            currentHero.addAttributes("damage", tmp);
-
-                            tmp = new ArrayList<Double>();
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "baseMoveSpeed")));
-                            tmp.add(Double.parseDouble(parser.getAttributeValue(null, "baseArmor")));
-                            currentHero.addAttributes("baseStats", tmp);
-                        } else if (heroName.equals("tips") && currentHero.getName().equals(textView.getText())) {
-                            currentHero.addTip(parser.nextText());
-                        } else if (heroName.equals("ability") && currentHero.getName().equals(textView.getText())) {
-                            name = parser.getAttributeValue(null, "name");
-                            description = parser.getAttributeValue(null, "description");
-                            ability = parser.getAttributeValue(null, "ability");
-                            affects = parser.getAttributeValue(null, "affects");
-                            if (parser.getAttributeValue(null, "damage") != null) {
-                                damage = parser.getAttributeValue(null, "damage");
+                        if (currentHero.getName().equals(textView.getText())) {
+                            if (heroName.equals("damageType")) {
+                                currentHero.setDamageType(parser.nextText());
+                            } else if (heroName.equals("attribute")) {
+                                currentHero.setAttribute(parser.nextText());
+                            } else if (heroName.equals("faction")) {
+                                currentHero.setFaction(parser.nextText());
+                            } else if (heroName.equals("description")) {
+                                currentHero.setDescription(parser.nextText());
+                            } else if (heroName.equals("role")) {
+                                currentHero.addRole(parser.nextText());
+                            } else if (heroName.equals("strengthBase")) {
+                                strength.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("strengthGain")) {
+                                strength.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("agilityBase")) {
+                                agility.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("agilityGain")) {
+                                agility.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("intelligenceBase")) {
+                                intelligence.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("intelligenceGain")) {
+                                intelligence.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("damageMinimum")) {
+                                damageAttr.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("damageMaximum")) {
+                                damageAttr.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("baseMoveSpeed")) {
+                                misc.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("baseArmor")) {
+                                misc.add(Double.parseDouble(parser.nextText()));
+                            } else if (heroName.equals("tips")) {
+                                currentHero.addTip(parser.nextText());
+                            } else if (heroName.equals("ability")) {
+                                name = parser.getAttributeValue(null, "name");
+                                description = parser.getAttributeValue(null, "description");
+                                ability = parser.getAttributeValue(null, "ability");
+                                affects = parser.getAttributeValue(null, "affects");
+                                if (parser.getAttributeValue(null, "damage") != null) {
+                                    damage = parser.getAttributeValue(null, "damage");
+                                }
+                                if (parser.getAttributeValue(null, "orbOfVenom") != null) {
+                                    orbOfVenom = Integer.parseInt(parser.getAttributeValue(null, "orbOfVenom")) == 1;
+                                }
+                                if (parser.getAttributeValue(null, "blackKingBar") != null) {
+                                    blackKingBar = Integer.parseInt(parser.getAttributeValue(null, "blackKingBar"));
+                                }
+                                if (parser.getAttributeValue(null, "linkensSphere") != null) {
+                                    linkensSphere = Integer.parseInt(parser.getAttributeValue(null, "linkensSphere"));
+                                }
+                                if (parser.getAttributeValue(null, "diffusalBlade") != null) {
+                                    diffusalBlade = Integer.parseInt(parser.getAttributeValue(null, "diffusalBlade"));
+                                }
+                                if (parser.getAttributeValue(null, "mantaStyle") != null) {
+                                    mantaStyle = Integer.parseInt(parser.getAttributeValue(null, "mantaStyle"));
+                                }
+                                if (parser.getAttributeValue(null, "cooldown") != null) {
+                                    cooldown = parser.getAttributeValue(null, "cooldown");
+                                }
+                                if (parser.getAttributeValue(null, "mana") != null) {
+                                    mana = parser.getAttributeValue(null, "mana");
+                                }
+                            } else if (heroName.equals("abilityAttributes")) {
+                                Log.wtf("name", parser.getAttributeValue(null, "name"));
+                                Log.wtf("value", parser.getAttributeValue(null, "value"));
+                                attributes.put(parser.getAttributeValue(null, "name"),
+                                               parser.getAttributeValue(null, "value"));
+                            } else if (heroName.equals("blackKingBar")) {
+                                blackKingBarDescription = parser.getAttributeValue(null, "description");
+                                Log.wtf("Ability.toString()", description);
+                            } else if (heroName.equals("linkensSphere")) {
+                                linkensSphereDescription = parser.getAttributeValue(null, "description");
+                                Log.wtf("Ability.toString()", description);
+                            } else if (heroName.equals("diffusalBlade")) {
+                                diffusalBladeDescription = parser.getAttributeValue(null, "description");
+                                Log.wtf("Ability.toString()", description);
+                            } else if (heroName.equals("mantaStyle")) {
+                                mantaStyleDescription = parser.getAttributeValue(null, "description");
+                                Log.wtf("Ability.toString()", description);
+                            } else if (heroName.equals("altDescription")) {
+                                altDescription = parser.getAttributeValue(null, "description");
+                                Log.wtf("Ability.toString()", description);
+                            } else if (heroName.equals("aghanims")) {
+                                aghanims = parser.getAttributeValue(null, "description");
+                                Log.wtf("Ability.toString()", description);
+                            } else if (heroName.equals("note")) {
+                                notes.add(parser.nextText());
                             }
-                            if (parser.getAttributeValue(null, "orbOfVenom") != null) {
-                                orbOfVenom = Integer.parseInt(parser.getAttributeValue(null, "orbOfVenom")) == 1;
-                            }
-                            if (parser.getAttributeValue(null, "blackKingBar") != null) {
-                                blackKingBar = Integer.parseInt(parser.getAttributeValue(null, "blackKingBar"));
-                            }
-                            if (parser.getAttributeValue(null, "linkensSphere") != null) {
-                                linkensSphere = Integer.parseInt(parser.getAttributeValue(null, "linkensSphere"));
-                            }
-                            if (parser.getAttributeValue(null, "diffusalBlade") != null) {
-                                diffusalBlade = Integer.parseInt(parser.getAttributeValue(null, "diffusalBlade"));
-                            }
-                            if (parser.getAttributeValue(null, "mantaStyle") != null) {
-                                mantaStyle = Integer.parseInt(parser.getAttributeValue(null, "mantaStyle"));
-                            }
-                            if (parser.getAttributeValue(null, "cooldown") != null) {
-                                cooldown = parser.getAttributeValue(null, "cooldown");
-                            }
-                            if (parser.getAttributeValue(null, "mana") != null) {
-                                mana = parser.getAttributeValue(null, "mana");
-                            }
-                        } else if (heroName.equals("abilityAttributes") && currentHero.getName().equals(textView.getText())) {
-                            Log.wtf("name", parser.getAttributeValue(null, "name"));
-                            Log.wtf("value", parser.getAttributeValue(null, "value"));
-                            attributes.put(parser.getAttributeValue(null, "name"), parser.getAttributeValue(null, "value"));
-                        } else if (heroName.equals("blackKingBar") && currentHero.getName().equals(textView.getText())) {
-                            blackKingBarDescription = parser.getAttributeValue(null, "description");
-                            Log.wtf("Ability.toString()", description);
-                        } else if (heroName.equals("linkensSphere") && currentHero.getName().equals(textView.getText())) {
-                            linkensSphereDescription = parser.getAttributeValue(null, "description");
-                            Log.wtf("Ability.toString()", description);
-                        } else if (heroName.equals("diffusalBlade") && currentHero.getName().equals(textView.getText())) {
-                            diffusalBladeDescription = parser.getAttributeValue(null, "description");
-                            Log.wtf("Ability.toString()", description);
-                        } else if (heroName.equals("mantaStyle") && currentHero.getName().equals(textView.getText())) {
-                            mantaStyleDescription = parser.getAttributeValue(null, "description");
-                            Log.wtf("Ability.toString()", description);
-                        } else if (heroName.equals("altDescription") && currentHero.getName().equals(textView.getText())) {
-                            altDescription = parser.getAttributeValue(null, "description");
-                            Log.wtf("Ability.toString()", description);
-                        } else if (heroName.equals("aghanims") && currentHero.getName().equals(textView.getText())) {
-                            aghanims = parser.getAttributeValue(null, "description");
-                            Log.wtf("Ability.toString()", description);
-                        } else if (heroName.equals("note") && currentHero.getName().equals(textView.getText())) {
-                            notes.add(parser.nextText());
                         }
                     }
                     break;
                 case XmlPullParser.END_TAG:
                     heroName = parser.getName();
-                    if (heroName.equalsIgnoreCase("hero") && currentHero != null && currentHero.getName()
-                        .equals(textView.getText())) {
+                    if (heroName.equalsIgnoreCase("hero") && currentHero != null && currentHero.getName().equals(textView.getText())) {
+                        currentHero.addAttributes("strength", strength);
+                        currentHero.addAttributes("agility", agility);
+                        currentHero.addAttributes("intelligence", intelligence);
+                        currentHero.addAttributes("damage", damageAttr);
+                        currentHero.addAttributes("baseStats", misc);
                         printHeroes(currentHero);
                         return;
                     } else if (heroName.equalsIgnoreCase("ability") && currentHero != null && currentHero.getName()
