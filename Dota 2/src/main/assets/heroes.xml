@@ -6,6 +6,9 @@
         <attribute>Strength</attribute>
         <faction>Dire</faction>
         <description>Abaddon the Lord of Avernus is a melee strength Hero known as one of the most versatile characters in Dota due to his rather low mana dependence, short spell cooldowns and a large number of viable item choices. His ability to help sustain his allies and himself plus his strong tower diving capacity give him solid lane presence. Many of his abilities offer a large sum of utility, which makes him a strong support Hero. Mist Coil serves as both a single target nuke and heal that helps shift the sustainability of both allied and enemy heroes in a lane at his will, though sacrificing a portion of his own health. Aphotic Shield holds as one of the most useful abilities in the game, able to shield a target from some damage while also able to reflect said damage to a huge area. The most important aspect is how it is able to dispel many status effects such as slows and stuns. His other abilities allow him to become a mix between a semi-carry and tank. Abaddon's passive, Curse of Avernus, allows his attacks to not only slow down his enemy, but also increase the attack and movement speed of any ally attacking the same target. With his ultimate, Borrowed Time, Abaddon is able to shift all non-HP removal damage he receives into health. When not on cooldown, Borrowed Time may activate passively when his health falls under a certain threshold, even under the most dire situations. Due to his powerful spells and versatility, Abaddon is an excellent addition to any team.</description>
+        <role>Durable</role>
+        <role>Support</role>
+        <role>Carry</role>
         <attributes
             strengthBase="23"
             strengthGain="2.7"
@@ -16,17 +19,17 @@
             damageMinimum="55"
             damageMaximum="65"
             baseMoveSpeed="310"
-            baseArmor="1.43" />
+            baseArmor="1.38" />
         <ability
             name="Mist Coil"
             description="Abaddon releases a coil of death that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health."
             ability="Target Unit"
             affects="Units"
             damage="Magical"
-            blackKingBar="2"
+            blackKingBar="1"
             linkensSphere="2"
             cooldown="5"
-            mana="75">
+            mana="50/60/70/80">
             <abilityAttributes
                 name="Range"
                 value="800"/>
@@ -36,6 +39,8 @@
             <abilityAttributes
                 name="Damage to Abaddon"
                 value="75/100/125/150"/>
+            <blackKingBar description="Can be cast on Spell Immune allies." />
+            <altDescription description="A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will." />
             <note>The damage to Abaddon is pure damage.</note>
             <note>Self-damage from Mist Coil can burst Aphotic Shield.</note>
             <note>Abaddon can deny himself with this ability.</note>
@@ -64,12 +69,14 @@
                 value="110/140/170/200"/>
             <blackKingBar description="Blocked by magic immunity, but not removed by becoming magic immune." />
             <diffusalBlade description="If purged, it will explode and deal damage in its radius." />
+            <altDescription description="The powers of the black mist rise to absorb attacks like the black mist absorbs light." />
             <note>If under the effects of Borrowed Time, Abaddon's own Aphotic Shield will not burst.</note>
             <note>Will automatically detonate and replace any existing Aphotic Shield already surrounding a target.</note>
             <note>Aphotic Shield will burst at the end of its duration if it has not absorbed sufficient damage.</note>
             <note>It will always burst for the maximum damage, regardless of how much was absorbed.</note>
             <note>Damage is calculated after all reductions.</note>
             <note>Can be used on siege creeps.</note>
+            <note>It will not deal damage to invisible enemy units.</note>
         </ability>
         <ability
             name="Curse of Avernus"
@@ -77,22 +84,27 @@
             ability="Passive"
             affects="Units"
             blackKingBar="0"
-            diffusalBlade="2">
+            diffusalBlade="2"
+            mantaStyle="0">
             <abilityAttributes
                 name="Duration of Slow"
                 value="2.5"/>
             <abilityAttributes
-                name="Slow"
-                value="5/10/15/20"/>
-            <abilityAttributes
                 name="Duration of Bonuses"
                 value="4.5"/>
             <abilityAttributes
-                name="Bonus Attack Speed"
-                value="10/20/30/40"/>
+                name="Movement Speed Slow"
+                value="5%/10%/15%/20%"/>
+            <abilityAttributes
+                name="Attack Speed Slow"
+                value="5/10/15/20"/>
             <abilityAttributes
                 name="Bonus Movement Speed"
                 value="15%"/>
+            <abilityAttributes
+                name="Bonus Attack Speed"
+                value="10/20/30/40"/>
+            <altDescription description="The curse that slows an enemy, speeds an ally." />
             <note>The Curse of Avernus buff is placed on Abaddon at the start of his attack, so he gets the bonus on his first hit. The debuff is only applied on hit.</note>
             <note>Works partially on towers. Abaddon will receive the buff from attacking a tower, however no debuff is applied to the tower so no other targets may benefit from it.</note>
             <note>Can affect allies, including creeps being denied. Enemies attacking an ally target affected by the debuff benefit from the Curse of Avernus buff.</note>
@@ -103,46 +115,51 @@
             description="When activated, most negative buffs will be removed and any damage you take will heal instead of damaging you. If the ability is not on cooldown, it will passively activate when your hitpoints drop below a certain threshold."
             ability="No Target"
             affects="Self"
+            diffusalBlade="0"
             cooldown="60/50/40">
             <abilityAttributes
                 name="Duration"
                 value="3/4/5 (5/6/7*)"/>
-            <aghanims description="Increases duration."/>
+            <abilityAttributes
+                name="Radius (With Aghanim's Scepter)"
+                value="900"/>
+            <aghanims description="Increases duration and redirects 35% of all damage dealt to nearby allied heroes in a 900 unit radius to Abaddon when active."/>
+            <altDescription description="The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew." />
             <note>Borrowed Time will activate itself if you suffer damage while you have less than 400 HP.</note>
             <note>Upon casting Borrowed Time, Abaddon will effectively dodge any projectiles currently flying at him.</note>
-            <note>When activated it removes most negative buffs from Abaddon, including Stuns.</note>
+            <note>When activated it removes most negative buffs from Abaddon, including stuns.</note>
             <note>Borrowed Time can be manually activated.</note>
-            <note>Borrowed Time is auto activated during Duel.</note>
+            <note>Borrowed Time is activated during Duel, if Abbadon hits the HP-threshold.</note>
             <note>It is possible to kill Abaddon without triggering Borrowed Time's auto-activation if he were to take damage higher than his remaining health, due to the fact that on activation of Borrowed Time, Abaddon takes the damage that activated it and then heals double the amount. Any other damage taken during the duration of Borrowed Time will deal 0 damage and heal instead.</note>
-            <note>Culling Blade and Ice Blast will kill Abaddon if he fits the health threshold, even with Borrowed Time active. Ice Blast also prevents you from being healed by attacks, but you will not take any damage either for Borrowed Time's duration.</note>
+            <note>Culling Blade and Ice Blast will kill Abaddon if he reaches the health threshold, even with Borrowed Time active. Ice Blast also prevents Abaddon from being healed by attacks, but Abaddon will not take any damage either for Borrowed Time's duration.</note>
             <note>If Abaddon is doomed before he hits the HP threshold, Borrowed Time will not activate.</note>
+            <note>With Aghanim's Scepter, the effective health of Abaddon's nearby allies will be increased by 53.85%.</note>
+            <note>While Borrowed Time is active Abaddon cannot reflect damage through Blade Mail.</note>
         </ability>
-        <tips>If you are playing the team's support hero it is usually wise to max Mist Coil and Aphotic Shield first before getting any points in Curse of Avernus as your first two skills provide a lot of utility early game ranging from healing, to debuff removal, protection and even denying yourself if needed.</tips>
+        <tips>If you are playing the team's support hero it is usually wise to max Mist Coil and Aphotic Shield first before getting any points in Curse of Avernus as your first two abilities provide a lot of utility early game ranging from healing, to debuff removal, protection and even denying yourself if needed.</tips>
         <tips>Remember that Aphotic Shield can remove stuns and slows from its target, you can use this to save your allies from many certain death situations.</tips>
         <tips>Abaddon is a very durable hero due to his unique ultimate, Borrowed Time, however do not let this fool you into diving enemies where retreating is the better option.</tips>
         <tips>Casting Aphotic Shield upon the same target before its duration has ended will automatically detonate the shield before reapplying another. Combining this tactic with its massive radius can help to increase your DPS in a teamfight or finish off enemies during a chase.</tips>
         <tips>During the early game you can use Aphotic Shield on creeps that are soon to die causing any heroes who move in for the last hit to take damage. With itemization geared toward mana regeneration this can be maintained as harassment in an Abaddon's lane support tactic. Even if the target hero realizes your tactic you can still burst your Shield by attacking the creep yourself.</tips>
         <tips>Due to his ultimate Abaddon is one of the few heroes that can dive towers even in early stages of the game, to add with his ability to chase down heroes you may also want to purchase a Mask of Madness as the extra damage Abaddon takes from activating it will not matter because of Borrowed Time.</tips>
-        <tips>Most veteran players will pay attention to when Abaddon's ultimate activates and will not attack until its duration has expired, you can however heal yourself using Mist Coil during this time, or by putting yourself among enemy creeps or damage-over-time skills that have already been cast such as Jakiro's Macropyre. Pay attention however that your ultimate has a relatively short duration.</tips>
+        <tips>Most veteran players will pay attention to when Abaddon's ultimate activates and will not attack until its duration has expired, you can however heal yourself using Mist Coil during this time, or by putting yourself among enemy creeps or damage-over-time abilities that have already been cast such as Jakiro's Macropyre. Pay attention however that your ultimate has a relatively short duration.</tips>
         <tips>Sometimes the best way to deal with Rupture is simply to run. Though Rupture will always outlast a manually triggered Borrowed Time, you still have total control of how much distance you can cover, as well as how much health you stand to lose or gain during Bloodseeker's ultimate.</tips>
-        <tips>Since Culling Blade can kill Abaddon even through Borrowed Time you might be able to bait out the skill from an enemy Axe by manually activating your ultimate just before you hit the threshold.</tips>
+        <tips>Since Culling Blade can kill Abaddon even through Borrowed Time you might be able to bait out the ability from an enemy Axe by manually activating your ultimate just before you hit the threshold.</tips>
         <tips>If you are planning on playing the team carry early points in Curse of Avernus will give you much needed chasing power and increased damage output and will also apply the same to your allies. In this case it might be a good choice to max Aphotic Shield before Mist Coil because you are likely to be diving the enemy a lot which will assure that your shield will burst quickly, allowing you to repeatedly cast it on yourself. Though trying to be the carry for the team is not recommended as Abaddon has much more utility as one of the most durable support heroes in the game.</tips>
         <tips>Curse of Avernus can have defensive uses as well, such as hitting an enemy that is chasing your ally to slow them down. You can also use this to save yourself as well under certain circumstances as hitting your target will reduce their movement speed by 20% while give you a 15% movement speed buff. That short boost of movement speed can sometimes save you or your allies.</tips>
         <tips>The on-hit buff and debuff of Curse of Avernus applies to any target that Abaddon may hit, including your own creeps. This means that enemy creeps will gain a speed boost after attacking one of your creeps with you. If you took an early point in Curse, use this to tinker with lane equilibrium during the laning phase.</tips>
-        <tips>Note that Curse of Avernus's debuff fully stacks with unique attack modifiers. Considering this you may sometimes want to buy an Orb of Venom or Eye of Skadi which allows you to slow down a hero up to 32% or 45% respectively when used in conjunction with your passive. When playing a carry Abaddon this aids you greatly with chasing down heroes. The same can be said with a Sange and a completed Sange and Yasha that gives you both a movement speed boost and an additional slow.</tips>
-        <tips>Against less experienced players it may be possible to initiate a team fight with Abaddon by diving into the enemy and absorbing most of their skills and disables since in most cases Abaddon cannot be focused down before his ultimate. This will allow your teammates to enter the fray without the fear of being disabled themselves. This strategy is very unlikely to fool more veteran players.</tips>
+        <tips>Note that Curse of Avernus's debuff fully stacks with unique attack modifiers. Considering this you may sometimes want to buy an Orb of Venom or Eye of Skadi which gives a combined movement speed change of 22% for OoV at level 1 Curse and 75% for a Skadi with max Curse. When playing a carry Abaddon this aids you greatly with chasing down heroes. The same can be said with a Sange and a completed Sange and Yasha that gives you both a movement speed boost and an additional slow.</tips>
+        <tips>Against less experienced players it may be possible to initiate a team fight with Abaddon by diving into the enemy and absorbing most of their spells and disables since in most cases Abaddon cannot be focused down before his ultimate. This will allow your teammates to enter the fray without the fear of being disabled themselves. This strategy is very unlikely to fool more veteran players.</tips>
     </hero>
     <hero>
         <name>Alchemist</name>
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <description>Razzil Darkbrew the Alchemist is a melee strength hero who utilises his alchemical prowess as a strange but versatile fighter. He is an unusual carry based upon transmuting fallen enemies into large amounts of bonus gold, with both an early game and late game presence due to his large health pool and the first strike nature of his spells. His balanced statistics and the sure promise of gold for items means he can be one of the most disparately built heroes in the game. Unstable Concoction is his main contribution early on, dealing good damage and a lengthy stun. Acid Spray allows him to rapidly clear waves of creeps for his Greevil's Greed to contribute massive amounts of extra income. A well-equipped Alchemist can then use Chemical Rage to its fullest effect, as the incredible regeneration and base attack time reduction make it one of the best steroid abilities in the game.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-        </roles>
+        <description>Razzil Darkbrew the Alchemist is a melee strength hero who utilises his alchemical prowess as a strange but versatile fighter. He is an unusual carry based upon transmuting fallen enemies into large amounts of bonus gold, with both an early game and late game presence due to his large health pool and the first strike nature of his spells. His low but balanced attributes and the sure promise of gold for items means he can be one of the most disparately built heroes in the game. Unstable Concoction is his main contribution early on, dealing good damage and a lengthy stun. Acid Spray allows him to rapidly clear waves of creeps for his Greevil's Greed to contribute massive amounts of extra income. A well-equipped Alchemist can then use Chemical Rage to its fullest effect, as the incredible regeneration and base attack time reduction make it one of the best steroid abilities in the game.</description>
+        <role>Durable</role>
+        <role>Carry</role>
+        <role>Disabler</role>
         <attributes
             strengthBase="25"
             strengthGain="1.8"
@@ -153,13 +170,13 @@
             damageMinimum="49"
             damageMaximum="58"
             baseMoveSpeed="295"
-            baseArmor="1.57" />
+            baseArmor="1.54" />
         <ability
             name="Acid Spray"
             description="Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take mixed damage per second and have their armor reduced."
             ability="Target Point"
             affects="Enemies"
-            damage="Composite"
+            damage="Physical"
             blackKingBar="0"
             linkensSphere="0"
             cooldown="22"
@@ -175,16 +192,15 @@
                 value="16"/>
             <abilityAttributes
                 name="Damage Per Second"
-                value="14/20/26/32"/>
+                value="12/16/20/24"/>
             <abilityAttributes
                 name="Armor Reduction"
-                value="3/4/5/6"/>
+                value="4/5/6/7"/>
             <altDescription description="Using traditional Alchemy from the Darkbrew family, Razzil concocts an acid that dissolves even the toughest metals." />
-            <note>Mechanical units suffer the armor reduction but do not take the composite damage.</note>
-            <note>Can deal up to 224/320/416/512 damage before reductions/amplifications.</note>
-            <note>As it deals composite damage, damage is reduced by magic resistance (usually 25% for heroes).</note>
-            <note>Damage can be further reduced by +armor, or further amplified by -armor.</note>
-            <note>Will deal significantly more damage to creeps than heroes, as creeps have no magic resistance, and tend to have lower armor.</note>
+            <note>Fully affects ancient units. Applies armor debuff on siege creeps.</note>
+            <note>Can deal up to 192/256/320/384 damage to a single unit.</note>
+            <note>Damage ticks happen in 1 second intervalls, starting 1 second after cast.</note>
+            <note>The debuff lingers for 0.5 seconds after leaving the targeted area.</note>
         </ability>
         <ability
             name="Unstable Concoction"
@@ -196,22 +212,22 @@
             mana="120">
             <abilityAttributes
                 name="Range"
-                value="775"/>
+                value="175"/>
             <abilityAttributes
                 name="Maximum Stun Duration"
                 value="1.75/2.5/3.25/4"/>
             <abilityAttributes
                 name="Maximum Damage"
                 value="150/220/290/360"/>
+            <blackKingBar description="When blowing up on self, damage and stun are blocked, aoe effect still occurs." />
+            <linkensSphere description="Does not block on self at all when failed to be thrown on time." />
             <altDescription description="A silver lining to the failure of turning a mountain into gold, this volatile solution has destructive potential." />
+            <note>Unlike Alchemist's other spells, Unstable Concoction has an instant cast time. The throwing part however is not instant.</note>
+            <note>A timer above Alchemist's head shows how much time is left before the Concoction blows up. This timer is not visible to enemies.</note>
+            <note>The brewing animation and particles are visible to everyone. The sound can be heard by enemies only when the spell was casted within their vision range.</note>
             <note>Unstable Concoction always affects a 175 area around where it explodes, including when it explodes on Alchemist.</note>
             <note>While brewing the concoction, Alchemist can still move around and take action.</note>
-            <note>It will blow up on Alchemist if built up for more than 5.5 seconds without throwing, checking at 0.5 second intervals.</note>
-            <note>As soon as it is thrown, the counter freezes. The concoction will not get stronger while flying or blow up mid-air.</note>
-            <note>Unstable Concoction cannot be disjointed.</note>
-            <note>The concoction moves at 900 speed, and provides 400/400 sight range.</note>
-            <note>Damages but does not stun Alchemist if he is magic immune when it explodes on him.</note>
-            <note>It is possible to deny yourself with this ability.</note>
+            <note>Alchemist can deny himself with this ability.</note>
         </ability>
         <ability
             name="Throw Unstable Concoction"
@@ -219,30 +235,45 @@
             ability="Target Unit"
             affects="Enemy Heroes"
             damage="Physical"
-            blackKingBar="1"
-            linkensSphere="2">
-            <blackKingBar description="Damages but does not stun magic immune targets. Cannot target magic immunity directly. Must be thrown before immunity is activated, or thrown at someone next to them." />
-            <linkensSphere description="Only if holder is target." />
+            blackKingBar="2"
+            linkensSphere="1">
+            <abilityAttributes
+                name="Range"
+                value="175"/>
+            <blackKingBar description="Blocks damage and stun. AOE effect still occurs." />
+            <linkensSphere description="Blocks damage, stun and AOE effect if holder is primary target. Does not block at all when holder is secondary target." />
+            <note>Unstable Concoction cannot be disjointed.</note>
+            <note>The concoction moves at 900 speed, and provides 400/400 sight range.</note>
+            <note>Once thrown, Unstable Concoction stops brewing.</note>
+            <note>Areal damage and stun does not hit creeps, except for the Spirit Bear, Warlock's Golems and Storm and Fire from Primal Split (though they cannot be directly targeted).</note>
+            <note>Connecting with an invulnerable or hidden target will completely nullify the concoction, including the aoe stun and damage.</note>
         </ability>
         <ability
             name="Greevil's Greed"
-            description="Alchemist gets bonus gold for killing creeps; the bonus stacks if the creeps are killed within a period of time, after which the count is reset. The bonus gold is capped at 30 gold."
+            description="Alchemist synthesizes additional gold from his enemies. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 25 seconds, an additional instance of Extra Bonus Gold is added to the total. The maximum total bonus gold is 30 per kill."
             ability="Passive"
             affects="Self"
-            diffusalBlade="0">
+            diffusalBlade="0"
+            mantaStyle="2">
             <abilityAttributes
-                name="Duration"
+                name="Recent Kill Window"
                 value="25"/>
             <abilityAttributes
-                name="Bonus Gold Per Kill"
+                name="Bass Bonus Gold"
+                value="4/6/8/10"/>
+            <abilityAttributes
+                name="Extra Bonus Gold"
                 value="1/2/3/4"/>
             <abilityAttributes
-                name="Base Bonus Gold"
-                value="4/6/8/10"/>
+                name="Max Bonus Gold"
+                value="30"/>
+            <mantaStyle description="Alchemist illusions have their own counter." />
             <altDescription description="While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets." />
-            <note>Skill description "resets after 25 seconds" can be misleading. It's really +1 to counter when you kill a unit, -1 to counter 25 seconds after the kill.</note>
-            <note>Works on Hero kills, sight wards, most summons, in addition to mechanical units (such as Plague Wards, Serpent Wards, Tombstone and some others).</note>
-            <note>Greed is currently bugged to not increase the counter on denies. Note that the denies themselves do not give Alch gold either way; they are just supposed to increase the counter.</note>
+            <note>Greevil's Greed counter increments by one when Alchemist kills a unit, and decreases by one 25 seconds after the kill.</note>
+            <note>Alchemist himself has to do the last hit. Only units who actually have this skill can make use of it. This means that illusions from Alchemist will have fully functional Greevil's Greed, independant from Alchemist himself, giving bonus gold to the owner of the illusion.</note>
+            <note>Works on basically every unit. Creeps, heroes, wards (eg Plague Wards, Sentry wards), Techies' mines, summons (eg Forge Spirits, Familiars), siege units and buildings, including Tombstone and the zombies it spawns.</note>
+            <note>Does not work on illusions and Power Cogs.</note>
+            <note>Does not work on denying from allied or own units.</note>
         </ability>
         <ability
             name="Chemical Rage"
@@ -250,6 +281,7 @@
             ability="No Target"
             affects="Self"
             diffusalBlade="0"
+            mantaStyle="2"
             cooldown="45"
             mana="50/100/150">
             <abilityAttributes
@@ -262,22 +294,25 @@
                 name="Base Health Regeneration"
                 value="50/75/100"/>
             <abilityAttributes
-                name="Base Mana Regeneration (Base Mana Regeneration)"
+                name="Base Mana Regeneration"
                 value="3/7.5/12"/>
             <abilityAttributes
                 name="Bonus Move Speed"
                 value="30/40/60"/>
+            <mantaStyle description="Illusions benifit from everything but the bonus hp regeneration." />
             <altDescription description="The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat." />
-            <note>Has a 0.35 second transformation time, which can be used to dodge projectiles and stuns.</note>
-            <note>Regenerates a total of 1250/1875/2500 health and 75/187.5/300 mana (less when taking the mp cost of the ability itself into account).</note>
-            <note>Bonus mana regeneration is affected by mana regeneration multipliers such as Sage's Mask.</note>
-            <note>Net MP Gain (norm)( +0%) : 25 / 87.5 / 150</note>
-            <note>Net MP Gain (sage)(+50%) : 62.5 / 181 / 300</note>
-            <note>Net MP Gain (void)(+100%) : 100 / 275 / 450</note>
+            <note>Disjoints disjointable projectiles when activated.</note>
+            <note>Has a cast time of 0.35 seconds.</note>
+            <note>Bonus mana regeneration is affected by mana regeneration multipliers such as Sage's Mask or Void Stone.</note>
+            <note>Regenerates a total of 1250/1875/2500 health and 75/187.5/300 mana (Reduced by the mana cost of the ability).</note>
+            <note>Net Mana Gain (Normal) (+0%): 25 / 87.5 / 150</note>
+            <note>Net Mana Gain (Sage's Mask) (+50%): 62.5 / 181.25 / 300</note>
+            <note>Net Mana Gain (Void Stone) (+100%): 100 / 275 / 450</note>
+            <note>Illusions created during Chemical Rage will get a new Chemical Rage buff which lasts its full duration, regardless of how much is left on Alchemist himself.</note>
         </ability>
         <tips>An early point in Greevil's Greed will significantly increase Alchemist's income.</tips>
         <tips>Smart opponents will make it difficult to land Unstable Concoction by juking and avoiding your vision, causing the backfire. It may be better to use it immediately when an enemy reaches the treeline, even if you lose damage and stun duration.</tips>
-        <tips>Fully brewed, Unstable Concoction is one of the most potent stuns in the game, in both damage and stun duration. While the enemy cannot see your timer, they will still be able to see the "shaking" animation (Alchemist shaking his vials). It is imperative that you either start channeling within range, or channel a few seconds of the concoction from within fog before revealing yourself. This skill is most devastating to low armor support heroes who almost take its full damage upon impact, especially if they are softened up by acid spray.</tips>
+        <tips>Fully brewed, Unstable Concoction is one of the most potent stuns in the game, in both damage and stun duration. While the enemy cannot see your timer, they will still be able to see the "shaking" animation (Alchemist shaking his vials). It is imperative that you either start channeling within range, or channel a few seconds of the concoction from within fog before revealing yourself. This ability is most devastating to low armor support heroes who almost take its full damage upon impact, especially if they are softened up by acid spray.</tips>
         <tips>Use Acid Spray to dissuade enemies from defending their towers, or pushing into yours.</tips>
         <tips>Feel free to use Chemical Rage for its healing effects; it will even regenerate its own mana cost over the duration, and even more if you have %mp regen from items like Sage's Mask or Perseverance.</tips>
         <tips>Avoid skirmishes if your Chemical Rage is on cooldown, especially in the early/mid-game stage when you have few items.</tips>
@@ -285,7 +320,7 @@
         <tips>Chemical Rage is the strongest single target DPS booster in the game (giving a 70% boost in DPS at level 3). This means that Alchemist scales very strongly with right-click items, however at the same time Alchemist does very little damage without right-click items. This means if Alchemist is going to contribute into team battles down the road, it is imperative to get yourself some right-click.</tips>
         <tips>With Acid Spray it is possible for Alchemist to farm Ancients safely early on. This, combined with Greevil's Greed can (if used efficiently) give Alchemist incredible amounts of gold over time. It is not uncommon to have Radiance or Mjollnir by 14 minutes with this strategy.</tips>
         <tips>Beware! Heroes like Lifestealer, Slardar and Dazzle can remove the little armor you have, making you even more vulnerable and easy to kill. This is especially true in the case of Lifestealer, since Feast helps him break you down.</tips>
-        <tips>Though unlisted, Medallion of Courage is a very good item for Alchemist, helping add both armor and mana regen, as well as increasing damage dealt by him. Built it in place of Ring of Basilius.</tips>
+        <tips>Though unlisted, Medallion of Courage is a very good item for Alchemist, helping add both armor and mana regen, as well as increasing damage dealt by attacks and spells as well. Build it in place of Ring of Basilius.</tips>
     </hero>
     <hero>
         <name>Ancient Apparition</name>
@@ -293,21 +328,19 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <description>Kaldr the Ancient Apparition is a ranged intelligence hero. This spell-caster elemental being possesses high range, great attributes and strong semi-spammable spells. He is commonly played as a ganker or support role and due to his high agility and an attack enhancing spell, he can be played as a Semi-Carry too. His ultimate is one of the most devastating spells in the game as it can hit multiple units, has global range, freezes health regeneration, and instantly kill units if low on life.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Support</role>
-        </roles>
+        <role>Support</role>
+        <role>Disabler</role>
         <attributes
             strengthBase="18"
             strengthGain="1.4"
-            agilityBase="22"
+            agilityBase="20"
             agilityGain="2.2"
             intelligenceBase="25"
             intelligenceGain="2.6"
             damageMinimum="44"
             damageMaximum="54"
             baseMoveSpeed="295"
-            baseArmor="1.86" />
+            baseArmor="1.80" />
         <ability
             name="Cold Feet"
             description="Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 4 seconds."
@@ -336,7 +369,7 @@
                 value="740"/>
             <diffusalBlade description="Initial debuff can be purged; the stun cannot." />
             <altDescription description="Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity." />
-            <note>Deals 37.5/50/62.5/75 magic damage at 0.8, 1.6, 2.5, 3.4 seconds (Total Damage: 150, 200, 250, 300)</note>
+            <note>Deals 37.5/50/62.5/75 magic damage at 0.8, 1.6, 2.5, 3.4 seconds (Total Damage: 150, 200, 250, 300).</note>
             <note>Effect ends when the unit either dies, walks 740 distance from the mark or has the debuff removed.</note>
         </ability>
         <ability
@@ -357,7 +390,7 @@
                 value="275"/>
             <abilityAttributes
                 name="Movement Speed Slow"
-                value="18%/22%/26%/30%"/>
+                value="15%/20%/25%/30%"/>
             <abilityAttributes
                 name="Magic Resistance Reduction"
                 value="15%/20%/25%/30%"/>
@@ -366,7 +399,7 @@
                 value="16"/>
             <altDescription description="Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle." />
             <note>New units are checked for every 0.5 seconds.</note>
-            <note>Does not affect Familiar.</note>
+            <note>Does not affect Visage's Familiars.</note>
             <note>Provides vision in the area.</note>
         </ability>
         <ability
@@ -374,6 +407,8 @@
             description="A frigid gust enchants allied heroes, granting them bonus magical damage for a given number of physical attacks, while slowing their attack speed slightly. Lasts 30 seconds."
             ability="Target Point"
             affects="Allied Heroes"
+            damage="Magical"
+            blackKingBar="2"
             diffusalBlade="0"
             cooldown="50/42/34/26"
             mana="110/120/130/140">
@@ -391,13 +426,12 @@
                 value="50/60/70/80"/>
             <abilityAttributes
                 name="Attack Speed Reduction"
-                value="15%"/>
+                value="20"/>
             <altDescription description="The Ancient Apparition's eternal knowledge brings a frigid enchantment to his allies." />
             <note>Extra damage is its own instance of damage as opposed to added to the attack.</note>
             <note>Only works against heroes and creeps.</note>
             <note>If an attack is interrupted before dealing damage the count of attacks is not lowered.</note>
-            <note>Castable attack modifiers (Drow Ranger's Frost Arrows, Viper's Poison Attack,...) will not trigger the bonus damage if it is cast (point &amp; click) instead of used via auto-cast.</note>
-            <note>Each ally "hit" can deal up to 150/240/350/480 damage on his own, and if all 5 allies are "hit", this can go up to 750/1200/1750/2400 damage.</note>
+            <note>Each ally buffed can deal up to 150/240/350/480 bonus damage, and if all 5 allies are buffed, this can go up to 750/1200/1750/2400 damage.</note>
             <note>The buff is always applied to Ancient Apparition even if he is not within the target area.</note>
         </ability>
         <ability
@@ -406,7 +440,7 @@
             ability="Target Point"
             affects="Enemy Units"
             damage="Magical"
-            blackKingBar="1"
+            blackKingBar="0"
             linkensSphere="0"
             diffusalBlade="0"
             cooldown="40"
@@ -429,25 +463,25 @@
             <abilityAttributes
                 name="Damage"
                 value="250/350/450"/>
-            <blackKingBar description="Frostbite partially goes through magic immunity. Shatter can be triggered, but it will not deal damage over time."/>
             <aghanims description="Increases duration." />
             <altDescription description="Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power." />
-            <note>The radius for the damage is 250+50*TimeTraveled capped at 975, The radius for HP freeze is 275 along the path of the second projectile and upon the final strike area.</note>
-            <note>The instant kill doesn't work on illusions or Meepo clones.</note>
-            <note>First projectile has a 1500 movement speed, stops when the caster dies or casts the second part of the skill.</note>
+            <note>The radius for the damage is 250+50*TimeTraveled (by the second projectile) capped at 975 (14.5seconds, 21500 units), The radius for HP freeze is 275 along the path of the second projectile and upon the final strike area.</note>
+            <note>The instant kill doesn't work on illusions.</note>
+            <note>First projectile has a 1500 movement speed, stops when the caster dies or casts the second part of the projectile.</note>
             <note>First projectile clears fog in a 500 radius circle at its end.</note>
-            <note>Kill will be granted to the source of the damage that triggers the shatter, enemies may also deny themselves via self-damage this way.</note>
-            <note>Fatal damage is 100000000 physical and clears all buffs prior damaging.</note>
-            <note>HP freeze prevents all kinds of healing.</note>
-            <note>The shatter damage will not kill you if you are affected by Shallow Grave.</note>
+            <note>Kill will be granted to the source of the damage that triggers the shatter.</note>
+            <note>HP freeze prevents all kinds of healing. Sunder will still work, since it is not properly a heal, but a "HP exchange".</note>
+            <note>The shatter damage will not kill units affected by Shallow Grave.</note>
             <note>Total damage : 350/530/770 (462.5/690/994*)</note>
+            <note>Cannot be dispelled by anything.</note>
+            <note>Tracer can be seen by true sight. It appears as a red dot on the minimap when passing towers and sentries or a hero with a gem. It is possible to see the tracer as an enemy hero, without true sight: it is seen as a feeble distortion on the map when the tracer passes through. (Possible bug)</note>
         </ability>
         <tips>Use Cold Feet to harass in the early game, but mind your mana pool.</tips>
         <tips>Eul's Scepter of Divinity in combination with Cold Feet can almost always guarantee a stun (though at the cost of Cold Feet's damage over time). It also allows you to land a short-range Ice Blast in quick succession.</tips>
         <tips>Chilling Touch can be useful to max along with Cold Feet if you are laning with another ranged hero. The harass is extremely potent and can often push your enemies out of the lane.</tips>
         <tips>Ice Vortex can be used to slow enemies when chasing or being chased, as well as reduce their resistance. It also gives vision, so it can be used to scout the Roshan pit, ancients, trees (if someone jukes into them), high ground, and so on. The cast range is very long, so all of this can be done from a safe distance. You can even scout Roshan from the Dire Secret Shop!</tips>
         <tips>Ice Blast is a multi-purpose spell that can be cast to anywhere on the map. Use it to aid your allies in ganks, initiate team battles, finish off low-HP heroes, and clear large creep waves.</tips>
-        <tips>Remember that Ice Blast prevents all healing effects from regenerating HP. Landing this skill on the enemy team at the start of a team fight will prevent healers such as Dazzle, Chen and Omniknight or a mekanism carrying hero from regenerating any hp to their team. The debuff reaches its ideal effect especially if you have an Aghanim's Scepter.</tips>
+        <tips>Remember that Ice Blast prevents all healing effects from regenerating HP. Landing this spell on the enemy team at the start of a team fight will prevent healers such as Dazzle, Chen and Omniknight or a Mekansm carrying hero from regenerating any hp to their team. The debuff reaches its ideal effect especially if you have an Aghanim's Scepter.</tips>
         <tips>Ancient Apparition can solo mid in the early game, as he has all the necessary tools to control his lane. AA will look to start ganking as soon as possible and use the early Ice Blasts to his team's advantage.</tips>
         <tips>In spite of his ability to solo, AA is still very potent in a dual or tri lane. Cold Feet functions well as a follow-up to an ally's stun, and Chilling Touch is able to buff every one of AA's allies, effectively multiplying its effectiveness by the number of allies you have available.</tips>
         <tips>All of Ancient Apparition's spells have incredible range. Try to avoid close combat when possible.</tips>
@@ -459,12 +493,10 @@
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
         <description>Anti-Mage is a fast melee Agility Carry with an emphasis on disabling and killing high-mana enemies. He has notably high agility and low base attack time, giving him high damage and scaling with his basic attacks. His signature ability is Mana Break, a passive attack modifier that makes him a huge threat to mana-reliant heroes, mainly Intelligence-based casters. In addition to granting substantial bonus damage on each attacks, its mana burn sets enemies up to be devastated by his ultimate ability, Mana Void. Blink is a highly versatile ability that allows Anti-Mage to instantly teleport short distances, thereby allowing him to escape, chase, and even farm with ease. Combined with his high base movement speed, this makes Anti-Mage a highly mobile hero at all points in the game. Spell Shield greatly increases Anti-Mage's magic resistance, allowing him to sustain more damage from enemy casters. Finally, Mana Void finishes off targets after their mana has been burnt, inflicting heavy damage to both the target and enemies surrounding the target. The damage Mana Void can potentially deal scales extremely well into the late game, as enemies' mana pools only grow larger over time. His naturally fast basic attacks combined with his powerful abilities make him extremely dangerous in the late game, allowing him to devastate enemies with ease if he is allowed to farm as a hard carry.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
         <attributes
-            strengthBase="20"
+            strengthBase="22"
             strengthGain="1.2"
             agilityBase="22"
             agilityGain="2.8"
@@ -473,7 +505,7 @@
             damageMinimum="49"
             damageMaximum="53"
             baseMoveSpeed="315"
-            baseArmor="2.14" />
+            baseArmor="2.08" />
         <ability
             name="Mana Break"
             description="Burns an opponent's mana on each attack. Mana Break deals 60% of the mana burned as damage to the target."
@@ -491,6 +523,7 @@
             <note>Can deal up to 17/24/31/38 damage per hit.</note>
             <note>Mana Burn is blocked by magic immunity.</note>
             <note>You can lifeleech the damage dealt by this skill with a Lifesteal aura.</note>
+            <note>Is a unique attack modifier.</note>
         </ability>
         <ability
             name="Blink"
@@ -525,21 +558,22 @@
             ability="Target Unit"
             affects="Enemies"
             damage="Magical"
-            blackKingBar="1"
-            linkensSphere="2">
+            blackKingBar="0"
+            linkensSphere="2"
+            cooldown="70"
+            mana="125/200/275">
             <abilityAttributes
                 name="Range"
                 value="600"/>
             <abilityAttributes
-                name="Damage"
+                name="Damage Per Missing Mana"
                 value="0.6/0.85/1.1"/>
             <abilityAttributes
                 name="Radius"
-                value="450"/>
+                value="500"/>
             <abilityAttributes
                 name="Stun Duration"
                 value="0.1/0.2/0.3"/>
-            <blackKingBar description="The damage is blocked, the stun is not." />
             <linkensSphere description="Blocked on primary target. No interaction otherwise." />
             <altDescription description="After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts." />
             <note>Stun goes through magic immunity.</note>
@@ -572,12 +606,10 @@
         <attribute>Strength</attribute>
         <faction>Dire</faction>
         <description>Mogul Khan the Axe is a savage melee strength hero, infamous for creating chaos in battle and thriving off of it. He is commonly played as an initiator with a large semi-carry presence that quickly transitions into a support role later in the game. His fighting style demands that he gets up close and very personal. He can taunt enemies into targeting him and counters those who try to strike him with a sweeping Counter Helix that slashes all enemies at melee range. Axe has a tendency to draw opponents so deep in the fight that they do not have a chance to escape, each soul he draws infusing his own love of war; his ultimate, Culling Blade bolsters that talent with an attack that unconditionally kills a unit with low health.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-            <role>Jungler</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Jungler</role>
         <attributes
             strengthBase="25"
             strengthGain="2.5"
@@ -588,10 +620,10 @@
             damageMinimum="49"
             damageMaximum="53"
             baseMoveSpeed="290"
-            baseArmor="1.86" />
+            baseArmor="1.80" />
         <ability
             name="Berserker's Call"
-            description="Mogul Khan the Axe is a savage melee strength hero, infamous for creating chaos in battle and thriving off of it. He is commonly played as an initiator with a large semi-carry presence that quickly transitions into a support role later in the game. His fighting style demands that he gets up close and very personal. He can taunt enemies into targeting him and counters those who try to strike him with a sweeping Counter Helix that slashes all enemies at melee range. Axe has a tendency to draw opponents so deep in the fight that they do not have a chance to escape, each soul he draws infusing his own love of war; his ultimate, Culling Blade bolsters that talent with an attack that unconditionally kills a unit with low health."
+            description="Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration."
             ability="No Target"
             affects="Enemies"
             blackKingBar="0"
@@ -609,9 +641,12 @@
                 name="Duration"
                 value="2/2.4/2.8/3.2"/>
             <altDescription description="Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe." />
-            <note>Berserker's Call affects invisible units, as well as units with magic immunity.</note>
-            <note>Enemies who are taunted by Berserker's Call will be frozen for the duration if Axe dies or couldn't be attacked.</note>
-            <note>Does not affect towers.</note>
+            <note>Affects invisible, spell immune and invulnerable units (except for Puck during Phase Shift).</note>
+            <note>Does not affect towers and hidden units (eg by Astral Imprisonment, Disruption, Snowball).</note>
+            <note>Affected units cannot use any spell or item and are forced to attack Axe, no matter what.</note>
+            <note>When Axe dies or can't be attacked for other reasons, affected units will face Axe and be unable to do anything for the duration, or until Axe can be attacked again.</note>
+            <note>When a unit is affected by both, Berserker's Call and Duel, Duel will always have priority.</note>
+            <note>Does not taunt Ancients.</note>
         </ability>
         <ability
             name="Battle Hunger"
@@ -625,6 +660,9 @@
             cooldown="20/15/10/5"
             mana="75/85/95/105">
             <abilityAttributes
+                name="Cast Range"
+                value="900"/>
+            <abilityAttributes
                 name="Duration"
                 value="10/12/14/16"/>
             <abilityAttributes
@@ -637,10 +675,10 @@
                 name="Damage Per Second"
                 value="15/20/25/30"/>
             <altDescription description="Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied." />
-            <note>Killing illusions, denying a friendly creep or destroying buildings will also remove the debuff.</note>
-            <note>Units affected by Battle Hunger cannot be denied.</note>
-            <note>Killing using summons does not remove debuff.</note>
-            <note>Has a maximum range of 900.</note>
+            <note>Denying a friendly creep or destroying buildings will also remove the debuff.</note>
+            <note>Using Death Pact, Devour, Demonic Conversion, or Hand of Midas will also remove the debuff. Lich's Sacrifice however does not.</note>
+            <note>Killing illusions or Power Cogs does not remove the debuff.</note>
+            <note>The affected unit itself has to make the kill to remove the debuff. Summons or illusions owned by the same player will not remove it when they make a kill.</note>
             <note>Total Damage: 150/240/350/480.</note>
         </ability>
         <ability
@@ -658,26 +696,32 @@
                 value="275"/>
             <abilityAttributes
                 name="Chance to Helix"
-                value="17%"/>
+                value="20%"/>
             <abilityAttributes
                 name="Damage"
                 value="100/135/170/205"/>
             <altDescription description="Axe is the only reinforcements this army needs." />
-            <note>Counter Helix checks for triggering whenever an attack against Axe begins, not when Axe is actually damaged by said attack.</note>
-            <note>Attacks from mechanical units cannot trigger Counter Helix. This includes Towers, Siege Creeps, Plague Wards, Serpent Wards, the Death Ward, and some others.</note>
-            <note>Does damage mechanical units like Siege units.</note>
+            <note>Counter Helix has a chance to trigger when the attacker begins their attack, not when their attack is completed.</note>
+            <note>Does not trigger on attacks from towers, fountains, siege creeps, Exorcism, Eye of the Storm, Mass Serpent Ward, Plague Ward, The Swarm and Death Ward.</note>
+            <note>Does not trigger on extra attacks or bouncing attacks from Sleight of Fist, Moment of Courage, Moon Glaive, Flak Cannon, Split Shot and Death Ward.</note>
+            <note>Does damage Siege units.</note>
+            <note>Counter Helix uses Pseudo Random chance.</note>
+            <note>Ability is not disabled by Doom.</note>
         </ability>
         <ability
             name="Culling Blade"
-            description="Axe spots weakness and strikes, dealing moderate damage but instantly killing an enemy unit with low health. When an enemy unit is killed in this way, Axe and nearby allied units gain bonus movement speed."
+            description="Axe spots a weakness and strikes, instantly killing an enemy unit with low health, or dealing moderate damage otherwise. When an enemy hero is killed with Culling Blade, its cooldown is reset, and Axe and nearby allied units gain bonus movement speed. Upgradable by Aghanim's Scepter."
             ability="Target Unit"
             affects="Enemies"
             damage="Magical"
-            blackKingBar="1"
-            linkensSphere="0"
+            blackKingBar="0"
+            linkensSphere="2"
             diffusalBlade="2"
             cooldown="75/65/55 (6*) (0**)"
             mana="60/120/180">
+            <abilityAttributes
+                name="Cast Range"
+                value="150"/>
             <abilityAttributes
                 name="Kill Threshold"
                 value="250/350/450 (300/450/625*)"/>
@@ -685,43 +729,34 @@
                 name="Damage"
                 value="150/250/300"/>
             <abilityAttributes
-                name="Range"
-                value="150"/>
-            <abilityAttributes
-                name="Bonus Movement Speed"
+                name="Bonus Attack and Movement Speed"
                 value="40%"/>
-            <abilityAttributes
-                name="Bonus Attack Speed"
-                value="40%"/>
-            <abilityAttributes
-                name="Movement Speed Radius"
-                value="900"/>
             <abilityAttributes
                 name="Movement Speed Duration"
                 value="6 (10*)"/>
-            <blackKingBar description="Instant kill can't be blocked, normal hit can." />
+            <abilityAttributes
+                name="Movement Speed Radius"
+                value="900"/>
             <diffusalBlade description="Buff after cull can be purged." />
-            <aghanims description="Decreases cooldown and increases damage." />
+            <aghanims description="Decreases cooldown, increases kill threshold, and increases the duration of movement speed upon kill." />
             <altDescription description="Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat." />
-            <note>Does not go on cooldown if it successfully kills a hero.</note>
-            <note>If the target is under the HP threshold, Culling Blade does exactly the target's remaining health in unmitigable damage.</note>
-            <note>The killing blow goes through magic immunity.</note>
-            <note>The killing blow removes all buffs from the target unit before killing it.</note>
-            <note>This includes any hero that is under the effects of Dazzle's Shallow Grave as well.</note>
-            <note>Roshan can be killed by Culling Blade.</note>
-            <note>You can steal last hits from Necrophos's Reaper's Scythe by using this ability.</note>
+            <note>(**) Does not go on cooldown if it successfully kills a hero.</note>
+            <note>The killing blow removes all buffs from the target unit before killing it, including usually unremovable buffs like Shallow Grave.</note>
+            <note>The killing blow ignores spell immunity and any other kind of resistance.</note>
+            <note>Can be cast on Animal Courier and Flying Courier.</note>
         </ability>
         <tips>Axe is especially dangerous early game with high starting statistics and the speed from Battle Hunger contributing to his ability to push up to the enemy tower relatively safely, even for a semi-carry.</tips>
         <tips>Berserker's Call provides the full armor bonus at level one. It is the primary factor in his ability to survive physical damage without good statistics.</tips>
-        <tips>Resist using Culling Blade when not roaming. While Axe is powerful early game, he levels stat-wise fairly badly, and it is best to drop kills to a carry past the point when a team acquires their ultimate.</tips>
+        <tips>Resist using Culling Blade when not roaming or teamfighting. While Axe is powerful early game, he levels stat-wise fairly badly, and it is best to drop kills to a carry past the point when a team acquires their ultimate if the speed boost for a killing blow is not immediately necessary.</tips>
         <tips>Items such as the Vanguard, Hood of Defiance and the Shiva's Guard are essential as they help reduce the damage being dealt to Axe while he tanks and initiates a battle without a Blink Dagger. With a Blink Dagger, this aspect can be ignored when initiating to an extent.</tips>
         <tips>During the early phase of the game, a Stout Shield is all Axe needs to survive the lane. If possible, instead of fighting along with allied creeps, Axe can try to go and clash with the enemy creeps by himself with Counter Helix allowing him to take down unstacked creeps by himself.</tips>
         <tips>A more advanced technique used by players is to max out Battle Hunger by Level 7. This enables Axe to constantly deal damage over time (dots) in the lane, dealing crippling damage and blocking any potential to push or counterpush. This meshes well with Axe's capability to tank and keep the enemy at bay while stopping them from last hitting or denying creeps, allowing Battle Hunger deal its full damage.</tips>
         <tips>If Axe is going against two weak melee heroes in a lane without sufficient burst damage (such as Phantom Assassin or Spirit Breaker, etc.), do not hesitate to stand between them and their creeps. It allows for complete lane dominance as they cannot last hit and it denies them of experience and gold as Counter Helix hurts a lot early game.</tips>
-        <tips>You can put "dota_health_per_vertical_marker 300" in the console without quotes to easily find the instakill hp thresholds for Axe's ultimate. Change the number according to Axe's ultimate. This sets each bar of health to the value you set, which means when they are under 1 bar of health, you can ultimate. This can also be applied to Dagon, but Magic Resist should be factored in.</tips>
+        <tips>You can type bind "P" "toggle dota_health_per_vertical_marker 250 350 450 625" into the console to easily find the instakill health thresholds for Axe's ultimate. Press 'P' in game to change the corresponding number of the health bars. This sets each bar of health to the value you set, which means when they are under 1 bar of health, you can successfully kill the hero. This can also be applied to other spells such as Dagon, Finger of Death, or Laguna Blade, but magic resistance should be factored in. For details on enabling the console, see Console.</tips>
         <tips>Axe is an excellent counter-pick to heroes with abilities that can greatly increase their attack speed (i.e. Ursa, Troll Warlord), as a combination of Berserker's Call and Blade Mail can be devastating to such heroes, especially if Counter Helix procs numerous times.</tips>
         <tips>Instead of using Berserker's Call to draw creep aggro in lane, it's usually better to right click enemy hero (which automatically pulls the creep aggro). It applies to any enemy heroes visible on map, thus you can pull aggro by standing in the middle of wave and right clicking visible enemy on the other side of the map.</tips>
-        <tips>Soul Ring can provide all of the mana needed through the early and midgame. Use this in cojunction with a form of HP regeneration such as Tranquil Boots or a Vanguard.</tips>
+        <tips>Soul Ring can provide all of the mana needed through the early and midgame. Use this in conjunction with a form of HP regeneration such as Tranquil Boots or a Vanguard.</tips>
+        <tips>Because of Counter Helix, attacking the enemy's creep wave when it spawns is an effective strategy for Axe to quickly earn experience. This will keep the enemies in your lane suppressed by your creeps during the early game. However it is not recommended if the opponent has an easy way to farm your incoming creep wave.</tips>
     </hero>
     <hero>
         <name>Bane</name>
@@ -729,11 +764,9 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <description>Atropos the Bane Elemental, also known simply as Bane, is a ranged intelligence Hero, possessing dark and nightmarish abilities that give him strong disabling, ganking, and nuking prowess. Mostly played as a support, he has some of the highest starting stats of any hero, yet is unique in the sense that all his attributes and stat growths are equivalent. In addition, he possesses four highly potent single-target spells, which if used properly can more than make up for his complete lack of area of effect presence and pushing power. Enfeeble reduces the target's attack damage by a tremendous amount, which can highly reduce an attack-reliant enemy hero's effectiveness from as early as the laning stage all the way to the endgame. Brain Sap is a nuke that deals hefty pure damage to the target, healing himself for the same amount as well. Nightmare puts a unit to sleep, completely disabling for several seconds and dealing minor damage per second. If the slept target is physically attacked, it wakes up and the spell transfers to the attacker (spells will also wake the target up, but will not transfer the effect to the caster). Finally, Bane's Fiend's Grip is a channeling spell that completely disables the target for several seconds, dealing heavy damage per second and giving Bane some mana back as well. Bane's debilitating lockdown abilities are what make him an invaluable support to allies, and a feared one for enemies.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="22"
             strengthGain="2.1"
@@ -864,12 +897,10 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <description>Batrider is a ranged intelligence hero who excels in lane control and harassing enemies, especially in the early phase of the game. Usually Batrider is played as a heavy support, items are not needed to utilise his abilties. Batrider is a mobile burst damage raider, capable of dealing enormous amounts of damage on stacks, at a risky close range. Before moving in for the kill, the Batrider hinders his targets with Sticky Napalm, a stacking debuff skill that slows his enemies and amplifies the damage taken from Batrider himself, be it with attacks, spells, or items. When his enemies are greatly crippled, he is ready to attack. With Flamebreak, he launches an explosive cocktail which damages and knocks back enemies in a targeted area. Then, the Batrider activates his Firefly ability, allowing the Batrider to fly high in the sky, creating a burning trail of liquid fire, scorching enemies who dare to go in his path, while giving him the ability to cross and phase through impassable grounds. With Sticky Napalm stacked, he is capable of amplifying and inflicting massive damage quickly, burning them with Flamebreak and Firefly. The Batrider then uses his ultimate, Flaming Lasso, which catches a target with a lasso, shackling and pulling them to his Firefly trail or to the clutches of his merciless allies. When these spells are used altogether, the Batrider is a dangerous enemy that enemies should be aware of, risking his own safety, but enough to cause fiery chaos and mass destruction.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Escape</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Escape</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="23"
             strengthGain="2.4"
@@ -997,11 +1028,9 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Karroch the Beastmaster is a melee strength hero whose unique power takes the form of summons with exaggerated unit utility. His thralls provide extreme amounts of sight and have ability to reduce the attackspeed of targeted units. In addition, he has the longest lasting single reliable stun in the game. He is an effective support with good disabling ability in team fights. His strengths lie primarily in the slow debuff his Boar inflicts and ability to easily provide vision at crucial locations on the map. His ultimate, the stunning Primal Roar and Wild Axes allow him to deal massive damage at a distance. Though he is able to easily take down undefended targets in the early game, most of his abilities do not directly combo with each other, although the debiliating effects he brings to a fight can greatly assist allies (along with his passive attack speed boost aura).</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="23"
             strengthGain="2.2"
@@ -1131,10 +1160,8 @@
         <attribute>Agility</attribute>
         <faction>Dire</faction>
         <description>Strygwyr the Bloodseeker is a melee agility hero imbued with dreadful powers to fuel violence and rip enemies apart in the heat of close combat. He can drive targets into a maddened Bloodrage, increasing the damage of their attacks, preventing them from casting spells and bleeding their life in the frenzy. His speed is unmatched when he senses the blood of the dying, and from this perception none can escape. His own health is never a problem, as he can salve his wounds merely by bathing in the blood of the fallen. His ultimate, Rupture, sunders the skin of his victims, causing them to trail their life force behind if they dare to flee.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Jungler</role>
-        </roles>
+        <role>Carry</role>
+        <role>Jungler</role>
         <attributes
             strengthBase="23"
             strengthGain="2.0"
@@ -1272,11 +1299,9 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="17"
             strengthGain="1.8"
@@ -1407,12 +1432,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="23"
             strengthGain="2.9"
@@ -1649,10 +1672,8 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Rigwarl the Bristleback is a melee Strength hero famous for his array of synergistic spells with low mana cost and cooldown. He is able to slow his enemies down and reduce their armor with Viscous Nasal Goo, then hit them with a barrage of Quill Sprays, making him an effective chaser when ganking enemies. His low strength gain makes him less tanky than most strength heroes, but he becomes substantially more durable when he turns around due to his passive Bristleback, which reduces damage taken from behind. In the right hands, Bristleback is a powerful ganker in the early stages of the game, and a powerful hard carry in the later stages depending on how much farm he gets.</description>
-        <roles>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="22"
             strengthGain="2.2"
@@ -1788,11 +1809,9 @@
         <attribute>Agility</attribute>
         <faction>Dire</faction>
         <tips>Black Arachnia the Broodmother is a melee agility hero who is a notably powerful pusher. Her trademark spiderlings, as both an asset and a liability, define her play style. While a possible additional source of income, experience and lane pushes, spiderlings can easily feed opponents when not handled with deft micro and great awareness. Broodmother's abilities allow her to summon those spiderlings to do her bidding, to conceal herself and her spiderlings in an area, and to slow and kill heroes with relative ease if caught off guard, all while staying as elusive as possible with her webs and passives. She spends most of the early game pressuring a lane with little concern, due to her spiderlings and her invisibility/added HP regeneration, but she can also transition into a difficult to kill melee carry, which can dive in on and rapidly kill lone enemies with the right items later on.</tips>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+    <role>Escape</role>
+    <role>Pusher</role>
         <attributes
             strengthBase="17"
             strengthGain="2.5"
@@ -1916,11 +1935,9 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Bradwarden the Centaur Warrunner is a melee strength hero whose natural place in combat is right in the center of battle. His abilities stop enemies around him in their tracks and inflict heavy damage, making him an excellent initiator. He is also a powerful tank, having the highest strength gain in the game. Bradwarden has immense natural health, and his skills' area of effect mean that he can charge into combat and incapacitate groups of enemies at a time. Hoof Stomp and Double Edge make a great combo of stunning and burst damage on short cooldowns and his Return means instant retaliation on enemies who try attack him. His ultimate, Stampede effectively turns the entire team into initiators, granting them high speed and the ability to flatten enemies under as they pass over them. Although he is usually not played as a carry, he can scale powerfully with items, becoming a hard-hitting semi-carry that is nearly impossible to kill.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="23"
             strengthGain="3.8"
@@ -2039,12 +2056,10 @@
         <attribute>Strength</attribute>
         <faction>Dire</faction>
         <description>Chaos Knight is a melee strength Hero with one of the highest physical damage outputs of all heroes. He is mostly played as a semi-carry and ganker. As his name implies, he has a theme based on randomness and uncertainty. His regular attack has an incredibly high thirty damage spread, making his last hitting ability somewhat unreliable. Chaos Bolt is his most notorious luck-based ability which, at max level, can stun a target anywhere between a mediocre 2 seconds to an effective 4 seconds that will almost certainly assure its death; it will also deal a variable amount of damage ranging from miniscule to moderate. Reality Rift pulls Chaos Knight and his target to a randomly chosen point along the line between the two and gives him bonus damage for one attack. Chaos Strike is a crit-based ability with one of the lowest proc chances, yet also one of the highest multipliers. His only non-random ability is his ultimate Phantasm, which produces the most powerful illusions in the game. These illusions, which retain his full damage and only take double damage, benefit from his Chaos Strike and can teleport alongside him to attack the target whenever he uses Reality Rift. With three illusions being produced at Phantasm's highest level, Chaos Knight's damage output is effectively quadrupled during teamfights later in the game, and it is not uncommon to see enemy heroes being killed instantly after being Reality Rifted by the four apocalyptic horsemen. Thus, CK is played as a carry whom excels in both the mid and late game, if the game drags on long enough and he is able to acquire enough strength-based and survivability items to ensure that his illusions can stay alive, he will be able to overpower most hard carries.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="20"
             strengthGain="2.9"
@@ -2164,11 +2179,9 @@
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
         <description>Chen the Holy Knight has gameplay that is different than most other heroes. Holy Persuasion lets him convert creeps to his side, including powerful neutral creeps. As a result, Chen is usually found in the forest searching for creeps to convert. When he finds a strong creep or two, he descends on his unwary enemies, using both his own spells and the abilities of his persuaded creeps to take them out. When ambushing enemies, Chen generally uses his Penitence ability, which slows the target and causes them to take extra damage from Chen's flock. Test of Faith can be used to finish off enemies and also teleport any ally to the fountain after a short delay with a subability. Chen's support abilities are rounded out by Hand of God, a healing spell which instantly restores a set amount of HP to all allied Heroes and fully heals his controlled creeps across the battlefield.</description>
-        <roles>
-            <role>Jungler</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Jungler</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="20"
             strengthGain="1.5"
@@ -2308,10 +2321,8 @@
         <attribute>Agility</attribute>
         <faction>Dire</faction>
         <description>Clinkz, the Bone Fletcher is a ranged agility carry specializing in ambushing lone Heroes with high physical damage and incredible speed. Though frail and easy to kill, Skeleton Walk grants Clinkz stealth and haste to escape and re-position himself. This assassin Strafes around the enemy, launching a flurry of Searing Arrows that greatly injure enemies. To aid his assault, Clinkz can form a Death Pact and absorb a creature's life for greater damage and health, making him not only able to take more hits, but hit harder as well.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
         <attributes
             strengthBase="15"
             strengthGain="1.6"
@@ -2420,10 +2431,8 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Rattletrap the Clockwerk is a melee strength hero commonly played as an initiator or ganker. As an initiator, his main purpose is crowd control. However, he also does secondary jobs such as chasing and map control. His abilities are centered around isolating and killing enemies one by one. He does not deal reliable area damage like most initiators, but still he is capable of doing a surprising and devastating entrance. Usually Clockwerk players should initiate onto low health support heroes or enemy heroes with strong team fight ability, such as Warlock, hampering their ability to land solid teamfight spells. Clockwerk can also initiate onto enemy carry heroes, in order to isolate them away from the team fight by forcing them to remain in cogs.</description>
-        <roles>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="24"
             strengthGain="2.7"
@@ -2574,12 +2583,10 @@
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
         <description>Rylai the Crystal Maiden is a ranged intelligence Hero used as a hard support and disabler. She is perhaps best known for her powerful global mana regeneration aura. This aura allows mana dependent allies to excel during the early to mid game and the laning phase, and allows her to constantly activate her own spells without needing to worry much about the mana costs. She also has a high amount of early game presence with just a few points in her Crystal Nova and Frostbite abilities. Crystal Nova is a powerful area-of-effect nuke that slows both attack and movement speeds of enemies within an area for several seconds, while Frostbite encases an enemy in a block of ice for several seconds, immobilizing it and doing moderate damage per second. Combining these two abilities together along with a laning partner's own spells often results in the quick death of an enemy hero. Although her strong early game presence is quickly lost due to her extreme frailty and poor mobility, she can still inflict a heavy amount of damage in teamfights later on if she is able to channel her deadly ultimate, Freezing Field. Her Arcane Aura, strong disabling and nuking prowess, relative ease of usage, and almost complete lack of item dependence makes her a reliable support caster that can be useful in any team.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Lane Support</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Lane Support</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="1.7"
@@ -2714,11 +2721,9 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <description>Ish'kafel the Dark Seer is a melee intelligence hero with versatile abilities that allow him to assist allies and greatly change the conditions of combat. His Vacuum in particular affects enemies in a large area and is a powerful crowd-control. It not only disorients and damages enemies, but also pushes them into a small area to follow up with area spells or to trigger other abilities, such as his Wall of Replica ultimate that turns the very power of enemies against them in the form of illusions that replicate their statistics. His other spells focus on buffing allies with speed, or in the case of his Ion Shell, granting an aura that radiates damage onto enemies who venture within it.</description>
-        <roles>
-            <role>Escape</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Escape</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="22"
             strengthGain="2.3"
@@ -2855,10 +2860,8 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <description>Dazzle the Shadow Priest is a ranged intelligence Hero exhibiting abilities that bend the sustainability of both his allies and enemies, making him a viable support. While frail, he is capable of keeping his allies and himself from dying, causing his foes to waste time in a fruitless endeavor. Similarly to Slardar, Dazzle boasts abilities that deal physical damage instead of the usual magical. His first ability, Poison Touch, is a strong spammable disable, though mediocre in effects in the first levels. Out of all his abilities, Poison Touch is the only one that cannot pass through Magic immunity, but it will sustain itself when magic immunity is granted after the buff is placed. Shallow Grave is a solid survivability spell, allowing your allied targets to escape during serious encounters. Though it only prevents fatal damage, it cannot be purged, making it a full guarantee that Dazzle's target will survive for the duration. Shadow Wave is a chaining healing ability that dissipates the health gained to damage nearby enemies, having a potential of delivering a huge damage output when good positioning comes to play. His ultimate, Weave, is a large armor bending ability that not only increases his allies' armor, but also decreases his enemies'. With the fact that his abilities deal physical damage and that Dazzle himself has large attack damage, the chaotic combination with armor reduction really makes Dazzle a devastating Hero to go against.</description>
-        <roles>
-            <role>Lane Support</role>
-            <role>Support</role>
-        </roles>
+        <role>Lane Support</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="1.85"
@@ -2989,11 +2992,9 @@
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
         <description>Krobelus the Death Prophet is a ranged intelligence Hero who excels at pushing lanes. Like other casters, her abilities allow her to be less item dependent during the early game. As she learns Exorcism, Death Prophet can deal a huge amount of damage to towers and lone heroes alike, while healing at the end of the duration. Despite being a caster, Death Prophet has a relatively high Strength compared to other intelligence Heroes and she is mostly built as a tank. Her passive ability, Witchcraft, both grants her bonus movement speed and an increase her other abilities' effectiveness, making her a formidable ganker as well.</description>
-        <roles>
-            <role>Durable</role>
-            <role>Nuker</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Durable</role>
+        <role>Nuker</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="19"
             strengthGain="2.2"
@@ -3119,12 +3120,10 @@
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
         <description>Disruptor the Stormcrafter is a supportive ranged intelligence Hero. His signature ability is Kinetic Field, a pseudo-disable that traps enemies within a small area for a long duration. Combined with his Static Storm, Disruptor can act as the initiator for a teamfight, or supplement his teammates' initiation very well. Glimpse is another powerful spell that forces enemies to watch their movements, as Disruptor can easily drag them back to a previous location to be focused down. Thunder Strike provides Disruptor with some reliable single-target damage, but more importantly grants vision on the target to prevent jukes and escapes.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="19"
             strengthGain="1.9"
@@ -3254,11 +3253,9 @@
         <attribute>Strength</attribute>
         <faction>Dire</faction>
         <description>Lucifer the Doom is a melee strength Hero with strong farming capabilities, good versatility, and one of the strongest single-target spells in the game. His very low starting armor makes him vulnerable to harassment, but his abilities and high health allow him to lane or even jungle quite effectively. A ruthless demon, he possesses malicious abilities revolving around greed, fire, and death. His Devour ability allows him to consume creeps, providing additional gold and allowing him to absorb any powers that creep had, which potentially allows him to have up to six total hero skills. Because there are numerous neutral creep abilities to choose from to supplement his other skills, the role that he chooses to play is quite flexible. Scorched Earth serves numerous purposes, allowing him to chase, escape, regenerate, and slowly burn his enemies all at once. LVL? Death is a spammable nuke that does either modest or massive damage to the enemy, depending on the enemy's level. Finally, his namesake ult Doom serves as one of the strongest single target lockdown abilities in the game. A unit afflicted with Doom takes intense damage over a lengthy duration, while having all his active abilities - even those from items - completely silenced. With numerous expensive items in his arsenal and a key enemy hero rendered useless for a teamfight, a farmed Doom ensures that nobody can extinguish his flame.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="26"
             strengthGain="3.2"
@@ -3393,12 +3390,10 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Davion the Dragon Knight is a very tough melee strength hero with a relatively versatile skill set. Dragon Knight has a nuke and a stun, giving him an advantage in ganks. Dragon Knight has no real escape ability, though his Dragon Blood ability and armor make him capable of withstanding strong hits and recovering quickly. He is still very vulnerable in the early game, however, and needs to farm and stay alive in order to be effective in later stages. If he has enough levels and farm, Dragon Knight is very formidable late game due to his strong ultimate, transforming into a legendary dragon, turning him into one of the most dangerous beasts in late game, capable of eliminating multiple enemies at once.</description>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="19"
             strengthGain="2.8"
@@ -3509,9 +3504,7 @@
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
         <description>Traxex the Drow Ranger is a ranged agility hero whose greatest assets are her incredible damage and ability to keep threats at bay. Traxex is a carry who, though lacking survivability, provides a worthwhile contribution through her damage alone. The Drow Ranger can be extremely powerful at any given point in the game. As an agility hero, Traxex's damage is based largely off her auto attacks and is among the greatest largely due to the massive amounts of agility she gains from her passive ultimate, Marksmanship. The Drow Ranger also adds ranged damage to teammates with her global Precision Aura. Despite her lack of escape spells, Drow Ranger can keep herself relatively safe from enemy spellcasters and melee heroes using her Gust and her Frost Arrows, respectively. Frost Arrows infuses her attacks with ice, greatly slowing down her enemies. Since it can be manually cast, Frost Arrows can be used to harass her foes in the early game without drawing the creeps' attention. Gust is a great counter to enemy spellcasters as well as melee heroes as Gust pushes heroes away from Drow and prevents them from casting spells, who might threaten her life in battles. Position is of utmost importance as Traxex is quite vulnerable in close combat and the agility bonus from Marksmanship is removed when enemies come near her. This means she struggles against melee heroes with high mobility, such as Anti-Mage and Faceless Void.</description>
-        <roles>
-            <role>Carry</role>
-        </roles>
+        <role>Carry</role>
         <attributes
             strengthBase="17"
             strengthGain="1.9"
@@ -3630,12 +3623,10 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>Raigor Stonehoof the Earthshaker is a melee Strength Hero with several area of effect disables, commonly played as a ganker or initiator. Unlike most Strength heroes, he is played more like an Intelligence caster hero and is almost entirely reliant on his spells to inflict heavy damage. His Fissure is a versatile spell that affects enemies in a line, used to stun, inflict decent damage, and create an impassable wall of earth for a significant duration. Good usage of this can cut off chokepoints, leaving enemies with no escape routes or preventing them from chasing after endangered allies. Enchant Totem massively boosts his attack damage for one attack, and has a very short cooldown. Aftershock lets the Earthshaker deal additional damage and stun in a small area around him everytime he uses one of his spells, and combos particularly well with Enchant Totem. Earthshaker's heavy AoE-centric kit is most powerful when his enemies are in large numbers and in close proximity. With his Echo Slam, he can deal heavy damage to clusters of enemies. All of Earthshaker's spells (with the exception of his ultimate) have a long casting animation, but with proper positioning, an adept Earthshaker can wreak havoc with his area-of-effect spells. Blink Dagger is an essential item for Earthshaker to be able to properly land Echo Slam within a cluster of enemies. At the same time, because of the high mana costs of his spells, he needs some form of mana sustenance. With his tremendous seismic power, the Earthshaker is never one that should be taken lightly even when he is heavily outnumbered.</description>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Lane Support</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Lane Support</role>
+        <role>Support</role>
         <attributes
             strengthBase="22"
             strengthGain="2.9"
@@ -3917,10 +3908,8 @@
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
         <description>The Elder Titan is a durable melee strength hero who plays the role of initiator. His Astral Spirit and Echo Stomp abilities allow him to disable large groups of enemies from afar, making him one of the few initiators that does not require a Blink Dagger. This combination creates a perfect setup for his powerful ultimate Earth Splitter, which damages enemies based on their maximum HP. This, along with his ability to lower his enemies' physical and magical resistance, makes Elder Titan scale well through his abilities and be effective at all stages of the game. As the progenitor of this world, Elder Titan reshapes the battlefield on a whim and can turn any teamfight in his favor.</description>
-        <roles>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="24"
             strengthGain="2.3"
@@ -4233,12 +4222,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Durable</role>
-            <role>Jungler</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Durable</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="1.0"
@@ -4256,12 +4243,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Jungler</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="17"
             strengthGain="2.1"
@@ -4279,12 +4264,10 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
             <role>Carry</role>
             <role>Disabler</role>
             <role>Escape</role>
             <role>Initiator</role>
-        </roles>
         <attributes
             strengthBase="23"
             strengthGain="1.6"
@@ -4302,11 +4285,9 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="18"
             strengthGain="1.8"
@@ -4324,11 +4305,9 @@
         <damageType>Ranged</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="21"
             strengthGain="2.4"
@@ -4363,11 +4342,9 @@
         <damageType>Ranged</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Lane Support</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Lane Support</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="17"
             strengthGain="1.9"
@@ -4385,12 +4362,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Lane Support</role>
-            <role>Nuker</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Lane Support</role>
+        <role>Nuker</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="24"
             strengthGain="2.3"
@@ -4408,10 +4383,8 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="20"
             strengthGain="1.9"
@@ -4429,9 +4402,7 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Pusher</role>
-        </roles>
+        <role>Pusher</role>
         <attributes
             strengthBase="14"
             strengthGain="1.8"
@@ -4449,12 +4420,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="24"
             strengthGain="3.0"
@@ -4489,12 +4458,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="1.6"
@@ -4512,11 +4479,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Lane Support</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Lane Support</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="18"
             strengthGain="1.55"
@@ -4534,12 +4499,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Escape</role>
-            <role>Jungler</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Escape</role>
+        <role>Jungler</role>
         <attributes
             strengthBase="25"
             strengthGain="2.4"
@@ -4557,11 +4520,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="18"
             strengthGain="1.5"
@@ -4579,12 +4540,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Lane Support</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Lane Support</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="1.7"
@@ -4602,12 +4561,10 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Jungler</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="17"
             strengthGain="2.1"
@@ -4625,10 +4582,8 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="15"
             strengthGain="1.9"
@@ -4646,12 +4601,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Jungler</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="22"
             strengthGain="2.75"
@@ -4669,12 +4622,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="21"
             strengthGain="2.75"
@@ -4709,11 +4660,9 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="23"
             strengthGain="1.6"
@@ -4731,12 +4680,10 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Escape</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Escape</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="17"
             strengthGain="1.85"
@@ -4754,11 +4701,9 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="19"
             strengthGain="2.0"
@@ -4776,12 +4721,10 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Escape</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Escape</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="21"
             strengthGain="2.3"
@@ -4799,12 +4742,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-            <role>Jungler</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="19"
             strengthGain="1.8"
@@ -4822,11 +4763,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Support</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="2.0"
@@ -4844,10 +4783,8 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="23"
             strengthGain="2.8"
@@ -4865,10 +4802,8 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="18"
             strengthGain="2.0"
@@ -4886,11 +4821,9 @@
         <damageType>Melee</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="23"
             strengthGain="3.2"
@@ -4908,11 +4841,9 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Durable</role>
-            <role>Lane Support</role>
-            <role>Support</role>
-        </roles>
+        <role>Durable</role>
+        <role>Lane Support</role>
+        <role>Support</role>
         <attributes
             strengthBase="20"
             strengthGain="2.65"
@@ -4930,9 +4861,7 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-        </roles>
+        <role>Carry</role>
         <attributes
             strengthBase="19"
             strengthGain="1.85"
@@ -4950,10 +4879,8 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
         <attributes
             strengthBase="20"
             strengthGain="1.85"
@@ -4971,11 +4898,9 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="18"
             strengthGain="2.7"
@@ -5044,11 +4969,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Nuker</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Nuker</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="17"
             strengthGain="1.2"
@@ -5066,11 +4989,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="16"
             strengthGain="1.7"
@@ -5088,11 +5009,9 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="21"
             strengthGain="1.7"
@@ -5110,10 +5029,8 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
         <attributes
             strengthBase="17"
             strengthGain="2.0"
@@ -5131,10 +5048,8 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="19"
             strengthGain="1.5"
@@ -5152,11 +5067,9 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="18"
             strengthGain="2.6"
@@ -5174,11 +5087,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="17"
             strengthGain="1.9"
@@ -5196,10 +5107,8 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Carry</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="15"
             strengthGain="2.0"
@@ -5217,12 +5126,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Nuker</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="19"
             strengthGain="1.6"
@@ -5240,11 +5147,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Initiator</role>
-            <role>Support</role>
-        </roles>
+        <role>Carry</role>
+        <role>Initiator</role>
+        <role>Support</role>
         <attributes
             strengthBase="17"
             strengthGain="2.2"
@@ -5262,11 +5167,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Nuker</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Nuker</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="19"
             strengthGain="1.5"
@@ -5284,12 +5187,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="21"
             strengthGain="2.8"
@@ -5307,9 +5208,7 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Escape</role>
-        </roles>
+        <role>Escape</role>
         <attributes
             strengthBase="21"
             strengthGain="1.8"
@@ -5327,9 +5226,7 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-        </roles>
+        <role>Carry</role>
         <attributes
             strengthBase="16"
             strengthGain="1.7"
@@ -5347,10 +5244,8 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
         <attributes
             strengthBase="19"
             strengthGain="2.0"
@@ -5368,12 +5263,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="29"
             strengthGain="2.4"
@@ -5391,12 +5284,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Escape</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Escape</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="19"
             strengthGain="1.5"
@@ -5414,12 +5305,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Support</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Support</role>
         <attributes
             strengthBase="23"
             strengthGain="2.7"
@@ -5437,10 +5326,8 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
         <attributes
             strengthBase="18"
             strengthGain="2.1"
@@ -5475,12 +5362,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Support</role>
         <attributes
             strengthBase="22"
             strengthGain="3.0"
@@ -5498,31 +5383,27 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
-            strengthBase="22"
-            strengthGain="2.1"
-            agilityBase="16"
-            agilityGain="1.3"
-            intelligenceBase="21"
-            intelligenceGain="2.4"
-            damageMinimum="48"
-            damageMaximum="52"
-            baseMoveSpeed="290"
-            baseArmor="0.29" />
+        strengthBase="22"
+        strengthGain="2.1"
+        agilityBase="16"
+        agilityGain="1.3"
+        intelligenceBase="21"
+        intelligenceGain="2.4"
+        damageMinimum="48"
+        damageMaximum="52"
+        baseMoveSpeed="290"
+        baseArmor="0.29" />
     </hero>
     <hero>
         <name>Tinker</name>
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Nuker</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Nuker</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="17"
             strengthGain="2.0"
@@ -5540,12 +5421,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="24"
             strengthGain="3.0"
@@ -5563,12 +5442,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-            <role>Lane Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Lane Support</role>
         <attributes
             strengthBase="25"
             strengthGain="3.3"
@@ -5603,10 +5480,8 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Durable</role>
-            <role>Initiator</role>
-        </roles>
+        <role>Durable</role>
+        <role>Initiator</role>
         <attributes
             strengthBase="23"
             strengthGain="2.3"
@@ -5624,12 +5499,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Initiator</role>
-            <role>Pusher</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Pusher</role>
         <attributes
             strengthBase="22"
             strengthGain="2.1"
@@ -5647,11 +5520,9 @@
         <damageType>Melee</damageType>
         <attribute>Agility</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-            <role>Jungler</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Jungler</role>
         <attributes
             strengthBase="23"
             strengthGain="2.9"
@@ -5669,12 +5540,10 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Lane Support</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Lane Support</role>
+        <role>Support</role>
         <attributes
             strengthBase="18"
             strengthGain="2.6"
@@ -5692,12 +5561,10 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Initiator</role>
-            <role>Nuker</role>
-            <role>Pusher</role>
-            <role>Support</role>
-        </roles>
+        <role>Initiator</role>
+        <role>Nuker</role>
+        <role>Pusher</role>
+        <role>Support</role>
         <attributes
             strengthBase="18"
             strengthGain="1.85"
@@ -5715,10 +5582,8 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Durable</role>
-        </roles>
+        <role>Carry</role>
+        <role>Durable</role>
         <attributes
             strengthBase="20"
             strengthGain="1.9"
@@ -5736,11 +5601,9 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Durable</role>
-            <role>Nuker</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Nuker</role>
         <attributes
             strengthBase="22"
             strengthGain="2.4"
@@ -5758,12 +5621,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Initiator</role>
-            <role>Lane Support</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Lane Support</role>
+        <role>Support</role>
         <attributes
             strengthBase="18"
             strengthGain="2.5"
@@ -5781,10 +5642,8 @@
         <damageType>Ranged</damageType>
         <attribute>Agility</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Escape</role>
-        </roles>
+        <role>Carry</role>
+        <role>Escape</role>
         <attributes
             strengthBase="15"
             strengthGain="1.5"
@@ -5802,12 +5661,10 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Escape</role>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Escape</role>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="15"
             strengthGain="2.5"
@@ -5825,10 +5682,8 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Disabler</role>
-            <role>Support</role>
-        </roles>
+        <role>Disabler</role>
+        <role>Support</role>
         <attributes
             strengthBase="16"
             strengthGain="1.8"
@@ -5846,11 +5701,9 @@
         <damageType>Melee</damageType>
         <attribute>Strength</attribute>
         <faction>Dire</faction>
-        <roles>
-            <role>Carry</role>
-            <role>Disabler</role>
-            <role>Durable</role>
-        </roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
         <attributes
             strengthBase="22"
             strengthGain="2.9"
@@ -5868,10 +5721,8 @@
         <damageType>Ranged</damageType>
         <attribute>Intelligence</attribute>
         <faction>Radiant</faction>
-        <roles>
-            <role>Nuker</role>
-            <role>Support</role>
-        </roles>
+        <role>Nuker</role>
+        <role>Support</role>
         <attributes
             strengthBase="19"
             strengthGain="2.3"
