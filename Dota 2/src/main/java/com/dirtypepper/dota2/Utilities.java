@@ -13,7 +13,7 @@ import java.util.Stack;
 
 public class Utilities {
 
-    public static Stack<Class<?>> parents = new Stack<Class<?>>();
+    public static final Stack<Class<?>> parents = new Stack<Class<?>>();
 
     public static String nameToDrawable(String name) {
         return name.replaceAll(" ", "_")

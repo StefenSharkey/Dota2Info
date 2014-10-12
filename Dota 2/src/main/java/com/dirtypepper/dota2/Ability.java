@@ -5,26 +5,26 @@ import java.util.Map;
 
 public class Ability {
 
-    private String name;
-    private String description;
-    private String ability;
-    private String affects;
-    private String damage;
-    private Map<String, String> attributes;
-    private Boolean orbOfVenom;
-    private Integer blackKingBar;
-    private Integer linkensSphere;
-    private Integer diffusalBlade;
-    private Integer mantaStyle;
-    private String cooldown;
-    private String mana;
-    private String blackKingBarDescription;
-    private String linkensSphereDescription;
-    private String diffusalBladeDescription;
-    private String mantaStyleDescription;
-    private String altDescription;
-    private String aghanims;
-    private ArrayList<String> notes;
+    private final String name;
+    private final String description;
+    private final String ability;
+    private final String affects;
+    private final String damage;
+    private final Map<String, String> attributes;
+    private final Boolean orbOfVenom;
+    private final Integer blackKingBar;
+    private final Integer linkensSphere;
+    private final Integer diffusalBlade;
+    private final Integer mantaStyle;
+    private final String cooldown;
+    private final String mana;
+    private final String blackKingBarDescription;
+    private final String linkensSphereDescription;
+    private final String diffusalBladeDescription;
+    private final String mantaStyleDescription;
+    private final String altDescription;
+    private final String aghanims;
+    private final ArrayList<String> notes;
 
     public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, Boolean orbOfVenom, Integer blacKingBar, Integer linkensSphere, Integer diffusalBlade, Integer mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
         this.name = name;

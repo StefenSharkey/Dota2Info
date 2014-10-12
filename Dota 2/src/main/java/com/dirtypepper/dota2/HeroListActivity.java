@@ -16,8 +16,6 @@ public class HeroListActivity extends Activity implements GridView.OnItemClickLi
 
     private ArrayList<String> heroesList;
 
-    private GridView gridView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +24,7 @@ public class HeroListActivity extends Activity implements GridView.OnItemClickLi
 
         heroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
 
-        gridView = (GridView) findViewById(R.id.grid_view);
+        GridView gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(new GridAdapter(getApplicationContext()));
 
         gridView.setOnItemClickListener(this);

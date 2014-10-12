@@ -20,12 +20,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
 
     private ArrayList<String> heroesList;
     private ArrayList<String> currentHeroesList;
-    private ArrayList<String> removedHeroesList;
     private Random random;
-
-    private Button button;
-    private Intent intent;
-    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +85,9 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
     }
 
     public void onClick(View view) {
+        Button button;
+        Intent intent;
+
         switch (view.getId()) {
             case android.R.id.home:
                 Utilities.parents.pop();
@@ -339,6 +337,8 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
     }
 
     public void randomizeHeroes() {
+        TextView textView;
+
         refillHeroesList();
 
         if (!((CheckBox) findViewById(R.id.ban_hero_1_checkbox)).isChecked()) {
@@ -465,10 +465,11 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
 
     public void refillHeroesList() {
         heroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
-        removedHeroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_removed)));
-        for (String s : removedHeroesList) {
+
+        for (String s : getResources().getStringArray(R.array.heroes_removed)) {
             heroesList.remove(s);
         }
+
         for (String s : currentHeroesList) {
             heroesList.remove(s);
         }

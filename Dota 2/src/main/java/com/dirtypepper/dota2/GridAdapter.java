@@ -17,10 +17,10 @@ import java.util.Arrays;
 
 public class GridAdapter extends BaseAdapter {
 
-    private Context context;
+    private final Context context;
 
-    private Integer[] images;
-    private ArrayList<String> names;
+    private final Integer[] images;
+    private final ArrayList<String> names;
 
     public GridAdapter(Context context) {
         this.context = context;

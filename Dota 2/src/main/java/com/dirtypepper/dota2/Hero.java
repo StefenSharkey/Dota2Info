@@ -11,11 +11,12 @@ public class Hero {
     private String attribute;
     private String faction;
     private String description;
-    private ArrayList<String> roles;
-    private Map<String, ArrayList<Double>> attributes;
-    private ArrayList<String> tips;
 
-    private ArrayList<Ability> abilities;
+    private final ArrayList<String> roles;
+    private final Map<String, ArrayList<Double>> attributes;
+    private final ArrayList<String> tips;
+
+    private final ArrayList<Ability> abilities;
 
     public Hero() {
         name = "";
