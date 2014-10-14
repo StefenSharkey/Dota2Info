@@ -15,8 +15,9 @@ public class Utilities {
 
     public static final Stack<Class<?>> parents = new Stack<Class<?>>();
 
-    public static String nameToDrawable(String name) {
-        return name.replaceAll(" ", "_")
+    public static String nameToResource(String name) {
+        return name
+            .replaceAll(" ", "_")
             .replaceAll("-", "_")
             .replaceAll("'", "")
             .replaceAll("\\(", "")
@@ -26,7 +27,7 @@ public class Utilities {
             .toLowerCase();
     }
 
-    public static String nameToDrawable(TextView name) {
+    public static String nameToResource(TextView name) {
         return String.valueOf(name.getText())
             .replaceAll(" ", "_")
             .replaceAll("-", "_")
@@ -38,7 +39,7 @@ public class Utilities {
             .toLowerCase();
     }
 
-    public static String nameToDrawable(String prefix, String name) {
+    public static String nameToResource(String prefix, String name) {
         return prefix
                    .replaceAll(" ", "_")
                    .replaceAll("-", "_")
@@ -46,7 +47,8 @@ public class Utilities {
                    .replaceAll("\\(", "")
                    .replaceAll("\\)", "")
                    .replaceAll("\\?", "")
-                   .replaceAll("!", "").toLowerCase()
+                   .replaceAll("!", "")
+                   .toLowerCase()
                + "_" + name
                    .replaceAll(" ", "_")
                    .replaceAll("-", "_")
@@ -58,7 +60,7 @@ public class Utilities {
                    .toLowerCase();
     }
 
-    public static String nameToDrawable(String prefix, TextView name) {
+    public static String nameToResource(String prefix, TextView name) {
         return prefix
                    .replaceAll(" ", "_")
                    .replaceAll("-", "_")
@@ -79,7 +81,7 @@ public class Utilities {
                    .toLowerCase();
     }
 
-    public static String nameToDrawable(String prefix, String name, String suffix) {
+    public static String nameToResource(String prefix, String name, String suffix) {
         return prefix
                    .replaceAll(" ", "_")
                    .replaceAll("-", "_")
@@ -101,7 +103,7 @@ public class Utilities {
                + "_" + suffix;
     }
 
-    public static String nameToDrawable(String prefix, TextView name, String suffix) {
+    public static String nameToResource(String prefix, TextView name, String suffix) {
         return prefix
                    .replaceAll(" ", "_")
                    .replaceAll("-", "_")
