@@ -137,7 +137,6 @@ public class HeroActivity extends Activity {
 
     private void parseHeroXML(XmlPullParser parser) throws XmlPullParserException, IOException {
         int eventType = parser.getEventType();
-        currentHero = null;
 
         String name = null;
         String description = null;
@@ -317,10 +316,10 @@ public class HeroActivity extends Activity {
 
         textView = (TextView) findViewById(R.id.hero_name);
         textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
-            Utilities.nameToDrawable("faction", hero.getFaction()), "drawable",
+            Utilities.nameToResource("faction", hero.getFaction()), "drawable",
             getApplicationContext().getPackageName())), null, null, null);
 
-        heroPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", hero.getName()), "drawable", getApplicationContext().getPackageName()));
+        heroPicture.setImageResource(getResources().getIdentifier(Utilities.nameToResource("hero", hero.getName()), "drawable", getApplicationContext().getPackageName()));
 
         textView = (TextView) findViewById(R.id.hero_damage_type);
         textView.setText(Utilities.formatRoles(hero));
@@ -332,8 +331,8 @@ public class HeroActivity extends Activity {
 
             textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
                 (hero.getAttribute().equals("Strength")
-                 ? Utilities.nameToDrawable("attribute", hero.getAttribute(), "main")
-                 : Utilities.nameToDrawable("attribute_strength")),
+                 ? Utilities.nameToResource("attribute", hero.getAttribute(), "main")
+                 : Utilities.nameToResource("attribute_strength")),
                 "drawable", getApplicationContext().getPackageName())), null, null, null);
         }
 
@@ -344,8 +343,8 @@ public class HeroActivity extends Activity {
 
             textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
                 (hero.getAttribute().equals("Agility")
-                 ? Utilities.nameToDrawable("attribute", hero.getAttribute(), "main")
-                 : Utilities.nameToDrawable("attribute_agility")),
+                 ? Utilities.nameToResource("attribute", hero.getAttribute(), "main")
+                 : Utilities.nameToResource("attribute_agility")),
                 "drawable", getApplicationContext().getPackageName())), null, null, null);
         }
 
@@ -356,8 +355,8 @@ public class HeroActivity extends Activity {
 
             textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
                 (hero.getAttribute().equals("Intelligence")
-                 ? Utilities.nameToDrawable("attribute", hero.getAttribute(), "main")
-                 : Utilities.nameToDrawable("attribute_intelligence")),
+                 ? Utilities.nameToResource("attribute", hero.getAttribute(), "main")
+                 : Utilities.nameToResource("attribute_intelligence")),
                 "drawable", getApplicationContext().getPackageName())), null, null, null);
         }
 
@@ -433,9 +432,10 @@ public class HeroActivity extends Activity {
 
         heroAbilityPicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 128));
         heroAbilityPicture.setAdjustViewBounds(true);
-        Log.wtf("Utilities.nameToDrawable()", Utilities.nameToDrawable(currentHero.getName(), ability.getName()));
-        if (getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0) {
-            heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
+        Log.wtf("Utilities.nameToResource()", Utilities.nameToResource(currentHero.getName(), ability.getName()));
+        if (getResources().getIdentifier(Utilities.nameToResource(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0) {
+            heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToResource(
+                currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
         } else if (ability.getName().equals(getResources().getString(R.string.spell_immunity))) {
             heroAbilityPicture.setImageResource(R.drawable.spell_immunity);
         } else {

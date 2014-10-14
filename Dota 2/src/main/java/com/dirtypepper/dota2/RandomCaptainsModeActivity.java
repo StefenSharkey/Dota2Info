@@ -348,7 +348,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.ban_hero_1_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -359,7 +359,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.ban_hero_2_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -370,7 +370,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.ban_hero_3_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -381,7 +381,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.ban_hero_4_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -392,7 +392,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.ban_hero_5_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -403,7 +403,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.pick_hero_1_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -414,7 +414,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.pick_hero_2_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -425,7 +425,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.pick_hero_3_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -436,7 +436,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.pick_hero_4_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
 
@@ -447,7 +447,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             }
             textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
             ((ImageView) findViewById(R.id.pick_hero_5_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToDrawable("hero", textView), "drawable", getApplicationContext().getPackageName()));
+                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
             currentHeroesList.add(String.valueOf(textView.getText()));
         }
     }
@@ -458,7 +458,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             currentHeroesList.remove(String.valueOf(textView.getText()));
         }
         textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
-        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToDrawable("hero", textView), "drawable",
+        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToResource("hero", textView), "drawable",
                                                                 getApplicationContext().getPackageName()));
         currentHeroesList.add(String.valueOf(textView.getText()));
     }

@@ -75,7 +75,7 @@ public class GridAdapter extends BaseAdapter {
 
     public void getHeroDrawables() {
         for (int x = 0; x < images.length; x++) {
-            images[x] = context.getResources().getIdentifier(Utilities.nameToDrawable("hero", names.get(x)), "drawable", context.getPackageName());
+            images[x] = context.getResources().getIdentifier(Utilities.nameToResource("hero", names.get(x)), "drawable", context.getPackageName());
         }
     }
 }
