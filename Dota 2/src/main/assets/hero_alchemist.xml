@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Alchemist</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Razzil Darkbrew the Alchemist is a melee strength hero who utilises his alchemical prowess as a strange but versatile fighter. He is an unusual carry based upon transmuting fallen enemies into large amounts of bonus gold, with both an early game and late game presence due to his large health pool and the first strike nature of his spells. His low but balanced attributes and the sure promise of gold for items means he can be one of the most disparately built heroes in the game. Unstable Concoction is his main contribution early on, dealing good damage and a lengthy stun. Acid Spray allows him to rapidly clear waves of creeps for his Greevil's Greed to contribute massive amounts of extra income. A well-equipped Alchemist can then use Chemical Rage to its fullest effect, as the incredible regeneration and base attack time reduction make it one of the best steroid abilities in the game.</description>
+    <roles>
+        <role>Durable</role>
+        <role>Carry</role>
+        <role>Disabler</role>
+    </roles>
+    <attributes>
+        <strengthBase>25</strengthBase>
+        <strengthGain>1.8</strengthGain>
+        <agilityBase>11</agilityBase>
+        <agilityGain>1.2</agilityGain>
+        <intelligenceBase>25</intelligenceBase>
+        <intelligenceGain>1.8</intelligenceGain>
+        <damageMinimum>49</damageMinimum>
+        <damageMaximum>58</damageMaximum>
+        <baseMoveSpeed>295</baseMoveSpeed>
+        <baseArmor>1.54</baseArmor>
+    </attributes>
+    <ability
+        name="Acid Spray"
+        description="Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take mixed damage per second and have their armor reduced."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        cooldown="22"
+        mana="130/140/150/160">
+        <abilityAttributes
+            name="Range"
+            value="900"/>
+        <abilityAttributes
+            name="Radius"
+            value="625"/>
+        <abilityAttributes
+            name="Duration"
+            value="16"/>
+        <abilityAttributes
+            name="Damage Per Second"
+            value="12/16/20/24"/>
+        <abilityAttributes
+            name="Armor Reduction"
+            value="4/5/6/7"/>
+        <altDescription description="Using traditional Alchemy from the Darkbrew family, Razzil concocts an acid that dissolves even the toughest metals." />
+        <notes>
+            <note>Fully affects ancient units. Applies armor debuff on siege creeps.</note>
+            <note>Can deal up to 192/256/320/384 damage to a single unit.</note>
+            <note>Damage ticks happen in 1 second intervalls, starting 1 second after cast.</note>
+            <note>The debuff lingers for 0.5 seconds after leaving the targeted area.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Unstable Concoction"
+        description="Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. After 5 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown."
+        ability="Target Unit"
+        affects="Enemy Heroes"
+        damage="Physical"
+        cooldown="16"
+        mana="120">
+        <abilityAttributes
+            name="Range"
+            value="175"/>
+        <abilityAttributes
+            name="Maximum Stun Duration"
+            value="1.75/2.5/3.25/4"/>
+        <abilityAttributes
+            name="Maximum Damage"
+            value="150/220/290/360"/>
+        <blackKingBar description="When blowing up on self, damage and stun are blocked, aoe effect still occurs." />
+        <linkensSphere description="Does not block on self at all when failed to be thrown on time." />
+        <altDescription description="A silver lining to the failure of turning a mountain into gold, this volatile solution has destructive potential." />
+        <notes>
+            <note>Unlike Alchemist's other spells, Unstable Concoction has an instant cast time. The throwing part however is not instant.</note>
+            <note>A timer above Alchemist's head shows how much time is left before the Concoction blows up. This timer is not visible to enemies.</note>
+            <note>The brewing animation and particles are visible to everyone. The sound can be heard by enemies only when the spell was casted within their vision range.</note>
+            <note>Unstable Concoction always affects a 175 area around where it explodes, including when it explodes on Alchemist.</note>
+            <note>While brewing the concoction, Alchemist can still move around and take action.</note>
+            <note>Alchemist can deny himself with this ability.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Throw Unstable Concoction"
+        description="Throw it before it blows up!"
+        ability="Target Unit"
+        affects="Enemy Heroes"
+        damage="Physical"
+        blackKingBar="2"
+        linkensSphere="1">
+        <abilityAttributes
+            name="Range"
+            value="175"/>
+        <blackKingBar description="Blocks damage and stun. AOE effect still occurs." />
+        <linkensSphere description="Blocks damage, stun and AOE effect if holder is primary target. Does not block at all when holder is secondary target." />
+        <notes>
+            <note>Unstable Concoction cannot be disjointed.</note>
+            <note>The concoction moves at 900 speed, and provides 400/400 sight range.</note>
+            <note>Once thrown, Unstable Concoction stops brewing.</note>
+            <note>Areal damage and stun does not hit creeps, except for the Spirit Bear, Warlock's Golems and Storm and Fire from Primal Split (though they cannot be directly targeted).</note>
+            <note>Connecting with an invulnerable or hidden target will completely nullify the concoction, including the aoe stun and damage.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Greevil's Greed"
+        description="Alchemist synthesizes additional gold from his enemies. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 25 seconds, an additional instance of Extra Bonus Gold is added to the total. The maximum total bonus gold is 30 per kill."
+        ability="Passive"
+        affects="Self"
+        diffusalBlade="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Recent Kill Window"
+            value="25"/>
+        <abilityAttributes
+            name="Bass Bonus Gold"
+            value="4/6/8/10"/>
+        <abilityAttributes
+            name="Extra Bonus Gold"
+            value="1/2/3/4"/>
+        <abilityAttributes
+            name="Max Bonus Gold"
+            value="30"/>
+        <mantaStyle description="Alchemist illusions have their own counter." />
+        <altDescription description="While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets." />
+        <notes>
+            <note>Greevil's Greed counter increments by one when Alchemist kills a unit, and decreases by one 25 seconds after the kill.</note>
+            <note>Alchemist himself has to do the last hit. Only units who actually have this skill can make use of it. This means that illusions from Alchemist will have fully functional Greevil's Greed, independant from Alchemist himself, giving bonus gold to the owner of the illusion.</note>
+            <note>Works on basically every unit. Creeps, heroes, wards (eg Plague Wards, Sentry wards), Techies' mines, summons (eg Forge Spirits, Familiars), siege units and buildings, including Tombstone and the zombies it spawns.</note>
+            <note>Does not work on illusions and Power Cogs.</note>
+            <note>Does not work on denying from allied or own units.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Chemical Rage"
+        description="Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and regeneration."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="0"
+        mantaStyle="2"
+        cooldown="45"
+        mana="50/100/150">
+        <abilityAttributes
+            name="Duration"
+            value="25"/>
+        <abilityAttributes
+            name="Base Attack Time"
+            value="1.4/1.2/1.0"/>
+        <abilityAttributes
+            name="Base Health Regeneration"
+            value="50/75/100"/>
+        <abilityAttributes
+            name="Base Mana Regeneration"
+            value="3/7.5/12"/>
+        <abilityAttributes
+            name="Bonus Move Speed"
+            value="30/40/60"/>
+        <mantaStyle description="Illusions benifit from everything but the bonus hp regeneration." />
+        <altDescription description="The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat." />
+        <notes>
+            <note>Disjoints disjointable projectiles when activated.</note>
+            <note>Has a cast time of 0.35 seconds.</note>
+            <note>Bonus mana regeneration is affected by mana regeneration multipliers such as Sage's Mask or Void Stone.</note>
+            <note>Regenerates a total of 1250/1875/2500 health and 75/187.5/300 mana (Reduced by the mana cost of the ability).</note>
+            <note>Net Mana Gain (Normal) (+0%): 25 / 87.5 / 150</note>
+            <note>Net Mana Gain (Sage's Mask) (+50%): 62.5 / 181.25 / 300</note>
+            <note>Net Mana Gain (Void Stone) (+100%): 100 / 275 / 450</note>
+            <note>Illusions created during Chemical Rage will get a new Chemical Rage buff which lasts its full duration, regardless of how much is left on Alchemist himself.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>An early point in Greevil's Greed will significantly increase Alchemist's income.</tip>
+        <tip>Smart opponents will make it difficult to land Unstable Concoction by juking and avoiding your vision, causing the backfire. It may be better to use it immediately when an enemy reaches the treeline, even if you lose damage and stun duration.</tip>
+        <tip>Fully brewed, Unstable Concoction is one of the most potent stuns in the game, in both damage and stun duration. While the enemy cannot see your timer, they will still be able to see the "shaking" animation (Alchemist shaking his vials). It is imperative that you either start channeling within range, or channel a few seconds of the concoction from within fog before revealing yourself. This ability is most devastating to low armor support heroes who almost take its full damage upon impact, especially if they are softened up by acid spray.</tip>
+        <tip>Use Acid Spray to dissuade enemies from defending their towers, or pushing into yours.</tip>
+        <tip>Feel free to use Chemical Rage for its healing effects; it will even regenerate its own mana cost over the duration, and even more if you have %mp regen from items like Sage's Mask or Perseverance.</tip>
+        <tip>Avoid skirmishes if your Chemical Rage is on cooldown, especially in the early/mid-game stage when you have few items.</tip>
+        <tip>If you are in a tight spot and nowhere to run with low HP especially without Town Portal Scroll or Boots of Travel, use Unstable Concoction to commit suicide if possible.</tip>
+        <tip>Chemical Rage is the strongest single target DPS booster in the game (giving a 70% boost in DPS at level 3). This means that Alchemist scales very strongly with right-click items, however at the same time Alchemist does very little damage without right-click items. This means if Alchemist is going to contribute into team battles down the road, it is imperative to get yourself some right-click.</tip>
+        <tip>With Acid Spray it is possible for Alchemist to farm Ancients safely early on. This, combined with Greevil's Greed can (if used efficiently) give Alchemist incredible amounts of gold over time. It is not uncommon to have Radiance or Mjollnir by 14 minutes with this strategy.</tip>
+        <tip>Beware! Heroes like Lifestealer, Slardar and Dazzle can remove the little armor you have, making you even more vulnerable and easy to kill. This is especially true in the case of Lifestealer, since Feast helps him break you down.</tip>
+        <tip>Though unlisted, Medallion of Courage is a very good item for Alchemist, helping add both armor and mana regen, as well as increasing damage dealt by attacks and spells as well. Build it in place of Ring of Basilius.</tip>
+    </tips>
+</hero>

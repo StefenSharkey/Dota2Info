@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Clinkz</name>
+    <damageType>Ranged</damageType>
+    <attribute>Agility</attribute>
+    <faction>Dire</faction>
+    <description>Clinkz, the Bone Fletcher is a ranged agility carry specializing in ambushing lone Heroes with high physical damage and incredible speed. Though frail and easy to kill, Skeleton Walk grants Clinkz stealth and haste to escape and re-position himself. This assassin Strafes around the enemy, launching a flurry of Searing Arrows that greatly injure enemies. To aid his assault, Clinkz can form a Death Pact and absorb a creature's life for greater damage and health, making him not only able to take more hits, but hit harder as well.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Escape</role>
+    </roles>
+    <attributes>
+        <strengthBase>15</strengthBase>
+        <strengthGain>1.6</strengthGain>
+        <agilityBase>22</agilityBase>
+        <agilityGain>3.0</agilityGain>
+        <intelligenceBase>16</intelligenceBase>
+        <intelligenceGain>1.55</intelligenceGain>
+        <damageMinimum>37</damageMinimum>
+        <damageMaximum>43</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>2.08</baseArmor>
+    </attributes>
+    <ability
+        name="Strafe"
+        description="Clinkz attacks with a barrage of arrows. Dramatically increases attack speed for a short time."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="2"
+        mantaStyle="0"
+        cooldown="45/40/35/30"
+        mana="90">
+        <abilityAttributes
+            name="Duration"
+            value="4/6/8/10"/>
+        <abilityAttributes
+            name="Bonus Attack Speed"
+            value="130"/>
+        <altDescription description="It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver." />
+        <notes>
+            <note>Clinkz will produce an animation for the duration of the spell, showing that it's currently active.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Searing Arrows"
+        description="Imbues Clinkz's arrows with fire for extra damage."
+        ability="Auto-Cast"
+        affects="Enemy Units and Structures"
+        damage="Physical"
+        blackKingBar="0"
+        mana="10">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="30/40/50/60"/>
+        <altDescription description="Clinkz simply lights his arrows from his flaming essence for quite the destructive effect." />
+        <notes>
+            <note>Works on mechanical units, such as towers and siege units.</note>
+            <note>Works on magic immune units.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Skeleton Walk"
+        description="Clinkz moves invisibly through units until the moment he attacks or uses an ability."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="0"
+        cooldown="20"
+        mana="75">
+        <abilityAttributes
+            name="Fade Time"
+            value="0.6"/>
+        <abilityAttributes
+            name="Duration"
+            value="20/25/30/35"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="11%/22%/33%/44%"/>
+        <altDescription description="With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen." />
+        <notes>
+            <note>Clinkz can go through units when under the effects of Skeleton Walk.</note>
+            <note>Has an instant cast time.</note>
+            <note>Will not interrupt most channeling abilities or items upon activation.</note>
+            <note>When attacking, invisibility is broken before the projectile reaches the target.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Death Pact"
+        description="Clinkz consumes the target friendly or enemy creep, gaining a percent of its HP as max health and damage."
+        ability="Target Unit"
+        affects="Units"
+        diffusalBlade="0"
+        mantaStyle="0"
+        cooldown="45/40/35"
+        mana="100">
+        <abilityAttributes
+            name="Range"
+            value="400"/>
+        <abilityAttributes
+            name="Duration"
+            value="35"/>
+        <abilityAttributes
+            name="Bonus HP Capacity"
+            value="50%/65%/80% of killed unit's HP"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="5%/6.5%/8% of killed unit's HP"/>
+        <altDescription description="Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings." />
+        <notes>
+            <note>If the target is an enemy or neutral unit, it will count as a creep kill and give Clinkz the correct gold and experience bounty.</note>
+            <note>When the duration ends, the maximum HP returns to normal, but Clinkz's current HP remains the same. If his HP is greater than his normal maximum, it will be set to his maximum.</note>
+            <note>It can target a Mud Golem, but not Ancient creeps.</note>
+            <note>When used with the neutral jungle creeps with the maximum amount of hp possible of 1100, Clinkz will gain 550/715/880 HP and 55/72/88 Dmg. These are the Centaur Conqueror, Dark Troll Summoner, and Satyr Tormentor respectively.</note>
+            <note>Bonus damage is considered Clinkz's base damage.</note>
+            <note>Melee Mega Creeps have 1270 HP, making them theoretically the best creeps to Dark Pact.</note>
+            <note>Can be cast on allied Creeps.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>While he can be an excellent ganker, Clinkz is extremely fragile and puts out huge amounts of DPS, making him a priority target in teamfights. Try to let your teammates start things off while you dance around the edge of the fight dealing damage to distracted or disabled opponents.</tip>
+        <tip>You can use orb-walking with Searing Arrows to harass your opponents. Be wary of the moderate mana cost, however.</tip>
+        <tip>Use Skeleton Walk a good amount of time before you expect to ambush an enemy, or appear in a fight. This will allow you to use Skeleton Walk again soon after, either for a quick escape or to chase down any survivors.</tip>
+        <tip>In most cases, max out Searing Arrows first for the reliable damage increase.</tip>
+        <tip>If you are ganking a lot with Clinkz, take Strafe as your second ability to max as the decreased cooldown makes you a great threat. If you are playing as the team's lategame carry, maxing Skeleton Walk will keep you safe and able to move quickly into untaken lanes and the jungle to farm.</tip>
+        <tip>Always try to use Death Pact on the biggest creep in the large creep camps, such as the Satyr Tormenter and Centaur Conqueror.</tip>
+        <tip>You can deny an enemy jungler some farm by stealing creeps with Death Pact, leaving as little as possible behind so they are forced to clear it for the respawn to trigger. Death Pact may also be used on dominated or controlled neutrals such as those used by Chen or Enchantress to kill them instantly.</tip>
+        <tip>Because of the huge amount of physical damage Clinkz can deal over a short period, he is also excellent at killing towers provided something else is there to take the aggro.</tip>
+    </tips>
+</hero>

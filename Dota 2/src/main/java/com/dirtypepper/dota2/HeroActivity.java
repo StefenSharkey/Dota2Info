@@ -31,19 +31,24 @@ public class HeroActivity extends Activity {
     private Hero currentHero;
     private TextView textView;
 
+    private String heroName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        heroName = intent.getStringExtra("hero");
+
         setContentView(R.layout.activity_hero);
         Utilities.parents.push(getClass());
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        Intent intent = getIntent();
-        String value = intent.getStringExtra("hero");
-        Log.wtf("Hero Value", value);
+
+        Log.wtf("Hero Value", heroName);
         textView = (TextView) findViewById(R.id.hero_name);
-        textView.setText(value);
-        getActionBar().setTitle(value);
+        textView.setText(heroName);
+
+        getActionBar().setTitle(heroName);
         getHeroInfo();
     }
 
@@ -124,7 +129,7 @@ public class HeroActivity extends Activity {
         try {
             XmlPullParserFactory pullParserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = pullParserFactory.newPullParser();
-            InputStream inputStream = getApplicationContext().getAssets().open("heroes.xml");
+            InputStream inputStream = getApplicationContext().getAssets().open("hero_" + Utilities.nameToResource(heroName) +  ".xml");
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             parser.setInput(inputStream, null);
             parseHeroXML(parser);
@@ -165,11 +170,14 @@ public class HeroActivity extends Activity {
         ArrayList<Double> misc = new ArrayList<Double>();
         ArrayList<String> notes = new ArrayList<String>();
 
+        currentHero = null;
+
         while (eventType != XmlPullParser.END_DOCUMENT) {
             String heroName;
             switch (eventType) {
                 case XmlPullParser.START_TAG:
                     heroName = parser.getName();
+
                     if (heroName.equals("hero")) {
                         currentHero = new Hero();
                     } else if (currentHero != null) {
@@ -208,7 +216,7 @@ public class HeroActivity extends Activity {
                                 misc.add(Double.parseDouble(parser.nextText()));
                             } else if (heroName.equals("baseArmor")) {
                                 misc.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("tips")) {
+                            } else if (heroName.equals("tip")) {
                                 currentHero.addTip(parser.nextText());
                             } else if (heroName.equals("ability")) {
                                 name = parser.getAttributeValue(null, "name");

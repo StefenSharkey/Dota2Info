@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Axe</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Dire</faction>
+    <description>Mogul Khan the Axe is a savage melee strength hero, infamous for creating chaos in battle and thriving off of it. He is commonly played as an initiator with a large semi-carry presence that quickly transitions into a support role later in the game. His fighting style demands that he gets up close and very personal. He can taunt enemies into targeting him and counters those who try to strike him with a sweeping Counter Helix that slashes all enemies at melee range. Axe has a tendency to draw opponents so deep in the fight that they do not have a chance to escape, each soul he draws infusing his own love of war; his ultimate, Culling Blade bolsters that talent with an attack that unconditionally kills a unit with low health.</description>
+    <roles>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Jungler</role>
+    </roles>
+    <attributes>
+        <strengthBase>25</strengthBase>
+        <strengthGain>2.5</strengthGain>
+        <agilityBase>20</agilityBase>
+        <agilityGain>2.2</agilityGain>
+        <intelligenceBase>18</intelligenceBase>
+        <intelligenceGain>1.6</intelligenceGain>
+        <damageMinimum>49</damageMinimum>
+        <damageMaximum>53</damageMaximum>
+        <baseMoveSpeed>290</baseMoveSpeed>
+        <baseArmor>1.80</baseArmor>
+    </attributes>
+    <ability
+        name="Berserker's Call"
+        description="Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration."
+        ability="No Target"
+        affects="Enemies"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="16/14/12/10"
+        mana="80/90/100/110">
+        <abilityAttributes
+            name="Radius"
+            value="300"/>
+        <abilityAttributes
+            name="Bonus Armor"
+            value="40"/>
+        <abilityAttributes
+            name="Duration"
+            value="2/2.4/2.8/3.2"/>
+        <altDescription description="Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe." />
+        <notes>
+            <note>Affects invisible, spell immune and invulnerable units (except for Puck during Phase Shift).</note>
+            <note>Does not affect towers and hidden units (eg by Astral Imprisonment, Disruption, Snowball).</note>
+            <note>Affected units cannot use any spell or item and are forced to attack Axe, no matter what.</note>
+            <note>When Axe dies or can't be attacked for other reasons, affected units will face Axe and be unable to do anything for the duration, or until Axe can be attacked again.</note>
+            <note>When a unit is affected by both, Berserker's Call and Duel, Duel will always have priority.</note>
+            <note>Does not taunt Ancients.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Battle Hunger"
+        description="Enrages an enemy unit, causing it to be slowed and take damage over time until it kills another unit or the duration ends. Axe gains movement speed for each unit affected with Battle Hunger."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="20/15/10/5"
+        mana="75/85/95/105">
+        <abilityAttributes
+            name="Cast Range"
+            value="900"/>
+        <abilityAttributes
+            name="Duration"
+            value="10/12/14/16"/>
+        <abilityAttributes
+            name="Movement Slow"
+            value="10%"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="10%"/>
+        <abilityAttributes
+            name="Damage Per Second"
+            value="15/20/25/30"/>
+        <altDescription description="Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied." />
+        <notes>
+            <note>Denying a friendly creep or destroying buildings will also remove the debuff.</note>
+            <note>Using Death Pact, Devour, Demonic Conversion, or Hand of Midas will also remove the debuff. Lich's Sacrifice however does not.</note>
+            <note>Killing illusions or Power Cogs does not remove the debuff.</note>
+            <note>The affected unit itself has to make the kill to remove the debuff. Summons or illusions owned by the same player will not remove it when they make a kill.</note>
+            <note>Total Damage: 150/240/350/480.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Counter Helix"
+        description="When attacked, Axe performs a helix counter attack, dealing damage to all nearby enemies."
+        ability="Passive"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        mantaStyle="2"
+        cooldown="0.45/0.4/0.35/0.3">
+        <abilityAttributes
+            name="Radius"
+            value="275"/>
+        <abilityAttributes
+            name="Chance to Helix"
+            value="20%"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/135/170/205"/>
+        <altDescription description="Axe is the only reinforcements this army needs." />
+        <notes>
+            <note>Counter Helix has a chance to trigger when the attacker begins their attack, not when their attack is completed.</note>
+            <note>Does not trigger on attacks from towers, fountains, siege creeps, Exorcism, Eye of the Storm, Mass Serpent Ward, Plague Ward, The Swarm and Death Ward.</note>
+            <note>Does not trigger on extra attacks or bouncing attacks from Sleight of Fist, Moment of Courage, Moon Glaive, Flak Cannon, Split Shot and Death Ward.</note>
+            <note>Does damage Siege units.</note>
+            <note>Counter Helix uses Pseudo Random chance.</note>
+            <note>Ability is not disabled by Doom.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Culling Blade"
+        description="Axe spots a weakness and strikes, instantly killing an enemy unit with low health, or dealing moderate damage otherwise. When an enemy hero is killed with Culling Blade, its cooldown is reset, and Axe and nearby allied units gain bonus movement speed. Upgradable by Aghanim's Scepter."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="75/65/55 (6*) (0**)"
+        mana="60/120/180">
+        <abilityAttributes
+            name="Cast Range"
+            value="150"/>
+        <abilityAttributes
+            name="Kill Threshold"
+            value="250/350/450 (300/450/625*)"/>
+        <abilityAttributes
+            name="Damage"
+            value="150/250/300"/>
+        <abilityAttributes
+            name="Bonus Attack and Movement Speed"
+            value="40%"/>
+        <abilityAttributes
+            name="Movement Speed Duration"
+            value="6 (10*)"/>
+        <abilityAttributes
+            name="Movement Speed Radius"
+            value="900"/>
+        <diffusalBlade description="Buff after cull can be purged." />
+        <aghanims description="Decreases cooldown, increases kill threshold, and increases the duration of movement speed upon kill." />
+        <altDescription description="Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat." />
+        <notes>
+            <note>(**) Does not go on cooldown if it successfully kills a hero.</note>
+            <note>The killing blow removes all buffs from the target unit before killing it, including usually unremovable buffs like Shallow Grave.</note>
+            <note>The killing blow ignores spell immunity and any other kind of resistance.</note>
+            <note>Can be cast on Animal Courier and Flying Courier.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Axe is especially dangerous early game with high starting statistics and the speed from Battle Hunger contributing to his ability to push up to the enemy tower relatively safely, even for a semi-carry.</tip>
+        <tip>Berserker's Call provides the full armor bonus at level one. It is the primary factor in his ability to survive physical damage without good statistics.</tip>
+        <tip>Resist using Culling Blade when not roaming or teamfighting. While Axe is powerful early game, he levels stat-wise fairly badly, and it is best to drop kills to a carry past the point when a team acquires their ultimate if the speed boost for a killing blow is not immediately necessary.</tip>
+        <tip>Items such as the Vanguard, Hood of Defiance and the Shiva's Guard are essential as they help reduce the damage being dealt to Axe while he tanks and initiates a battle without a Blink Dagger. With a Blink Dagger, this aspect can be ignored when initiating to an extent.</tip>
+        <tip>During the early phase of the game, a Stout Shield is all Axe needs to survive the lane. If possible, instead of fighting along with allied creeps, Axe can try to go and clash with the enemy creeps by himself with Counter Helix allowing him to take down unstacked creeps by himself.</tip>
+        <tip>A more advanced technique used by players is to max out Battle Hunger by Level 7. This enables Axe to constantly deal damage over time (dots) in the lane, dealing crippling damage and blocking any potential to push or counterpush. This meshes well with Axe's capability to tank and keep the enemy at bay while stopping them from last hitting or denying creeps, allowing Battle Hunger deal its full damage.</tip>
+        <tip>If Axe is going against two weak melee heroes in a lane without sufficient burst damage (such as Phantom Assassin or Spirit Breaker, etc.), do not hesitate to stand between them and their creeps. It allows for complete lane dominance as they cannot last hit and it denies them of experience and gold as Counter Helix hurts a lot early game.</tip>
+        <tip>You can type bind "P" "toggle dota_health_per_vertical_marker 250 350 450 625" into the console to easily find the instakill health thresholds for Axe's ultimate. Press 'P' in game to change the corresponding number of the health bars. This sets each bar of health to the value you set, which means when they are under 1 bar of health, you can successfully kill the hero. This can also be applied to other spells such as Dagon, Finger of Death, or Laguna Blade, but magic resistance should be factored in. For details on enabling the console, see Console.</tip>
+        <tip>Axe is an excellent counter-pick to heroes with abilities that can greatly increase their attack speed (i.e. Ursa, Troll Warlord), as a combination of Berserker's Call and Blade Mail can be devastating to such heroes, especially if Counter Helix procs numerous times.</tip>
+        <tip>Instead of using Berserker's Call to draw creep aggro in lane, it's usually better to right click enemy hero (which automatically pulls the creep aggro). It applies to any enemy heroes visible on map, thus you can pull aggro by standing in the middle of wave and right clicking visible enemy on the other side of the map.</tip>
+        <tip>Soul Ring can provide all of the mana needed through the early and midgame. Use this in conjunction with a form of HP regeneration such as Tranquil Boots or a Vanguard.</tip>
+        <tip>Because of Counter Helix, attacking the enemy's creep wave when it spawns is an effective strategy for Axe to quickly earn experience. This will keep the enemies in your lane suppressed by your creeps during the early game. However it is not recommended if the opponent has an easy way to farm your incoming creep wave.</tip>
+    </tips>
+</hero>

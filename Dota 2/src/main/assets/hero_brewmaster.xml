@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Brewmaster</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Mangix the Brewmaster is a melee strength hero that can fill almost any role, though he is primarily seen as a carry, ganker, tank or initiator. He fits well into any lane, but is very experience dependent, which means he is often seen on the offlane or the midlane. His core abilities make him a respectable physical damage dealer and an especially good duelist, since he has abilities that involve negating opposing auto-attacks while strengthening his own. However, his true power lies in his ultimate, Primal Split, which, if used properly, can by itself turn the tide of a team fight. Each of the three aspects of the Brewmaster are exceptionally powerful, with exceptional disables, survivability against magic and physical attacks, and damage; they are also able to charge recklessly into the enemy since the damage they take is not permanent, and very rarely will all three die before Primal Split ends. For this reason, Brewmaster is almost always built to fully maximize the potential of this ultimate, getting items such as Blink Dagger so that he can combo into his ultimate without risk of being initiated on, Heart of Tarrasque to ensure he can survive the first wave of stuns and burst in order to cast his ultimate, and of course Aghanim's Scepter to give his spirits his abilities, Thunder Clap to Earth, Drunken Haze to Storm, and Drunken Brawler to Fire, all independent of the original brewmaster's cooldowns for his abilities.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>Pusher</role>
+    </roles>
+    <attributes>
+        <strengthBase>23</strengthBase>
+        <strengthGain>2.9</strengthGain>
+        <agilityBase>22</agilityBase>
+        <agilityGain>1.95</agilityGain>
+        <intelligenceBase>14</intelligenceBase>
+        <intelligenceGain>1.25</intelligenceGain>
+        <damageMinimum>52</damageMinimum>
+        <damageMaximum>59</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>4.08</baseArmor>
+    </attributes>
+    <ability
+        name="Thunder Clap"
+        description="Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy land units."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="12"
+        mana="90/105/130/150">
+        <abilityAttributes
+            name="Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="25/35/45/55"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="25%/35%/45%/55%"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/175/250/300"/>
+        <abilityAttributes
+            name="Duration"
+            value="4.25 on Heroes (8 on creeps)"/>
+        <altDescription description="A slam of Mangix' mighty keg starts the festivities." />
+        <notes>
+            <note>Given to Earth when holding Aghanim's Scepter, at the same level as the original Brewmaster.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Drunken Haze"
+        description="Drenches a small area in alcohol, causing enemies in the areas movement speed to be reduced, and causing their attacks to have a chance to miss.."
+        ability="Target Unit"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="8"
+        mana="50">
+        <abilityAttributes
+            name="Range"
+            value="850"/>
+        <abilityAttributes
+            name="Radius"
+            value="200"/>
+        <abilityAttributes
+            name="Duration"
+            value="8 on Heroes (12 on creeps)"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="14%/18%/22%/26%"/>
+        <abilityAttributes
+            name="Miss Chance"
+            value="45%/55%/65%/75%"/>
+        <linkensSphere description="Will be blocked even if Linken's holder wasn't the primary target." />
+        <altDescription description="The Order of the Oyo's solution to all problems - another round!" />
+        <notes>
+            <note>Given to Storm when holding Aghanim's Scepter, at the same level as the original Brewmaster.</note>
+            <note>Despite the visual effect, Drunken Haze does not use a projectile and is instant, and thus cannot be disjointed.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Drunken Brawler"
+        description="Gives a chance to avoid attacks and to deal critical damage. Drunken Brawler will always activate if you have not attacked, or have been attacked, in the last several seconds."
+        ability="Passive"
+        affects="Self"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Dodge Chance"
+            value="10%/15%/20%/25%"/>
+        <abilityAttributes
+            name="Critical Chance"
+            value="10%/15%/20%/25%"/>
+        <abilityAttributes
+            name="Critical Damage"
+            value="200%"/>
+        <abilityAttributes
+            name="Certain Trigger Timer"
+            value="16/14/12/10"/>
+        <mantaStyle description="Red critical numbers are before illusion and armor reduction." />
+        <altDescription description="When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation." />
+        <notes>
+            <note>Given to Fire when holding Aghanim's Scepter, at the same level as the original Brewmaster.</note>
+            <note>Drunken Brawler does stack with other sources of evasion.</note>
+            <note>The guaranteed critical attack and guaranteed dodge chance are on separate timers.</note>
+            <note>If Brewmaster is guaranteed to evade the next attack on him, the icon will turn orange, and he will gain a shimmering effect around him. If he is guaranteed to preform a critical strike on his next attack, a red streak will appear on the icon, and he will gain a red shimmering affect around his shoulders and weapon.</note>
+            <note>Illusions will also have the guaranteed critical hit and evasion.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Primal Split"
+        description="Splits the Brewmaster into elements, forming 3 specialized warriors, adept at survival. If any of them survive until the end of their summoned timer, the Brewmaster is reborn. Upgradable by Aghanim's Scepter."
+        ability="No Target"
+        affects="Self"
+        cooldown="140/120/100"
+        mana="125/150/175">
+        <abilityAttributes
+            name="Duration"
+            value="15/17/19"/>
+        <aghanims description="Gives Thunder Clap to Earth, Drunken Haze to Storm, and Drunken Brawler to Fire, at the same level as the original Brewmaster and with independent cooldowns from the original Brewmaster." />
+        <altDescription description="It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor." />
+        <notes>
+            <note>The split time is 0.85 seconds during which Brewmaster is invulnerable.</note>
+            <note>During Primal Split, Brewmaster is periodically moved to Earth's position. If Earth dies, to Storm's and if Storm dies, to Fire. This affects multiple things such as:</note>
+            <note>When Primal Split ends, Brewmaster will appear at the Earth's location. When Earth is dead, at Storm's and when Storm is dead, at Fire's location.</note>
+            <note>Every aura Brewmaster has (Including Gem of True Sight and Radiance) affects units around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire.</note>
+            <note>Effects which react on heroes' presence, such as Smoke of Deceit, Marksmanship or Blur will react on Earth's presence, when Earth is dead, on Storm, when Storm is dead, on Fire's.</note>
+            <note>Teleporting effect like Test of Faith (Teleport) or Relocate causes the periodic moving of Brewmaster to get canceled, so that the 3 notes above don't apply anymore.</note>
+            <note>Primal Split does not change Brewmaster's hp and does not stop any regeneration. So Brewmaster will return with the hp and mana he had before the split + what he could regenerate during it.</note>
+            <note>Primal Split will not dispell buffs or debuffs.</note>
+            <note>The Storm, Earth and Fire spirits are treated like heroes by most spells. This means that they cannot be dominated or converted (Holy Persuasion, Hand of Midas, Enchant will slow instead), buffs and debuffs last as long as they last on heroes and most heroes-only targeted spells can target them (I.E. Shallow Grave).</note>
+            <note>The spirits also do not take summon bonus damage (I.E. Arcane Orb, Diffusal Blade.</note>
+            <note>The spirits are affected by Enigma's Black Hole.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Hurl Boulder"
+        description="Throws a boulder at a unit, doing damage and stunning it."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        cooldown="7"
+        mana="100">
+        <abilityAttributes
+            name="Range"
+            value="800"/>
+        <abilityAttributes
+            name="Duration"
+            value="2"/>
+        <abilityAttributes
+            name="Damage"
+            value="100"/>
+        <notes>
+            <note>Can be disjointed.</note>
+            <note>The projectile's speed is 800.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Spell Immunity"
+        description="Immune to spells."
+        ability="Passive"
+        affects="Self">
+    </ability>
+    <ability
+        name="Pulverize"
+        description="Provides a chance to do damage in a small radius."
+        ability="Passive"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0">
+        <abilityAttributes
+            name="Radius"
+            value="150/250"/>
+        <abilityAttributes
+            name="Damage"
+            value="20/40"/>
+        <abilityAttributes
+            name="Chance"
+            value="20%"/>
+        <notes>
+            <note>Occurs when Earth attacks an enemy.</note>
+            <note>The AOE is centered around Earth.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Dispel Magic"
+        description="Damages summoned units in a small radius and purges most buffs or debuffs."
+        ability="Target Area"
+        affects="Units"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="8"
+        mana="75">
+        <abilityAttributes
+            name="Range"
+            value="500"/>
+        <abilityAttributes
+            name="Radius"
+            value="200"/>
+        <abilityAttributes
+            name="Damage to summons"
+            value="200"/>
+        <notes>
+            <note>Affects magic immune allies, but not magic immune enemies and thus can't dispel Repel from enemies.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Cyclone"
+        description="Encloses a unit in a tornado, removing it from the battlefield."
+        ability="Target Unit"
+        affects="Enemy Units"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="8"
+        mana="150">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Duration"
+            value="6 on heroes (20 on creeps)"/>
+        <notes>
+            <note>Unlike other cyclones it does not dispel buffs or debuffs.</note>
+            <note>Cyclone can be ended prematurely using Dispel Magic, or other purging effects.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Wind Walk"
+        description="Provides temporary invisibility. Bonus movement speed and attack damage when invisible."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="2"
+        cooldown="7"
+        mana="75">
+        <abilityAttributes
+            name="Duration"
+            value="20"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="100"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="50%"/>
+        <notes>
+            <note>Unlike other windwalk abilities with Backstab, the attack out of this Wind Walk does not have true strike.</note>
+            <note>Also unlike other Windwalk abilities, this Windwalk can be dispelled.</note>
+            <note>Storm will not auto-attack while invisible.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Permanent Immolation"
+        description="Burns nearby enemy units."
+        ability="Passive"
+        affects="Self"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0">
+        <abilityAttributes
+            name="Damage per Second"
+            value="15/30/45"/>
+        <abilityAttributes
+            name="Radius"
+            value="220"/>
+        <notes>
+            <note>Is an aura and thus the debuff lingers for 0.5 seconds.</note>
+            <note>Damages in 1 second intervals.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Brewmaster is strong against auto-attack heroes; Thunder Clap slows down attack speed, Drunken Haze causes them to miss, and Drunken Brawler helps him dodge attacks and deal critical damage.</tip>
+        <tip>Thunder Clap is extremely strong at the early stages of the game, acting as his area-of-effect cripple. It is generally leveled up first.</tip>
+        <tip>Against extremely strong physical harassment (such as Sniper or Weaver), consider going for a Drunken Haze and Drunken Brawler build to maximize your dodge chance.</tip>
+        <tip>Many players opt for Arcane Boots if the hero is being played in a ganking or initiator role, as it can allow you to use Thunder Clap and Primal Split in succession much earlier and solve mana issues.</tip>
+        <tip>Use Primal Split sparingly, as it has an extremely long cooldown. Try to avoid using it to run away if at all possible.</tip>
+        <tip>If Brewmaster is being played more in the semi-carry role, consider using his ultimate as a life saver to keep yourself in the fight when you would normally die. The utility of the Brewlings works excellently for finishing off opponents as well as initiation.</tip>
+        <tip>When playing Brewmaster, try to gain an advantage for your team early before anybody on the enemy team, particularly the carry, can build a Black King Bar. Against magic immunity, both his anti-carry abilities and Primal Split abilities are rendered useless and must be focused on another target.</tip>
+    </tips>
+</hero>

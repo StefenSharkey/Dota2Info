@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Bounty Hunter</name>
+    <damageType>Melee</damageType>
+    <attribute>Agility</attribute>
+    <faction>Radiant</faction>
+    <description>Gondar the Bounty Hunter is a melee agility Hero that excels in dealing high amounts of damage to single targets. Bounty Hunter can easily gank other lanes, using his Shadow Walk to sneak up on enemies and get easy kills. Shadow Walk also allows him to escape from dangerous situations, making him very elusive. Bounty Hunter can be played as a carry, though it is not recommended. Bounty Hunter is also extremely deadly as an offlaner, thanks to Track, which will grant True Sight, movement speed, and bonus gold, and Jinada, which amplifies the damage of his next attack every few seconds.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Escape</role>
+        <role>Nuker</role>
+    </roles>
+    <attributes>
+        <strengthBase>17</strengthBase>
+        <strengthGain>1.8</strengthGain>
+        <agilityBase>21</agilityBase>
+        <agilityGain>3.0</agilityGain>
+        <intelligenceBase>19</intelligenceBase>
+        <intelligenceGain>1.4</intelligenceGain>
+        <damageMinimum>45</damageMinimum>
+        <damageMaximum>59</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>5.94</baseArmor>
+    </attributes>
+    <ability
+        name="Shuriken Toss"
+        description="Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce between any Tracked units who are within a 900 radius of each other."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="1"
+        cooldown="10"
+        mana="90/115/135/155">
+        <abilityAttributes
+            name="Range"
+            value="650"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/200/250/325"/>
+        <linkensSphere description="Fully blocked if Linken's holder is the primary target (no subsequent bounces to tracked units). No interaction if bounced while tracked." />
+        <altDescription description="While the shuriken may be small, Gondar's precise aim can cause critical damage." />
+        <notes>
+            <note>Mini-stuns the target on impact.</note>
+            <note>Bounces to all Tracked units within a 900 range. The initial target does not have to be tracked for this effect to occur. It only bounces to each Tracked unit once.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Jinada"
+        description="Bounty Hunter plans his next hit, passively adding a critical strike and maim to his next attack."
+        ability="Passive"
+        affects="Self"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="12/10/8/6">
+        <abilityAttributes
+            name="Duration"
+            value="3"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="25%"/>
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="25"/>
+        <abilityAttributes
+            name="Critical Damage"
+            value="150%/175%/200%/250%"/>
+        <altDescription description="Whispering an enchantment he learned from Soruq to his faithful blades, Gondar targets vital tendons and joints to disable his opponents." />
+        <notes>
+            <note>Jinada does not amplify the damage of your Shadow Walk ability.</note>
+            <note>Though it stacks with Shadow Walk damage. Shadow Walk and Jinada total damage is: (Autoattack * Jinada crit multiplier) + (Shadow Walk bonus damage).</note>
+        </notes>
+    </ability>
+    <ability
+        name="Shadow Walk"
+        description="Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability. If he breaks the invisibility with an attack, that attack will deal bonus damage."
+        ability="No Target"
+        affects="Self"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="15"
+        mana="50">
+        <abilityAttributes
+            name="Duration"
+            value="20/25/30/35"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="30/60/90/120"/>
+        <abilityAttributes
+            name="Fade Time"
+            value="1/0.75/0.5/0.25"/>
+        <altDescription description="The court jesters present during King Goff's assassination can recount no other image than a dancing shadow." />
+        <notes>
+            <note>Will not break most channeling of spells upon activation.</note>
+            <note>The bonus damage is dealt as a separate non-crittable damage instance.</note>
+            <note>The bonus damage will be applied during fade time without removing Shadow Walk, allowing for multiple hits.</note>
+            <note>Invisibility is broken as soon as Bounty Hunter starts an attack, or starts casting any spell.</note>
+            <note>Items and abilities used during the fade time will not stop Bounty Hunter from going invisible.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Track"
+        description="Tracks an enemy hero and grants a gain in movement speed to allies near the hunted. If the target dies, Bounty Hunter and nearby heroes collect a bounty in gold."
+        ability="Target Unit"
+        affects="Enemy Heroes"
+        blackKingBar="0"
+        linkensSphere="2"
+        diffusalBlade="2"
+        mantaStyle="2"
+        cooldown="10/7/5"
+        mana="50">
+        <abilityAttributes
+            name="Range"
+            value="1200"/>
+        <abilityAttributes
+            name="Speed Radius"
+            value="900"/>
+        <abilityAttributes
+            name="Duration"
+            value="30"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="20%"/>
+        <abilityAttributes
+            name="Bonus Gold for Self"
+            value="150/200/250"/>
+        <abilityAttributes
+            name="Bonus Gold for Allies"
+            value="50/100/150"/>
+        <mantaStyle description="Illusions gain movement speed bonus." />
+        <altDescription description="Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success." />
+        <notes>
+            <note>Bounty Hunter will get the bonus gold if the target dies while the spell is still active, regardless of how it dies.</note>
+            <note>Gives True Sight of the target.</note>
+            <note>Bonus gold will be added as reliable gold.</note>
+            <note>Can be used to illusions.</note>
+            <note>The track particle effect is hidden from enemies, although they can see the debuff on their status bar and the bonus movement speed effect on nearby enemy units.</note>
+            <note>Allies will only gain bonus gold if they are within 900 radius of the tracked target.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Track provides a great deal of benefits to the team, the vision and movement speed help with ganking enemies as well as with avoiding enemy ganks, and the bonus gold will provide a big advantage over the enemy team if you get kills. You should try to cast it on every enemy hero, though priority targets should be carries as well as those that can go invisible.</tip>
+        <tip>Despite being classified a carry, Bounty Hunter is also a strong ganker. Your abilities give you a great deal of power in the mid game, you should use this time to gank enemies as the bonus gold from Track more than makes up for the farm you may miss.</tip>
+        <tip>It is possible to get the bonus damage of Shadow Walk twice by attacking once during the fade time and once to break the invisibility. This can help securing last hits or harassing.</tip>
+        <tip>Getting an Orb of Venom is an extremely effective item when ganking in the early phase of the game as the 12% slow together with the slow from Jinada can make your opponent much easier to kill.</tip>
+    </tips>
+</hero>

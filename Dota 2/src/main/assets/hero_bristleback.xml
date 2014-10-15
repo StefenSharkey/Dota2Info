@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Bristleback</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Rigwarl the Bristleback is a melee Strength hero famous for his array of synergistic spells with low mana cost and cooldown. He is able to slow his enemies down and reduce their armor with Viscous Nasal Goo, then hit them with a barrage of Quill Sprays, making him an effective chaser when ganking enemies. His low strength gain makes him less tanky than most strength heroes, but he becomes substantially more durable when he turns around due to his passive Bristleback, which reduces damage taken from behind. In the right hands, Bristleback is a powerful ganker in the early stages of the game, and a powerful hard carry in the later stages depending on how much farm he gets.</description>
+    <roles>
+        <role>Durable</role>
+        <role>Initiator</role>
+        <role>disabler</role>
+    </roles>
+    <attributes>
+        <strengthBase>22</strengthBase>
+        <strengthGain>2.2</strengthGain>
+        <agilityBase>17</agilityBase>
+        <agilityGain>1.8</agilityGain>
+        <intelligenceBase>14</intelligenceBase>
+        <intelligenceGain>2.8</intelligenceGain>
+        <damageMinimum>48</damageMinimum>
+        <damageMaximum>58</damageMaximum>
+        <baseMoveSpeed>295</baseMoveSpeed>
+        <baseArmor>3.38</baseArmor>
+    </attributes>
+    <ability
+        name="Vicious Nasal Goo"
+        description="Covers a target in snot, causing it to have reduced armor and movement speed. Multiple casts stack and refresh the duration."
+        ability="Target Unit"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="1.5"
+        mana="30">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Duration"
+            value="5 (10 on creeps)"/>
+        <abilityAttributes
+            name="Armor Reduction per Stack"
+            value="1/1/2/2"/>
+        <abilityAttributes
+            name="Base Movement Speed Slow"
+            value="20%"/>
+        <abilityAttributes
+            name="Movement Speed Slow per Stack"
+            value="3%/6%/9%/12%"/>
+        <abilityAttributes
+            name="Stack Limit"
+            value="4"/>
+        <altDescription description="Having caught a cold while stuck in the snow, Bristleback turns it to his advantage." />
+        <notes>
+            <note>Can be disjointed.</note>
+            <note>Goo travels with 1000ms.</note>
+            <note>Can reduce up to 4/4/8/8 armor and 32/44/56/68% movement speed.</note>
+            <note>Each recast on the same target refreshes the duration of all current stacks on it.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Quill Spray"
+        description="Sprays enemy units with quills dealing damage in an area of effect around Bristleback. Deals bonus damage for every time a unit was hit by Quill Spray in the last 14 seconds."
+        ability="No Target"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="0"
+        diffusalBlade="0"
+        cooldown="3"
+        mana="35">
+        <abilityAttributes
+            name="Radius"
+            value="625"/>
+        <abilityAttributes
+            name="Duration"
+            value="14"/>
+        <abilityAttributes
+            name="Quill Base Damage"
+            value="20/40/60/80"/>
+        <abilityAttributes
+            name="Quill Stack Damage"
+            value="30"/>
+        <abilityAttributes
+            name="Stack Duration"
+            value="14"/>
+        <abilityAttributes
+            name="Max Damage"
+            value="400"/>
+        <altDescription description="An enforcer's honor can be a prickly thing. So can his quills." />
+        <notes>
+            <note>Has an instant cast time.</note>
+            <note>Despite the visual effects, the damage is applied instantly in the area.</note>
+            <note>Quill Spray damage is not reduced by damage block abilities.</note>
+            <note>Places 1 debuff on each hit enemy, which shows the number of current stacks (a number is visible on the icon).</note>
+            <note>The Stacks' durations are independent, not refreshing each other.</note>
+            <note>This means that normally Bristleback can stack it up to 5 times. But the stack from the 1st cast expires 1 second before the 5th cast's cooldown finishes, so the maximum possible bonus damage is 120. To reach the damage cap, additional Quill Sprays from Bristleback passive are needed.</note>
+            <note>13/12/12/11 stacks are required to reach the 400 damage cap, which so require 9/8/8/7 sprays from Bristleback.</note>
+            <note>The debuff is removable by death only.</note>
+            <note>Fully affects magic immune units.</note>
+            <note>Though it does not damage ethereal units, it still places the debuff and adds stacks to them.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Bristleback"
+        description="Bristleback takes less damage if hit on the sides or rear. If Bristleback takes 250 damage from the rear, he releases a Quill Spray of the current level."
+        ability="Passive"
+        mantaStyle="1">
+        <abilityAttributes
+            name="Back Damage Reduction"
+            value="16%/24%/32%/40%"/>
+        <abilityAttributes
+            name="Side Damage Reduction"
+            value="8%/12%/16%/20%"/>
+        <mantaStyle description="Illusions benefit damage reduction, but not quill spray procs." />
+        <altDescription description="Turning his back to a fight might be just the thing." />
+        <notes>
+            <note>Bristleback's rear is considered to be within 70 degrees from the back. A sound and visual effect procs on Bristleback whenever his back takes damage.</note>
+            <note>Bristleback's side is considered to be within 110 degrees from the back. A visual effect procs on Bristleback whenever his sides take damage.</note>
+            <note>Bristleback takes less damage from all damage types except HP removal.</note>
+            <note>When taking rear damage, Bristleback's effective health will be increased by 19.05%/31.58%/47.06%/66.67%</note>
+            <note>When taking side damage, Bristleback's effective health will be increased by 8.70%/13.64%/19.05%/25%</note>
+            <note>Does not work against towers.</note>
+            <note>Checks the damage source's current position and compares it to Bristleback's facing angle on each damage instance. This also goes for every tick of damage of time effects.</note>
+            <note>Passive Quill Spray procs when Bristleback's back (not sides) takes 250 damage (after all reductions) and the damage counter is reset once the spray occurs.</note>
+            <note>Passive Quill Spray proc does not cost mana and has no cooldown.</note>
+            <note>Doom fully disables this ability, while Chronosphere and hexes only disable the passive Quill Spray.</note>
+            <note>When Quill Spray is not learnt, passive Quill Sprays will still proc, but deal no damage.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Warpath"
+        description="Bristleback works himself up into a fury every time he casts a spell, increasing his movement speed and damage."
+        ability="Passive"
+        affects="Self"
+        diffusalBlade="0"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Damage per Stack"
+            value="20/25/30"/>
+        <abilityAttributes
+            name="Movement per Stack"
+            value="3%/4%/5%"/>
+        <abilityAttributes
+            name="Stack Duration"
+            value="14"/>
+        <abilityAttributes
+            name="Max Stacks"
+            value="5/6/7"/>
+        <altDescription description="'Temper, temper,' his mum always chided. But in a fight, a temper can come in handy." />
+        <notes>
+            <note>Bristleback's size will increase and more particles will fly around him the more stacks he has.</note>
+            <note>Stacks up to 5/6/7 times, meaning it can give at most 15/24/35% movement speed and 100/150/210 attack damage.</note>
+            <note>Each stack has its own duration, gaining another stack does not refresh the duration of previous stacks.</note>
+            <note>Places 1 buff on Bristleback, which shows how many stacks he currently has (a number is visible on the icon).</note>
+            <note>Illusions owned by Bristleback gain a stack everytime Bristleback himself gains a stack. They fully benifit from it (although illusions can't make use of the bonus damage).</note>
+            <note>Using items does not trigger Warpath.</note>
+            <note>Quill Spray triggers from Bristleback do not trigger Warpath.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Use your passive ability Bristleback to your advantage; anticipate enemy attacks and turn your back on them, so that you can reduce as much damage as you can.</tip>
+        <tip>An early ability point on this ability during the laning phase can help you stay in the lane a while longer, especially if you are having trouble against auto-attacks.</tip>
+        <tip>Even if your enemies can easily defend against you with a Magic Wand, you can still heavily damage them with Warpath; as long as you're stacking your spells against them, the bonus damage will do its job.</tip>
+        <tip>Viscous Nasal Goo is an extremely useful cripple, provided that you keep casting it against your target, as it slows their movement speed for 32/44/56/68%. The cripple's duration is up to you, since you can continuously cast it to refresh the duration, and its cooldown is only 1.5 seconds. However, this ability has a significant backswing, so when you're chasing, be sure to issue a walk or attack command immediately after you see the snot come out.</tip>
+        <tip>This ability is very effective when combined with Warlock's Fatal Bonds, as the damage inflicted on the crippled target from other bound creeps or heroes is applied to the armor reduced hero at said reduced value. This makes the Bristleback/Warlock lane combination very potent, even into the late game. When combined with area of effect items and attacks, a lot of damage can be dealt very quickly.</tip>
+        <tip>Bristleback's mana woes can easily be remedied by a Sage's Mask or a Ring of Basilius, since his abilities have extremely low mana costs.</tip>
+        <tip>One of Bristleback's main weaknesses is his lack of disables, meaning he cannot silence or interrupt an enemy from casting spells. You can either rely on your teammates for disables, or create an item of your own, so long as it benefits him in some way (a good example would be a Scythe of Vyse, since it gives him good mana regeneration for his abilities, and a devastating hex disable).</tip>
+    </tips>
+</hero>

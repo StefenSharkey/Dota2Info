@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Chaos Knight</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Dire</faction>
+    <description>Chaos Knight is a melee strength Hero with one of the highest physical damage outputs of all heroes. He is mostly played as a semi-carry and ganker. As his name implies, he has a theme based on randomness and uncertainty. His regular attack has an incredibly high thirty damage spread, making his last hitting ability somewhat unreliable. Chaos Bolt is his most notorious luck-based ability which, at max level, can stun a target anywhere between a mediocre 2 seconds to an effective 4 seconds that will almost certainly assure its death; it will also deal a variable amount of damage ranging from miniscule to moderate. Reality Rift pulls Chaos Knight and his target to a randomly chosen point along the line between the two and gives him bonus damage for one attack. Chaos Strike is a crit-based ability with one of the lowest proc chances, yet also one of the highest multipliers. The illusions produced by his ultimate, which retain his full damage and only take double damage, benefit from his Chaos Strike and can teleport alongside him to attack the target whenever he uses Reality Rift. With up to four illusions being produced at Phantasm's highest level, Chaos Knight's damage output can be multiplied to be five times as great during teamfights later in the game, and it is not uncommon to see enemy heroes being killed instantly after being Reality Rifted by the apocalyptic horsemen. Thus, CK is played as a carry who excels in both the mid and late game, if the game drags on long enough and he is able to acquire enough strength-based and survivability items to ensure that his illusions can stay alive, he will be able to overpower most hard carries.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Pusher</role>
+    </roles>
+    <attributes>
+        <strengthBase>20</strengthBase>
+        <strengthGain>2.9</strengthGain>
+        <agilityBase>14</agilityBase>
+        <agilityGain>2.1</agilityGain>
+        <intelligenceBase>16</intelligenceBase>
+        <intelligenceGain>1.2</intelligenceGain>
+        <damageMinimum>49</damageMinimum>
+        <damageMaximum>79</damageMaximum>
+        <baseMoveSpeed>325</baseMoveSpeed>
+        <baseArmor>3.96</baseArmor>
+    </attributes>
+    <ability
+        name="Chaos Bolt"
+        description="Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        cooldown="10"
+        mana="140">
+        <abilityAttributes
+            name="Range"
+            value="500"/>
+        <abilityAttributes
+            name="Min Stun Duration"
+            value="1/1/1/2"/>
+        <abilityAttributes
+            name="Max Stun Duration"
+            value="2/3/4/4"/>
+        <abilityAttributes
+            name="Minimum Damage"
+            value="1/50/75/100"/>
+        <abilityAttributes
+            name="Maximum Damage"
+            value="200/225/250/275"/>
+        <altDescription description="Even Chaos Knight cannot predict this manifest of unholy energy." />
+        <notes>
+            <note>Projectile travels at a speed of 1000.</note>
+            <note>Can be disjointed.</note>
+            <note>The stun duration is not strictly exact 1/2/3/4 seconds, it ranges between the given values, means for example at level 1, it could stun for 1.74 seconds.</note>
+            <note>Damage and stun values are inversely related, meaning the longer the stun is, the less damage it deals and vice versa.</note>
+            <note>Stun duration and damage values are shown above the target's head upon hit (visible to allies and enemies). The stun is shown as a rounded value.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Reality Rift"
+        description="Teleports you, any images you have and the target unit to a random point along the line between the two of you. Gives you bonus attack damage for one attack."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        mantaStyle="1"
+        cooldown="24/18/12/6"
+        mana="70">
+        <abilityAttributes
+            name="Range"
+            value="550/600/650/700"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="25/50/75/100"/>
+        <abilityAttributes
+            name="Bonus Duration"
+            value="1.2"/>
+        <diffusalBlade description="The damage bonus buff can be purged." />
+        <mantaStyle description="Illusions belonging to Chaos Knight (not only from Phantasm) within a range of 1375 will be teleported to the same position as the original. Illusions do not benifit from the raw damage bonus" />
+        <altDescription description="Armageddon rides between the planes, bringing Chaos Knight to his victim wherever he may hide." />
+        <notes>
+            <note>Teleports Chaos Knight, his illusions and the target to a random point on the line between him and the target (between 30% and 80% of the distance).</note>
+            <note>Chaos Knight lands at the opposite side of the hero from where he casted. His illusions land at a random angle around the target.</note>
+            <note>The location is determined at the beginning of the cast. The visual effects also play at the beginning, revealing the point at which Chaos Knight and his target will land.</note>
+            <note>Chaos Knight and his illusions are made to face his target and are issued an attack order against the target.</note>
+            <note>The bonus damage is provided by a short buff which gives him a raw damage bonus. This means it can make use of crits, cleaves and lifesteal.</note>
+            <note>The buff is also placed on his illusions, but since it's raw damage bonus, they can't make use of it.</note>
+            <note>Does not interrupt the target's channeling spells.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Chaos Strike"
+        description="Chaos Knight's mojo gives him a chance to deal bonus damage."
+        ability="Passive"
+        affects="Self"
+        blackKingBar="0"
+        linkensSphere="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Critical Damage"
+            value="150%/200%/250%/300%"/>
+        <abilityAttributes
+            name="Critical Chance"
+            value="10%"/>
+        <mantaStyle description="Red critical numbers are before illusion and armor reduction." />
+        <altDescription description="Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors." />
+        <notes>
+            <note>The sound and particles play upon start of the attack, not when the attack lands.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Phantasm"
+        description="Summons several phantasmal copies of the Chaos Knight from alternate dimensions. There is a 50% chance an extra phantasm will be summoned. The phantasms deal full damage, but take double damage."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="2"
+        cooldown="140"
+        mana="125/200/275">
+        <abilityAttributes
+            name="Duration"
+            value="34"/>
+        <abilityAttributes
+            name="Number of Phantasms"
+            value="1/2/3"/>
+        <diffusalBlade description="Illusions take Purge damage." />
+        <altDescription description="Drawing on his battles fought across many worlds and many times, phantasms of the Chaos Knight rise up to quell all who oppose him." />
+        <notes>
+            <note>Chaos Knight is invulnerable and hidden for 0.5 seconds upon cast.</note>
+            <note>Disjoints projectiles upon cast.</note>
+            <note>Applies a normal dispel on Chaos Knight upon cast.</note>
+            <note>Resets current attack and spell targeting priorities on Chaos Knight.</note>
+            <note>After the 0.5 seconds, Chaos Knight reappears with his illusions.</note>
+            <note>The formation of Chaos Knight and the illusions is always the same. One spawns on Chaos Knight's cast location and the others randomly on north, east, south or west side each.</note>
+            <note>Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle.</note>
+            <note>When the 50% extra phantasm spawns, an extra sound effect is played.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>While ganking in the early-mid game, use Reality Rift to get close to the enemy, then hit him once with your bonus damage and use Chaos Bolt to stun. If you're lucky, you could even get more than 2 hits while he's stunned.</tip>
+        <tip>In most situations, max Chaos Bolt and Reality Rift first, since the critical damage from your Chaos Strike is negligible in the early game, and you won't have enough mana to summon the Phantasm(s) with your ultimate.</tip>
+        <tip>Always activate your Armlet of Mordiggian before using your ultimate, since the illusions also gain bonuses from it.</tip>
+        <tip>By buying a Sange &amp; Yasha, you'll be able to disassemble it later and build a Heaven's Halberd and a Manta Style. You may buy the first item if you need more survivability, since it gives you more health, some evasion and a reliable disarm; buy Manta Style first if you farmed really well, and you wish to confuse your enemies even more. It also grants additional increases to attributes.</tip>
+        <tip>Diffusal Blade will give Chaos Knight's illusions Feedback. Like Phantom Lancer, an army of Chaos Knights can deplete enemy's mana very quickly. Its active ability can also be used to ensure that enemies do not escape Chaos Knight's army after Reality Rift, if Chaos Bolt is unavailable.</tip>
+        <tip>Buying an early Soul Ring will solve most of Chaos Knight's mana problems.</tip>
+        <tip>Desolator may not be a good item on Chaos Knight himself, but the armor reduction will make your target squishier allowing your Illusions to deal more damage to them. Consider having an ally buy one instead to apply the Corruption debuff on enemy heroes or towers.</tip>
+    </tips>
+</hero>

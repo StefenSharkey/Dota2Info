@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Clockwerk</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Rattletrap the Clockwerk is a melee strength hero commonly played as an initiator or ganker. As an initiator, his main purpose is crowd control. However, he also does secondary jobs such as chasing and map control. His abilities are centered around isolating and killing enemies one by one. He does not deal reliable area damage like most initiators, but still he is capable of doing a surprising and devastating entrance. Usually Clockwerk players should initiate onto low health support heroes or enemy heroes with strong team fight ability, such as Warlock, hampering their ability to land solid teamfight spells. Clockwerk can also initiate onto enemy carry heroes, in order to isolate them away from the team fight by forcing them to remain in cogs.</description>
+    <roles>
+        <role>Durable</role>
+        <role>Initiator</role>
+    </roles>
+    <attributes>
+        <strengthBase>24</strengthBase>
+        <strengthGain>2.7</strengthGain>
+        <agilityBase>13</agilityBase>
+        <agilityGain>2.3</agilityGain>
+        <intelligenceBase>17</intelligenceBase>
+        <intelligenceGain>1.3</intelligenceGain>
+        <damageMinimum>55</damageMinimum>
+        <damageMaximum>57</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>1.82</baseArmor>
+    </attributes>
+    <ability
+        name="Battery Assault"
+        description="Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        mantaStyle="0"
+        cooldown="32/28/24/20"
+        mana="75">
+        <abilityAttributes
+            name="Radius"
+            value="275"/>
+        <abilityAttributes
+            name="Duration"
+            value="10.5"/>
+        <abilityAttributes
+            name="Interval"
+            value="0.7"/>
+        <abilityAttributes
+            name="Damage"
+            value="15/35/55/75"/>
+        <altDescription description="Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver." />
+        <notes>
+            <note>Remains active even if Clockwerk is disabled.</note>
+            <note>Discharges a total of 16 shrapnel.</note>
+            <note>Total damage: 240/560/880/1200.</note>
+            <note>Does not hit invisible units.</note>
+            <note>Mini-stun duration is 0.1 seconds.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Power Cogs"
+        description="Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down. Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="15"
+        mana="50/60/70/80">
+        <abilityAttributes
+            name="Radius"
+            value="210"/>
+        <abilityAttributes
+            name="Duration"
+            value="5/6/7/8"/>
+        <abilityAttributes
+            name="Life and Mana Drained"
+            value="80/120/160/200"/>
+        <abilityAttributes
+            name="Enemy Attacks Required"
+            value="2/2/2/3"/>
+        <altDescription description="One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies." />
+        <notes>
+            <note>Cogs can shock invisible units.</note>
+            <note>The knock back lasts 0.84 seconds and affected units are disabled during it. Damage is taken and mana is lost right after the push back.</note>
+            <note>Knocks back enemies 252 units at a speed of 300 units.</note>
+            <note>Cogs give no gold when destroyed.</note>
+            <note>Units knocked back will destroy trees in 100 AoE around where they land.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Rocket Flare"
+        description="Fires a global range flare that explodes over a given area, damaging enemies and providing vision for 10 seconds."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="20/18/16/14"
+        mana="50">
+        <abilityAttributes
+            name="Range"
+            value="Global"/>
+        <abilityAttributes
+            name="Radius"
+            value="575"/>
+        <abilityAttributes
+            name="Duration"
+            value="10"/>
+        <abilityAttributes
+            name="Damage"
+            value="80/120/160/200"/>
+        <altDescription description="What started as a festive display has become a useful scouting and bombardment tool." />
+        <notes>
+            <note>Gives vision in a 600 radius for 1 second while traveling and for 10 second at the targeted area after reaching it.</note>
+            <note>The flare travels at a speed of 1500.</note>
+            <note>The rocket can block creep camps if timed correctly.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Hookshot"
+        description="Fires a grappling device rapidly at the target location. If the hook hits a unit, Clockwerk launches himself into the target, stunning and dealing damage. Any enemies Clockwerk collides with along the way are subject to damage and stunned. Upgradable by Aghanim's Scepter."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="70/55/60 (12*)"
+        mana="150">
+        <abilityAttributes
+            name="Range"
+            value="2000/2500/3000"/>
+        <abilityAttributes
+            name="Radius"
+            value="125 (175**)"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="1/1.5/2"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/200/300"/>
+        <aghanims description="Decreases cooldown." />
+        <altDescription description="A somewhat unwieldy device, the Hookshot sends the otherwise clunky Clockwerk armor flying through the air." />
+        <notes>
+            <note>(**) Latch/stun radius.</note>
+            <note>Will latch on to and take Clockwerk to allied units, but will not damage or stun them.</note>
+            <note>The hook travels at a speed of 4000/5000/6000.</note>
+            <note>The affected enemy will be stunned until the hook retracts, effectively prolonging the stun duration by up to 0.5 seconds on the latched unit.</note>
+            <note>Clockwerk is silenced while travelling, so attempting to activate another ability mid-flight will not queue it for use when he arrives. Items however can be freely used.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Clockwerk is a formidable ganker with nice farming capabilities who can be effective even with very few items in the early and mid game. This makes you comfortable at almost any lane; side lane, mid lane or solo lane are all viable options.</tip>
+        <tip>Clockwerk has great synergy with high DPS nukers. Power Cogs can isolate a single enemy and set them up for AOE or single-target nukes.</tip>
+        <tip>Clockwerk has two very powerful escape mechanisms in Power Cogs and Hookshot. Use them to enter fights or escape.</tip>
+        <tip>Battery Assault works as a ministun, and is effective for interrupting channeled spells or teleports. This prevents heroes from casting spells with extended cast times.</tip>
+        <tip>You can spam Rocket Flare to gain map control due to the vision it provides. Consider using it before the game starts to find out where enemy heroes are.</tip>
+        <tip>You can utilize the global cast range of Rocket Flare to kill fleeing opponents.</tip>
+        <tip>If a rocket flies over an empty neutral camp exactly during their respawn timer (every 1 minute), it will be counted as blocking (similar to ward blocking) and thus no neutrals will spawn there. However, this requires extremely precise timing, as the rocket needs to be 'physically' present there, not after it explodes.</tip>
+        <tip>Clockwerk is a mortal threat to many heroes. However, his spells scale off late game. Be sure to have a strong ganking presence in the mid game to create space for your team.</tip>
+        <tip>Necronomicon is also a good item to get on Clockwerk. The damage from the summoned units, mana burn, and the true sight all synergize well with Clockwerk's ability to trap enemies in his cogs.</tip>
+        <tip>Force Staff is also a good choice to be able to quickly escape your own cogs, while leaving opponents trapped inside. This is especially useful against heroes that can rapidly deal melee damage (e.g. Slardar, Alchemist, Lifestealer,etc).</tip>
+    </tips>
+</hero>

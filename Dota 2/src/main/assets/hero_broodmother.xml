@@ -1,0 +1,200 @@
+<hero>
+    <name>Broodmother</name>
+    <damageType>Melee</damageType>
+    <attribute>Agility</attribute>
+    <faction>Dire</faction>
+    <tip>Black Arachnia the Broodmother is a melee agility hero who is a notably powerful pusher. Her trademark spiderlings, as both an asset and a liability, define her play style. While a possible additional source of income, experience and lane pushes, spiderlings can easily feed opponents when not handled with deft micro and great awareness. Broodmother's abilities allow her to summon those spiderlings to do her bidding, to conceal herself and her spiderlings in an area, and to slow and kill heroes with relative ease if caught off guard, all while staying as elusive as possible with her webs and passives. She spends most of the early game pressuring a lane with little concern, due to her spiderlings and her invisibility/added HP regeneration, but she can also transition into a difficult to kill melee carry, which can dive in on and rapidly kill lone enemies with the right items later on.</tip>
+    <roles>
+        <role>Pusher</role>
+        <role>Carry</role>
+        <role>Escape</role>
+    </roles>
+    <attributes>
+        <strengthBase>17</strengthBase>
+        <strengthGain>2.5</strengthGain>
+        <agilityBase>18</agilityBase>
+        <agilityGain>2.2</agilityGain>
+        <intelligenceBase>18</intelligenceBase>
+        <intelligenceGain>2.0</intelligenceGain>
+        <damageMinimum>44</damageMinimum>
+        <damageMaximum>50</damageMaximum>
+        <baseMoveSpeed>295</baseMoveSpeed>
+        <baseArmor>2.52</baseArmor>
+    </attributes>
+    <ability
+        name="Spawn Spiderlings"
+        description="Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        cooldown="10"
+        mana="120">
+        <abilityAttributes
+            name="Range"
+            value="700"/>
+        <abilityAttributes
+            name="Damage"
+            value="75/150/225/300"/>
+        <abilityAttributes
+            name="Count"
+            value="1/2/3/4"/>
+        <altDescription description="Black Arachnia continues to raise her young, even amidst the field of combat. The brood quickly learns how to support their mother." />
+        <notes>
+            <note>Units from which the Spiderlings spawn leave no corpse on death.</note>
+            <note>If the target is killed within 2 seconds of being hit by this ability, regardless of what the killer is, the Spiderlings will spawn (This includes denying an "infected" ally or committing suicide).</note>
+            <note>Units killed by Spiderlings will then give birth to Spiderites, smaller and less powerful versions of the Spiderlings.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Spin Web"
+        description="Spins a large web that renders Broodmother invisible, grants a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. When invisible in a web, the movement speed bonus doubles. Spin Web charges restore every 40 seconds. Free movement is disabled for 6 seconds if damage is taken. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears."
+        ability="Target Point"
+        mantaStyle="0"
+        mana="50">
+        <abilityAttributes
+            name="Range"
+            value="1000"/>
+        <abilityAttributes
+            name="Radius"
+            value="900"/>
+        <abilityAttributes
+            name="Spin Web Charges"
+            value="1/2/3/4"/>
+        <abilityAttributes
+            name="Maximum Webs"
+            value="2/4/6/8"/>
+        <abilityAttributes
+            name="Bonus Health Regeneration"
+            value="2/4/6/8"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="20%/25%/30%/35%"/>
+        <abilityAttributes
+            name="Bonus Movement Speed While Invisible"
+            value="40%/50%/60%/70%"/>
+        <abilityAttributes
+            name="Recharge Time"
+            value="40"/>
+        <altDescription description="Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of foreboding." />
+        <notes>
+            <note>Has an invisibility fade time of 2 seconds, but invisibility is instantly lost outside the web.</note>
+            <note>Movement speed and health regeneration are instantly granted and lost when moving in or out of the web.</note>
+            <note>Also affects Spiderlings and Spiderites.</note>
+            <note>If more webs are spawned than allowed, the oldest one will disappear.</note>
+            <note>Webs are marked by icons on the minimap.</note>
+            <note>Broodmother gains unobstructed movement within the web (can walk over cliffs, trees, etc) with no collision box.</note>
+            <note>Unobstructed movement is disabled for 6 seconds when she takes damage.</note>
+            <note>Has a 0.4 cast point (slower than default).</note>
+            <note>Broodmother will not be able to become invisible while muted, but will not lose her invisibility if she is already on a web. Other components behave normally.</note>
+            <note>The web will distinctly twitch whenever Broodmother walks on it, indicating her position.</note>
+            <note>Spin Web can be cast from anywhere as long as the new web touches another.</note>
+            <note>Whenever Broodmother is taken out of Spin Web's free pathing, she destroys nearby trees.</note>
+            <note>Spin Webs are selectable and have an ability to destroy themselves.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Incapacitating Bite"
+        description="Broodmother's venom cripples enemy units, causing her attacks to slow, as well as giving the affected unit a chance to miss its attacks. Incapacitating Bite is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+        ability="Passive"
+        affects="Enemies"
+        orbOfVenom="1"
+        blackKingBar="2"
+        linkensSphere="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Duration"
+            value="2"/>
+        <abilityAttributes
+            name="Miss Chance"
+            value="30%/40%/50%/60%"/>
+        <abilityAttributes
+            name="Move Slow"
+            value="10%/20%/30%/40%"/>
+        <altDescription description="Paralytic toxins come from Black Arachnia's fangs, causing a slow and painful death to those who intrude on her webs." />
+        <notes>
+            <note>The affected enemies' miss chance stacks with evasion and terrain dodge chance.</note>
+            <note>In DotA 1, this ability is blocked by Linken's Sphere. The change appears to be intended.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Insatiable Hunger"
+        description="A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="2"
+        cooldown="45"
+        mana="100">
+        <abilityAttributes
+            name="Bonus Damage"
+            value="60/80/100"/>
+        <abilityAttributes
+            name="Lifesteal"
+            value="60%/80%/100%"/>
+        <abilityAttributes
+            name="Duration"
+            value="14"/>
+        <altDescription description="While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes." />
+        <notes>
+            <note>Fully stacks with all items providing lifesteal (both Unique Attack Modifiers and auras).</note>
+            <note>Can only be removed by Purge (from Diffusal Blade, Demonic Purge, Unstable Current, or the Satyr Trickster).</note>
+        </notes>
+    </ability>
+    <ability
+        name="Destroy Spin Web"
+        description="Destroys the selected Spin Web."
+        ability="Self">
+        <notes>
+            <note>This is cast from the web itself, allowing Broodmother to destroy webs individually instead of having the oldest one destroyed.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Poison Sting"
+        description="Poisons enemies on attack."
+        ability="Passive"
+        affects="Enemies">
+        <abilityAttributes
+            name="Duration on Hero"
+            value="2"/>
+        <abilityAttributes
+            name="Duration on Unit"
+            value="6"/>
+        <abilityAttributes
+            name="Damage per Second"
+            value="8"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="15%"/>
+        <altDescription description="While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes." />
+        <notes>
+            <note>Goes through magic immunity, currently bugged as of 29/04/2014 (6.81) as it deals 16 dps in two damage instances of 8.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Spawn Spiderite"
+        description="Applies debuff on attack. If debuffed unit dies, a spiderite will spawn."
+        ability="Passive"
+        affects="Enemies">
+        <abilityAttributes
+            name="Spiderite Duration"
+            value="60"/>
+        <abilityAttributes
+            name="Debuff Duration"
+            value="2"/>
+        <notes>
+            <note>Only Spiderlings can spawn Spiderites, Spiderites cannot spawn other Spiderites (Spiderites don't have the passive).</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Spin Web and Spawn Spiderlings should almost always be maxed first, before points are put into any other ability. Both Incapacitating Bite and Insatiable Hunger are only useful once Broodmother has gotten her farm.</tip>
+        <tip>Going into a solo lane is a viable option for Broodmother as webs give her the survivability and the pushing power from the spiderlings can overwhelm a lane without need of her being babysat by an additional hero.</tip>
+        <tip>Spawn Spiderlings acts as a ranged nuke, and is very useful for killing weak enemies that are fleeing.</tip>
+        <tip>Soul Ring is a great item to have on her as the instant mana boost gives her the ability to spawn more spiderlings and the HP regen from the webs can cover for the loss of HP from the Soul ring.</tip>
+        <tip>Going right into a Black King Bar is a good choice as the combination of magic immunity and the powerful lifesteal from Insatiable Hunger makes the Broodmother a very difficult opponent to kill.</tip>
+        <tip>Casting Spin Web on top of an enemy tower makes it easy to dive in on weak heroes. The regen and movespeed bonus combined with Broodmother's slow is very effective for diving on heroes with no reliable escape or stun.</tip>
+        <tip>Broodmother is very effective against solitary targets, but against multiple enemies she suffers; as her lifesteal can generally only replenish the damage taken from a solitary foe.</tip>
+        <tip>A quick Yasha will give her more movement speed to evade ganks and remain a threat for that lane. Then this can be made into a Manta Style which will give her a way to remove dust and confuse the enemy to escape ganks and waste their crowd control spells.</tip>
+        <tip>Be cautious when the enemy has picked an Earthshaker as Echo Slam will annihilate her if multiple spiderlings are present.</tip>
+        <tip>Legion Commander's first ability, Overwhelming Odds, scales off how many units are in the AoE. It will destroy her spiderlings and do a huge amount of damage to Broodmother.</tip>
+    </tips>
+</hero>

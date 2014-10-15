@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Anti-Mage</name>
+    <damageType>Melee</damageType>
+    <attribute>Agility</attribute>
+    <faction>Radiant</faction>
+    <description>Anti-Mage is a fast melee Agility Carry with an emphasis on disabling and killing high-mana enemies. He has notably high agility and low base attack time, giving him high damage and scaling with his basic attacks. His signature ability is Mana Break, a passive attack modifier that makes him a huge threat to mana-reliant heroes, mainly Intelligence-based casters. In addition to granting substantial bonus damage on each attacks, its mana burn sets enemies up to be devastated by his ultimate ability, Mana Void. Blink is a highly versatile ability that allows Anti-Mage to instantly teleport short distances, thereby allowing him to escape, chase, and even farm with ease. Combined with his high base movement speed, this makes Anti-Mage a highly mobile hero at all points in the game. Spell Shield greatly increases Anti-Mage's magic resistance, allowing him to sustain more damage from enemy casters. Finally, Mana Void finishes off targets after their mana has been burnt, inflicting heavy damage to both the target and enemies surrounding the target. The damage Mana Void can potentially deal scales extremely well into the late game, as enemies' mana pools only grow larger over time. His naturally fast basic attacks combined with his powerful abilities make him extremely dangerous in the late game, allowing him to devastate enemies with ease if he is allowed to farm as a hard carry.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Escape</role>
+    </roles>
+    <attributes>
+        <strengthBase>22</strengthBase>
+        <strengthGain>1.2</strengthGain>
+        <agilityBase>22</agilityBase>
+        <agilityGain>2.8</agilityGain>
+        <intelligenceBase>15</intelligenceBase>
+        <intelligenceGain>1.8</intelligenceGain>
+        <damageMinimum>49</damageMinimum>
+        <damageMaximum>53</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>2.08</baseArmor>
+    </attributes>
+    <ability
+        name="Mana Break"
+        description="Burns an opponent's mana on each attack. Mana Break deals 60% of the mana burned as damage to the target."
+        ability="Passive"
+        affects="Enemies"
+        damage="Physical"
+        orbOfVenom="1"
+        blackKingBar="2"
+        linkensSphere="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Mana per Hit"
+            value="28/40/52/64"/>
+        <altDescription description="A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner." />
+        <notes>
+            <note>Can deal up to 17/24/31/38 damage per hit.</note>
+            <note>Mana Burn is blocked by magic immunity.</note>
+            <note>You can lifeleech the damage dealt by this skill with a Lifesteal aura.</note>
+            <note>Is a unique attack modifier.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Blink"
+        description="Short distance teleportation that allows Anti-Mage to move in and out of combat."
+        ability="Target Point"
+        cooldown="12/9/7/5"
+        mana="60">
+        <abilityAttributes
+            name="Range"
+            value="1000/1075/1150/1150"/>
+        <altDescription description="In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive." />
+        <notes>
+            <note>You can use Blink to dodge incoming projectiles.</note>
+            <note>Blink has a 0.4 seconds teleportation delay.</note>
+            <note>The in game tooltip is in error and clicking beyond the range of the ability will still use the maximum range of the blink as of this writing.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Spell Shield"
+        description="Increases Anti-Mage's resistance to magic damage."
+        ability="Passive"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Resistance"
+            value="26%/34%/42%/50%"/>
+        <altDescription description="Years of meditation and obsession with revenge have hardened Anti-Mage's skin against mystical opponents." />
+        <notes>
+            <note>Stacks with magic resistance items.</note>
+            <note>Mana Burn is blocked by magic immunity.</note>
+            <note>Total hero magic resistance for Spell shield at each level is 44.5%/50.5%/56.5%/62.5%.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Mana Void"
+        description="For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The primary target is stunned for a short duration."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="2"
+        cooldown="70"
+        mana="125/200/275">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Damage Per Missing Mana"
+            value="0.6/0.85/1.1"/>
+        <abilityAttributes
+            name="Radius"
+            value="500"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="0.1/0.2/0.3"/>
+        <linkensSphere description="Blocked on primary target. No interaction otherwise." />
+        <altDescription description="After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts." />
+        <notes>
+            <note>Stun goes through magic immunity.</note>
+            <note>Has a casting delay of 0.3 seconds.</note>
+            <note>Damage is calculated based on the primary target's mana, but applied to all enemies within the radius.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Blink is the most common choice for your first skill point, as its immediate benefit is better than either of your passives. Put some points into Spell Shield and stats if you are facing strong opponents or go for Mana Break if you want to be aggressive.</tip>
+        <tip>Blink is a very versatile and powerful escape mechanism. You can also use it to chase, maneuver, or to avoid spells during battles.</tip>
+        <tip>Manta Style is a commonly built item on Anti-Mage as your illusions can also apply Mana Break, tripling the ability's effectiveness. It also provides general stats and a means to remove most disables, especially silences, that could prevent escaping via blink.</tip>
+        <tip>Mana Break is most effective against heroes with low mana pools, as you can completely deplete and disable them in less time.</tip>
+        <tip>Anti-Mage becomes a real threat somewhere around level 13 if he is not underfarmed and underleveled too much. Keep farming, ignore distractions, don't hesitate to steal kills from your allies.</tip>
+        <tip>Your laning phase is an absolute nightmare. Many heroes can cripple your early game by harassing you and chasing you away. Also, if you don't utilize your laning phase the game may well end before you reach Anti-Mage's maximum potential. Ask your teammates to babysit you.</tip>
+        <tip>Anti-Mage has relatively low base health. If you can't kill an enemy quickly, it may be best to disengage, as a favorable fight can easily result in your own death.</tip>
+        <tip>While Spell Shield provides substantial magic resistance, it is not a substitute for magic immunity as it does not block non-damage effects of enemy magic.</tip>
+        <tip>Mana Void is very difficult to use to full effect. Constantly check enemies with large mana pools. Use it on enemy casters after they have used their skills and burnt most of their mana. It can absolutely devastate an enemy team if used properly. Note that it does have a short stun, allowing you to cancel spell casts and channels.</tip>
+        <tip>You are utterly useless in team fights if you can't physically attack enemies. There are many ways to counter raw physical damage in DotA, especially if it's melee. Decent players will buy items like Scythe of Vyse, Blade Mail and Ghost Scepter to shut you down. Timing your entrance into the battle is everything for you.</tip>
+        <tip>If you find yourself being killed quickly with stun locks and high physical damage, it is a good idea to pick up Vanguard for the HP boost and damage reduction. Alternatively, a Vitality Booster provides most of the benefit and can be later built into a Heart of Tarrasque.</tip>
+        <tip>Tranquil Boots can be a viable alternative to Battlefury and Treads if your lane has a lot of harass. Rather than needing to go back to base or resorting to jungling, just back off the creep wave (preferably out of los of enemy heroes) and heal to full before you resume last hitting again. This also has the advantage of passively providing you 4 armor under heavy harass, almost a 30% reduction on incoming autoattacks!</tip>
+        <tip>A quick Battle Fury will greatly increase your farming ability which will greatly help later in the game. If you do not need a Vanguard, Battlefury is a good alternative.</tip>
+        <tip>Never use Blink to start a fight unless you know you can win it. Doing so could leave you stranded in a bad situation.</tip>
+        <tip>Although Anti-Mage has the potential to be a carry with his extremely low BAT (Base Attack Time), with his extreme mobility and manaburn in the middle game he can be played as a ganker and semi-carry (mana burn is more effective early as armor and mana pools are lower).</tip>
+        <tip>Don't just simply be farming. If the enemy is pushing Anti-Mage can push a different lane solo with a reliable escape mechanism with Blink and TP scroll and can indirectly defend by forcing the enemy to defend.</tip>
+        <tip>Be very wary of heroes like Shadow Demon and Dark Seer, as illusions created from you carry the Mana Break spell as well, and combined with Anti-Mage's high Agility, could easily turn the tides of a teamfight.</tip>
+        <tip>Once you get full slotted you could opt to sell your Battle Fury for a different item, but its creep clearing abilities are still very useful and sometimes critical. You should sell it if you absolutely need another item that can turn the tides, such as a Monkey King Bar.</tip>
+        <tip>Many players are tempted to switch Power Treads to agility, but given your low strength gain (1.2), it may be better to keep them on strength. This is especially true early game, or if you opt for a Battle Fury instead of a Vanguard.</tip>
+    </tips>
+</hero>

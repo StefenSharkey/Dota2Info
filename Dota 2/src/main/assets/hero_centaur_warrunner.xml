@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Centaur Warrunner</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Bradwarden the Centaur Warrunner is a melee strength hero whose natural place in combat is right in the center of battle. His abilities stop enemies around him in their tracks and inflict heavy damage, making him an excellent initiator. He is also a powerful tank, having the highest strength gain in the game. Bradwarden has immense natural health, and his skills' area of effect mean that he can charge into combat and incapacitate groups of enemies at a time. Hoof Stomp and Double Edge make a great combo of stunning and burst damage on short cooldowns and his Return means instant retaliation on enemies who try attack him. His ultimate, Stampede effectively turns the entire team into initiators, granting them high speed and the ability to flatten enemies under as they pass over them. Although he is usually not played as a carry, he can scale powerfully with items, becoming a hard-hitting semi-carry that is nearly impossible to kill.</description>
+    <roles>
+        <role>Durable</role>
+        <role>Disabler</role>
+        <role>Initiator</role>
+    </roles>
+    <attributes>
+        <strengthBase>23</strengthBase>
+        <strengthGain>3.8</strengthGain>
+        <agilityBase>15</agilityBase>
+        <agilityGain>2.0</agilityGain>
+        <intelligenceBase>15</intelligenceBase>
+        <intelligenceGain>1.6</intelligenceGain>
+        <damageMinimum>55</damageMinimum>
+        <damageMaximum>57</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>3.1</baseArmor>
+    </attributes>
+    <ability
+        name="Hoof Stomp"
+        description="Slams the ground, stunning and damaging nearby enemy units."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="13"
+        mana="130">
+        <abilityAttributes
+            name="Radius"
+            value="315"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="2/2.25/2.5/2.75"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/150/200/250"/>
+        <altDescription description="When the mighty hoof of the Warrunner touches soil, the tremors are felt far and wide." />
+    </ability>
+    <ability
+        name="Double Edge"
+        description="Centaur strikes a mighty blow at melee range, damaging both himself and the target. Centaur cannot die from Double Edge. Double Edge deals its damage in a 190 AoE around the target."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="1"
+        cooldown="8">
+        <abilityAttributes
+            name="Range"
+            value="150"/>
+        <abilityAttributes
+            name="Radius"
+            value="190"/>
+        <abilityAttributes
+            name="Damage"
+            value="175/250/325/400"/>
+        <linkensSphere description="Blocked on primary target. No interaction otherwise. Bradwarden doesn't take his recoil damage if blocked." />
+        <altDescription description="In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage." />
+        <notes>
+            <note>Double Edge deals magic type damage to both the targets and himself.</note>
+            <note>Because of how Soul Catcher or Penitence work, they will cause Centaur to die when he's affected by them and casts Double Edge while on low enough hp. Penitence will result in a deny, while Soul Catcher will grant Shadow Demon the kill.</note>
+            <note>Reducing Centaur's magic resistance will still not cause Centaur to die from Double Edge.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Return"
+        description="Centaur Warrunner immediately counters every attack, damaging the attacker based on a percentage of Centaur's strength."
+        ability="Passive"
+        affects="Enemy Units and Structures"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Base Damage"
+            value="16/18/20/22"/>
+        <abilityAttributes
+            name="Bonus Damage as Percent of Centaur Warrunner's Strength"
+            value="26%/34%/42%/50%"/>
+        <altDescription description="Bradwarden has no need to parry his opponent's attacks; his armor-like hide does it for him." />
+        <notes>
+            <note>This ability works against everything which is not a ward, a siege unit or invulnerable. This means it fully works against towers.</note>
+            <note>Return's damage is inflicted when the attacker begins their attack, not when their attack is completed.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Stampede"
+        description="Centaur leads all allies into a vicious charge causing them to move through units at max speed and slow enemy units they tread upon. Each enemy can be trampled once and takes damage based on the Warrunner's strength."
+        ability="No Target"
+        affects="Allies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="100"
+        mana="90/75/60">
+        <abilityAttributes
+            name="Charge Duration"
+            value="3.75"/>
+        <abilityAttributes
+            name="Damage"
+            value="1/2/3 times your strength"/>
+        <abilityAttributes
+            name="Slow"
+            value="100%"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="1.5"/>
+        <abilityAttributes
+            name="Stampede Collision Radius"
+            value="105"/>
+        <altDescription description="The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat." />
+        <notes>
+            <note>Affects every player-controlled allied unit, except for wards and Spectre's Haunt illusions.</note>
+            <note>Has an instant cast time.</note>
+            <note>Affected allies become phased and ignore slowing effects.</note>
+            <note>Slow and damage does not affect magic immune enemies.</note>
+            <note>The sound effect is global and can be heard by enemies even through the fog of war.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>When trying to land Hoof Stomp on fleeing enemies, get in front of their path if possible. Most opponents will outrun the stun during the cast-time if they are already on the edge of the AoE.</tip>
+        <tip>Return is an extremely powerful ability and not to be underestimated. Although its most notable effect is greatly increasing damage against enemies that try to gank Warrunner in the late game, even at lower levels it can completely shut down heroes with high damage and low health.</tip>
+        <tip>To force a tower to attack you and utilize Return, issue an attack command upon an enemy hero when in range (even one in another lane). This trick also works to aggravate lane creeps.</tip>
+        <tip>You can use Stampede's movement speed boost to help allies escape or chase in a pinch, although the long cooldown makes this usage situational.</tip>
+        <tip>Stampede gives all allies the power to become initiators, allowing the entire team the chance to break into battle with destructive force; unfortunately, Stampede only affects enemies once for a relatively short duration, so in larger fights the skill may go totally awry. This means the initiation must be careful and planned, with a chosen initiator, as with other fights (more than not, possibly Warrunner himself).</tip>
+        <tip>When jungling or attacking ancients in a safe location, it is advised to drop your tranquil boots should they have been purchased. This prevents the boots from breaking and allows for instant hp regen after killing all the neutrals.</tip>
+    </tips>
+</hero>

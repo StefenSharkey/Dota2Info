@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Chen</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Radiant</faction>
+    <description>Chen the Holy Knight has gameplay that is different than most other heroes. Holy Persuasion lets him convert creeps to his side, mainly the powerful neutral creeps. As a result, Chen is usually found in the forest searching for creeps to convert. When he finds a strong creep or two, he descends on his unwary enemies, using both his own spells and the abilities of his persuaded creeps to take them out. When ambushing enemies, Chen generally uses his Penitence ability, which slows the target and causes them to take extra damage from Chen's flock. Test of Faith can be used to finish off enemies and also teleport any ally to the fountain after a short delay with a subability. Chen's support abilities are rounded out by Hand of God, a healing spell which instantly restores a set amount of HP to all allied Heroes and fully heals his controlled creeps across the battlefield.</description>
+    <roles>
+        <role>Support</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
+    </roles>
+    <attributes>
+        <strengthBase>20</strengthBase>
+        <strengthGain>1.5</strengthGain>
+        <agilityBase>15</agilityBase>
+        <agilityGain>2.1</agilityGain>
+        <intelligenceBase>21</intelligenceBase>
+        <intelligenceGain>2.8</intelligenceGain>
+        <damageMinimum>43</damageMinimum>
+        <damageMaximum>53</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>1.1</baseArmor>
+    </attributes>
+    <ability
+        name="Penitence"
+        description="Forces an enemy unit to move slower and take more damage from attacks and spells."
+        ability="Target Unit"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="14/13/12/11"
+        mana="100">
+        <abilityAttributes
+            name="Range"
+            value="800"/>
+        <abilityAttributes
+            name="Duration"
+            value="5/6/7/8"/>
+        <abilityAttributes
+            name="Slow"
+            value="14%/18%/22%/26%"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="14%/18%/22%/26%"/>
+        <altDescription description="Although Chen's brand of animal enthrallment isn't quite strong enough to control the minds of enemy heroes, it still tests their resolve in combat." />
+    </ability>
+    <ability
+        name="Test of Faith"
+        description="Deals random damage to test an enemy unit's faith."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Pure"
+        blackKingBar="2"
+        linkensSphere="2"
+        cooldown="24"
+        mana="175">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Damage Min"
+            value="50/100/150/200"/>
+        <abilityAttributes
+            name="Damage Max"
+            value="100/200/300/400"/>
+        <altDescription description="Knights of the Fold possess a fanatical form of magic that is considered quite unwieldy by most other users of arcane arts." />
+        <notes>
+            <note>Despite being two parts of the same ability, Test of Faith and the Teleport component don't share cooldown.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Test of Faith (Teleport)"
+        description="Teleports a friendly unit back to the base. Creeps are teleported instantly, Heroes have a delay before teleporting."
+        ability="Target Unit"
+        blackKingBar="0"
+        diffusalBlade="2"
+        cooldown="24"
+        mana="200">
+        <abilityAttributes
+            name="Hero Teleport Delay"
+            value="6/5/4/3"/>
+        <diffusalBlade description="Can be dispelled on heroes during the delay." />
+        <notes>
+            <note>Despite being two parts of the same ability, Test of Faith and the Teleport component don't share cooldown.</note>
+            <note>Under certain circumstances, Sand King won't be teleported back to the base while using Burrowstrike.</note>
+            <note>If dispelled, the hero will not be brought back to base.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Holy Persuasion"
+        description="Gives control of an enemy or neutral creep, and gives it bonus hit points."
+        ability="Target Unit"
+        affects="Creeps"
+        blackKingBar="0"
+        cooldown="30/26/22/18"
+        mana="100">
+        <abilityAttributes
+            name="Range"
+            value="800"/>
+        <abilityAttributes
+            name="Max Units"
+            value="1/1/2/3"/>
+        <abilityAttributes
+            name="Health Bonus"
+            value="75/150/225/300"/>
+        <aghanims description="Ancient creeps can be Persuaded." />
+        <altDescription description="Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted." />
+        <notes>
+            <note>Ancient creeps can be Persuaded when Chen owns Aghanim's scepter (maximum 1 Ancient Creep per level of Hand of God).</note>
+            <note>When persuading a new creep above the max unit count, the oldest persuaded unit will die.</note>
+            <note>If an enemy has dominated a creep with the item Helm of the Dominator, you can use Holy Persuasion on it, thus gaining control over it.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Hand of God"
+        description="Fully regenerates any creeps under Chen's control and heals all allied heroes on the map."
+        ability="No Target"
+        affects="Allies"
+        blackKingBar="0"
+        cooldown="160/140/120 (30*)"
+        mana="200/300/400">
+        <abilityAttributes
+            name="Health"
+            value="200/300/400"/>
+        <aghanims description="Reduces cooldown." />
+        <altDescription description="Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism." />
+        <notes>
+            <note>Heals magic immune units.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>You should try to end the game as soon as possible, because Chen's effectiveness diminishes as the game progresses.</tip>
+        <tip>Chen is a good jungler and can take any camp at level 1 if you level Holy Persuasion.</tip>
+        <tip>While jungling, don't be too selective about the creeps. Just persuade the higher level ones in the large creep camps and persuade new creeps if yours are on low HP.</tip>
+        <tip>Try to keep your creeps group in a Hotkey of some sort (Command groups, tabbing, selecting all other units) and also have another hotkey for both creeps and Chen.</tip>
+        <tip>Always try to send in your creeps while keeping Chen at a safe distance (don't send him in the middle of a battle with your creeps) and keep an eye on him and his hp while controlling the creeps.</tip>
+        <tip>Always try to keep an eye on the minimap in case you have to use Hand of God to heal a teammate. Try always to have enough mana to use Hand of God when it isn't on cooldown, as it may be needed at any time.</tip>
+        <tip>For jungling, it's useful to have a Satyr Tormentor, as it makes your creeps regenerate HP faster and can use an AoE spell.</tip>
+        <tip>For ganking, it's very useful to have at least a Centaur Conqueror / Hellbear Smasher (for the stomp stun/slow) and a Dark Troll Summoner (for the Ensnare so the centaur can get positioned).</tip>
+        <tip>You can have guaranteed ganks at level 1 or 2 if you get either a Centaur Conqueror or an Hellbear Smasher and your ally has a stun or a slow.</tip>
+        <tip>For pushing, it's very useful to have either Satyr Tormentors (with their nuke they take down creep waves easily), an Wildwing Ripper (its Tornado takes down creeps fast) or even Centaur Conquerors (they are tanky).</tip>
+        <tip>For team battles, Centaur Conquerors are the best option, as they can keep the enemy stunned for up to 6 seconds if Chen has gathered more than one.</tip>
+        <tip>In team battles, try to use your Mekansm (if you have it) before Hand of God as it gives an armor boost too.</tip>
+        <tip>Try to use either Mekansm or Hand of God when a few of your allies are damaged to maximize the healing, rather than just healing a single damaged ally while the rest are with full hp.</tip>
+        <tip>You can try to kill Roshan around level 6-7 since your creeps can tank his damage very well and you can instant heal them with your ultimate. However, this is usually not a good idea as Chen is a support and is needed in teamfights to heal and support his allies. It is advised to give Roshan to your carry instead.</tip>
+        <tip>If the game drags on until late game (which you should avoid and try to finish the game fast) you should persuade an Alpha Wolf, and make it follow your carry, as it will greatly increase his/her damage dealt.</tip>
+        <tip>Be especially wary of Doom, Lifestealer, Enchantress and Clinkz as they can take away your creeps instantly and with the help of a Hand of Midas two of your creeps can be destroyed before they even get near the enemy. Clinkz is a special mention as due to the fact that the creeps Che penrsuades have increased HP Clinkz not only gets a huge HP boost from consuming your creeps but also a large damage boost on top of it using his ultimate. The same can be said about Naix if he is not properly locked down as he can use the increased HP of your creeps to not only Infest your creeps to heal himself on the spot but also deal nuke damage back to you and all of your allies present. Doom and Enchantress on the other hand while incapable of healing themselves using your creep can instead use the abilities of your own creeps against you as Doom's Devour ability grants him the abilities of the creep he consumes while Enchantress' enchant simply takes the creep from under your control.</tip>
+        <tip>Also be wary if the enemy team has an Ancient Apparition as Ice Blast prevents your ultimate ability from healing the affected units.</tip>
+        <tip>Although the lifesteal isn't very useful to Chen, building a Helm of the Dominator will allow you to control an additional creep.</tip>
+    </tips>
+</hero>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Beastmaster</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Karroch the Beastmaster is a melee strength hero whose versatility allows him to take on multiple roles. His hawks provide free flying vision and his boars can harass, slow, and stack jungle camps. His ultimate, Primal Roar, is the longest lasting single reliable stun in the game. He is an effective support with good disabling ability in team fights. His strengths lie primarily in the slow debuff his Boar inflicts and ability to easily provide vision at crucial locations on the map. His ultimate, the stunning Primal Roar and Wild Axes allow him to deal massive damage at a distance. Though he is able to easily take down undefended targets in the early game, most of his abilities do not directly combo with each other, although the debiliating effects he brings to a fight can greatly assist allies (along with his passive attack speed boost aura).</description>
+    <roles>
+        <role>Initiator</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+    </roles>
+    <attributes>
+        <strengthBase>23</strengthBase>
+        <strengthGain>2.2</strengthGain>
+        <agilityBase>18</agilityBase>
+        <agilityGain>1.6</agilityGain>
+        <intelligenceBase>16</intelligenceBase>
+        <intelligenceGain>1.9</intelligenceGain>
+        <damageMinimum>60</damageMinimum>
+        <damageMaximum>64</damageMaximum>
+        <baseMoveSpeed>310</baseMoveSpeed>
+        <baseArmor>4.52</baseArmor>
+    </attributes>
+    <ability
+        name="Wild Axes"
+        description="Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        cooldown="13"
+        mana="120">
+        <abilityAttributes
+            name="Range"
+            value="1300"/>
+        <abilityAttributes
+            name="Damage"
+            value="70/100/130/160"/>
+        <altDescription description="While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries." />
+        <notes>
+            <note>This ability destroys trees.</note>
+            <note>Doesn't damage ethereal units.</note>
+            <note>Damage is not blocked by damage block.</note>
+            <note>The flying axes give flying vision.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Call of the Wild (Hawk)"
+        description="Beastmaster calls a watchful Hawk."
+        ability="No Target"
+        affects="Self"
+        cooldown="40"
+        mana="15">
+        <abilityAttributes
+            name="Level 1"
+            value="Summons a Scout Hawk."/>
+        <abilityAttributes
+            name="Level 2"
+            value="Summons a Scout Hawk."/>
+        <abilityAttributes
+            name="Level 3"
+            value="Summons a Greater Hawk."/>
+        <abilityAttributes
+            name="Level 4"
+            value="Summons a Greater Hawk."/>
+        <abilityAttributes
+            name="Hawk Duration"
+            value="60"/>
+        <altDescription description="After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need." />
+        <notes>
+            <note>The hawk gives 30/30/65/65 gold.</note>
+            <note>Uses a 0.3 cast point instead of the normal 0.5 cast point.</note>
+            <note>Will not destroy a previous summon if this ability is used again before the Hawk's duration expires.</note>
+            <note>Neither triggers, nor takes damage from Land Mines.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Call of the Wild (Boar)"
+        description="Beastmaster calls a powerful Boar."
+        ability="No Target"
+        affects="Self"
+        cooldown="40"
+        mana="15">
+        <abilityAttributes
+            name="Level 1"
+            value="Not available."/>
+        <abilityAttributes
+            name="Level 2"
+            value="Summons a Lesser Boar."/>
+        <abilityAttributes
+            name="Level 3"
+            value="Summons a Lesser Boar."/>
+        <abilityAttributes
+            name="Level 4"
+            value="Summons a Greater Boar."/>
+        <abilityAttributes
+            name="Boar Duration"
+            value="0/60/60/60"/>
+        <altDescription description="After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need." />
+        <notes>
+            <note>The boar gives 26-38 gold.</note>
+            <note>Uses a 0.3 cast point instead of the normal 0.5 cast point.</note>
+            <note>Will not destroy a previous summon if this ability is used again before the Boar's duration expires.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Inner Beast"
+        description="Untaps the inner fury of allies, passively increasing their attack speed."
+        ability="Aura"
+        affects="Allies">
+        <abilityAttributes
+            name="Radius"
+            value="900"/>
+        <abilityAttributes
+            name="Bonus Attack Speed"
+            value="15/25/35/45"/>
+        <altDescription description="Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom." />
+        <notes>
+            <note>Affects all summons and illusions.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Primal Roar"
+        description="A deafening roar that deals damage and stuns the target enemy unit, while opening a path between Beastmaster and his prey. Nearby enemies also take damage and have their movement speed and attack rate reduced. Upgradable by Aghanim's Scepter."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="1"
+        linkensSphere="1"
+        diffusalBlade="1"
+        cooldown="80/75/70 (45*)"
+        mana="150/175/200">
+        <abilityAttributes
+            name="Range"
+            value="600 (950*)"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="3/3.5/4"/>
+        <abilityAttributes
+            name="Radius"
+            value="300"/>
+        <abilityAttributes
+            name="Movement Slow"
+            value="50%"/>
+        <abilityAttributes
+            name="Attack Slow"
+            value="50%"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="2/3/4"/>
+        <abilityAttributes
+            name="Damage"
+            value="200/250/300"/>
+        <blackKingBar description="Secondary targets under effect of Spell Immunity will be knocked back but not slowed." />
+        <linkensSphere description="Blocked on primary target. No interaction otherwise." />
+        <diffusalBlade description="Side target's slow can be purged." />
+        <aghanims description="Decreases cooldown, increases cast range." />
+        <altDescription description="The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies." />
+        <notes>
+            <note>Only enemy units are shoved aside from the path of the roar.</note>
+            <note>Primal Roar can be used on Couriers to stun it, but it won't be damaged. Couriers are also not a valid target for the pushback.</note>
+            <note>Knockback speed is 500ms and distance is 300 units, so the knockback duration is 0.6 seconds.</note>
+            <note>The pushback and slow have a dynamic range, based on the distance between you and the primary target. The further away the target, the further the pushback and slow will reach beyond the target, and even a bit behind Beastmaster.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>His Wild Axes skill is a powerful farming tool.</tip>
+        <tip>Beastmaster can stack/farm ancients incredibly effectively with Wild Axes since it can affect magic immune units. This can be very effectively used in Dire offlane (bottom), as he doesn't need to leave the lane to do so.</tip>
+        <tip>Although his abilities have a long range, Blink Dagger is still useful for lining up Primal Roar.</tip>
+        <tip>Beastmaster works well alongside carries who already have attack power but lack attack speed (Like Sven Sven and Tiny Tiny) due to his attack speed boosting aura.</tip>
+        <tip>If you buy Assault Cuirass, it will allow your main carry to focus on raw damage items, as he will already have 65 bonus attack speed from Beastmaster. It will also increase your whole team's survivability and physical damage output.</tip>
+    </tips>
+</hero>

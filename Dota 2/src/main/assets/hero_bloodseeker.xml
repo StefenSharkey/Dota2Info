@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Bloodseeker</name>
+    <damageType>Melee</damageType>
+    <attribute>Agility</attribute>
+    <faction>Dire</faction>
+    <description>Strygwyr the Bloodseeker is a melee agility hero imbued with dreadful powers to fuel violence and rip enemies apart in the heat of close combat. He can drive targets into a maddened Bloodrage, increasing the damage of their attacks, and allowing them to heal their wounds by killing their enemies. His speed is unmatched when he senses the blood of the dying, and from this perception none can escape. By using Blood Rite, he can create a ritual field where his foes will be silenced and damaged in the process. His ultimate, Rupture, sunders the skin of his victims, causing them to trail their life force behind if they dare to flee.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Jungler</role>
+    </roles>
+    <attributes>
+        <strengthBase>23</strengthBase>
+        <strengthGain>2.0</strengthGain>
+        <agilityBase>24</agilityBase>
+        <agilityGain>3.0</agilityGain>
+        <intelligenceBase>18</intelligenceBase>
+        <intelligenceGain>1.7</intelligenceGain>
+        <damageMinimum>53</damageMinimum>
+        <damageMaximum>59</damageMaximum>
+        <baseMoveSpeed>290</baseMoveSpeed>
+        <baseArmor>3.36</baseArmor>
+    </attributes>
+    <ability
+        name="Bloodrage"
+        description="Drives a unit into a bloodthirsty rage during which a unit deals, and takes, increased damage. Heroes affected by Bloodrage will be healed for 25% of the max health of any units they kill. Heroes affected by Bloodrage when killed will heal 25% of their max health to their killer."
+        ability="Target Unit"
+        affects="Units"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="1"
+        cooldown="12/10/8/6">
+        <abilityAttributes
+            name="Range"
+            value="800"/>
+        <abilityAttributes
+            name="Duration"
+            value="9/10/11/12"/>
+        <abilityAttributes
+            name="Amplified Damage"
+            value="25%/30%/35%/40%"/>
+        <altDescription description="Strygwyr shares his animalistic thirst for bloodshed." />
+        <notes>
+            <note>Has a cast point of 0.2 second.</note>
+            <note>Bloodrage can be cast on enemy and allied units, as well as Bloodseeker himself.</note>
+            <note>Amplifies all damage taken and dealt by the buffed unit, including damage from spells and items.</note>
+            <note>The cooldown is shorter than the duration, this allows you to have Bloodrage on up to 2 units.</note>
+            <note>Having max level Bloodrage simultaneously on Bloodseeker and the enemy allows for up to 96% amplification.</note>
+            <note>Does not change the values of abilities that use an independent source of damage.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Blood Rite"
+        description="Bloodseeker baptizes an area in sacred blood. After 3 seconds the ritual completes, causing any enemies caught in the area to take damage and become silenced."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Pure"
+        blackKingBar="2"
+        diffusalBlade="2">
+        <abilityAttributes
+            name="Range"
+            value="1500"/>
+        <abilityAttributes
+            name="Radius"
+            value="600"/>
+        <abilityAttributes
+            name="Silence Duration"
+            value="3/4/5/6"/>
+        <abilityAttributes
+            name="Damage"
+            value="120/160/200/240"/>
+        <altDescription description="The Flayed Twins are ever willing to aid those who spill blood upon the field of battle." />
+        <notes>
+            <note>The affected area is visible to enemies.</note>
+            <note>Grants vision over the center of the affected area for its duration.</note>
+            <note>The delay consists of 0.4 seconds cast time +2.6 seconds effect delay.</note>
+            <note>With Max level Bloodrage on Bloodseeker Blood Rite deals 168/224/280/336 pure damage.</note>
+            <note>With Max level Bloodrage applied on both Bloodseeker and the enemy unit Blood Rite deals 235/313/392/470 pure damage.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Thirst"
+        description="Enables Bloodseeker to sense enemy Heroes whose health is below a certain percentage wherever they are, giving him True Sight on that unit, increased movement speed and increased damage. Bonuses stack per Hero."
+        ability="Passive"
+        affects="Self"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Radius"
+            value="Global"/>
+        <abilityAttributes
+            name="Duration"
+            value="Until no nearby valid target exists"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="10%/20%/30%/40%"/>
+        <abilityAttributes
+            name="Bonus damage"
+            value="10/20/30/40"/>
+        <abilityAttributes
+            name="Thirst HP percentage detection"
+            value="30% of target HP"/>
+        <altDescription description="Strygwyr becomes frenzied when blood is spilled." />
+        <notes>
+            <note>Thirst is not triggered by Illusions.</note>
+            <note>When active, Bloodseeker can go above the normal movement speed cap of 522.</note>
+            <note>Does not grant full vision on detected enemy heroes, it only shows their model and their icon on the minimap.</note>
+            <note>Thirst shows a debuff and a visible effect to the enemy when they are revealed.</note>
+            <note>Thirst scales linearly from 0 bonus at 100% health to full bonus at 1% health.</note>
+            <note>Thirst bonuses are independent of vision granted at 30%.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Rupture"
+        description="Causes an enemy unit's skin to rupture. If the unit moves, it takes a percentage of the distance traveled as damage. The damage is dealt through spell immunity."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Pure"
+        blackKingBar="0"
+        linkensSphere="2"
+        diffusalBlade="0"
+        cooldown="60"
+        mana="150/200/250">
+        <abilityAttributes
+            name="Range"
+            value="1000"/>
+        <abilityAttributes
+            name="Duration"
+            value="12"/>
+        <abilityAttributes
+            name="Distance Moved Damage"
+            value="20%/40%/60%"/>
+        <altDescription description="When the Bloodseeker hunts you, injuries become fatalities." />
+        <notes>
+            <note>Has a cast point of 0.6 seconds.</note>
+            <note>If the affected unit moves more than 1300 distance in 0.25 seconds, it will not receive any damage.</note>
+            <note>Using Force Staff on affected unit will deal 120/240/360 damage.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Bloodseeker, whilst being an efficient jungler and dual laner, is also a prime choice for solo mid, as it gives him easy access to the side lanes for ganking.</tip>
+        <tip>Reaching level six as quickly as possible should be a priority of the player; ganks should not usually be attempted before he has his ultimate.</tip>
+        <tip>Rupture is one of the best abilities to intercept an enemy hero that is chasing you or your allies, especially since it goes through spell immunity and does full damage regardless of armor and magic resistance. Heroes with high mobility like Anti-Mage, Lycan, Luna, Queen of Pain or Night Stalker suffer devastating damage when Ruptured as they are chasing or running away.</tip>
+        <tip>When ganking it is sometimes best to save your Rupture for when your target begins running away rather than right at the beginning of the gank.</tip>
+        <tip>Using Blood Rite in conjunction with Rupture allows for more precise aiming of the skill.</tip>
+        <tip>Each individual Meepo will add to the Thirst bonus stack.</tip>
+        <tip>Skull Basher or Abyssal Blade and even Eul's Scepter of Divinity can opt to be taken if your team lacks disables and your enemies are using Teleportation spells like Town Portal Scrolls to escape your onslaught.</tip>
+        <tip>Force Staff, in conjunction with Rupture can cause significant burst damage (120/240/360) to enemy heroes by forcing them to move. It also serves as a quick escape tool, something that Bloodseeker does not naturally possess. However, it should be noted that the burst damage is relatively little to the level of your enemies and the level of your ultimate, and may just potentially push your target to safety.</tip>
+        <tip>Helm of the Dominator can introduce interesting new utility if Bloodrage is used as a steroid.</tip>
+        <tip>Armlet of Mordiggian can be picked up if you are confident in your killing power. It synergizes well with Blood Bath and Bloodrage's damage increase, but can also make you easier to kill, especially when focused.</tip>
+        <tip>Rod of Atos can give Bloodseeker even better chasing ability and can be bought if you don't want to rely on Sange's random Maim chance. However, the 25 bonus Intelligence is wasted on Bloodseeker.</tip>
+        <tip>Shadow Blade can be used to surprise your enemies, especially when they are alone. Backstab damage, movement speed and attack speed boosts your hunting ability along with your Thirst.</tip>
+    </tips>
+</hero>

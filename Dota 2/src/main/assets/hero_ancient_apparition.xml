@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Ancient Apparition</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Dire</faction>
+    <description>Kaldr the Ancient Apparition is a ranged intelligence hero. This spell-caster elemental being possesses high range, great attributes and strong semi-spammable spells. He is commonly played as a ganker or support role and due to his high agility and an attack enhancing spell, he can be played as a Semi-Carry too. His ultimate is one of the most devastating spells in the game as it can hit multiple units, has global range, freezes health regeneration, and instantly kill units if low on life.</description>
+    <roles>
+        <role>Support</role>
+        <role>Disabler</role>
+    </roles>
+    <attributes>
+        <strengthBase>18</strengthBase>
+        <strengthGain>1.4</strengthGain>
+        <agilityBase>20</agilityBase>
+        <agilityGain>2.2</agilityGain>
+        <intelligenceBase>25</intelligenceBase>
+        <intelligenceGain>2.6</intelligenceGain>
+        <damageMinimum>44</damageMinimum>
+        <damageMaximum>54</damageMaximum>
+        <baseMoveSpeed>295</baseMoveSpeed>
+        <baseArmor>1.80</baseArmor>
+    </attributes>
+    <ability
+        name="Cold Feet"
+        description="Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 4 seconds."
+        ability="Target Unit"
+        affects="Enemy Units"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="1"
+        cooldown="15/13/11/9"
+        mana="150">
+        <abilityAttributes
+            name="Range"
+            value="700"/>
+        <abilityAttributes
+            name="Duration"
+            value="4"/>
+        <abilityAttributes
+            name="Damage Over Time"
+            value="37.5/50/62.5/75"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="1.25/2/2.75/3.5"/>
+        <abilityAttributes
+            name="Break Distance"
+            value="740"/>
+        <diffusalBlade description="Initial debuff can be purged; the stun cannot." />
+        <altDescription description="Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity." />
+        <notes>
+            <note>Deals 37.5/50/62.5/75 magic damage at 0.8, 1.6, 2.5, 3.4 seconds (Total Damage: 150, 200, 250, 300).</note>
+            <note>Effect ends when the unit either dies, walks 740 distance from the mark or has the debuff removed.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Ice Vortex"
+        description="Creates a vortex of icy energy that slows movement speed and increases magic damage done in its range. Lasts 16 seconds."
+        ability="Target Point"
+        affects="Enemy Units"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="4"
+        mana="80/90/100/110">
+        <abilityAttributes
+            name="Range"
+            value="1500"/>
+        <abilityAttributes
+            name="Radius"
+            value="275"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="15%/20%/25%/30%"/>
+        <abilityAttributes
+            name="Magic Resistance Reduction"
+            value="15%/20%/25%/30%"/>
+        <abilityAttributes
+            name="Duration"
+            value="16"/>
+        <altDescription description="Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle." />
+        <notes>
+            <note>New units are checked for every 0.5 seconds.</note>
+            <note>Does not affect Visage's Familiars.</note>
+            <note>Provides vision in the area.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Chilling Touch"
+        description="A frigid gust enchants allied heroes, granting them bonus magical damage for a given number of physical attacks, while slowing their attack speed slightly. Lasts 30 seconds."
+        ability="Target Point"
+        affects="Allied Heroes"
+        damage="Magical"
+        blackKingBar="2"
+        diffusalBlade="0"
+        cooldown="50/42/34/26"
+        mana="110/120/130/140">
+        <abilityAttributes
+            name="Range"
+            value="800"/>
+        <abilityAttributes
+            name="Radius"
+            value="525"/>
+        <abilityAttributes
+            name="Duration"
+            value="3/4/5/6 attacks or 30 seconds"/>
+        <abilityAttributes
+            name="Bonus Magical Damage"
+            value="50/60/70/80"/>
+        <abilityAttributes
+            name="Attack Speed Reduction"
+            value="20"/>
+        <altDescription description="The Ancient Apparition's eternal knowledge brings a frigid enchantment to his allies." />
+        <notes>
+            <note>Extra damage is its own instance of damage as opposed to added to the attack.</note>
+            <note>Only works against heroes and creeps.</note>
+            <note>If an attack is interrupted before dealing damage the count of attacks is not lowered.</note>
+            <note>Each ally buffed can deal up to 150/240/350/480 bonus damage, and if all 5 allies are buffed, this can go up to 750/1200/1750/2400 damage.</note>
+            <note>The buff is always applied to Ancient Apparition even if he is not within the target area.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Ice Blast"
+        description="An explosive ball of icy hail that can be used to strike targets anywhere on the map. On first use, Kaldr launches a tracer towards the targeted location. The second use marks the current location of the blast, upon which the actual projectile is launched - the greater the distance, the larger the radius affected. It deals damage to enemy units and applies a frostbite curse to units in and around the area that prevents regeneration or healing. Frostbitten units will take minor damage over time; if the units drop below a certain percentage of hitpoints, they'll instantly shatter."
+        ability="Target Point"
+        affects="Enemy Units"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="40"
+        mana="100/125/150">
+        <abilityAttributes
+            name="Range"
+            value="Global"/>
+        <abilityAttributes
+            name="Radius"
+            value="See notes"/>
+        <abilityAttributes
+            name="Frostbite Duration"
+            value="8/9/10 (17*)"/>
+        <abilityAttributes
+            name="Frostbite Damage Per Second"
+            value="12.5/20/32"/>
+        <abilityAttributes
+            name="HP for Kill"
+            value="10%/11%/12%"/>
+        <abilityAttributes
+            name="Damage"
+            value="250/350/450"/>
+        <aghanims description="Increases duration." />
+        <altDescription description="Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power." />
+        <notes>
+            <note>The radius for the damage is 250+50*TimeTraveled (by the second projectile) capped at 975 (14.5seconds, 21500 units), The radius for HP freeze is 275 along the path of the second projectile and upon the final strike area.</note>
+            <note>The instant kill doesn't work on illusions.</note>
+            <note>First projectile has a 1500 movement speed, stops when the caster dies or casts the second part of the projectile.</note>
+            <note>First projectile clears fog in a 500 radius circle at its end.</note>
+            <note>Kill will be granted to the source of the damage that triggers the shatter.</note>
+            <note>HP freeze prevents all kinds of healing. Sunder will still work, since it is not properly a heal, but a "HP exchange".</note>
+            <note>The shatter damage will not kill units affected by Shallow Grave.</note>
+            <note>Total damage : 350/530/770 (462.5/690/994*)</note>
+            <note>Cannot be dispelled by anything.</note>
+            <note>Tracer can be seen by true sight. It appears as a red dot on the minimap when passing towers and sentries or a hero with a gem. It is possible to see the tracer as an enemy hero, without true sight: it is seen as a feeble distortion on the map when the tracer passes through. (Possible bug)</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Use Cold Feet to harass in the early game, but mind your mana pool.</tip>
+        <tip>Eul's Scepter of Divinity in combination with Cold Feet can almost always guarantee a stun (though at the cost of Cold Feet's damage over time). It also allows you to land a short-range Ice Blast in quick succession.</tip>
+        <tip>Chilling Touch can be useful to max along with Cold Feet if you are laning with another ranged hero. The harass is extremely potent and can often push your enemies out of the lane.</tip>
+        <tip>Ice Vortex can be used to slow enemies when chasing or being chased, as well as reduce their resistance. It also gives vision, so it can be used to scout the Roshan pit, ancients, trees (if someone jukes into them), high ground, and so on. The cast range is very long, so all of this can be done from a safe distance. You can even scout Roshan from the Dire Secret Shop!</tip>
+        <tip>Ice Blast is a multi-purpose spell that can be cast to anywhere on the map. Use it to aid your allies in ganks, initiate team battles, finish off low-HP heroes, and clear large creep waves.</tip>
+        <tip>Remember that Ice Blast prevents all healing effects from regenerating HP. Landing this spell on the enemy team at the start of a team fight will prevent healers such as Dazzle, Chen and Omniknight or a Mekansm carrying hero from regenerating any hp to their team. The debuff reaches its ideal effect especially if you have an Aghanim's Scepter.</tip>
+        <tip>Ancient Apparition can solo mid in the early game, as he has all the necessary tools to control his lane. AA will look to start ganking as soon as possible and use the early Ice Blasts to his team's advantage.</tip>
+        <tip>In spite of his ability to solo, AA is still very potent in a dual or tri lane. Cold Feet functions well as a follow-up to an ally's stun, and Chilling Touch is able to buff every one of AA's allies, effectively multiplying its effectiveness by the number of allies you have available.</tip>
+        <tip>All of Ancient Apparition's spells have incredible range. Try to avoid close combat when possible.</tip>
+        <tip>You don't have an escape mechanism, so having vision of your opponents is crucial for you to survive. Ask your teammates to ward or do it yourself whenever possible.</tip>
+    </tips>
+</hero>

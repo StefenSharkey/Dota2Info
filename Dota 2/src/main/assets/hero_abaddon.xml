@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Abaddon</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Dire</faction>
+    <description>Abaddon the Lord of Avernus is a melee strength Hero known as one of the most versatile characters in Dota due to his rather low mana dependence, short spell cooldowns and a large number of viable item choices. His ability to help sustain his allies and himself plus his strong tower diving capacity give him solid lane presence. Many of his abilities offer a large sum of utility, which makes him a strong support Hero. Mist Coil serves as both a single target nuke and heal that helps shift the sustainability of both allied and enemy heroes in a lane at his will, though sacrificing a portion of his own health. Aphotic Shield holds as one of the most useful abilities in the game, able to shield a target from some damage while also able to reflect said damage to a huge area. The most important aspect is how it is able to dispel many status effects such as slows and stuns. His other abilities allow him to become a mix between a semi-carry and tank. Abaddon's passive, Curse of Avernus, allows his attacks to not only slow down his enemy, but also increase the attack and movement speed of any ally attacking the same target. With his ultimate, Borrowed Time, Abaddon is able to shift all non-HP removal damage he receives into health. When not on cooldown, Borrowed Time may activate passively when his health falls under a certain threshold, even under the most dire situations. Due to his powerful spells and versatility, Abaddon is an excellent addition to any team.</description>
+    <roles>
+        <role>Durable</role>
+        <role>Support</role>
+        <role>Carry</role>
+    </roles>
+    <attributes>
+        <strengthBase>23</strengthBase>
+        <strengthGain>2.7</strengthGain>
+        <agilityBase>17</agilityBase>
+        <agilityGain>1.5</agilityGain>
+        <intelligenceBase>21</intelligenceBase>
+        <intelligenceGain>2.0</intelligenceGain>
+        <damageMinimum>55</damageMinimum>
+        <damageMaximum>65</damageMaximum>
+        <baseMoveSpeed>310</baseMoveSpeed>
+        <baseArmor>1.38</baseArmor>
+    </attributes>
+    <ability
+        name="Mist Coil"
+        description="Abaddon releases a coil of death that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health."
+        ability="Target Unit"
+        affects="Units"
+        damage="Magical"
+        blackKingBar="1"
+        linkensSphere="2"
+        cooldown="5"
+        mana="50/60/70/80">
+        <abilityAttributes
+            name="Range"
+            value="800"/>
+        <abilityAttributes
+            name="Heal/Damage to Target"
+            value="100/150/200/250"/>
+        <abilityAttributes
+            name="Damage to Abaddon"
+            value="75/100/125/150"/>
+        <blackKingBar description="Can be cast on Spell Immune allies." />
+        <altDescription description="A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will." />
+        <notes>
+            <note>The damage to Abaddon is pure damage.</note>
+            <note>Self-damage from Mist Coil can burst Aphotic Shield.</note>
+            <note>Abaddon can deny himself with this ability.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Aphotic Shield"
+        description="Summons dark energies around an ally unit, creating a shield that absorbs a set amount of damage before expiring. When the shield is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it. Removes certain types of negative buffs and stuns on cast."
+        ability="Target Unit"
+        affects="Allied Units"
+        damage="Magical"
+        blackKingBar="1"
+        diffusalBlade="2"
+        cooldown="12/10/8/6"
+        mana="100/105/110/115">
+        <abilityAttributes
+            name="Range"
+            value="500"/>
+        <abilityAttributes
+            name="Radius"
+            value="675"/>
+        <abilityAttributes
+            name="Duration"
+            value="15"/>
+        <abilityAttributes
+            name="Absorbed Damage"
+            value="110/140/170/200"/>
+        <blackKingBar description="Blocked by magic immunity, but not removed by becoming magic immune." />
+        <diffusalBlade description="If purged, it will explode and deal damage in its radius." />
+        <altDescription description="The powers of the black mist rise to absorb attacks like the black mist absorbs light." />
+        <notes>
+            <note>If under the effects of Borrowed Time, Abaddon's own Aphotic Shield will not burst.</note>
+            <note>Will automatically detonate and replace any existing Aphotic Shield already surrounding a target.</note>
+            <note>Aphotic Shield will burst at the end of its duration if it has not absorbed sufficient damage.</note>
+            <note>It will always burst for the maximum damage, regardless of how much was absorbed.</note>
+            <note>Damage is calculated after all reductions.</note>
+            <note>Can be used on siege creeps.</note>
+            <note>It will not deal damage to invisible enemy units.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Curse of Avernus"
+        description="Abaddon strikes an enemy with chilling power on each attack, causing all units who attack the slowed enemy to gain increased movement speed, along with faster attack speed, for a limited time."
+        ability="Passive"
+        affects="Units"
+        blackKingBar="0"
+        diffusalBlade="2"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Duration of Slow"
+            value="2.5"/>
+        <abilityAttributes
+            name="Duration of Bonuses"
+            value="4.5"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="5%/10%/15%/20%"/>
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="5/10/15/20"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="15%"/>
+        <abilityAttributes
+            name="Bonus Attack Speed"
+            value="10/20/30/40"/>
+        <altDescription description="The curse that slows an enemy, speeds an ally." />
+        <notes>
+            <note>The Curse of Avernus buff is placed on Abaddon at the start of his attack, so he gets the bonus on his first hit. The debuff is only applied on hit.</note>
+            <note>Works partially on towers. Abaddon will receive the buff from attacking a tower, however no debuff is applied to the tower so no other targets may benefit from it.</note>
+            <note>Can affect allies, including creeps being denied. Enemies attacking an ally target affected by the debuff benefit from the Curse of Avernus buff.</note>
+            <note>Affects magic immune targets.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Borrowed Time"
+        description="When activated, most negative buffs will be removed and any damage you take will heal instead of damaging you. If the ability is not on cooldown, it will passively activate when your hitpoints drop below a certain threshold."
+        ability="No Target"
+        affects="Self"
+        diffusalBlade="0"
+        cooldown="60/50/40">
+        <abilityAttributes
+            name="Duration"
+            value="3/4/5 (5/6/7*)"/>
+        <abilityAttributes
+            name="Radius (With Aghanim's Scepter)"
+            value="900"/>
+        <aghanims description="Increases duration and redirects 35% of all damage dealt to nearby allied heroes in a 900 unit radius to Abaddon when active."/>
+        <altDescription description="The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew." />
+        <notes>
+            <note>Borrowed Time will activate itself if you suffer damage while you have less than 400 HP.</note>
+            <note>Upon casting Borrowed Time, Abaddon will effectively dodge any projectiles currently flying at him.</note>
+            <note>When activated it removes most negative buffs from Abaddon, including stuns.</note>
+            <note>Borrowed Time can be manually activated.</note>
+            <note>Borrowed Time is activated during Duel, if Abbadon hits the HP-threshold.</note>
+            <note>It is possible to kill Abaddon without triggering Borrowed Time's auto-activation if he were to take damage higher than his remaining health, due to the fact that on activation of Borrowed Time, Abaddon takes the damage that activated it and then heals double the amount. Any other damage taken during the duration of Borrowed Time will deal 0 damage and heal instead.</note>
+            <note>Culling Blade and Ice Blast will kill Abaddon if he reaches the health threshold, even with Borrowed Time active. Ice Blast also prevents Abaddon from being healed by attacks, but Abaddon will not take any damage either for Borrowed Time's duration.</note>
+            <note>If Abaddon is doomed before he hits the HP threshold, Borrowed Time will not activate.</note>
+            <note>With Aghanim's Scepter, the effective health of Abaddon's nearby allies will be increased by 53.85%.</note>
+            <note>While Borrowed Time is active Abaddon cannot reflect damage through Blade Mail.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>If you are playing the team's support hero it is usually wise to max Mist Coil and Aphotic Shield first before getting any points in Curse of Avernus as your first two abilities provide a lot of utility early game ranging from healing, to debuff removal, protection and even denying yourself if needed.</tip>
+        <tip>Remember that Aphotic Shield can remove stuns and slows from its target, you can use this to save your allies from many certain death situations.</tip>
+        <tip>Abaddon is a very durable hero due to his unique ultimate, Borrowed Time, however do not let this fool you into diving enemies where retreating is the better option.</tip>
+        <tip>Casting Aphotic Shield upon the same target before its duration has ended will automatically detonate the shield before reapplying another. Combining this tactic with its massive radius can help to increase your DPS in a teamfight or finish off enemies during a chase.</tip>
+        <tip>During the early game you can use Aphotic Shield on creeps that are soon to die causing any heroes who move in for the last hit to take damage. With itemization geared toward mana regeneration this can be maintained as harassment in an Abaddon's lane support tactic. Even if the target hero realizes your tactic you can still burst your Shield by attacking the creep yourself.</tip>
+        <tip>Due to his ultimate Abaddon is one of the few heroes that can dive towers even in early stages of the game, to add with his ability to chase down heroes you may also want to purchase a Mask of Madness as the extra damage Abaddon takes from activating it will not matter because of Borrowed Time.</tip>
+        <tip>Most veteran players will pay attention to when Abaddon's ultimate activates and will not attack until its duration has expired, you can however heal yourself using Mist Coil during this time, or by putting yourself among enemy creeps or damage-over-time abilities that have already been cast such as Jakiro's Macropyre. Pay attention however that your ultimate has a relatively short duration.</tip>
+        <tip>Sometimes the best way to deal with Rupture is simply to run. Though Rupture will always outlast a manually triggered Borrowed Time, you still have total control of how much distance you can cover, as well as how much health you stand to lose or gain during Bloodseeker's ultimate.</tip>
+        <tip>Since Culling Blade can kill Abaddon even through Borrowed Time you might be able to bait out the ability from an enemy Axe by manually activating your ultimate just before you hit the threshold.</tip>
+        <tip>If you are planning on playing the team carry early points in Curse of Avernus will give you much needed chasing power and increased damage output and will also apply the same to your allies. In this case it might be a good choice to max Aphotic Shield before Mist Coil because you are likely to be diving the enemy a lot which will assure that your shield will burst quickly, allowing you to repeatedly cast it on yourself. Though trying to be the carry for the team is not recommended as Abaddon has much more utility as one of the most durable support heroes in the game.</tip>
+        <tip>Curse of Avernus can have defensive uses as well, such as hitting an enemy that is chasing your ally to slow them down. You can also use this to save yourself as well under certain circumstances as hitting your target will reduce their movement speed by 20% while give you a 15% movement speed buff. That short boost of movement speed can sometimes save you or your allies.</tip>
+        <tip>The on-hit buff and debuff of Curse of Avernus applies to any target that Abaddon may hit, including your own creeps. This means that enemy creeps will gain a speed boost after attacking one of your creeps with you. If you took an early point in Curse, use this to tinker with lane equilibrium during the laning phase.</tip>
+        <tip>Note that Curse of Avernus's debuff fully stacks with unique attack modifiers. Considering this you may sometimes want to buy an Orb of Venom or Eye of Skadi which gives a combined movement speed change of 22% for OoV at level 1 Curse and 75% for a Skadi with max Curse. When playing a carry Abaddon this aids you greatly with chasing down heroes. The same can be said with a Sange and a completed Sange and Yasha that gives you both a movement speed boost and an additional slow.</tip>
+        <tip>Against less experienced players it may be possible to initiate a team fight with Abaddon by diving into the enemy and absorbing most of their spells and disables since in most cases Abaddon cannot be focused down before his ultimate. This will allow your teammates to enter the fray without the fear of being disabled themselves. This strategy is very unlikely to fool more veteran players.</tip>
+    </tips>
+</hero>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Bane</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Dire</faction>
+    <description>Atropos the Bane Elemental, also known simply as Bane, is a ranged intelligence Hero, possessing dark and nightmarish abilities that give him strong disabling, ganking, and nuking prowess. Mostly played as a support, he has some of the highest starting stats of any hero, yet is unique in the sense that all his attributes and stat growths are equivalent. In addition, he possesses four highly potent single-target spells, which if used properly can more than make up for his complete lack of area of effect presence and pushing power. Enfeeble reduces the target's attack damage by a tremendous amount, which can highly reduce an attack-reliant enemy hero's effectiveness from as early as the laning stage all the way to the endgame. Brain Sap is a nuke that deals hefty pure damage to the target, healing himself for the same amount as well. Nightmare puts a unit to sleep, completely disabling for several seconds and dealing minor damage per second. If the slept target is physically attacked, it wakes up and the spell transfers to the attacker (spells will also wake the target up, but will not transfer the effect to the caster). Finally, Bane's Fiend's Grip is a channeling spell that completely disables the target for several seconds, dealing heavy damage per second and giving Bane some mana back as well. Bane's debilitating lockdown abilities are what make him an invaluable support to allies, and a feared one for enemies.</description>
+    <roles>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Support</role>
+    </roles>
+    <attributes>
+        <strengthBase>22</strengthBase>
+        <strengthGain>2.1</strengthGain>
+        <agilityBase>22</agilityBase>
+        <agilityGain>2.1</agilityGain>
+        <intelligenceBase>22</intelligenceBase>
+        <intelligenceGain>2.1</intelligenceGain>
+        <damageMinimum>55</damageMinimum>
+        <damageMaximum>61</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>4.08</baseArmor>
+    </attributes>
+    <ability
+        name="Enfeeble"
+        description="Weakens an enemy unit, reducing its physical damage. Lasts 20 seconds."
+        ability="Target Unit"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="0"
+        cooldown="10"
+        mana="95/105/115/125">
+        <abilityAttributes
+            name="Range"
+            value="1000"/>
+        <abilityAttributes
+            name="Duration"
+            value="20"/>
+        <abilityAttributes
+            name="Attack Damage Reduction"
+            value="30/60/90/120"/>
+        <blackKingBar description="Blocked by magic immunity, but can't be dispelled by it." />
+        <altDescription description="Even the mightiest of warriors crumble before the terror of Atropos." />
+        <notes>
+            <note>Unable to target Ancients</note>
+            <note>Cannot be dispelled.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Brain Sap"
+        description="Feasts on the vital energies of an enemy unit, dealing damage and gaining health equal to the damage dealt."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Pure"
+        blackKingBar="2"
+        linkensSphere="2"
+        cooldown="14"
+        mana="125/150/175/200">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Health Absorbed"
+            value="90/160/230/300"/>
+        <altDescription description="Atropos finds no greater pleasure than to harvest the fear he creates." />
+        <notes>
+            <note>Bane always receives the full amount of health, regardless of the amount of damage dealt.</note>
+            <note>Deals damage before heal.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Nightmare"
+        description="Puts the target enemy or friendly Hero to sleep and deals damage per second. Sleeping units are awakened when attacked, but the Nightmare passes to the attacking unit."
+        ability="Target Unit"
+        affects="Units"
+        damage="Pure"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="0"
+        cooldown="15"
+        mana="165">
+        <abilityAttributes
+            name="Range"
+            value="500/550/600/650"/>
+        <abilityAttributes
+            name="Duration"
+            value="4/5/6/7"/>
+        <abilityAttributes
+            name="Health Drain per Second"
+            value="20"/>
+        <altDescription description="A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep." />
+        <notes>
+            <note>The target will wake up on receiving any type of damage other than Pure.</note>
+            <note>Nightmare can be used to deny heroes.</note>
+            <note>Only physical attacks cause the Nightmare to be transferred.</note>
+            <note>In the first second of Nightmare, the unit is invulnerable.</note>
+            <note>When Bane is in nightmare, he gains Nightmare End which can wake himself up from Nightmare.</note>
+            <note>Deal a total of 80/100/120/140 damage.</note>
+            <note>Every time Nightmare is passed to another unit, its duration is refreshed.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Nightmare End"
+        description="Wakes Bane up from Nightmare."
+        ability="No Target"
+        affects="Self">
+    </ability>
+    <ability
+        name="Fiend's Grip"
+        description="CHANNELED - Grips an enemy unit, disabling it and causing heavy damage over time, while stealing mana every second based on the unit's maximum mana."
+        ability="Channeled"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="2"
+        diffusalBlade="0"
+        cooldown="100"
+        mana="200/300/400">
+        <abilityAttributes
+            name="Range"
+            value="625"/>
+        <abilityAttributes
+            name="Duration"
+            value="5 (7*)"/>
+        <abilityAttributes
+            name="Damage per Second"
+            value="100/155/215 (155/215/270*)"/>
+        <abilityAttributes
+            name="Mana Transfer per Second"
+            value="5% (10%*) of target's max mana"/>
+        <aghanims description="Increases damage per second, mana drain, and duration. Anyone who attacks Bane while he is channeling will be afflicted with Nightmare." />
+        <altDescription description="Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares." />
+        <notes>
+            <note>Using Fiend's Grip on a spell immune unit will still disable and drain mana.</note>
+            <note>Deal a total of 500/775/1075 (1085/1505/1890*) damage and drain a total of 25% (70%*) of the target's max mana.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Between levels 6-12 Bane is comparatively a very powerful hero. If you maxed Brain Sap you will be able to solo kill most heroes by means of Fiend's Grip followed by Brain Sap. It is necessary to get kills during this phase of the game; as if Bane is not well-geared and leveled up later in the game, he will be relegated to a support unit.</tip>
+        <tip>It is important for the player to judge when to change roles; as mentioned above, Bane should gank constantly in the middle of the game to gain a gold advantage and avoid getting shut down or subjugated to a conservative support role. A well-managed Bane can change the outcome of a team fight in the late game with effective use of items such as Necronomicon, Scythe of Vyse, and Aghanim's Scepter.</tip>
+        <tip>Bane is not an initiator; despite having two disables, he is far too delicate to withstand the initial retaliation. Instead, he should hide until such time as his abilities become crucial when the team fight has ensued(preventing escapes, finishing off enemy heroes with Brain Sap, etc.).</tip>
+        <tip>He can however initiate on out-of-position heroes with nightmare, wait for allies to get in position, take the nightmare and wake himself up.</tip>
+        <tip>Avoid heroes with stuns, as they can interrupt Fiend's Grip. If you must deal with them, incapacitate them via Nightmare, a Scythe of Vyse, or Fiend's Grip itself. Picking Bane in a match against several heroes with disables is unwise. Black King Bar is typically an effective first major item to build on Bane if you need to help your team disable someone before they retaliate.</tip>
+        <tip>If the enemy team lack area-of-effect stuns or interrupts, a Shadow Blade can make your ultimate harder to stop, since your opponents must first reveal you and then interrupt you. As with all similar abilities, you can activate invisibility without breaking your channel. While Shadow Blade is also effective for ganking solo heroes and escaping, you should still get Black King Bar instead if the enemy team have ranged AoE interrupts such as those possessed by Lina, Drow, Dark Seer, or Death Prophet, for example.</tip>
+        <tip>Bane is a strong mid-lane character. Enfeeble can severely weaken heroes reliant on physical damage to last hit, while Bane's strong ultimate and nuke allow him to solo almost any hero, while ganking should be no problem. Mid-lane also allows Bane to farm up his core items.</tip>
+    </tips>
+</hero>
