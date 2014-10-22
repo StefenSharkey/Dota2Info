@@ -24,11 +24,11 @@ public class Hero {
         attribute = "";
         faction = "";
         description = "";
-        roles = new ArrayList<String>();
-        attributes = new TreeMap<String, ArrayList<Double>>();
-        tips = new ArrayList<String>();
+        roles = new ArrayList<>();
+        attributes = new TreeMap<>();
+        tips = new ArrayList<>();
 
-        abilities = new ArrayList<Ability>();
+        abilities = new ArrayList<>();
     }
 
     public String getName() {

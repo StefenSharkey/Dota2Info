@@ -13,7 +13,7 @@ import java.util.Stack;
 
 public class Utilities {
 
-    public static final Stack<Class<?>> parents = new Stack<Class<?>>();
+    public static final Stack<Class<?>> parents = new Stack<>();
 
     public static String nameToResource(String name) {
         return name

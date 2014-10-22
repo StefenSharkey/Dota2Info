@@ -12,23 +12,22 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class GridAdapter extends BaseAdapter {
 
     private final Context context;
 
-    private final Integer[] images;
-    private final ArrayList<String> names;
+    private final int[] images;
+    private final String[] names;
 
     public GridAdapter(Context context) {
         this.context = context;
-        names = new ArrayList<String>(Arrays.asList(context.getResources().getStringArray(R.array.heroes_all)));
+        names = context.getResources().getStringArray(R.array.heroes_all);
+
         for (String s : names) {
             Log.wtf("Hero", s);
         }
-        images = new Integer[names.size()];
+
+        images = new int[names.length];
         getHeroDrawables();
     }
 
@@ -62,7 +61,7 @@ public class GridAdapter extends BaseAdapter {
         imageView.setScaleType(ImageView.ScaleType.CENTER);
 
         textView.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT, GridView.LayoutParams.WRAP_CONTENT));
-        textView.setText(names.get(x));
+        textView.setText(names[x]);
         textView.setGravity(Gravity.CENTER_HORIZONTAL);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         textView.setTextAppearance(context, R.style.TextColor);
@@ -75,7 +74,7 @@ public class GridAdapter extends BaseAdapter {
 
     public void getHeroDrawables() {
         for (int x = 0; x < images.length; x++) {
-            images[x] = context.getResources().getIdentifier(Utilities.nameToResource("hero", names.get(x)), "drawable", context.getPackageName());
+            images[x] = context.getResources().getIdentifier(Utilities.nameToResource("hero", names[x]), "drawable", context.getPackageName());
         }
     }
 }

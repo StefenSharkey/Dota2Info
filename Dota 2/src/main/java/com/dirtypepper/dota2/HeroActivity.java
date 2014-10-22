@@ -36,8 +36,7 @@ public class HeroActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
-        heroName = intent.getStringExtra("hero");
+        heroName = getIntent().getStringExtra("hero");
 
         setContentView(R.layout.activity_hero);
         Utilities.parents.push(getClass());
@@ -133,9 +132,7 @@ public class HeroActivity extends Activity {
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             parser.setInput(inputStream, null);
             parseHeroXML(parser);
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -148,14 +145,14 @@ public class HeroActivity extends Activity {
         String ability = null;
         String affects = null;
         String damage = null;
-        Boolean orbOfVenom = null;
-        Integer blackKingBar = null;
-        Integer linkensSphere = null;
-        Integer diffusalBlade = null;
-        Integer mantaStyle = null;
+        boolean orbOfVenom = false;
+        int blackKingBar = -1;
+        int linkensSphere = -1;
+        int diffusalBlade = -1;
+        int mantaStyle = -1;
         String cooldown = null;
         String mana = null;
-        Map<String, String> attributes = new LinkedHashMap<String, String>();
+        Map<String, String> attributes = new LinkedHashMap<>();
         String blackKingBarDescription = null;
         String linkensSphereDescription = null;
         String diffusalBladeDescription = null;
@@ -163,12 +160,12 @@ public class HeroActivity extends Activity {
         String altDescription = null;
         String aghanims = null;
 
-        ArrayList<Double> strength = new ArrayList<Double>();
-        ArrayList<Double> agility = new ArrayList<Double>();
-        ArrayList<Double> intelligence = new ArrayList<Double>();
-        ArrayList<Double> damageAttr = new ArrayList<Double>();
-        ArrayList<Double> misc = new ArrayList<Double>();
-        ArrayList<String> notes = new ArrayList<String>();
+        ArrayList<Double> strength = new ArrayList<>();
+        ArrayList<Double> agility = new ArrayList<>();
+        ArrayList<Double> intelligence = new ArrayList<>();
+        ArrayList<Double> damageAttr = new ArrayList<>();
+        ArrayList<Double> misc = new ArrayList<>();
+        ArrayList<String> notes = new ArrayList<>();
 
         currentHero = null;
 
@@ -186,92 +183,114 @@ public class HeroActivity extends Activity {
                         }
 
                         if (currentHero.getName().equals(textView.getText())) {
-                            if (heroName.equals("damageType")) {
-                                currentHero.setDamageType(parser.nextText());
-                            } else if (heroName.equals("attribute")) {
-                                currentHero.setAttribute(parser.nextText());
-                            } else if (heroName.equals("faction")) {
-                                currentHero.setFaction(parser.nextText());
-                            } else if (heroName.equals("description")) {
-                                currentHero.setDescription(parser.nextText());
-                            } else if (heroName.equals("role")) {
-                                currentHero.addRole(parser.nextText());
-                            } else if (heroName.equals("strengthBase")) {
-                                strength.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("strengthGain")) {
-                                strength.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("agilityBase")) {
-                                agility.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("agilityGain")) {
-                                agility.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("intelligenceBase")) {
-                                intelligence.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("intelligenceGain")) {
-                                intelligence.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("damageMinimum")) {
-                                damageAttr.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("damageMaximum")) {
-                                damageAttr.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("baseMoveSpeed")) {
-                                misc.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("baseArmor")) {
-                                misc.add(Double.parseDouble(parser.nextText()));
-                            } else if (heroName.equals("tip")) {
-                                currentHero.addTip(parser.nextText());
-                            } else if (heroName.equals("ability")) {
-                                name = parser.getAttributeValue(null, "name");
-                                description = parser.getAttributeValue(null, "description");
-                                ability = parser.getAttributeValue(null, "ability");
-                                affects = parser.getAttributeValue(null, "affects");
-                                if (parser.getAttributeValue(null, "damage") != null) {
-                                    damage = parser.getAttributeValue(null, "damage");
-                                }
-                                if (parser.getAttributeValue(null, "orbOfVenom") != null) {
-                                    orbOfVenom = Integer.parseInt(parser.getAttributeValue(null, "orbOfVenom")) == 1;
-                                }
-                                if (parser.getAttributeValue(null, "blackKingBar") != null) {
-                                    blackKingBar = Integer.parseInt(parser.getAttributeValue(null, "blackKingBar"));
-                                }
-                                if (parser.getAttributeValue(null, "linkensSphere") != null) {
-                                    linkensSphere = Integer.parseInt(parser.getAttributeValue(null, "linkensSphere"));
-                                }
-                                if (parser.getAttributeValue(null, "diffusalBlade") != null) {
-                                    diffusalBlade = Integer.parseInt(parser.getAttributeValue(null, "diffusalBlade"));
-                                }
-                                if (parser.getAttributeValue(null, "mantaStyle") != null) {
-                                    mantaStyle = Integer.parseInt(parser.getAttributeValue(null, "mantaStyle"));
-                                }
-                                if (parser.getAttributeValue(null, "cooldown") != null) {
-                                    cooldown = parser.getAttributeValue(null, "cooldown");
-                                }
-                                if (parser.getAttributeValue(null, "mana") != null) {
-                                    mana = parser.getAttributeValue(null, "mana");
-                                }
-                            } else if (heroName.equals("abilityAttributes")) {
-                                Log.wtf("name", parser.getAttributeValue(null, "name"));
-                                Log.wtf("value", parser.getAttributeValue(null, "value"));
-                                attributes.put(parser.getAttributeValue(null, "name"),
-                                               parser.getAttributeValue(null, "value"));
-                            } else if (heroName.equals("blackKingBar")) {
-                                blackKingBarDescription = parser.getAttributeValue(null, "description");
-                                Log.wtf("Ability.toString()", description);
-                            } else if (heroName.equals("linkensSphere")) {
-                                linkensSphereDescription = parser.getAttributeValue(null, "description");
-                                Log.wtf("Ability.toString()", description);
-                            } else if (heroName.equals("diffusalBlade")) {
-                                diffusalBladeDescription = parser.getAttributeValue(null, "description");
-                                Log.wtf("Ability.toString()", description);
-                            } else if (heroName.equals("mantaStyle")) {
-                                mantaStyleDescription = parser.getAttributeValue(null, "description");
-                                Log.wtf("Ability.toString()", description);
-                            } else if (heroName.equals("altDescription")) {
-                                altDescription = parser.getAttributeValue(null, "description");
-                                Log.wtf("Ability.toString()", description);
-                            } else if (heroName.equals("aghanims")) {
-                                aghanims = parser.getAttributeValue(null, "description");
-                                Log.wtf("Ability.toString()", description);
-                            } else if (heroName.equals("note")) {
-                                notes.add(parser.nextText());
+                            switch (heroName) {
+                                case "damageType":
+                                    currentHero.setDamageType(parser.nextText());
+                                    break;
+                                case "attribute":
+                                    currentHero.setAttribute(parser.nextText());
+                                    break;
+                                case "faction":
+                                    currentHero.setFaction(parser.nextText());
+                                    break;
+                                case "description":
+                                    currentHero.setDescription(parser.nextText());
+                                    break;
+                                case "role":
+                                    currentHero.addRole(parser.nextText());
+                                    break;
+                                case "strengthBase":
+                                    strength.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "strengthGain":
+                                    strength.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "agilityBase":
+                                    agility.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "agilityGain":
+                                    agility.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "intelligenceBase":
+                                    intelligence.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "intelligenceGain":
+                                    intelligence.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "damageMinimum":
+                                    damageAttr.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "damageMaximum":
+                                    damageAttr.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "baseMoveSpeed":
+                                    misc.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "baseArmor":
+                                    misc.add(Double.parseDouble(parser.nextText()));
+                                    break;
+                                case "tip":
+                                    currentHero.addTip(parser.nextText());
+                                    break;
+                                case "ability":
+                                    name = parser.getAttributeValue(null, "name");
+                                    description = parser.getAttributeValue(null, "description");
+                                    ability = parser.getAttributeValue(null, "ability");
+                                    affects = parser.getAttributeValue(null, "affects");
+                                    if (parser.getAttributeValue(null, "damage") != null) {
+                                        damage = parser.getAttributeValue(null, "damage");
+                                    }
+                                    if (parser.getAttributeValue(null, "orbOfVenom") != null) {
+                                        orbOfVenom = Integer.parseInt(parser.getAttributeValue(null, "orbOfVenom")) == 1;
+                                    }
+                                    if (parser.getAttributeValue(null, "blackKingBar") != null) {
+                                        blackKingBar = Integer.parseInt(parser.getAttributeValue(null, "blackKingBar"));
+                                    }
+                                    if (parser.getAttributeValue(null, "linkensSphere") != null) {
+                                        linkensSphere = Integer.parseInt(parser.getAttributeValue(null, "linkensSphere"));
+                                    }
+                                    if (parser.getAttributeValue(null, "diffusalBlade") != null) {
+                                        diffusalBlade = Integer.parseInt(parser.getAttributeValue(null, "diffusalBlade"));
+                                    }
+                                    if (parser.getAttributeValue(null, "mantaStyle") != null) {
+                                        mantaStyle = Integer.parseInt(parser.getAttributeValue(null, "mantaStyle"));
+                                    }
+                                    if (parser.getAttributeValue(null, "cooldown") != null) {
+                                        cooldown = parser.getAttributeValue(null, "cooldown");
+                                    }
+                                    if (parser.getAttributeValue(null, "mana") != null) {
+                                        mana = parser.getAttributeValue(null, "mana");
+                                    }
+                                    break;
+                                case "abilityAttributes":
+                                    Log.wtf("name", parser.getAttributeValue(null, "name"));
+                                    Log.wtf("value", parser.getAttributeValue(null, "value"));
+                                    attributes.put(parser.getAttributeValue(null, "name"),
+                                                   parser.getAttributeValue(null, "value"));
+                                    break;
+                                case "blackKingBar":
+                                    blackKingBarDescription = parser.getAttributeValue(null, "description");
+                                    Log.wtf("Ability.toString()", description);
+                                    break;
+                                case "linkensSphere":
+                                    linkensSphereDescription = parser.getAttributeValue(null, "description");
+                                    Log.wtf("Ability.toString()", description);
+                                    break;
+                                case "diffusalBlade":
+                                    diffusalBladeDescription = parser.getAttributeValue(null, "description");
+                                    Log.wtf("Ability.toString()", description);
+                                    break;
+                                case "mantaStyle":
+                                    mantaStyleDescription = parser.getAttributeValue(null, "description");
+                                    Log.wtf("Ability.toString()", description);
+                                    break;
+                                case "altDescription":
+                                    altDescription = parser.getAttributeValue(null, "description");
+                                    Log.wtf("Ability.toString()", description);
+                                    break;
+                                case "note":
+                                    notes.add(parser.nextText());
+                                    break;
                             }
                         }
                     }
@@ -295,21 +314,21 @@ public class HeroActivity extends Activity {
                         ability = null;
                         affects = null;
                         damage = null;
-                        orbOfVenom = null;
-                        blackKingBar = null;
-                        linkensSphere = null;
-                        diffusalBlade = null;
-                        mantaStyle = null;
+                        orbOfVenom = false;
+                        blackKingBar = -1;
+                        linkensSphere = -1;
+                        diffusalBlade = -1;
+                        mantaStyle = -1;
                         cooldown = null;
                         mana = null;
-                        attributes = new LinkedHashMap<String, String>();
+                        attributes = new LinkedHashMap<>();
                         blackKingBarDescription = null;
                         diffusalBladeDescription = null;
                         linkensSphereDescription = null;
                         mantaStyleDescription = null;
                         altDescription = null;
                         aghanims = null;
-                        notes = new ArrayList<String>();
+                        notes = new ArrayList<>();
                     }
             }
             eventType = parser.next();
@@ -466,78 +485,68 @@ public class HeroActivity extends Activity {
         heroAbilityOrbOfVenomIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityOrbOfVenomIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityOrbOfVenomIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if (ability.getOrbOfVenom() != null) {
-            if (ability.getOrbOfVenom()) {
-                heroAbilityOrbOfVenomIcon.setImageResource(R.drawable.ability_orb_of_venom);
-            }
+        if (ability.getOrbOfVenom()) {
+            heroAbilityOrbOfVenomIcon.setImageResource(R.drawable.ability_orb_of_venom);
         }
 
         heroAbilityBlackKingBarIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityBlackKingBarIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityBlackKingBarIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if (ability.getBlackKingBar() != null) {
-            switch (ability.getBlackKingBar()) {
-                case 0:
-                    heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar_none);
-                    break;
-                case 1:
-                    heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar_partial);
-                    break;
-                case 2:
-                    heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar);
-                    break;
-            }
+        switch (ability.getBlackKingBar()) {
+            case 0:
+                heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar_none);
+                break;
+            case 1:
+                heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar_partial);
+                break;
+            case 2:
+                heroAbilityBlackKingBarIcon.setImageResource(R.drawable.ability_black_king_bar);
+                break;
         }
 
         heroAbilityLinkensSphereIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityLinkensSphereIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityLinkensSphereIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if (ability.getLinkensSphere() != null) {
-            switch (ability.getLinkensSphere()) {
-                case 0:
-                    heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere_none);
-                    break;
-                case 1:
-                    heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere_partial);
-                    break;
-                case 2:
-                    heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere);
-                    break;
-            }
+        switch (ability.getLinkensSphere()) {
+            case 0:
+                heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere_none);
+                break;
+            case 1:
+                heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere_partial);
+                break;
+            case 2:
+                heroAbilityLinkensSphereIcon.setImageResource(R.drawable.ability_linkens_sphere);
+                break;
         }
 
         heroAbilityDiffusalBladeIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityDiffusalBladeIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityDiffusalBladeIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if (ability.getDiffusalBlade() != null) {
-            switch (ability.getDiffusalBlade()) {
-                case 0:
-                    heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade_none);
-                    break;
-                case 1:
-                    heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade_partial);
-                    break;
-                case 2:
-                    heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade);
-                    break;
-            }
+        switch (ability.getDiffusalBlade()) {
+            case 0:
+                heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade_none);
+                break;
+            case 1:
+                heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade_partial);
+                break;
+            case 2:
+                heroAbilityDiffusalBladeIcon.setImageResource(R.drawable.ability_diffusal_blade);
+                break;
         }
 
         heroAbilityMantaStyleIcon.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         heroAbilityMantaStyleIcon.setPadding(Utilities.dpToPx(5, getResources()), 0, 0, 0);
         heroAbilityMantaStyleIcon.setScaleType(ImageView.ScaleType.CENTER);
-        if (ability.getMantaStyle() != null) {
-            switch (ability.getMantaStyle()) {
-                case 0:
-                    heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style_none);
-                    break;
-                case 1:
-                    heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style_partial);
-                    break;
-                case 2:
-                    heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style);
-                    break;
-            }
+        switch (ability.getMantaStyle()) {
+            case 0:
+                heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style_none);
+                break;
+            case 1:
+                heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style_partial);
+                break;
+            case 2:
+                heroAbilityMantaStyleIcon.setImageResource(R.drawable.ability_manta_style);
+                break;
         }
 
         heroAbilityAbilityParent.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -611,19 +620,19 @@ public class HeroActivity extends Activity {
         heroAbilityAbilityParent.addView(heroAbilityAffects);
         heroAbilityAbilityParent.addView(heroAbilityDamage);
         heroAbilityTitle.addView(heroAbilityName);
-        if (ability.getOrbOfVenom() != null) {
+        if (ability.getOrbOfVenom()) {
             heroAbilityTitle.addView(heroAbilityOrbOfVenomIcon);
         }
-        if (ability.getBlackKingBar() != null) {
+        if (ability.getBlackKingBar() > -1) {
             heroAbilityTitle.addView(heroAbilityBlackKingBarIcon);
         }
-        if (ability.getLinkensSphere() != null) {
+        if (ability.getLinkensSphere() > -1) {
             heroAbilityTitle.addView(heroAbilityLinkensSphereIcon);
         }
-        if (ability.getDiffusalBlade() != null) {
+        if (ability.getDiffusalBlade() > -1) {
             heroAbilityTitle.addView(heroAbilityDiffusalBladeIcon);
         }
-        if (ability.getMantaStyle() != null) {
+        if (ability.getMantaStyle() > -1) {
             heroAbilityTitle.addView(heroAbilityMantaStyleIcon);
         }
         heroAbility.addView(heroAbilityTitle);

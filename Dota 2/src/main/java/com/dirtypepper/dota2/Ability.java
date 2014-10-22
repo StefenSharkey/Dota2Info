@@ -11,11 +11,11 @@ public class Ability {
     private final String affects;
     private final String damage;
     private final Map<String, String> attributes;
-    private final Boolean orbOfVenom;
-    private final Integer blackKingBar;
-    private final Integer linkensSphere;
-    private final Integer diffusalBlade;
-    private final Integer mantaStyle;
+    private final boolean orbOfVenom;
+    private final int blackKingBar;
+    private final int linkensSphere;
+    private final int diffusalBlade;
+    private final int mantaStyle;
     private final String cooldown;
     private final String mana;
     private final String blackKingBarDescription;
@@ -26,7 +26,7 @@ public class Ability {
     private final String aghanims;
     private final ArrayList<String> notes;
 
-    public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, Boolean orbOfVenom, Integer blacKingBar, Integer linkensSphere, Integer diffusalBlade, Integer mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
+    public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, boolean orbOfVenom, int blacKingBar, int linkensSphere, int diffusalBlade, int mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
         this.name = name;
         this.description = description;
         this.ability = ability;
@@ -73,23 +73,23 @@ public class Ability {
         return attributes;
     }
 
-    public Boolean getOrbOfVenom() {
+    public boolean getOrbOfVenom() {
         return orbOfVenom;
     }
 
-    public Integer getBlackKingBar() {
+    public int getBlackKingBar() {
         return blackKingBar;
     }
 
-    public Integer getLinkensSphere() {
+    public int getLinkensSphere() {
         return linkensSphere;
     }
 
-    public Integer getDiffusalBlade() {
+    public int getDiffusalBlade() {
         return diffusalBlade;
     }
 
-    public Integer getMantaStyle() {
+    public int getMantaStyle() {
         return mantaStyle;
     }
 
