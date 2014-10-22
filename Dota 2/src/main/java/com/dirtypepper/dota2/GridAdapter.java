@@ -2,14 +2,11 @@ package com.dirtypepper.dota2;
 
 import android.content.Context;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class GridAdapter extends BaseAdapter {
@@ -19,9 +16,12 @@ public class GridAdapter extends BaseAdapter {
     private final int[] images;
     private final String[] names;
 
+    private LayoutInflater inflater;
+
     public GridAdapter(Context context) {
         this.context = context;
         names = context.getResources().getStringArray(R.array.heroes_all);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         for (String s : names) {
             Log.wtf("Hero", s);
@@ -48,33 +48,34 @@ public class GridAdapter extends BaseAdapter {
 
     @Override
     public View getView(int x, View view, ViewGroup viewGroup) {
-        LinearLayout linearLayout = new LinearLayout(context);
-        ImageView imageView = new ImageView(context);
-        TextView textView = new TextView(context);
+        ViewHolder viewHolder;
 
-        linearLayout.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT, GridView.LayoutParams.WRAP_CONTENT));
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-        linearLayout.setPadding(0, Utilities.dpToPx(8, context.getResources()), 0, Utilities.dpToPx(2, context.getResources()));
+        if (view == null) {
+            viewHolder = new ViewHolder();
+            view = inflater.inflate(R.layout.grid_adapter, null);
 
-        imageView.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT, GridView.LayoutParams.WRAP_CONTENT));
-        imageView.setImageResource(images[x]);
-        imageView.setScaleType(ImageView.ScaleType.CENTER);
+            viewHolder.image = (ImageView) view.findViewById(R.id.grid_picture);
+            viewHolder.name = (TextView) view.findViewById(R.id.grid_text);
 
-        textView.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT, GridView.LayoutParams.WRAP_CONTENT));
-        textView.setText(names[x]);
-        textView.setGravity(Gravity.CENTER_HORIZONTAL);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-        textView.setTextAppearance(context, R.style.TextColor);
+            view.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) view.getTag();
+        }
 
-        linearLayout.addView(imageView);
-        linearLayout.addView(textView);
+        viewHolder.image.setImageResource(images[x]);
+        viewHolder.name.setText(names[x]);
 
-        return linearLayout;
+        return view;
     }
 
     public void getHeroDrawables() {
         for (int x = 0; x < images.length; x++) {
             images[x] = context.getResources().getIdentifier(Utilities.nameToResource("hero", names[x]), "drawable", context.getPackageName());
         }
+    }
+
+    static class ViewHolder {
+        public ImageView image;
+        public TextView name;
     }
 }
