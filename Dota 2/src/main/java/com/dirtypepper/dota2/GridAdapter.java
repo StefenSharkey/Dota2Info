@@ -24,7 +24,7 @@ public class GridAdapter extends BaseAdapter {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         for (String s : names) {
-            Log.wtf("Hero", s);
+            Log.d("Hero", s);
         }
 
         images = new int[names.length];

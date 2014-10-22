@@ -34,7 +34,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
         random = new Random();
         refillHeroesList();
 
-        Log.wtf("Heroes Amount", String.valueOf(heroesList.size()));
+        Log.d("Heroes Amount", String.valueOf(heroesList.size()));
 
         randomizeHeroes();
 
