@@ -134,8 +134,6 @@ public class HeroActivity extends Activity {
             parseHeroXML(parser);
         } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
