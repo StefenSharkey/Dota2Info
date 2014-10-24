@@ -27,7 +27,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_captains_mode);
 
-        currentHeroesList = new ArrayList<String>();
+        currentHeroesList = new ArrayList<>();
 
         Utilities.parents.push(getClass());
 
@@ -464,7 +464,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
     }
 
     public void refillHeroesList() {
-        heroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
+        heroesList = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
 
         for (String s : getResources().getStringArray(R.array.heroes_removed)) {
             heroesList.remove(s);

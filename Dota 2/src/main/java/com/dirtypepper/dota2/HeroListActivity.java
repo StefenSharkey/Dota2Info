@@ -22,7 +22,7 @@ public class HeroListActivity extends Activity implements GridView.OnItemClickLi
         setContentView(R.layout.activity_hero_list);
         Utilities.parents.push(getClass());
 
-        heroesList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
+        heroesList = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
 
         GridView gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(new GridAdapter(getApplicationContext()));
