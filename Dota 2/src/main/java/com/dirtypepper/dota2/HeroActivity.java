@@ -43,7 +43,7 @@ public class HeroActivity extends Activity {
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Log.wtf("Hero Value", heroName);
+        Log.d("Hero Value", heroName);
         textView = (TextView) findViewById(R.id.hero_name);
         textView.setText(heroName);
 
@@ -72,7 +72,7 @@ public class HeroActivity extends Activity {
             case R.id.action_description:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle(currentHero.getName() + " " + getResources().getString(R.string.description));
-                Log.wtf("currentHero.getDescription()", currentHero.getDescription());
+                Log.d("currentHero.getDescription()", currentHero.getDescription());
                 builder.setMessage(currentHero.getDescription());
                 builder.setNegativeButton(R.string.tips, new DialogInterface.OnClickListener() {
                     @Override
@@ -133,6 +133,8 @@ public class HeroActivity extends Activity {
             parser.setInput(inputStream, null);
             parseHeroXML(parser);
         } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -263,30 +265,30 @@ public class HeroActivity extends Activity {
                                     }
                                     break;
                                 case "abilityAttributes":
-                                    Log.wtf("name", parser.getAttributeValue(null, "name"));
-                                    Log.wtf("value", parser.getAttributeValue(null, "value"));
+                                    Log.d("name", parser.getAttributeValue(null, "name"));
+                                    Log.d("value", parser.getAttributeValue(null, "value"));
                                     attributes.put(parser.getAttributeValue(null, "name"),
                                                    parser.getAttributeValue(null, "value"));
                                     break;
                                 case "blackKingBar":
                                     blackKingBarDescription = parser.getAttributeValue(null, "description");
-                                    Log.wtf("Ability.toString()", description);
+                                    Log.d("Ability.toString()", description);
                                     break;
                                 case "linkensSphere":
                                     linkensSphereDescription = parser.getAttributeValue(null, "description");
-                                    Log.wtf("Ability.toString()", description);
+                                    Log.d("Ability.toString()", description);
                                     break;
                                 case "diffusalBlade":
                                     diffusalBladeDescription = parser.getAttributeValue(null, "description");
-                                    Log.wtf("Ability.toString()", description);
+                                    Log.d("Ability.toString()", description);
                                     break;
                                 case "mantaStyle":
                                     mantaStyleDescription = parser.getAttributeValue(null, "description");
-                                    Log.wtf("Ability.toString()", description);
+                                    Log.d("Ability.toString()", description);
                                     break;
                                 case "altDescription":
                                     altDescription = parser.getAttributeValue(null, "description");
-                                    Log.wtf("Ability.toString()", description);
+                                    Log.d("Ability.toString()", description);
                                     break;
                                 case "note":
                                     notes.add(parser.nextText());
@@ -339,7 +341,7 @@ public class HeroActivity extends Activity {
         ImageView heroPicture = (ImageView) findViewById(R.id.hero_picture);
         ArrayList<Double> stats;
 
-        Log.wtf("printHeroes()", hero.getName());
+        Log.d("printHeroes()", hero.getName());
 
         textView = (TextView) findViewById(R.id.hero_name);
         textView.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(getResources().getIdentifier(
@@ -410,7 +412,7 @@ public class HeroActivity extends Activity {
     }
 
     public void printAbility(Ability ability) {
-        Log.wtf("printAbility()", ability.getName());
+        Log.d("printAbility()", ability.getName());
         LinearLayout heroAbilityParent = (LinearLayout) findViewById(R.id.hero_ability_parent);
         LinearLayout heroAbilityContainer = new LinearLayout(this);
         ImageView heroAbilityPicture = new ImageView(this);
@@ -459,7 +461,7 @@ public class HeroActivity extends Activity {
 
         heroAbilityPicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 128));
         heroAbilityPicture.setAdjustViewBounds(true);
-        Log.wtf("Utilities.nameToResource()", Utilities.nameToResource(currentHero.getName(), ability.getName()));
+        Log.d("Utilities.nameToResource()", Utilities.nameToResource(currentHero.getName(), ability.getName()));
         if (getResources().getIdentifier(Utilities.nameToResource(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0) {
             heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToResource(
                 currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));

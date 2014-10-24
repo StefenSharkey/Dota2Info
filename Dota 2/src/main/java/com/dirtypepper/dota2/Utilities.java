@@ -168,7 +168,7 @@ public class Utilities {
 
     public static void printStack() {
         for (Class c : parents) {
-            Log.wtf("c.getName()", c.getName());
+            Log.d("c.getName()", c.getName());
         }
     }
 
