@@ -177,7 +177,6 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
-                    android:paddingStart="9dp"
                     android:paddingLeft="9dp"
                     android:drawableStart="@drawable/attribute_defense"
                     android:drawableLeft="@drawable/attribute_defense"
