@@ -16,7 +16,7 @@ public class GridAdapter extends BaseAdapter {
     private final int[] images;
     private final String[] names;
 
-    private LayoutInflater inflater;
+    private final LayoutInflater inflater;
 
     public GridAdapter(Context context) {
         this.context = context;

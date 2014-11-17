@@ -8,8 +8,6 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private Intent intent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +23,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        Intent intent = new Intent();
+
         switch (view.getId()) {
             case R.id.heroes:
                 intent = new Intent(MainActivity.this, HeroListActivity.class);
@@ -33,6 +33,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 intent = new Intent(MainActivity.this, RandomCaptainsModeActivity.class);
                 break;
         }
-        MainActivity.this.startActivity(intent);
+
+        startActivity(intent);
     }
 }
