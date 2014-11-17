@@ -26,7 +26,7 @@ public class Ability {
     private final String aghanims;
     private final ArrayList<String> notes;
 
-    public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, boolean orbOfVenom, int blacKingBar, int linkensSphere, int diffusalBlade, int mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
+    public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, boolean orbOfVenom, int blackKingBar, int linkensSphere, int diffusalBlade, int mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
         this.name = name;
         this.description = description;
         this.ability = ability;
@@ -34,7 +34,7 @@ public class Ability {
         this.damage = damage;
         this.attributes = attributes;
         this.orbOfVenom = orbOfVenom;
-        this.blackKingBar = blacKingBar;
+        this.blackKingBar = blackKingBar;
         this.linkensSphere = linkensSphere;
         this.diffusalBlade = diffusalBlade;
         this.mantaStyle = mantaStyle;
