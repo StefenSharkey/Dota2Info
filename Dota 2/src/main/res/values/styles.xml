@@ -13,64 +13,8 @@
         <item name="android:textStyle">italic</item>
     </style>
 
-    <style name="ClickableView">
-        <item name="android:listSelector">@drawable/custom_view</item>
-    </style>
+    <style name="AppTheme" parent="android:Theme.DeviceDefault">
 
-    <style name="Theme.Dotabar" parent="@android:style/Theme.Holo">
-        <item name="android:actionBarItemBackground">@drawable/selectable_background_dotabar</item>
-        <item name="android:popupMenuStyle">@style/PopupMenu.Dotabar</item>
-        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dotabar</item>
-        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dotabar</item>
-        <item name="android:actionDropDownStyle">@style/DropDownNav.Dotabar</item>
-        <item name="android:actionBarStyle">@style/ActionBar.Solid.Dotabar</item>
-        <item name="android:actionModeBackground">@drawable/cab_background_top_dotabar</item>
-        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_dotabar</item>
-        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Dotabar</item>
-    </style>
-
-    <style name="ActionBar.Solid.Dotabar" parent="@android:style/Widget.Holo.ActionBar.Solid">
-        <item name="android:background">@drawable/ab_solid_dotabar</item>
-        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_dotabar</item>
-        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_dotabar</item>
-        <item name="android:progressBarStyle">@style/ProgressBar.Dotabar</item>
-    </style>
-
-    <style name="ActionBar.Transparent.Dotabar" parent="@android:style/Widget.Holo.ActionBar">
-        <item name="android:background">@drawable/ab_transparent_dotabar</item>
-        <item name="android:progressBarStyle">@style/ProgressBar.Dotabar</item>
-    </style>
-
-    <style name="PopupMenu.Dotabar" parent="@android:style/Widget.Holo.ListPopupWindow">
-        <item name="android:popupBackground">@drawable/menu_dropdown_panel_dotabar</item>
-    </style>
-
-    <style name="DropDownListView.Dotabar" parent="@android:style/Widget.Holo.ListView.DropDown">
-        <item name="android:listSelector">@drawable/selectable_background_dotabar</item>
-    </style>
-
-    <style name="ActionBarTabStyle.Dotabar" parent="@android:style/Widget.Holo.ActionBar.TabView">
-        <item name="android:background">@drawable/tab_indicator_ab_dotabar</item>
-    </style>
-
-    <style name="DropDownNav.Dotabar" parent="@android:style/Widget.Holo.Spinner">
-        <item name="android:background">@drawable/spinner_background_ab_dotabar</item>
-        <item name="android:popupBackground">@drawable/menu_dropdown_panel_dotabar</item>
-        <item name="android:dropDownSelector">@drawable/selectable_background_dotabar</item>
-    </style>
-
-    <style name="ProgressBar.Dotabar" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
-        <item name="android:progressDrawable">@drawable/progress_horizontal_dotabar</item>
-    </style>
-
-    <style name="ActionButton.CloseMode.Dotabar" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
-        <item name="android:background">@drawable/btn_cab_done_dotabar</item>
-    </style>
-
-    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
-    <style name="Theme.Dotabar.Widget" parent="@android:style/Theme.Holo">
-        <item name="android:popupMenuStyle">@style/PopupMenu.Dotabar</item>
-        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dotabar</item>
     </style>
 
 </resources>
