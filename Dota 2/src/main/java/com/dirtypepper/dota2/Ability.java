@@ -49,6 +49,10 @@ public class Ability {
         this.notes = notes;
     }
 
+    public boolean hasNotes() {
+        return notes.size() != 0;
+    }
+
     public String getName() {
         return name;
     }
@@ -130,6 +134,6 @@ public class Ability {
     }
 
     public String toString() {
-        return getName() + " | " + getDescription() + " | " + getAbility() + " | " + getAffects() + " | " + getDamage();
+        return getName();
     }
 }

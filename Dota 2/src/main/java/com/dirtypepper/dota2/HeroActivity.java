@@ -6,15 +6,18 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -79,23 +82,7 @@ public class HeroActivity extends Activity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
                         builder1.setTitle(currentHero.getName() + " " + getResources().getString(R.string.tips));
-                        builder1.setMessage(formatTips());
-                        builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.dismiss();
-                            }
-                        });
-                        builder1.create().show();
-                    }
-                });
-                builder.setNeutralButton(R.string.notes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
-                        builder1.setTitle(
-                            currentHero.getName() + " " + getResources().getString(R.string.ability_notes));
-                        builder1.setMessage(formatNotes());
+                        builder1.setMessage(Html.fromHtml(formatTips()));
                         builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -409,7 +396,7 @@ public class HeroActivity extends Activity {
         }
     }
 
-    public void printAbility(Ability ability) {
+    public void printAbility(final Ability ability) {
         Log.d("printAbility()", ability.getName());
         LinearLayout heroAbilityParent = (LinearLayout) findViewById(R.id.hero_ability_parent);
         LinearLayout heroAbilityContainer = new LinearLayout(this);
@@ -461,8 +448,7 @@ public class HeroActivity extends Activity {
         heroAbilityPicture.setAdjustViewBounds(true);
         Log.d("Utilities.nameToResource()", Utilities.nameToResource(currentHero.getName(), ability.getName()));
         if (getResources().getIdentifier(Utilities.nameToResource(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()) != 0) {
-            heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToResource(
-                currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
+            heroAbilityPicture.setImageResource(getResources().getIdentifier(Utilities.nameToResource(currentHero.getName(), ability.getName()), "drawable", getApplicationContext().getPackageName()));
         } else if (ability.getName().equals(getResources().getString(R.string.spell_immunity))) {
             heroAbilityPicture.setImageResource(R.drawable.spell_immunity);
         } else {
@@ -822,24 +808,41 @@ public class HeroActivity extends Activity {
         if (ability.getAltDescription() != null) {
             heroAbility.addView(heroAbilityAltDescription);
         }
+
         heroAbilityContainer.addView(heroAbilityPicture);
         heroAbilityContainer.addView(heroAbility);
+
+        heroAbilityContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ability.hasNotes()) {
+                    AlertDialog.Builder notes = new AlertDialog.Builder(HeroActivity.this);
+                    notes.setTitle(ability + " " + getResources().getString(R.string.notes));
+                    notes.setMessage(Html.fromHtml(formatNotes(ability)));
+                    notes.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+                    notes.create().show();
+                } else {
+                    Toast.makeText(getApplicationContext(), getString(R.string.notes_empty) + " " + ability.getName() + ".", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
         heroAbilityParent.addView(heroAbilityContainer);
     }
 
-    public String formatNotes() {
+    public String formatNotes(Ability ability) {
         String notes = "";
-        if (currentHero.getAbilities().size() == 0) {
-            return notes;
+
+        for (String note : ability.getNotes()) {
+            notes += getString(R.string.bullet) + note + getString(R.string.line_break);
         }
-        for (Ability ability : currentHero.getAbilities()) {
-            notes += ability.getName() + ":\n";
-            for (String s : ability.getNotes()) {
-                notes += "* " + s + "\n";
-            }
-            notes += "\n";
-        }
-        return notes.substring(0, notes.length() - 2);
+
+        return notes.trim();
     }
 
     public String formatTips() {
@@ -848,8 +851,8 @@ public class HeroActivity extends Activity {
             return tips;
         }
         for (String tip : currentHero.getTips()) {
-            tips += "*" + tip + "\n\n";
+            tips += getString(R.string.bullet) + tip + getString(R.string.line_break) + getString(R.string.line_break);
         }
-        return tips.substring(0, tips.length() - 4);
+        return tips.trim();
     }
 }

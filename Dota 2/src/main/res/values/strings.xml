@@ -14,7 +14,9 @@
     <string name="notes">Notes</string>
     <string name="wiki">Wiki</string>
 
-    <string name="ability_notes">Ability Notes</string>
+    <string name="bullet">&#8226;</string>
+    <string name="line_break"><![CDATA[<br/>]]></string>
+    <string name="notes_empty">There aren\'t any notes for</string>
 
     <string name="ability">Ability</string>
     <string name="affects">Affects</string>
