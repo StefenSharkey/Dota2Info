@@ -49,6 +49,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             (Button) findViewById(R.id.pick_hero_3_repick),
             (Button) findViewById(R.id.pick_hero_4_repick),
             (Button) findViewById(R.id.pick_hero_5_repick)};
+
         for (Button button : buttonListeners) {
             button.setOnClickListener(this);
         }
@@ -64,6 +65,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             (CheckBox) findViewById(R.id.pick_hero_3_checkbox),
             (CheckBox) findViewById(R.id.pick_hero_4_checkbox),
             (CheckBox) findViewById(R.id.pick_hero_5_checkbox)};
+
         for (CheckBox checkBox : checkBoxListeners) {
             checkBox.setOnClickListener(this);
         }
@@ -79,6 +81,7 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
             (ImageView) findViewById(R.id.pick_hero_3_picture),
             (ImageView) findViewById(R.id.pick_hero_4_picture),
             (ImageView) findViewById(R.id.pick_hero_5_picture)};
+
         for (ImageView imageView : imageViewListeners) {
             imageView.setOnClickListener(this);
         }
@@ -337,141 +340,184 @@ public class RandomCaptainsModeActivity extends Activity implements View.OnClick
     }
 
     public void randomizeHeroes() {
-        TextView textView;
+        TextView heroName;
 
         refillHeroesList();
 
         if (!((CheckBox) findViewById(R.id.ban_hero_1_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.ban_hero_1_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.ban_hero_1_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.ban_hero_1_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.ban_hero_2_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.ban_hero_2_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.ban_hero_2_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.ban_hero_2_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.ban_hero_3_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.ban_hero_3_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.ban_hero_3_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.ban_hero_3_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.ban_hero_4_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.ban_hero_4_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.ban_hero_4_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.ban_hero_4_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.ban_hero_5_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.ban_hero_5_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.ban_hero_5_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.ban_hero_5_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.pick_hero_1_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.pick_hero_1_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.pick_hero_1_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.pick_hero_1_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.pick_hero_2_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.pick_hero_2_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.pick_hero_2_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.pick_hero_2_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.pick_hero_3_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.pick_hero_3_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.pick_hero_3_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.pick_hero_3_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.pick_hero_4_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.pick_hero_4_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.pick_hero_4_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.pick_hero_4_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
 
         if (!((CheckBox) findViewById(R.id.pick_hero_5_checkbox)).isChecked()) {
-            textView = (TextView) findViewById(R.id.pick_hero_5_name);
-            if (textView.getText() != null) {
-                currentHeroesList.remove(String.valueOf(textView.getText()));
+            heroName = (TextView) findViewById(R.id.pick_hero_5_name);
+
+            if (heroName.getText() != null) {
+                currentHeroesList.remove(String.valueOf(heroName.getText()));
             }
-            textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
+            heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+
             ((ImageView) findViewById(R.id.pick_hero_5_picture)).setImageResource(getResources().getIdentifier(
-                Utilities.nameToResource("hero", textView), "drawable", getApplicationContext().getPackageName()));
-            currentHeroesList.add(String.valueOf(textView.getText()));
+                Utilities.nameToResource("hero", heroName), "drawable", getApplicationContext().getPackageName()));
+
+            currentHeroesList.add(String.valueOf(heroName.getText()));
         }
     }
 
-    public void randomizeHeroes(TextView textView, ImageView imageView) {
-        heroesList.add(String.valueOf(textView.getText()));
-        if (textView.getText() != null) {
-            currentHeroesList.remove(String.valueOf(textView.getText()));
+    public void randomizeHeroes(TextView heroName, ImageView heroImage) {
+        heroesList.add(String.valueOf(heroName.getText()));
+
+        if (heroName.getText() != null) {
+            currentHeroesList.remove(String.valueOf(heroName.getText()));
         }
-        textView.setText(heroesList.remove(random.nextInt(heroesList.size())));
-        imageView.setImageResource(getResources().getIdentifier(Utilities.nameToResource("hero", textView), "drawable",
-                                                                getApplicationContext().getPackageName()));
-        currentHeroesList.add(String.valueOf(textView.getText()));
+
+        heroName.setText(heroesList.remove(random.nextInt(heroesList.size())));
+        heroImage.setImageResource(getResources().getIdentifier(Utilities.nameToResource("hero", heroName), "drawable",
+                getApplicationContext().getPackageName()));
+
+        currentHeroesList.add(String.valueOf(heroName.getText()));
     }
 
     public void refillHeroesList() {
         heroesList = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.heroes_all)));
 
-        for (String s : getResources().getStringArray(R.array.heroes_removed)) {
-            heroesList.remove(s);
+        for (String hero : getResources().getStringArray(R.array.heroes_removed)) {
+            heroesList.remove(hero);
         }
 
-        for (String s : currentHeroesList) {
-            heroesList.remove(s);
+        for (String hero : currentHeroesList) {
+            heroesList.remove(hero);
         }
     }
 }
