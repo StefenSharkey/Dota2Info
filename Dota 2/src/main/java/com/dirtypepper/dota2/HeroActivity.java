@@ -36,6 +36,33 @@ public class HeroActivity extends Activity {
 
     private String heroName;
 
+    private String name = null;
+    private String description = null;
+    private String ability = null;
+    private String affects = null;
+    private String damage = null;
+    private boolean orbOfVenom = false;
+    private int blackKingBar = -1;
+    private int linkensSphere = -1;
+    private int diffusalBlade = -1;
+    private int mantaStyle = -1;
+    private String cooldown = null;
+    private String mana = null;
+    private Map<String, String> attributes = new LinkedHashMap<>();
+    private String blackKingBarDescription = null;
+    private String linkensSphereDescription = null;
+    private String diffusalBladeDescription = null;
+    private String mantaStyleDescription = null;
+    private String altDescription = null;
+    private String aghanims = null;
+
+    private ArrayList<Double> strength = new ArrayList<>();
+    private ArrayList<Double> agility = new ArrayList<>();
+    private ArrayList<Double> intelligence = new ArrayList<>();
+    private ArrayList<Double> damageAttr = new ArrayList<>();
+    private ArrayList<Double> misc = new ArrayList<>();
+    private ArrayList<String> notes = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,33 +155,6 @@ public class HeroActivity extends Activity {
 
     private void parseHeroXML(XmlPullParser parser) throws XmlPullParserException, IOException {
         int eventType = parser.getEventType();
-
-        String name = null;
-        String description = null;
-        String ability = null;
-        String affects = null;
-        String damage = null;
-        boolean orbOfVenom = false;
-        int blackKingBar = -1;
-        int linkensSphere = -1;
-        int diffusalBlade = -1;
-        int mantaStyle = -1;
-        String cooldown = null;
-        String mana = null;
-        Map<String, String> attributes = new LinkedHashMap<>();
-        String blackKingBarDescription = null;
-        String linkensSphereDescription = null;
-        String diffusalBladeDescription = null;
-        String mantaStyleDescription = null;
-        String altDescription = null;
-        String aghanims = null;
-
-        ArrayList<Double> strength = new ArrayList<>();
-        ArrayList<Double> agility = new ArrayList<>();
-        ArrayList<Double> intelligence = new ArrayList<>();
-        ArrayList<Double> damageAttr = new ArrayList<>();
-        ArrayList<Double> misc = new ArrayList<>();
-        ArrayList<String> notes = new ArrayList<>();
 
         currentHero = null;
 
