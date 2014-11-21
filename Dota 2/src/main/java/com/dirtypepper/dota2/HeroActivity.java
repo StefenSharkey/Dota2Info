@@ -844,7 +844,7 @@ public class HeroActivity extends Activity {
             notes += getString(R.string.bullet) + note + getString(R.string.line_break);
         }
 
-        return notes.trim();
+        return notes.trim().substring(0, notes.length()-1);
     }
 
     public String formatTips() {
@@ -855,6 +855,6 @@ public class HeroActivity extends Activity {
         for (String tip : currentHero.getTips()) {
             tips += getString(R.string.bullet) + tip + getString(R.string.line_break) + getString(R.string.line_break);
         }
-        return tips.trim();
+        return tips.trim().substring(0, tips.length()-8);
     }
 }
