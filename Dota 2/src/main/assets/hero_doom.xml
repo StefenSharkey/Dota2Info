@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Doom</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Dire</faction>
+    <description>Lucifer, otherwise known as Doom, is a melee strength Hero with strong farming capabilities, good versatility, and one of the strongest single-target spells in the game. His very low starting armor makes him vulnerable to harassment, but his abilities and high health allow him to lane or even jungle quite effectively. As a ruthless demon, he possesses malicious abilities revolving around greed, fire, and death. His Devour ability allows him to consume creeps, providing additional gold and allowing him to absorb any powers that creep had, which potentially allows him to have up to six total hero abilities. Because there are numerous neutral creep abilities to choose from to supplement his other abilities, the role that he chooses to play is quite flexible. Scorched Earth serves numerous purposes, allowing him to chase, escape, regenerate, and slowly burn his enemies all at once. LVL? Death is a spammable nuke that does either modest or massive damage to the enemy, depending on the enemy's level. Finally, his namesake ult Doom serves as one of the strongest single target lockdown abilities in the game. A unit afflicted with Doom takes intense damage over a lengthy duration, while having all his active abilities - even those from items - completely silenced. With numerous expensive items in his arsenal and a key enemy hero rendered useless for a teamfight, a farmed Doom ensures that nobody can extinguish his flame.</description>
+    <roles>
+        <role>Durable</role>
+        <role>Carry</role>
+        <role>Nuker</role>
+    </roles>
+    <attributes>
+        <strengthBase>26</strengthBase>
+        <strengthGain>3.2</strengthGain>
+        <agilityBase>11</agilityBase>
+        <agilityGain>0.9</agilityGain>
+        <intelligenceBase>13</intelligenceBase>
+        <intelligenceGain>2.1</intelligenceGain>
+        <damageMinimum>53</damageMinimum>
+        <damageMaximum>69</damageMaximum>
+        <baseMoveSpeed>290</baseMoveSpeed>
+        <baseArmor>0.54</baseArmor>
+    </attributes>
+    <ability
+        name="Devour"
+        description="Consumes an enemy or neutral creep, acquiring any special abilities that it possessed."
+        ability="Target Unit"
+        affects="Creeps"
+        blackKingBar="2"
+        diffusalBlade="0"
+        cooldown="70/60/50/40"
+        mana="60">
+        <abilityAttributes
+            name="Range"
+            value="300"/>
+        <abilityAttributes
+            name="Gold Bonus"
+            value="25/50/75/100"/>
+        <altDescription description="Lucifer's appetite and greed are never sated." />
+        <notes>
+            <note>Can target all lane creeps, except for siege creeps.</note>
+            <note>Can target all neutral creeps, except for ancient creeps, Mud Golems and Roshan.</note>
+            <note>Can target all summons, except for Spirit Bear, Warlock's Golem, Visage's Familiars, Primal Split spirits, couriers and any sort of wards.</note>
+            <note>Can only gain the abilities of neutral creeps. Abilities are gained instantly. Abilities use the original cast point of the neutral creeps they come from.</note>
+            <note>Abilities of neutral creeps are kept permanentally, even through death, or until another neutral creep with abilities is devoured.</note>
+            <note>Devouring a creep with no abilities does not remove the already acquired abilities.</note>
+            <note>The targeted creep is instantly killed, granting its bounty and experience like a regular last hit.</note>
+            <note>Places a debuff on Doom himself, which lasts for the creep's current hp/20 seconds. The debuff is lost upon death.</note>
+            <note>While having the debuff on, Doom cannot devour another creep. Devour gold is granted when the debuff expires (losing it upon death does not grant the gold).</note>
+            <note>The debuff can last longer than the cooldown of the spell when devouring a creep with more than 1400/1200/1000/800 HP.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Scorched Earth"
+        description="Carpets the nearby earth in flames, damaging enemies while Doom gains bonus HP regen and increased movement speed."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="60/55/50/45"
+        mana="60/55/50/45">
+        <abilityAttributes
+            name="Radius"
+            value="600"/>
+        <abilityAttributes
+            name="Damage/Regen"
+            value="12/18/24/30"/>
+        <abilityAttributes
+            name="Bonus Move Speed"
+            value="16%"/>
+        <abilityAttributes
+            name="Duration"
+            value="10/12/14/16"/>
+        <mantaStyle description="Illusions benefit from health regeneration." />
+        <altDescription description="The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him." />
+        <notes>
+            <note>Has an instant cast time, though the backswing animation has to be manually canceled.</note>
+            <note>Scorched Earth follows Doom, centered around his current location.</note>
+            <note>Other units Doom control also benifit from Scorched Earth when they stand inside the area.</note>
+            <note>The heal is HP regeneration, so it heals for 1.2/1.8/2.4/3.0 HP in 0.1 second intervals.</note>
+            <note>Deals damage in 1 second intervals, starting 1 second after cast.</note>
+            <note>Total damage dealt/healed: 120/216/336/480</note>
+        </notes>
+    </ability>
+    <ability
+        name="LVL? Death"
+        description="Ignites an enemy hero's soul, dealing base damage and a mini-stun. If the target hero's level is a multiple of the Hero Level Multiplier, or they are level 25, they will be dealt additional damage equal to 20% of their maximum health."
+        ability="Target Unit"
+        affects="Enemy Heroes"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        cooldown="8"
+        mana="110">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Base Damage"
+            value="125/175/225/275"/>
+        <abilityAttributes
+            name="Level Multiple"
+            value="6/5/4/3"/>
+        <altDescription description="Lucifer shares the fire branding bestowed upon him at the time of his exile." />
+        <notes>
+            <note>Mini-stun lasts 0.01 seconds.</note>
+            <note>Bonus damage of 20% of the target's max hp is applied on the following levels:</note>
+            <note>Level 1: 6/12/18/24/25</note>
+            <note>Level 2: 5/10/15/20/25</note>
+            <note>Level 3: 4/8/12/16/20/24/25</note>
+            <note>Level 4: 3/6/9/12/15/18/21/24/25</note>
+        </notes>
+    </ability>
+    <ability
+        name="Doom"
+        description="Inflicts a curse that prevents an enemy Hero from casting spells or using items, while taking damage over time."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Pure"
+        blackKingBar="0"
+        linkensSphere="2"
+        diffusalBlade="0"
+        cooldown="100"
+        mana="150/200/250">
+        <abilityAttributes
+            name="Range"
+            value="550"/>
+        <abilityAttributes
+            name="Duration"
+            value="15 (16*)"/>
+        <abilityAttributes
+            name="Damage Per Second"
+            value="20/35/50 (40/60/80*)"/>
+        <diffusalBlade description="Inflicts a curse that prevents an enemy Hero from casting spells or using items, while taking damage over time." />
+        <aghanims description="Increases damage and duration. Disables passive skills. Duration doesn't count down while the target is within 900 range of Doom." />
+        <altDescription description="When a name is tolled from the bell of Vashundol, doom is sure to follow. Upgradable by Aghanim's Scepter." />
+        <notes>
+            <note>Has a cast point of 0.5 seconds.</note>
+            <note>Applies a dispel on the target, removing buffs in the process.</note>
+            <note>Heroes afflicted by Doom can be denied when their HP drops below 25%.</note>
+            <note>If a magic shield is present, such as the barrier from Pipe of Insight, Doom will damage the barrier first before moving on to the Hero.</note>
+            <note>Unlike other silences, Doom also prevents the target from using items. Aghanim's Scepter also makes it disable many passive abilities, turning it into a mute.</note>
+            <note>Toggling spells like Rot or Voodoo Restoration stay active when they were active upon getting doomed.</note>
+            <note>Doomed units still can pick up or drop items and take runes.</note>
+            <note>Doomed units can still level up their spells and attribute bonus.</note>
+            <note>Deals damage in 1 second intervals, starting immediately.</note>
+            <note>Deals a total of 300/525/750 damage and at least 640/960/1280 damage when upgraded with Aghanim's Scepter.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Doom has very poor Agility gain and ironically, one of the lowest starting armor in the game while having the most visible armor on his model so it is often essential to tank him up with armor items such as Assault Cuirass and Shiva's Guard to make his high HP go farther against physical attacks.</tip>
+        <tip>Be aware of heroes that commonly build Linken's Sphere as casting Doom on them will result in it being completely wasted. Cast LVL? Death on them first to burn the Linken's Sphere cooldown before casting Doom.</tip>
+        <tip>Always make sure to never max out LVL? Death, but instead level it when your enemies are in multiples of 6,5,4, and 3 in order to make it hit as hard as possible.</tip>
+        <tip>Cast Doom early in teamfights - the huge 15 second duration can render spell-dependent nukers such as Zeus or Lina virtually useless. Alternatively, if you can catch a hero carrying key support items like Mekansm and Pipe of Insight you can prevent those items from being used during the subsequent fight.</tip>
+        <tip>Make use of Devour's ability steal to give yourself and your team useful neutral creep abilities like stuns, slows, ensnares, or different types of auras.</tip>
+        <tip>Dark Troll Summoner is one of the best creeps to devour for a jungling Doom in early game. It gives Raise Dead, allowing you to summon two skeleton warriors who can tank creeps for you.</tip>
+        <tip>Another useful creep for jungling is Satyr Tormenter, its Unholy Aura provides great health regeneration (4 health/second), and can also be used while laning to help you and allies hold lane longer. The Shockwave nuke has a high mana cost, but has good range and moderate cooldown, which you can use to finish off fleeing enemies with low health. In the early stages of the game, it can also be used to effectively harass your opponents in-lane.</tip>
+        <tip>Satyr Mindstealer's Mana Burn could be used to prevent heroes with small mana pool such as Sven or Chaos Knight from attempting an early kill. It could also be used against lane supports to prevent them from assisting their carries.</tip>
+        <tip>Hill Troll Priest's heal and mana regeneration aura are good for laning as well. The low mana cost healing spell can be useful against heroes who deal damage over time like Venomancer, Viper, or Axe, and is particularly useful against Silencers Curse of the Silent.</tip>
+        <tip>In midgame, you may opt for more powerful spells such as War Stomp (from Centaur Conqueror), or Ensnare (Dark Troll Summoner). A Satyr Trickster gives you a Purge spell on a very low (5 seconds) cooldown, it is a very versatile ability and is another strong choice. Remember that it has a short cast range of 350.</tip>
+        <tip>In lategame, one of the best options is an Alpha Wolf with passive critical hit chance (20% for 2x damage) and 30% bonus damage aura.</tip>
+        <tip>This synergizes with aura items such as Vladimir's Offering and Assault Cuirass giving your whole team a huge advantage.</tip>
+        <tip>A Kobold Foreman's movement speed aura can also be useful for pushing, ganking, chasing and fleeing.</tip>
+        <tip>Necronomicon is a very strong item on Doom, since Scorched Earth will heal your summons as well. The item also gives Doom valuable intelligence.</tip>
+        <tip>Unlike other melee heroes, Doom has 150 attack range (while the normal melee hero has 128 attack range).</tip>
+        <tip>Doom is a very versatile hero capable of assuming different roles, sometimes even at the same time, due to his ability to farm well (especially with a Hand of Midas) and ability to gain different neutral creep skills enabling him to build certain items and combinations thereof to suit what your team needs:</tip>
+        <tip>As a Tank with defense items such as Vanguard, Heart of Tarrasque, and Shiva's Guard.</tip>
+        <tip>As a Support with aura and team-oriented items such as Mekansm, Pipe of Insight, Vladimir's Offering and Drums of Endurance.</tip>
+        <tip>He can also buy courier and wards if the situation calls for it, and it won't hurt his farm as much as carries.</tip>
+        <tip>During laning phase, skills such as Hill Troll Priest's heal or Unholy Aura could be used to babysit other carries.</tip>
+        <tip>As a Ganker with items such as Shadow Blade or Blink Dagger.</tip>
+        <tip>As a Disabler with a Refresher Orb and an Aghanim's Scepter.</tip>
+        <tip>Purge, War Stomp, or Ensnare could also help your team-mates secure a kill.</tip>
+        <tip>With an Aghanim's Scepter, the potential total damage your ultimate can deal is practically infinite assuming that the target cannot distance himself 900 units away from Doom for 16 seconds. You can kill enemy heroes that is particularly hard to shut down by just chasing them while they are Doomed. Items such as Sange and Yasha, Eye of Skadi, Shiva's Guard and other movement granting items would make Doom able to chase particularly well when combined with Scorched Earth.</tip>
+    </tips>
+</hero>

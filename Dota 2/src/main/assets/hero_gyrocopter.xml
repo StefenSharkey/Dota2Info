@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Gyrocopter</name>
+    <damageType>Ranged</damageType>
+    <attribute>Agility</attribute>
+    <faction>Radiant</faction>
+    <description>Aurel the Gyrocopter is a ranged agility Hero, capable of outputting a lot of single target and area of effect damage at a multitude of ranges. Early game Gyrocopter is a strong ganker, with Rocket Barrage able to output a lot of damage in a short amount of time if he and his target are alone. His second ability, Homing Missile, is a long range projectile that forces opponents to either stop and engage to take out the missile, or run to a safe location before being stunned. Thanks to his third ability, Flak Cannon, he is also an excellent pusher, and with it can farm up big items in the midgame as his spells start to fall off in damage. Flak Cannon also allows him to hit everyone in a teamfight with his autoattack, and with enough damage items he can inflict a lot of damage to the entire enemy team. Call Down is a useful ultimate with a low cooldown, and with an Aghanim's Scepter Gyrocopter can become a global presence, able to push or gank from anywhere on the map. With the right items, he can also transition into a semi-carry role.</description>
+    <roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Nuker</role>
+    </roles>
+    <attributes>
+        <strengthBase>18</strengthBase>
+        <strengthGain>1.8</strengthGain>
+        <agilityBase>24</agilityBase>
+        <agilityGain>2.8</agilityGain>
+        <intelligenceBase>23</intelligenceBase>
+        <intelligenceGain>2.1</intelligenceGain>
+        <damageMinimum>41</damageMinimum>
+        <damageMaximum>51</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>315</baseArmor>
+    </attributes>
+    <ability
+        name="Rocket Barrage"
+        description="Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter. Lasts 3 seconds."
+        ability="No Target"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="7/6.5/6/5.5"
+        mana="90">
+        <abilityAttributes
+            name="Search Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Rockets per Second"
+            value="10"/>
+        <abilityAttributes
+            name="Damage per Rocket"
+            value="11/15/19/23"/>
+        <abilityAttributes
+            name="Barrage Duration"
+            value="3"/>
+        <altDescription description="Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities." />
+        <notes>
+            <note>Despite the visual effects, the damage is dealt instantly, rather than on projectiles hit.</note>
+            <note>Rocket Barrage can't hit invisible units or units in the Fog of War.</note>
+            <note>Rocket Barrage can hit siege creeps.</note>
+            <note>Gyrocopter can act freely during Rocket Barrage.</note>
+            <note>Deals damage in 0.1 second intervals, resulting in 30 damage instances.</note>
+            <note>Deals a total of 330/450/570/690 damage (before reductions), assuming all rockets hit.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Homing Missile"
+        description="Fires a homing missile to seek the targeted enemy unit. The missile gains speed over time, dealing damage and stunning when it impacts the target. Homing Missile deals greater damage the further it has traveled. Enemy units can destroy the missile before it reaches its target."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="1"
+        diffusalBlade="0"
+        cooldown="20/17/14/11"
+        mana="120/130/140/150">
+        <abilityAttributes
+            name="Cast Range"
+            value="1050"/>
+        <abilityAttributes
+            name="Hero Attacks to Destroy"
+            value="3/3/4/5"/>
+        <abilityAttributes
+            name="Non-Hero Attacks to Destroy"
+            value="6/6/8/10"/>
+        <abilityAttributes
+            name="Minimum Damage"
+            value="50"/>
+        <abilityAttributes
+            name="Maximum Damage"
+            value="125/250/375/500"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="2.2/2.4/2.6/2.8"/>
+        <linkensSphere description="Blocked upon cast (no missile is spawned). No interaction otherwise." />
+        <altDescription description="The biggest missile Aurel could possibly attach to his craft, The Bomb™ has carefully calculated aerodynamics and explosives for maximum impact." />
+        <notes>
+            <note>Homing Missile's initial speed is 340 and increases by 20 per second.</note>
+            <note>Though the damage is capped, the missile's speed keeps on increasing until it hits the target or is destroyed.</note>
+            <note>The missile is placed 150 range infront of Gyrocopter and starts moving 3 seconds after cast.</note>
+            <note>The crosshair over the target is visible to allies only.</note>
+            <note>Although the spell grants in no way vision over the target, the missile will follow and hit invisible units.</note>
+            <note>When the missile hits its target, its 400 range flying vision stays at the location for 3.5 seconds.</note>
+            <note>Only attacks from heroes, illusions (counting as heroes), towers and the fountains (counting as towers) can damage the missile.</note>
+            <note>The missile's damage is based the distance between the rocket's starting position (150 range in front of Gyrocopter upon cast).</note>
+            <note>To deal more than the minimum damage, the missile has to hit its target at least 601/301/201/151 range away from its starting position.</note>
+            <note>This is how much damage the Homing Missile will deal (before reductions) on certain distances:</note>
+            <note>300 distance: 50/50/75/100 damage</note>
+            <note>600 distance: 50/100/150/200 damage</note>
+            <note>900 distance: 75/150/225/300 damage</note>
+            <note>1200 distance: 100/200/300/400 damage</note>
+            <note>1500 distance: 125/250/375/500 damage</note>
+            <note>The damage is capped at 1500 distance.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Flak Cannon"
+        description="Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks. Only the main target of attacks will receive attack bonuses such as Critical Strike. Lasts 15 seconds or until the attacks are used."
+        ability="No Target"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        mantaStyle="0"
+        cooldown="30"
+        mana="50">
+        <abilityAttributes
+            name="Search Radius"
+            value="1000"/>
+        <abilityAttributes
+            name="Number of Attacks"
+            value="3/4/5/6"/>
+        <abilityAttributes
+            name="Duration"
+            value="15"/>
+        <altDescription description="This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius." />
+        <notes>
+            <note>Flak Cannon has an instant cast time, but cancels channeling spells.</note>
+            <note>The flak projectiles travel at a speed of 800, while Gyrocopter's own projectile speed stays at 3000.</note>
+            <note>The flaks can be disjointed. They also can miss on evasion.</note>
+            <note>Gyrocopter's attack range remains 365.</note>
+            <note>The flaks are released at the same time as his attack projectile is released. Means when an attack misses, the flaks are still released.</note>
+            <note>It does not matter how much damage the initial target from the attack takes, the flaks will always deal damage based on Gyrocopter's base damage + bonus damage.</note>
+            <note>This means that the armor of the initial attack target does not influence the flaks' damage at all. It also means that damage from attack modifiers like crits do not affect it either.</note>
+            <note>So the only way to make the flaks deal more damage is to increase Gyrocopter's base damage via stats, give him a raw damage bonus, or reduce the armor of the flak targets.</note>
+            <note>Other effects of attack modifiers like bash or lifesteal is only applied to the attack target.</note>
+            <note>Does not target couriers, wards, buildings, invisible units and units in Fog of War in range. Does target siege creeps.</note>
+            <note>However, attacking couriers, wards or buildings will still cause flaks to hit all valid targets within the range.</note>
+            <note>The number of attacks left is visible (to everyone) on the buff icon.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Call Down"
+        description="Call down an aerial missile strike on enemy units in a target area. Two missiles arrive in succession, the first dealing major damage and major slow; the second dealing minor damage and minor slow."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="55/50/45"
+        mana="125">
+        <abilityAttributes
+            name="Cast Range"
+            value="1000 (Global*)"/>
+        <abilityAttributes
+            name="Effect Radius"
+            value="450"/>
+        <abilityAttributes
+            name="Missile One Damage"
+            value="250/300/350"/>
+        <abilityAttributes
+            name="Missile Two Damage"
+            value="100/150/200 (175/225/275*)"/>
+        <abilityAttributes
+            name="Missile One Slow"
+            value="50%"/>
+        <abilityAttributes
+            name="Missile Two Slow"
+            value="20%"/>
+        <abilityAttributes
+            name="Missile One Slow Duration"
+            value="2"/>
+        <abilityAttributes
+            name="Missile Two Slow Duration"
+            value="3"/>
+        <aghanims description="Increases the damage of the second missile, and gives global cast range." />
+        <altDescription description="'Bombs away!'" />
+        <notes>
+            <note>The first missile impacts 2 seconds and the second missile 4 seconds after cast.</note>
+            <note>The missile's damage and slow duration are bound to the missiles, while the slow depends on wether a unit has the slow debuff from the first missile on or not.</note>
+            <note>This means when a unit does not have the debuff on (first missile missed or the debuff was purged), but is hit by the second missile, it will be slowed for 50%, instead of 20%.</note>
+            <note>Provides 300 radius flying vision at the targeted area for 4 seconds since cast.</note>
+            <note>Does not affect ancient creeps, Roshan, Warlock's Golems and the spirits from Primal Split.</note>
+            <note>The visual areal indicator is visible to allies only, but the sound effects are audible and the missiles visible to everyone.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Rocket Barrage is incredibly powerful against a single enemy, but its damage falls off dramatically if there are multiple targets. Position yourself to make the best use of it.</tip>
+        <tip>Homing Missile is a great harassment tool. Place it behind your allies to prevent the enemy from destroying it before it starts moving.</tip>
+        <tip>Flak Cannon allows you to harass enemy heroes from a great distance, or force them away from the creeps. An early point should be considered if you are taking the solo mid-lane. However, it does push the lane and may open yourself to ganks.</tip>
+        <tip>Using Flak Cannon early (before you use the attacks) will lessen the cooldown on your next cast.</tip>
+        <tip>For maximum effect, cast Call Down in conjunction with your Homing Missile's impact or an allied disable.</tip>
+        <tip>Gyrocopter makes for a viable Divine Rapier carrier due to Flak Cannon's ability to hit all enemies in 1000 range with your current total Attack Damage. Extreme caution is advised when holding this item due to your poor HP pool, but with good judgement and teamwork, it can allow you to devastate the enemy team. It should only be purchased when the game has gone on for a long time and is balanced on a knife edge, or the game is looking extremely bad for your team.</tip>
+    </tips>
+</hero>

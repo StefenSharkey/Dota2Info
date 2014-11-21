@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Earthshaker</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Raigor Stonehoof the Earthshaker is a melee Strength Hero with several area of effect disables, commonly played as a ganker or initiator. Unlike most Strength heroes, he is played more like an Intelligence caster hero and is almost entirely reliant on his spells to inflict heavy damage. His Fissure is a versatile spell that affects enemies in a line, used to stun, inflict decent damage, and create an impassable wall of earth for a significant duration. Good usage of this can cut off chokepoints, leaving enemies with no escape routes or preventing them from chasing after endangered allies. Enchant Totem massively boosts his attack damage for one attack, and has a very short cooldown. Aftershock lets the Earthshaker deal additional damage and stun in a small area around him everytime he uses one of his spells, and combos particularly well with Enchant Totem. Earthshaker's heavy AoE-centric kit is most powerful when his enemies are in large numbers and in close proximity. With his Echo Slam, he can deal heavy damage to clusters of enemies. All of Earthshaker's spells (with the exception of his ultimate) have a long casting animation, but with proper positioning, an adept Earthshaker can wreak havoc with his area-of-effect spells. Blink Dagger is an essential item for Earthshaker to be able to properly land Echo Slam within a cluster of enemies. At the same time, because of the high mana costs of his spells, he needs some form of mana sustenance. With his tremendous seismic power, the Earthshaker is never one that should be taken lightly even when he is heavily outnumbered.</description>
+    <roles>
+        <role>Initiator</role>
+        <role>Disabler</role>
+        <role>Support</role>
+        <role>Lane Support</role>
+    </roles>
+    <attributes>
+        <strengthBase>22</strengthBase>
+        <strengthGain>2.9</strengthGain>
+        <agilityBase>12</agilityBase>
+        <agilityGain>1.4</agilityGain>
+        <intelligenceBase>16</intelligenceBase>
+        <intelligenceGain>1.8</intelligenceGain>
+        <damageMinimum>46</damageMinimum>
+        <damageMaximum>56</damageMaximum>
+        <baseMoveSpeed>310</baseMoveSpeed>
+        <baseArmor>2.68</baseArmor>
+    </attributes>
+    <ability
+        name="Fissure"
+        description="Slams the ground with a mighty totem, creating an impassable ridge of stone while stunning and damaging enemy units in a line."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="15"
+        mana="125/140/155/170">
+        <abilityAttributes
+            name="Fissure Length"
+            value="1400"/>
+        <abilityAttributes
+            name="Effect Radius"
+            value="225"/>
+        <abilityAttributes
+            name="Damage"
+            value="125/175/225/275"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="1/1.25/1.5/1.75"/>
+        <abilityAttributes
+            name="Fissure Duration"
+            value="8"/>
+        <blackKingBar description="Spell immune units are still shoved aside and cannot pass through the Fissure." />
+        <altDescription description="The Nishian totem splits the earth to its core with tectonic force." />
+        <notes>
+            <note>Fissure's pathing blocking width is approximately 80.</note>
+            <note>Flying units (e.g. Flying Courier or Summon Familiars) and units with free pathing (Spectral Dagger, Charge of Darkness, Spin Web) are not blocked by Fissure.</note>
+            <note>They still are fully affected by Fissure otherwise when hit. They are shoved aside, stunned and damaged.</note>
+            <note>Lane Creeps and neutral creeps (including Roshan) will not try to path around the Fissure, but wait for it to disappear.</note>
+            <note>However, spell immune lane and neutral creeps completely ignore the Fissure and can walk through it.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Enchant Totem"
+        description="Empowers Earthshaker's totem, causing it to deal extra damage on the next attack."
+        ability="No Target"
+        affects="Self"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="5"
+        mana="50">
+        <abilityAttributes
+            name="Attack Damage Bonus"
+            value="100%/200%/300%/400%"/>
+        <abilityAttributes
+            name="Damage Duration"
+            value="14"/>
+        <altDescription description="Raigor's gorilla strength can destroy mountains." />
+        <notes>
+            <note>Only increases base damage and additional damage given by the primary attribute.</note>
+            <note>Bonus damage buff is used on successful landed attack.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Aftershock"
+        description="Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when Earthshaker casts his abilities."
+        ability="Passive"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0">
+        <abilityAttributes
+            name="Radius"
+            value="300"/>
+        <abilityAttributes
+            name="Damage"
+            value="50/75/100/125"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="0.6/0.9/1.2/1.5"/>
+        <altDescription description="The earth trembles beneath the mighty footsteps of Raigor." />
+        <notes>
+            <note>Using items does not trigger Aftershock.</note>
+            <note>Aftershock's damage and stun is applied before the triggering spell's effects are applied.</note>
+            <note>The stun does not stack with the stun of Fissure. It follows the regular rule of stuns – the longer stun overrides the shorter one.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Echo Slam"
+        description="Shockwaves travel through the ground, damaging enemy units. Each enemy hit causes an echo to damage nearby units. Upgradable by Aghanim's Scepter."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        cooldown="150/130/110"
+        mana="145/205/265">
+        <abilityAttributes
+            name="Radius"
+            value="575"/>
+        <abilityAttributes
+            name="Main Damage"
+            value="160/210/270"/>
+        <abilityAttributes
+            name="Echo Damage"
+            value="40/55/70"/>
+        <blackKingBar description="Unit still counts for the echo effect." />
+        <aghanims description="Causes each initial hero hit to echo twice." />
+        <altDescription description="Tectonic plates crack, mountains fold, and foes are crushed by the Echo Slam." />
+        <notes>
+            <note>Echo Slam as an instant cast time, though the backswing animation has to be manually canceled. Interrupts channeling spells.</note>
+            <note>Each unit within the initial AoE will produce an echo wave, dealing damage to units within a 575 radius around itself (including itself).</note>
+            <note>Creeps killed by Echo Slam's initial damage will still give off echo wave damage.</note>
+            <note>The initial damage is applied instantly in the AoE, while the echo waves travel at a speed of 550.</note>
+            <note>The Aghanim's Scepter upgrade treats illusions as heroes, means they will echo twice as well.</note>
+            <note>Fully affects invisible units and units in Fog of War.</note>
+            <note>Total damage to a single unit when hitting a certain number of heroes with no creeps nearby (before reductions):</note>
+            <note>1 Hero: 200/265/340 (240/320/410)</note>
+            <note>2 Heroes: 240/320/410 (320/430/550)</note>
+            <note>3 Heroes: 280/375/480 (400/540/690)</note>
+            <note>4 Heroes: 320/430/550 (480/650/830)</note>
+            <note>5 Heroes: 360/485/620 (560/760/970)</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Fissure creates an impassable barrier, which can be effective for stopping enemies from escaping.</tip>
+        <tip>It is important to keep in mind, however, that this barrier is also impassable to yourself and allies. Be careful of how you position yourself and the Fissure wall.</tip>
+        <tip>Upon initiating, Aftershock allows for your Enchant Totem and Echo slam to disable the enemy team for longer periods of time.</tip>
+        <tip>Because of the echo damage, Echo Slam is best used in the middle of the enemy team, especially when they have a large amount of units near them.</tip>
+        <tip>A Blink Dagger or Force Staff will help you get into position to use Echo Slam. Note that it might not always be best to initiate and it can sometimes be best to wait for the enemy team to start the fight and group up.</tip>
+        <tip>Try to find a balance between building items that help you be the team's initiator and those which increase your mana, Intelligence and or Strength so that you can remain effective throughout the game.</tip>
+        <tip>Soul Ring is often a particularly effective item on Earthshaker, as it provides both health and mana regeneration while giving you the option for mana whenever needed.</tip>
+        <tip>Arcane Boots give Earthshaker more team utility through active mana regeneration, increased movement speed, and an increased mana pool to allow you to cast more spells.</tip>
+        <tip>Because of Echo Slam, it is a fatal mistake to push against an Earthshaker without taking precautions to not get caught while grouped up. Echo Slam's damage has no upper limit and so Earthshaker has the potential to wipe out an entire team of heroes instantly if there are enough bodies present.</tip>
+        <tip>Because of Echo Slam, Earthshaker is particularly effective against heroes that can create illusions or clones, such as Chaos Knight, Naga Siren, Phantom Lancer and Meepo, as well as heroes that can summon or control units such as Broodmother, Nature's Prophet, Enchantress and Chen.</tip>
+        <tip>While he is primarily and fundamentally a support because of his potentially game-breaking spells, it is possible to play Earthshaker as a physical damage dealer due to the very large amount of damage from Enchant Totem. There are a lot of builds for this, but they usually revolve around cost-efficient strength items like Drum of Endurance and Armlet of Mordiggian, and then Daedalus. With these items an Earthshaker can potentially instantly kill an enemy carry (though there is some risk involved). If you wish to attempt this type of build, make sure you have the consent of your teammates first, most will assume you plan on supporting.</tip>
+    </tips>
+</hero>

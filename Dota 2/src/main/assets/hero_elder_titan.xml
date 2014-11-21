@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Elder Titan</name>
+    <damageType>Melee</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>The Elder Titan is a durable melee strength hero who plays the role of initiator. His Astral Spirit and Echo Stomp abilities allow him to disable large groups of enemies from afar, making him one of the few initiators that does not require a Blink Dagger. This combination creates a perfect setup for his powerful ultimate Earth Splitter, which damages enemies based on their maximum HP. This, along with his ability to lower his enemies' physical and magical resistance, makes Elder Titan scale well through his abilities and be effective at all stages of the game. As the progenitor of this world, Elder Titan reshapes the battlefield on a whim and can turn any teamfight in his favor.</description>
+    <roles>
+        <role>Initiator</role>
+        <role>Durable</role>
+    </roles>
+    <attributes>
+        <strengthBase>24</strengthBase>
+        <strengthGain>2.3</strengthGain>
+        <agilityBase>14</agilityBase>
+        <agilityGain>1.5</agilityGain>
+        <intelligenceBase>23</intelligenceBase>
+        <intelligenceGain>1.6</intelligenceGain>
+        <damageMinimum>47</damageMinimum>
+        <damageMaximum>57</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>2.96</baseArmor>
+    </attributes>
+    <ability
+        name="Echo Stomp"
+        description="Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations. The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage. Unconscious enemies will wake if they take player based damage."
+        ability="No Target/Channeled"
+        affects="Enemies"
+        damage="Physical/Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="15"
+        mana="100">
+        <abilityAttributes
+            name="Channel Time"
+            value="1.4"/>
+        <abilityAttributes
+            name="Radius"
+            value="475"/>
+        <abilityAttributes
+            name="Sleep Duration"
+            value="2/3/4/5"/>
+        <abilityAttributes
+            name="Physical Damage"
+            value="80"/>
+        <abilityAttributes
+            name="Magical Damage"
+            value="80"/>
+        <altDescription description="The force of creation still echoes in the stomp of the Titan." />
+        <notes>
+            <note>The Astral Spirit will always perform its part of the stomp, perfectly synchronized with Elder Titan, even when it was not cast, nor leveled up.</note>
+            <note>When Astral Spirit is not been cast, it will appear on Elder Titan's location and cast its part of the Echo Stomp, dealing magical damage in the same AoE and disappear afterwards.</note>
+            <note>If the Astral Spirit is cast, it will do only magical damage part in 475 radius around itself, when Elder Titan will do only physical damage part in the same radius around himself.</note>
+            <note>The Astral Spirit itself possesses this ability as well (with a different icon). Ordering the spirit to cast it forces Elder Titan to cast his part.</note>
+            <note>When being cast on the spirit while Elder Titan is disabled, it will go into cooldown for the spirit and do nothing. However, Elder Titan can still use it afterwards and the spirit will still mimic, even though its own is on cooldown.</note>
+            <note>Echo Stomp cannot be canceled by ordering the spirit to stop. During the Echo Stomp animation, the spirit "Can't Act" (a red error message appears, reading that).</note>
+            <note>Affected units cannot be woken up for the initial 0.65 seconds of the sleep.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Astral Spirit"
+        description="Elder Titan sends forth his Astral Spirit, damaging any units it passes through. When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it damaged. The Astral Spirit possesses the Echo Stomp, Return Spirit, and Natural Order abilities."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="16"
+        mana="110">
+        <abilityAttributes
+            name="Cast Range"
+            value="1200"/>
+        <abilityAttributes
+            name="Radius"
+            value="275"/>
+        <abilityAttributes
+            name="Damage"
+            value="60/100/140/180"/>
+        <abilityAttributes
+            name="Spirit Duration"
+            value="8"/>
+        <abilityAttributes
+            name="Buff Duration"
+            value="9"/>
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="1% (per Creep) + 5% (per Hero)"/>
+        <abilityAttributes
+            name="Bonus Damage"
+            value="3/6/9/12 (per Creep) + 10/20/30/40 (per Hero)"/>
+        <altDescription description="Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need." />
+        <notes>
+            <note>The spirit is invulnerable.</note>
+            <note>The spirit is controllable by Elder Titan until the end of its duration.</note>
+            <note>The spirit can move over impassable terrain (e.g. cliffs, trees).</note>
+            <note>The spirit has no collision size, so it can't be used to block enemies.</note>
+            <note>The spirit cannot intercept any spell (e.g. Meat Hook, Sacred Arrow, Hookshot).</note>
+            <note>It is possible to teleport to the spirit using Boots of Travel.</note>
+            <note>The spirit's movement speed is set equal to Elder Titan's movement speed upon cast. Changes to his movement speed afterwards are not adapted by the spirit.</note>
+            <note>Drum of Endurance is the only aura the Astral Spirit benefits from (other auras which affect invulnerable units are useless for the spirit).</note>
+            <note>The Astral Spirit will unite with Elder Titan when he comes within 100 range of it. So just walking through it will return it as well.</note>
+            <note>Casting Echo Stomp while the spirit returns to Elder Titan forces the spirit to stop and cast his part. He will continue returning once the cast finishes.</note>
+            <note>Does not prevent neutral creeps from spawning.</note>
+            <note>The spirit has 450 radius ground vision.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Return Astral Spirit"
+        description="Returns the Astral Spirit to Elder Titan."
+        ability="No Target">
+        <notes>
+            <note>Unlike Elder Titan's other spells, has an instant cast time.</note>
+            <note>Replaces Astral Spirit spell until the spirit unites with Elder Titan again.</note>
+            <note>The Astral Spirit possesses this ability as well.</note>
+            <note>Elder Titan cannot cast this while disabled, however the Astral Spirit can while Elder Titan is disabled.</note>
+            <note>The Astral Spirit moves back with a speed of 600.</note>
+            <note>Does not interrupt channeling.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Natural Order"
+        description="Reduces all elements to their basic levels, removing base armor and magic resistance from nearby enemy units."
+        ability="Aura"
+        affects="Enemies"
+        blackKingBar="0"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Radius"
+            value="275"/>
+        <abilityAttributes
+            name="Armor Reduction"
+            value="40%/60%/80%/100%"/>
+        <abilityAttributes
+            name="Magical Damage Amplification"
+            value="12%/19%/26%/33%"/>
+        <altDescription description="As it was at the beginning, Elder Titan makes it so again." />
+        <notes>
+            <note>Armor reduction only applies to base armor and armor gained via agility.</note>
+            <note>33% bonus magical damage will essentially negate natural magic resistance of enemy heroes (with the exception of Meepo and Visage, leaving them with +13.33% and -20% respectively).</note>
+            <note>The Astral Spirit possesses this aura.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Earth Splitter"
+        description="Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage. Upgradable by Aghanim's Scepter."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Physical/Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="100"
+        mana="175">
+        <abilityAttributes
+            name="Casting Range"
+            value="2400"/>
+        <abilityAttributes
+            name="Delay"
+            value="3.14"/>
+        <abilityAttributes
+            name="Crack Width"
+            value="300"/>
+        <abilityAttributes
+            name="Crack Range"
+            value="2400"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="30%/40%/50%"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="3/4/5 (4/5/6*)"/>
+        <abilityAttributes
+            name="Disarm Duration"
+            value="0 (4/5/6*)"/>
+        <abilityAttributes
+            name="Max HP as Damage"
+            value="35%"/>
+        <aghanims description="Increases slow duration and adds disarm." />
+        <altDescription description="That which he created, the titan tears asunder." />
+        <notes>
+            <note>Deals 17.5% of the affected units' max hp as physical damage, and 17.5% as magical damage.</note>
+            <note>The crack extends with a speed of 910.</note>
+            <note>The crack extends up to 2600 distance, but the actual effects stop at 2400.</note>
+            <note>Area starts actually 300 units behind Elder Titan and goes up to 2400 in front of him. So the actual range of the whole crack affects is 2700.</note>
+            <note>Affected units are instantly pulled towards the crack once it implodes.</note>
+            <note>The pull interrupts channeling spells.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Depending on your team composition and level of play, Elder Titan's skills have differing priorities to max. Level Echo Stomp to increase the sleep's duration, making it easier for Elder Titan and his team to set up their own area-of-effect spells without disturbance. Astral Spirit provides the highest overall damage increase. Maxing Natural Order early massively increases its effectiveness, as enemy heroes will have little to no bonus defenses and will thus be taking almost full damage.</tip>
+        <tip>Astral Spirit spawns at a target location up to a distance of 1200 away from Elder Titan and can then be moved further away from there. Elder Titan can use this to initiate by casting Astral Spirit in the middle of an enemy team followed immediately by Echo Stomp; if the enemy team was unaware of Elder Titan's location beforehand they usually won't have time to react before Echo Stomp's cast time is finished. If Echo Stomp's level is high enough the enemies should be stunned for the entire 3 seconds it takes for Earth Splitter to form and activate, assuming they don't take any damage that breaks the stun.</tip>
+        <tip>Astral Spirit is an effective harassing and pushing tool throughout the early game that can be used without putting Elder Titan in danger.</tip>
+        <tip>Be careful, though: it costs 110 mana per use. This mana cost can be remedied if your lane partner or you build Arcane Boots.</tip>
+        <tip>Although unmentioned, a Refresher Orb is a fairly good choice for the Elder Titan; two casts of Earth Splitter will both severely damage the enemy and slow them for an extended duration, if both hit. Be aware that you need items to augment your mana pool, though.</tip>
+        <tip>Elder Titan can excel even with just one or two core items. Eul's Scepter of Divinity, for example, solves his mana problems while giving a reliable disable to set up an Echo Stomp or Earth Splitter.</tip>
+        <tip>Due to his tankiness, Elder Titan can carry auras effectively. Items like Ring of Basilius, Drum of Endurance, Mekansm, Pipe of Insight, Vladmir's Offering and Assault Cuirass can help the whole team, as long as Elder Titan stays alive and close to his allies.</tip>
+        <tip>Power Treads will make you able to land more hits after the Spirit returns, and switching to Intelligence can help with the low mana pool; Phase Boots pair well with the movement speed bonus granted by the Astral Spirit; Arcane Boots give much more mana to spam spells; later in the game, Boots of Travel can be used to counter-push or counter-gank.</tip>
+        <tip>While Elder Titan makes a great initiator, he is also great at breaking enemy team initiations. If you can react fast enough and use a long range Echo Stomp through your spirit the moment your allies get initiated on you will open the way for your allies to reorganize and re-position to follow up on your Earth Splitter.</tip>
+        <tip>In later stages of the game when your team sieges and pushes towers Astral Spirit makes a magnificent tool in scouting ahead to check enemy positions without putting anyone on your team in danger. To better control your spirit you can actually assign it to a group so you can immediately select it whenever it is available.</tip>
+        <tip>Remember that the sleep from Echo Stomp is not a stun and enemy units will immediately wake up if they take any sort of hero damage. If an allied Elder Titan is preparing to initiate make sure you do not attack the enemy until his Earth Splitter activates and maims the enemy team.</tip>
+        <tip>Early game in certain cases you can use the mechanics of Echo Stomp to your advantage. Consider the fact that only player based damage awakens sleeping units if you perhaps can knockout an enemy in the range of your tower for example you can do considerable damage.</tip>
+        <tip>Refresher Orb is an item which can allow you to deal 70% of enemies' HP in a team fight by casting Earth Splitter twice in succession, severely crippling them within moments. This set up will need careful coordination with your team and a successfully executed Echo Stomp.</tip>
+        <tip>An early Soul Ring will allow you to spam Astral Spirit constantly while still in the laning phase, adding a considerable amount of harassment potential to Elder Titan.</tip>
+    </tips>
+</hero>

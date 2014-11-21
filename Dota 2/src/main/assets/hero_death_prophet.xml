@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Death Prophet</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Dire</faction>
+    <description>Krobelus the Death Prophet is a ranged intelligence Hero who excels at pushing lanes. She is often played in the mid lane, since her Crypt Swarm gives her strong magic damage that can be spammed easily - and even more so once she learns Witchcraft to improve her spells. As she levels her ultimate, Exorcism, Death Prophet can deal a huge amount of damage to towers and heroes alike, while healing at the end of the duration. Finally, her Silence gives her a powerful tool to disable enemy casters and heroes that rely on escape abilities. Because she can deal large amounts of damage over time with her ultimate and Crypt Swarm, Death Prophet is mostly built as a tank, to ensure she can continue to stay in the fight.</description>
+    <roles>
+        <role>Pusher</role>
+        <role>Nuker</role>
+        <role>Durable</role>
+    </roles>
+    <attributes>
+        <strengthBase>19</strengthBase>
+        <strengthGain>2.2</strengthGain>
+        <agilityBase>14</agilityBase>
+        <agilityGain>1.4</agilityGain>
+        <intelligenceBase>20</intelligenceBase>
+        <intelligenceGain>3.0</intelligenceGain>
+        <damageMinimum>44</damageMinimum>
+        <damageMaximum>56</damageMaximum>
+        <baseMoveSpeed>280</baseMoveSpeed>
+        <baseArmor>2.96</baseArmor>
+    </attributes>
+    <ability
+        name="Crypt Swarm"
+        description="Sends a swarm of winged beasts to savage enemy units in front of Death Prophet."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="8"
+        mana="105/120/140/165">
+        <abilityAttributes
+            name="Cast Range"
+            value="600"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/175/250/300"/>
+        <abilityAttributes
+            name="Radius"
+            value="110 (Starting Radius) / 700 (Distance) / 300 (Final Radius)"/>
+        <altDescription description="Krobelus' many trips to the grave gather a flock of the damned." />
+        <notes>
+            <note>Can hit units up to 1110 range away.</note>
+            <note>Cooldown reduced by Witchcraft is: 7/6/5/4</note>
+            <note>Mana Cost is reduce by max level Witchcraft to: 80/95/115/140</note>
+        </notes>
+    </ability>
+    <ability
+        name="Silence"
+        description="Prevents enemy units in a target area from casting spells."
+        ability="Target Point"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="15"
+        mana="80">
+        <abilityAttributes
+            name="Casting Range"
+            value="900"/>
+        <abilityAttributes
+            name="Radius"
+            value="425"/>
+        <abilityAttributes
+            name="Duration"
+            value="3/4/5/6"/>
+        <altDescription description="Peering into the veil of her opponent's demise, Krobelus sees a silent future." />
+        <notes>
+            <note>Doesn't prevent usage of items.</note>
+            <note>Cooldown is reduce with Witchcraft to: 14/13/12/11</note>
+            <note>Mana Cost is reduce with Witchcraft to: 70/65/60/55</note>
+        </notes>
+    </ability>
+    <ability
+        name="Witchcraft"
+        description="Increases the potency of Death Prophet's spells, while providing a passive movement speed boost. Reduces mana costs and cooldowns of Crypt Swarm and Silence, and adds additional spirits to Exorcism."
+        ability="Passive"
+        affects="Self"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Bonus Movement Speed"
+            value="5%/10%/15%/20%"/>
+        <abilityAttributes
+            name="Mana Cost Decrease on Crypt Swarm and Silence"
+            value="10/15/20/25"/>
+        <abilityAttributes
+            name="Cooldown Decrease on Crypt Swarm and Silence"
+            value="1/2/3/4"/>
+        <abilityAttributes
+            name="Bonus Exorcism Spirits"
+            value="3/4/5/6"/>
+        <mantaStyle description="Illusions get the bonus movement speed." />
+        <altDescription description="With each death, Krobelus adds necromantic power to her repertoire." />
+    </ability>
+    <ability
+        name="Exorcism"
+        description="Unleashes evil spirits to drain the life of nearby enemy units and structures. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Lasts 30 seconds."
+        ability="No Target"
+        affects="Enemy Units and Structures"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="145"
+        mana="200/300/400">
+        <abilityAttributes
+            name="Radius"
+            value="700"/>
+        <abilityAttributes
+            name="Spirits"
+            value="4/12/21"/>
+        <abilityAttributes
+            name="Spirit Damage"
+            value="53-58"/>
+        <abilityAttributes
+            name="Life Drain"
+            value="25%"/>
+        <abilityAttributes
+            name="Duration"
+            value="30"/>
+        <altDescription description="Over time, the banshee remnants of her previous lives return to haunt the present." />
+        <notes>
+            <note>Radius specifies the area around Death Prophet where spirits will choose new targets.</note>
+            <note>Spawns a maximum of 27 spirits.</note>
+            <note>The spirits' damage is reduced by armor, but NOT by damage block (Stout Shield, etc.).</note>
+            <note>The spirits will prioritize damage to the last hostile unit that was targeted.</note>
+            <note>Each spirit will heal Death Prophet for the amount of damage they have dealt.</note>
+            <note>Spirits travel at 500 movement speed upon return, making it possible to outrun them as they return.</note>
+            <note>Can damage siege creeps and structures.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Exorcism is a fantastic pushing ultimate that can easily take down towers and Roshan if left unhindered. Fighting into an activated Exorcism is quite dangerous as well, which means hindering her is not easy.</tip>
+        <tip>Crypt Swarm is typically maxed first as it is a very strong AoE nuke with low cooldown, followed by Witchcraft, which greatly reduces the mana cost of Crypt Swarm as well as alleviating Krobelus' very low base movement speed. Maxing Witchcraft early also enhances Exorcism, which is a useful ability at all stages of the game.</tip>
+        <tip>Put a single point in Silence early, as 3 seconds of silence is well worth the 80 mana it will cost you.</tip>
+        <tip>Always remember Exorcism's damage is physical, and as such Armor reduction increases its damage. Focusing on targets with low armour (Int and many Str heroes) will yield the best result of Exorcism. That said, its damage is a threat even to targets with very high armour.</tip>
+        <tip>In a large clash, Krobelus should be swooping around silencing and nuking enemy supports while eroding their health with Exorcism. Carries almost unfailingly have higher armor than supports, and since Exorcism is physical damage, her damage potential is highest when she focuses on the supports.</tip>
+        <tip>Despite her abysmal base movement speed, with Witchcraft and Phase Boots Krobelus moves extremely fast and can often avoid damage simply by being faster than her aggressor. A Eul's Scepter of Divinity is also common pickup on her and will increase her movement speed to phenomenal levels. Krobelus tends to chase people around a lot with Exorcism, so high movement speed is a must and can also help the spirits damage enemies around Krobelus while she is safe.</tip>
+        <tip>Use Exorcism as early as is practically possible for clashes, as the sooner it is cast the sooner her spirits will return and heal her. Her spirits will easily harvest enough life to restore her HP entirely, and the conclusion of her ultimate can save Krobelus' life; as well as severely endanger the lives of her adversaries as she returns to battle with full health.</tip>
+        <tip>Medallion of Courage makes Exorcism do a lot more damage to a single target, as well as provide more mana regeneration and armor when not active, both of which Death Prophet needs.</tip>
+        <tip>Assault Cuirass is fairly easy for Death Prophet to farm because of Crypt Swarm being a fast farming tool, and her ability to take towers in seconds with Exorcism. Assault Cuirass gives a lot of armor and attack speed to herself and her team, as well as reducing the enemy's armor, allowing Exorcism to do even more damage in engagements and pushes.</tip>
+    </tips>
+</hero>

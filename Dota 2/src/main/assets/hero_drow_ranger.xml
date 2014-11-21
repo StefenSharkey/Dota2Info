@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Drow Ranger</name>
+    <damageType>Ranged</damageType>
+    <attribute>Agility</attribute>
+    <faction>Radiant</faction>
+    <description>Traxex the Drow Ranger is a ranged agility hero whose greatest assets are her incredible damage and ability to keep threats at bay. Traxex is a carry who, though lacking survivability, provides a worthwhile contribution through her damage alone. The Drow Ranger can be extremely powerful at any given point in the game. &#13;&#10;&#13;&#10;As an agility hero, Traxex's damage is based largely off her auto attacks and is among the greatest largely due to the massive amounts of agility she gains from her passive ultimate, Marksmanship. The Drow Ranger also adds ranged damage to teammates with her global Precision Aura. Despite her lack of escape spells, Drow Ranger can keep herself relatively safe from enemy spellcasters and melee heroes using her Gust and her Frost Arrows, respectively. Frost Arrows infuses her attacks with ice, greatly slowing down her enemies. Since it can be manually cast, Frost Arrows can be used to harass her foes in the early game without drawing the creeps' attention. Gust is a great counter to enemy spellcasters as well as melee heroes as Gust pushes heroes away from Drow and prevents them from casting spells, who might threaten her life in battles. Position is of utmost importance as Traxex is quite vulnerable in close combat and the agility bonus from Marksmanship is removed when enemies come near her. This means she struggles against melee heroes with high mobility, such as Anti-Mage and Faceless Void.</description>
+    <roles>
+        <role>Carry</role>
+    </roles>
+    <attributes>
+        <strengthBase>17</strengthBase>
+        <strengthGain>1.9</strengthGain>
+        <agilityBase>26</agilityBase>
+        <agilityGain>1.9</agilityGain>
+        <intelligenceBase>15</intelligenceBase>
+        <intelligenceGain>1.4</intelligenceGain>
+        <damageMinimum>44</damageMinimum>
+        <damageMaximum>55</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>0.64</baseArmor>
+    </attributes>
+    <ability
+        name="Frost Arrows"
+        description="Adds a freezing effect to Drow's attacks, slowing enemy movement. Lasts 1.5 seconds on Heroes, and 7 seconds on creeps."
+        ability="Auto-Cast"
+        affects="Enemies"
+        orbOfVenom="1"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        mana="12">
+        <abilityAttributes
+            name="Range"
+            value="625"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="15%/30%/45%/60%"/>
+        <abilityAttributes
+            name="Hero Slow Duration"
+            value="1.5"/>
+        <abilityAttributes
+            name="Creep Slow Duration"
+            value="7"/>
+        <altDescription description="Ice-encased arrows pierce the silence, chilling their victims to the core." />
+        <notes>
+            <note>Frost Arrows can be disjointed.</note>
+            <note>The slow from successive casts don't stack, only the duration gets refreshed.</note>
+            <note>It works on siege creeps.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Gust"
+        description="Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to you."
+        ability="Target Point"
+        affects="Enemy Units"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="13"
+        mana="90">
+        <abilityAttributes
+            name="Range"
+            value="900"/>
+        <abilityAttributes
+            name="Radius"
+            value="250"/>
+        <abilityAttributes
+            name="Duration"
+            value="3/4/5/6"/>
+        <abilityAttributes
+            name="Knockback Duration"
+            value="0.6/0.7/0.8/0.9"/>
+        <diffusalBlade description="The knockback as well as the silence can be purged." />
+        <altDescription description="Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi." />
+        <notes>
+            <note>Applies a Silence.</note>
+            <note>The wave travels at a speed of 2000.</note>
+            <note>Reaches up to 1150 range away (900 travel distance + 250 radius).</note>
+            <note>The knockback distance is inversely proportional to the target's distance, 350 at closest, 0 at 900.</note>
+            <note>Units are not disabled during the knockback. They can still turn, attack and use items. Channeling items are not interrupted.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Precision Aura"
+        description="Adds bonus damage to the physical attack of allied, ranged Hero units on the map based on a percentage of Drow's agility. Affects creeps for 30 seconds when cast."
+        ability="No Target"
+        affects="Allies"
+        blackKingBar="0"
+        mantaStyle="1"
+        cooldown="120">
+        <abilityAttributes
+            name="Radius"
+            value="Global"/>
+        <abilityAttributes
+            name="Range Damage Bonus"
+            value="18%/24%/30%/36%"/>
+        <abilityAttributes
+            name="Duration"
+            value="30"/>
+        <mantaStyle description="Illusions can carry the aura, but can't make use of the bonus damage." />
+        <altDescription description="Traxex' time spent alone in the forests of her Drow home has allowed her to teach other archers how to improve their bow skills." />
+        <notes>
+            <note>Has an instant cast time, but interrupts channeling.</note>
+            <note>Only affects ranged units.</note>
+            <note>Checks Drow Ranger's agility periodically and adapts the bonus damage instantly.</note>
+            <note>Activating Precision Aura does not place a buff on lane creeps and summons, it instead makes the aura affect them as well.</note>
+            <note>This means that creeps summoned or spawned after the activation will still get the bonus for the remaining duration.</note>
+            <note>Active aura persist through Drow Ranger's death, however it does not provide the bonus during her death.</note>
+            <note>This means when she dies and reincarnates with Aegis of the Immortal, or uses Buyback, the bonus will be applied again for its remaining duration.</note>
+            <note>The buff lingers for 0.5 seconds. This goes for both, the passive aura for heroes and the active aura for creeps.</note>
+            <note>Visage's Familliars and Storm from Primal Split passively benifit from the aura when they are within 900 range of Drow Ranger. They globally benifit from it when activated.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Marksmanship"
+        description="Passively provides bonus agility. If there are nearby enemy heroes, the bonus agility is removed."
+        ability="Passive"
+        affects="Self"
+        blackKingBar="0"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Deactivation Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Agility Bonus"
+            value="40/60/80"/>
+        <altDescription description="The Drow Ranger is the epitome of archery prowess." />
+        <notes>
+            <note>An icy particle effect is visible on Drow Ranger while Marksmanship is active.</note>
+            <note>Checks for enemy heroes in range in 0.1 second intervals and adapts the bonus accordingly.</note>
+            <note>Invulnerable and hidden heroes also deactivate the bonus when they are in range. Illusions do not deactivate it.</note>
+            <note>Effectively gives Drow Ranger 40/60/80 attack speed, 40/60/80 damage and 5.6/8.4/11.2 armor.</note>
+            <note>This is how much damage Precision Aura icon.png Precision Aura grants in conjunction with Marksmanship icon.png Marksmanship's agility bonus:</note>
+            <note>Marksmanship Level 1: 7.2/9.6/12.0/14.4</note>
+            <note>Marksmanship Level 2: 10.8/14.4/18.0/21.6</note>
+            <note>Marksmanship Level 1: Level 3: 14.4/19.2/24.0/28.8</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Manually casting Frost Arrows (known as orbwalking) will prevent Traxex from drawing creep/tower aggro. Traxex can also use this to kite and escape from enemies when caught out.</tip>
+        <tip>An early level of Gust can be crucial to defend against spellcasters.</tip>
+        <tip>Due to the mechanics of Marksmanship, positioning is the key for Traxex. Traxex needs to be at least 400 units away from enemies to enable Marksmanship, or else it won't be active and won't give Traxex the ever needed bonus agility.</tip>
+        <tip>Marksmanship will have a noticeable particle effect that emanates from Traxex's body. If Traxex is too close to an enemy hero, the particle effect will disappear, meaning Traxex will not receive the bonus Agility. This also occurs when invisible units are nearby.</tip>
+        <tip>If during a team fight the enemy heroes get close to each other, using Gust in many or even all of them can simply turn the battle aside. This can make Traxex not just a great carry, but also a powerful disabler/initiator too.</tip>
+        <tip>When in possession of Shadow Blade, Traxex can effectively gank by taking a shot to break the invisibility and immediately using Gust, leaving the target: slowed, damaged, silenced, and being completely unable to react (apart from using items).</tip>
+        <tip>Because of the removal of the bonus agility when there is an enemy hero near Traxex, it is advised to avoid picking her when the enemy carries are especially mobile (Antimage, Faceless Void) or otherwise employ powerful slows that can match Frost Arrow (Viper, Phantom Assassin).</tip>
+    </tips>
+</hero>

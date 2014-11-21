@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Dark Seer</name>
+    <damageType>Melee</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Dire</faction>
+    <description>Ish'kafel the Dark Seer is a melee intelligence hero with versatile abilities that allow him to assist allies and greatly change the conditions of combat. His Vacuum in particular affects enemies in a large area and is a powerful crowd-control. It not only disorients and damages enemies, but also pushes them into a small area to follow up with area spells or to trigger other abilities, such as his Wall of Replica ultimate that turns the very power of enemies against them in the form of illusions that replicate their statistics. His other spells focus on buffing allies with speed, or in the case of his Ion Shell, granting an aura that radiates damage onto enemies who venture within it.</description>
+    <roles>
+        <role>Initiator</role>
+        <role>Nuker</role>
+        <role>Escape</role>
+    </roles>
+    <attributes>
+        <strengthBase>22</strengthBase>
+        <strengthGain>2.3</strengthGain>
+        <agilityBase>12</agilityBase>
+        <agilityGain>1.2</agilityGain>
+        <intelligenceBase>29</intelligenceBase>
+        <intelligenceGain>2.7</intelligenceGain>
+        <damageMinimum>60</damageMinimum>
+        <damageMaximum>66</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>5.68</baseArmor>
+    </attributes>
+    <ability
+        name="Vacuum"
+        description="Dark Seer creates a vacuum over the target area that sucks in enemy units, disrupting them and dealing damage."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="28"
+        mana="100/130/160/190">
+        <abilityAttributes
+            name="Range"
+            value="500"/>
+        <abilityAttributes
+            name="Radius"
+            value="250/350/450/550"/>
+        <abilityAttributes
+            name="Damage"
+            value="40/80/120/160"/>
+        <altDescription description="Ish'Kafel modifies the center of gravity to a place of his choosing." />
+        <notes>
+            <note>This ability interrupts channeling.</note>
+            <note>Drags units over 0.3 seconds.</note>
+            <note>Can drag units over cliffs.</note>
+            <note>This ability destroys trees in a 275 radius.</note>
+            <note>Doesn't work on invulnerable units.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Ion Shell"
+        description="Surrounds the target unit with a bristling shield that damages enemy units in an area around it."
+        ability="Target Unit"
+        affects="Units"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="9"
+        mana="70/90/110/130">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Radius"
+            value="250"/>
+        <abilityAttributes
+            name="Duration"
+            value="20"/>
+        <abilityAttributes
+            name="Damage Per Second"
+            value="30/50/70/90"/>
+        <altDescription description="The Dark Seer slices holes into the 'Land Behind the Wall,' causing prismatic energy to seep forth." />
+        <notes>
+            <note>Doesn't damage the target it is cast on.</note>
+            <note>Damage is dealt in smaller amounts every 0.1 second.</note>
+            <note>If cast on a unit that already has Ion Shell on it, the new Ion Shell will replace the old one.</note>
+            <note>Can be cast on mechanical units.</note>
+            <note>Total damage for each level is: 600/1000/1400/1800</note>
+        </notes>
+    </ability>
+    <ability
+        name="Surge"
+        description="Charges a target friendly unit with power, giving it a brief burst of maximum movement speed."
+        ability="Target Unit"
+        affects="Allied Units"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="12/11/10/9"
+        mana="20/30/40/50">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Duration"
+            value="3/4.5/6/7.5"/>
+        <altDescription description="Ish'Kafel once used his speed of mind to navigate the maze between the walls." />
+        <notes>
+            <note>Slowing effects from spells or items do not affect Surged units.</note>
+            <note>Surged unit maintain maximum movement speed for the full duration, unless the Surge buff is removed (by Purge or other spells).</note>
+        </notes>
+    </ability>
+    <ability
+        name="Wall of Replica"
+        description="Raises a wall of warping light that damages and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will."
+        ability="Target Point"
+        affects="Enemy Heroes"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        cooldown="100"
+        mana="200/300/400">
+        <abilityAttributes
+            name="Range"
+            value="500/900/1300"/>
+        <abilityAttributes
+            name="Wall Length"
+            value="1000"/>
+        <abilityAttributes
+            name="Duration"
+            value="15/30/45"/>
+        <abilityAttributes
+            name="Illusion Damage Dealt"
+            value="70%/80%/90% (100%/120%/140%*)"/>
+        <abilityAttributes
+            name="Illusion Bonus Damage Taken"
+            value="300%"/>
+        <aghanims description="Increases the damage dealt by illusions." />
+        <altDescription description="The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks." />
+        <notes>
+            <note>Doesn't create illusions from other illusions.</note>
+            <note>Every time an enemy hero causes the wall to create an illusion, the wall deals 150 damage.</note>
+            <note>Illusions are semi-transparent to enemy players.</note>
+            <note>The wall is created perpendicular to the line between the Dark Seer and the target point.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>With a Stout Shield and healing items, Dark Seer can go to kill neutral creeps almost immediately.</tip>
+        <tip>An advanced jungling tactic involves Smoke of Deceit. By combining it with Ion Shell, Dark Seer can jungle without taking any damage from creeps, as the only thing that removes the invisibility is proximity to an enemy hero or auto attacking a unit. In this way, Dark Seer can stack a single camp multiple times, cast Ion Shell on himself, pop Smoke, and stand at the camp until the creeps have been killed. Because of the steep cost of Smoke, it is advised that players do not use it without stacking camps first. As of the July 26th patch neutrals will now run away when attacked by an invisible enemy, players can still choose to use this method of jungling by chasing the creeps while invisible or casting on a weak neutral but the method will be far less efficient compared to before.</tip>
+        <tip>If laning, be sure to harass enemies with Ion Shell by placing it on their melee creeps (for melee heroes) or ranged creeps (for ranged heroes). Additionally, placing Ion Shell on the second allied melee creep to arrive at the creep line is a good way to push the lane as well as create a moving damage-dealing creep that will chase enemy heroes.</tip>
+        <tip>Be sure to take at least 1 early point of Surge, as it can help escaping ganks and chasing, as well as giving more mobility.</tip>
+        <tip>When chasing, self-cast Ion Shell and run next to the enemy without attacking, using Surge if you need to catch up. Even better, use surge to body-block enemy heroes (that is, get in front of them to hinder their movement) and deliver auto-attacks without moving out of range of the Ion Shell.</tip>
+        <tip>Wall of Replica is usually leveled after you've maxed both Ion Shell and Vacuum, as early game illusions don't deal much damage. Additionally, the relatively high mana cost at lower levels can be prohibitive, as you won't be left with much mana to cast other spells.</tip>
+        <tip>AoE spells, especially those that require positioning, greatly benefit from Vacuum, as you can place all of them together to ensure a hit.</tip>
+        <tip>Using Vacuum on enemy heroes to send them through your Wall of Replica will disallow foes from preventing illusions, as well as causing guaranteed damage from passing through the Wall.</tip>
+        <tip>Due to Vacuum and Ion Shell's instant cast, your usefulness in large team fights permit Dark Seer to synergize extremely well with heroes such as Enigma and Jakiro. Make sure to cast these abilities with Black Hole and Ice Path/Macropyre/Liquid Fire to maximize AoE damage and maybe turn the tide in battle.</tip>
+        <tip>Mekansm is a strong pickup on Dark Seer, as it makes him tankier and he can very quickly farm one up.</tip>
+        <tip>A Bottle can also be used to sustain high mana use, if the Dark Seer is put midlane. It has the added benefit of rune control as most runes are useful for Ion Shell harass.</tip>
+    </tips>
+</hero>

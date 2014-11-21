@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Ember Spirit</name>
+    <damageType>Melee</damageType>
+    <attribute>Agility</attribute>
+    <faction>Radiant</faction>
+    <description>Xin the Ember Spirit is a highly mobile melee Agility carry, whose abilities enable him to also play as an initiator or ganker. His skill set allows for incredibly aggressive assaults on other heroes, dealing extraordinary amounts of damage in a relatively small window of time, and then escaping to safety. Despite a good HP pool early on, he lacks armor and a sizable mana pool, and as such may be unable to escape quickly enough if caught out of position. However, with good item choices and proper judgement, Ember Spirit can quickly snowball out of control, dominating the battlefield with blinding speed as he cheats death. While he has only a limited presence in the early and mid game, in time Xin becomes a dangerous opponent even on his own, proving to friend and foe alike that for them, there is still much to be learned.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Nuker</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+    </roles>
+    <attributes>
+        <strengthBase>19</strengthBase>
+        <strengthGain>2.0</strengthGain>
+        <agilityBase>22</agilityBase>
+        <agilityGain>1.8</agilityGain>
+        <intelligenceBase>20</intelligenceBase>
+        <intelligenceGain>1.8</intelligenceGain>
+        <damageMinimum>52</damageMinimum>
+        <damageMaximum>56</damageMaximum>
+        <baseMoveSpeed>310</baseMoveSpeed>
+        <baseArmor>1.08</baseArmor>
+    </attributes>
+    <ability
+        name="Searing Chains"
+        description="Ember Spirit unleashes two fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage."
+        ability="No Target"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="14/12/10/8"
+        mana="110">
+        <abilityAttributes
+            name="Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Unit Counts"
+            value="2"/>
+        <abilityAttributes
+            name="Damage Per Second"
+            value="80/60/120/100"/>
+        <abilityAttributes
+            name="Duration"
+            value="1/2/2/3"/>
+        <altDescription description="Xin's harshest lessons often employed the use of red-hot chains." />
+        <notes>
+            <note>Searing Chains interrupts channeling spells upon cast.</note>
+            <note>Despite the visual effects, the effects are applied instantly and can't be disjointed.</note>
+            <note>Ensnares 2 random enemy units within the radius. There are no priorities.</note>
+            <note>Affected units can still turn, cast spells, use items and attack. Affected units receive a stop command upon getting ensnared.</note>
+            <note>Disables the following spells: Blink, Teleportation, Charge of Darkness, Phase Shift and Blink Dagger.</note>
+            <note>Interrupts channeling spells of the target upon ensnaring, but affected units can channel spells during it.</note>
+            <note>Searing Chains reveal invisible units for their duration.</note>
+            <note>Does not target invisible units or units in the Fog of War.</note>
+            <note>Deals damage in 1 second intervals, starting 1 second after cast.</note>
+            <note>Deals a total of 80/120/240/300 damage to a single unit.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Sleight of Fist"
+        description="Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effect, then returning to his start location. Deals bonus damage to heroes, and less damage to creeps."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="30/22/14/6"
+        mana="50">
+        <abilityAttributes
+            name="Cast Range"
+            value="700"/>
+        <abilityAttributes
+            name="Radius"
+            value="250/350/450/550"/>
+        <abilityAttributes
+            name="Hero Damage Bonus"
+            value="20/40/60/80"/>
+        <abilityAttributes
+            name="Creep Damage Penalty"
+            value="50%"/>
+        <altDescription description="The studied warrior must whip and weave through its enemies, burning each without pause." />
+        <notes>
+            <note>Ember Spirit is invulnerable, and his model cannot be selected with the mouse during Sleight of Fist. Does not disjoint projectiles upon cast.</note>
+            <note>Targets are determined upon cast. The targets have a flaming sword above their heads as an indicator, which disappears once Ember Spirit slashes them.</note>
+            <note>This means that units entering the targeted area after cast are not hit, and units which were in the area upon cast and leave the area will be hit, no matter how far they moved.</note>
+            <note>Does not mark or jump on invisible units. When a marked unit goes invisible, it will be fully skipped when it's still invisible on his turn. Units in the Fog of War are fully affected.</note>
+            <note>Jumps in 0.2 second intervals. The jumps are randomly between all marked units, there are no priorities. The damage is dealt immediatly upon each jump.</note>
+            <note>Ember Spirit can cast spells and use items during Sleight of Fist.</note>
+            <note>The damage is based on Ember Spirit's attack damage + the stated damage when jumping on heroes, or - 50% when jumping on creeps.</note>
+            <note>This means that all attack modifier, e.g. bash, crits, lifesteal, or unique attack modifier fully apply or have a chance to trigger on each slash.</note>
+            <note>This also means that when Ember Spirit is disarmed, he will deal no damage on slashes, since he can't attack. He also can miss, and damage reduction will affect the damage.</note>
+            <note>However, Sleight of Fist attacks do not trigger Counter Helix, Moment of Courage and Reactive Armor.</note>
+            <note>After all marked targets have been slashed, Ember Spirit will return to his position he had upon casting Sleight of Fist. That position is marked by a remnant for the duration.</note>
+            <note>Sleight of Fist is not canceled when Ember Spirit gets moved by e.g. a teleport or Activate Fire Remnant.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Flame Guard"
+        description="Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, leaving him unharmed. Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active. If the shield is broken, the damage is also lost."
+        ability="No Target"
+        affects="Self"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="35"
+        mana="80/90/100/110">
+        <abilityAttributes
+            name="Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Damage Per Second"
+            value="30/40/50/60"/>
+        <abilityAttributes
+            name="Magic Damage Absorbed"
+            value="50/200/350/500"/>
+        <abilityAttributes
+            name="Duation"
+            value="8/12/16/20"/>
+        <altDescription description="An enemy should never be allowed to approach without difficulty." />
+        <notes>
+            <note>Flame Guard interrupts channeling spells upon cast.</note>
+            <note>Flame Guard blocks damage before any reductions. The only exception here is spell immunity, during which it does not block any magic damage.</note>
+            <note>Deals 6/8/10/12 damage in 0.2 seconds intervals, starting 0.2 seconds after cast.</note>
+            <note>Can deal a total of 240/480/800/1200 damage to a single unit (before reductions), assuming max duration Flame Guard.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Activate Fire Remnant"
+        description="Select the Fire Remnant to arrive at."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        mana="150">
+        <abilityAttributes
+            name="Cast Range"
+            value="Global"/>
+        <abilityAttributes
+            name="Radius"
+            value="450"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/150/200"/>
+        <abilityAttributes
+            name="Duration"
+            value="8/12/16/20"/>
+        <diffusalBlade description="The invulnerability can be purged." />
+        <altDescription description="With blazing speed does a spirit fly!" />
+        <notes>
+            <note>Ember Spirit moves to a Fire Remnant with a speed of 1300, or reaches it in 0.4 seconds, whichever is faster.</note>
+            <note>Activate Fire Remnant always costs 150 mana, no matter if Ember Spirit has to travel to 1, 2, 3 or 4 Fire Remnants.</note>
+            <note>While traveling, Ember Spirit can attack, cast spells and use items.</note>
+            <note>Using Sleight of Fist or Blink Dagger while traveling will cause him to stop traveling and lose the invulnerability, and then instantly get moved to the next remnant.</note>
+            <note>Always travels to the Fire Remnant furthest away from the targeted point first.</note>
+            <note>The damage is dealt around every Fire Remnant upon reaching them.</note>
+            <note>Destroys trees within 200 radius around Ember Spirit while he's traveling to a remnant. Though at high speeds, some trees may be skipped.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Fire Remnant"
+        description="Ember Spirit generates Fire Remnant charges every 35 seconds, with a max of 3 charges. Releasing a charge sends a Fire Remnant that runs to the target location at 2.5x Ember Spirit's speed. Using Activate Fire Remnant, Ember Spirit can dash out to his Remnants, exploding them for area of effect damage. The targeted Remnant will be arrived at last."
+        ability="Target Point"
+        diffusalBlade="0">
+        <abilityAttributes
+            name="Cast Range"
+            value="1500"/>
+        <abilityAttributes
+            name="Remnant Radius"
+            value="450"/>
+        <abilityAttributes
+            name="Maximum Charges"
+            value="3"/>
+        <abilityAttributes
+            name="Charge Replenish Time"
+            value="35"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/150/200"/>
+        <abilityAttributes
+            name="Remnant Duration"
+            value="45"/>
+        <altDescription description="By the spirit's power are Xin's teachings spread anew." />
+        <notes>
+            <note>Ember Spirit gets all 3 charges immediatly upon learning Fire Remnant.</note>
+            <note>Fire Remnants move to their targeted location at a speed of 250% of Ember Spirit's movement speed. The speed is set upon cast and doesn't adapt.</note>
+            <note>Sínce Fire Remants last for 45 seconds and the replenish time is 35 seconds, it is possible to have 4 remnants up on the map at a time.</note>
+            <note>Every time a Fire Remnant is placed, Ember Spirit gets a status buff, showing the duration of the remnant.</note>
+            <note>Fire Remnants deal no damage when they expire.</note>
+            <note>Fire Remnants have 400/400 day/night flying vision and are visible to everyone.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Searing Chains is most effective when you're against one or two enemies, since the targets are chosen randomly in an area around you.</tip>
+        <tip>Sleight of Fist is perfect against multiple enemy Heroes, since it hits all the targets in the area for full damage and makes you invulnerable in the meantime. Max it when teamfights start, so that the affected area will be bigger and the cooldown will be shorter.</tip>
+        <tip>Flame Guard has two utilizations: it can be either used to deal consistent damage during ganks or to make you partially immune to magical damage. Be wary, though, that the damage over time effect will be lost if you reach the damage reduction threshold.</tip>
+        <tip>Fire Remnant is a versatile spell. It can be used to:&#13;&#10;close the gap between you and the enemy; &#13;&#10;escape by sending the Remnant to a safe position, and then returning to it if in danger; &#13;&#10;deal high damage by sending 3 Remnants quickly near the opponent(s), and then dashing to them; &#13;&#10;quickly return to battle (place a Remnant, use a TP Scroll, refill your health and mana, dash to the Remnant); &#13;&#10;gain vision of an area; &#13;&#10;scare your enemies by placing a Remnant close to them; &#13;&#10;return to a team-fight after using buy back.</tip>
+        <tip>Xin is relatively squishy early on. You should level up Flame Guard first in order to soak up magical damage and deal your own.</tip>
+        <tip>While Sleight of Fist can be maxed early to harass and outlane the opponent, it's almost useless in 1 VS 1 situations.</tip>
+        <tip>Don't place many Fire Remnants in a short window of time, unless you want to finish an enemy. Usually, one is enough to chase and close a gap.</tip>
+        <tip>Phase Boots synergize well with Xin's skill set, since you'll be able to chase your enemies more easily and burn them with Flame Guard, but if you find yourself low on mana too often, consider going for Arcane Boots.</tip>
+        <tip>A fast Desolator means that your Sleight of Fist will deal constant high damage; Drum of Endurance lets you chase better and gives health and mana, which are very important for Ember Spirit; Battle Fury's cleave is really effective with Sleight of Fist, and the regeneration it provides is immensely useful.</tip>
+        <tip>Stacking Battle Furies is actually viable on Ember Spirit, since Sleight of Fist has a low cooldown and can affect the whole enemy team.</tip>
+        <tip>After your first core item, consider going for items like Daedalus and Maelstrom/Mjollnir since they'll greatly increase your damage per second while using your second ability, Sleight of Fist.</tip>
+        <tip>If you are planning on stacking more than two Battle Fury, bear in mind that your second one will increase your cleave damage by 100%, and your third by 50%. Getting a fourth is not recommended as it increases the damage by 33.3% in relation to your current Cleave damage, and as such, it is better to get a Daedalus as the critical chance grants approximately a 35% overall damage increase, as well as making you more viable in a 1v1 situation.</tip>
+    </tips>
+</hero>

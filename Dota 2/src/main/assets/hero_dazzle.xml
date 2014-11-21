@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Dazzle</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Dire</faction>
+    <description>Dazzle the Shadow Priest is a ranged intelligence Hero exhibiting abilities that bend the sustainability of both his allies and enemies, making him a viable support. While frail, he is capable of keeping his allies and himself from dying, causing his foes to waste time in a fruitless endeavor. Similarly to Slardar, Dazzle boasts abilities that deal physical damage instead of the usual magical. His first ability, Poison Touch, is a strong spammable disable, though mediocre in effects in the first levels. Out of all his abilities, Poison Touch is the only one that cannot pass through Magic immunity, but it will sustain itself when magic immunity is granted after the buff is placed. Shallow Grave is a solid survivability spell, allowing your allied targets to escape during serious encounters. Though it only prevents fatal damage, it cannot be purged, making it a full guarantee that Dazzle's target will survive for the duration. Shadow Wave is a chaining healing ability that dissipates the health gained to damage nearby enemies, having a potential of delivering a huge damage output when good positioning comes to play. His ultimate, Weave, is a large armor bending ability that not only increases his allies' armor, but also decreases his enemies'. With the fact that his abilities deal physical damage and that Dazzle himself has large attack damage, the chaotic combination with armor reduction really makes Dazzle a devastating Hero to go against.</description>
+    <roles>
+        <role>Support</role>
+        <role>Lane Support</role>
+    </roles>
+    <attributes>
+        <strengthBase>16</strengthBase>
+        <strengthGain>1.85</strengthGain>
+        <agilityBase>21</agilityBase>
+        <agilityGain>1.7</agilityGain>
+        <intelligenceBase>27</intelligenceBase>
+        <intelligenceGain>3.4</intelligenceGain>
+        <damageMinimum>41</damageMinimum>
+        <damageMaximum>59</damageMaximum>
+        <baseMoveSpeed>305</baseMoveSpeed>
+        <baseArmor>1.94</baseArmor>
+    </attributes>
+    <ability
+        name="Poison Touch"
+        description="Casts a poisonous spell on an enemy unit, graduallying slowing movement, and causing damage over time."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Physical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="15/13/11/7"
+        mana="100/115/130/145">
+        <abilityAttributes
+            name="Range"
+            value="600"/>
+        <abilityAttributes
+            name="Slow Time"
+            value="3"/>
+        <abilityAttributes
+            name="Damage Duration"
+            value="10"/>
+        <abilityAttributes
+            name="Damage"
+            value="14/20/26/32"/>
+        <altDescription description="One of the few Dezun rites used for offensive purposes, the paralytic enchantment often proves useful." />
+        <notes>
+            <note>Lvl 1: Slow target by 33% for 3 seconds.</note>
+            <note>Lvl 2: Slow target by 33% for 2 seconds, then slow target by 66% for 1 second.</note>
+            <note>Lvl 3: Slow target by 33% for 1 second, then slow target by 66% for 1 second, then slow target by 100% for 1 second.</note>
+            <note>Lvl 4: Slow target by 33% for 1 second, then slow target by 66% for 1 second, then stun target for 1 second.</note>
+            <note>The damage is not reduced by damage block abilities (such as Vanguard, Kraken Shell, etc.).</note>
+            <note>After 3 seconds, damage occurs as 8 damage ticks over 7 seconds, dealing a total of 112/160/208/256 damage.</note>
+            <note>Projectile is dodgeable.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Shallow Grave"
+        description="An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection."
+        ability="Target Unit"
+        affects="Allies"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="60/45/30/15"
+        mana="140/130/120/110">
+        <abilityAttributes
+            name="Duration"
+            value="5"/>
+        <abilityAttributes
+            name="Range"
+            value="550/700/850/1000"/>
+        <altDescription description="Only a seasoned acolyte of the Shadow can properly perform the rite of preventing death." />
+        <notes>
+            <note>HP cannot go below 1 while under the effects of Shallow Grave.</note>
+            <note>Axe's Culling Blade ignores the effect of Shallow Grave, but the shatter damage of Ice Blast will not kill a hero affected by this ability.</note>
+            <note>Does not prevent dying via Goblin Techies' Suicide Squad, Attack! or Bloodstone's Pocket Suicide.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Shadow Wave"
+        description="Shadow Wave heals several allies, which in turn cause damage equal to their healing in a small area around them. Dazzle is always healed by Shadow Wave, and it does not count toward the number of targets."
+        ability="Target Unit"
+        affects="Allies"
+        damage="Physical"
+        blackKingBar="0"
+        linkensSphere="0"
+        cooldown="12/10/8/6"
+        mana="80/90/100/110">
+        <abilityAttributes
+            name="Range"
+            value="900"/>
+        <abilityAttributes
+            name="Damage Radius"
+            value="185"/>
+        <abilityAttributes
+            name="Bounce Radius"
+            value="475"/>
+        <abilityAttributes
+            name="Number of Targets"
+            value="3/4/5/6"/>
+        <abilityAttributes
+            name="Damage/Heal"
+            value="80/100/120/140"/>
+        <altDescription description="While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success." />
+        <notes>
+            <note>Prioritizes allied heroes over creeps.</note>
+            <note>If enemies are near multiple allied units affected by Shadow Wave, they can take multiple instances of damage.</note>
+            <note>Can deal a maximum of 240/400/600/840 damage (Excludes Dazzle as a source of damage).</note>
+        </notes>
+    </ability>
+    <ability
+        name="Weave"
+        description="Applies a buff that increases the armor of allied heroes while decreasing the armor of enemy heroes in the target area over time. Upgradable by Aghanim's Scepter."
+        ability="Target Point"
+        affects="Heroes"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="40"
+        mana="100">
+        <abilityAttributes
+            name="Range"
+            value="2000"/>
+        <abilityAttributes
+            name="Radius"
+            value="575 (775*)"/>
+        <abilityAttributes
+            name="Armor Per Second"
+            value="0.75/1.0/1.25 (1.25/1.5/1.75*)"/>
+        <abilityAttributes
+            name="Duration"
+            value="24"/>
+        <aghanims description="Increases radius and armor per second." />
+        <altDescription description="His ethereal journey into the Nothl realm has allowed Dazzle to mend together the powers of light and dark, creating shifting waves of enchantments." />
+        <notes>
+            <note>Places a buff on units, so entering or leaving the area after the cast has no effect.</note>
+            <note>Increases/Decreases armor by a maximum of 18/24/30 (30/36/42*).</note>
+            <note>Unobstructed sight (800 range day and night) is provided for 8 seconds.</note>
+            <note>Cannot be dispelled by anything.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Don't forget that Shadow Wave deals damage around your healed allies as well, roughly a Melee hero swing and a tiny bit more.</tip>
+        <tip>Each level of upgrade for Shallow Grave makes it cost less mana; if you're having mana problems (and you likely will), consider upgrading it sooner rather than later.</tip>
+        <tip>Your first skill can be any of the three depending on the situation; Poison Touch if you're hunting for first blood (with teammates, by yourself or with a single lane partner is probably not enough and can be risky in the event of a reversal), Shallow Grave if the enemy has not been spotted in their lanes and you suspect a possible gank incoming, and Shadow Wave if you're fighting an aggressive melee gank with an ally.</tip>
+        <tip>Don't forget that the range of Shallow Grave increases with each level; it starts out less than your normal attack, but at level 4 goes to twice that length. You don't want to have an ally die just because you had to run in closer.</tip>
+        <tip>Using Shallow Grave is one of the most important things Dazzle does. Gauge the situation to time it right, keeping an idea of which spells have already been used yet can prevent you from using Shallow Grave too early or too late. In a teamfight, try to prioritize your targets: your team's main carry, allies that haven't used their ultimate yet, or heroes that can change the tide of battle. In the early game laning phase, you can aggressively attempt a kill and then use Grave on yourself once you're near death; however, this can easily backfire due to burst damage and stun, preventing you from using the spell.</tip>
+        <tip>While Weave is a spell with a fairly simple effect it can massively increase both the deadliness and the durability of your team, especially if it is heavy in physical damage dealers who need to close with the enemy like Ursa and Sven.</tip>
+        <tip>Learn to use Weave pre-emptively to maximise the armor buff/debuff for the team fight. In addition, it can be used to discourage your enemies from sieging a tower or attempting Roshan: as their armor deteriorates while they make an attempt, their chances of following up with a team fight in their favour becomes much lower.</tip>
+        <tip>One of the main advantages of Shadow Wave is that, being a healing spell that can deal big damage in one time only if the situation is right (similarly to Earthshaker's Echo Slam), most enemies won't expect you to be a threat to them, and will chase you carelessly in a straight line. Decrease their armor with Weave or Medallion of Courage, then lead them into a wave of allied creeps. Once they're surrounded by the creeps, Shadow Wave them. Your attacker's diminished armor will not stop the raw physical damage. Then either slow him and chase after him, making sure your creeps stand around him for more Shadow Wave damage, or face him and Shallow Grave yourself if the enemy's damage output is too high for you to handle.</tip>
+        <tip>Unlike in Dota 1, the buff from Weave can be stacked with Refresher Orb. If cast simultaneously it will change armor by 2 every second. Alternatively, the prospect of a double Shallow Grave will prove to be gamebreaking in ganks and teamfights in keeping team-mates alive.</tip>
+    </tips>
+</hero>

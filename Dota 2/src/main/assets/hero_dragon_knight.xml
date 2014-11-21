@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Dragon Knight</name>
+    <damageType>Melee/Ranged</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Davion the Dragon Knight is a very tough melee strength hero with a relatively versatile skill set. Dragon Knight has a nuke and a stun, giving him an advantage in ganks. Dragon Knight has no real escape ability, though his Dragon Blood ability and armor make him capable of withstanding strong hits and recovering quickly. He is still very vulnerable in the early game, however, and needs to farm and stay alive in order to be effective in later stages. If he has enough levels and farm, Dragon Knight is very formidable late game due to his strong ultimate, transforming into a legendary dragon, turning him into one of the most dangerous beasts in late game, capable of eliminating multiple enemies at once.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Disabler</role>
+        <role>Durable</role>
+        <role>Pusher</role>
+    </roles>
+    <attributes>
+        <strengthBase>19</strengthBase>
+        <strengthGain>2.8</strengthGain>
+        <agilityBase>19</agilityBase>
+        <agilityGain>2.2</agilityGain>
+        <intelligenceBase>15</intelligenceBase>
+        <intelligenceGain>1.7</intelligenceGain>
+        <damageMinimum>46</damageMinimum>
+        <damageMaximum>52</damageMaximum>
+        <baseMoveSpeed>290</baseMoveSpeed>
+        <baseArmor>3.66</baseArmor>
+    </attributes>
+    <ability
+        name="Breathe Fire"
+        description="Unleashes a breath of fire on enemy units in a line in front of Dragon Knight."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        cooldown="12"
+        mana="100/110/120/130">
+        <abilityAttributes
+            name="Range"
+            value="500"/>
+        <abilityAttributes
+            name="Starting Radius"
+            value="150"/>
+        <abilityAttributes
+            name="End Radius"
+            value="250"/>
+        <abilityAttributes
+            name="Damage"
+            value="90/170/240/300"/>
+        <altDescription description="Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp." />
+        <notes>
+            <note>Fire travels at a speed of 1050.</note>
+            <note>The complete AoE is shaped like a cone.</note>
+            <note>Hits units up to 900 away.</note>
+            <note>Affects siege creeps.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Dragon Tail"
+        description="Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage. When in Elder Dragon Form, the cast range increases to 400."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        cooldown="12/11/10/9"
+        mana="100">
+        <abilityAttributes
+            name="Cast Range"
+            value="150"/>
+        <abilityAttributes
+            name="Cast Range during Elder Dragon Form"
+            value="400"/>
+        <abilityAttributes
+            name="Damage"
+            value="25/50/75/100"/>
+        <abilityAttributes
+            name="Stun Duration"
+            value="2.5/2.75/3/3.25"/>
+        <altDescription description="Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat." />
+    </ability>
+    <ability
+        name="Dragon Blood"
+        description="The life blood of the Dragon improves health regeneration and strengthens armor."
+        ability="Passive"
+        affects="Self"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Health Regen"
+            value="2/3/4/5"/>
+        <abilityAttributes
+            name="Bonus Armor"
+            value="3/6/9/12"/>
+        <altDescription description="Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight." />
+    </ability>
+    <ability
+        name="Elder Dragon Form"
+        description="Dragon Knight takes the form of one of three powerful elder dragons, increasing his damage, speed, and Dragon Tail's range, while granting him new powers. &#13;&#10;LEVEL 1: Green Dragon - Corrosive Breath: attacks deal 20 poison damage over 5 seconds. Works on structures. &#13;&#10;LEVEL 2: Red Dragon - Splash Attack: attacks damage all enemy units in a 250 radius, with Corrosive Breath added to the primary target. &#13;&#10;LEVEL 3: Blue Dragon - Frost Breath: slows movement speed by 30%%, and attack speed by 20, of enemy units in Splash Attack range for 3 seconds."
+        ability="No Target"
+        affects="Self"
+        blackKingBar="1"
+        linkensSphere="0"
+        diffusalBlade="1"
+        mantaStyle="2"
+        cooldown="115"
+        mana="50">
+        <abilityAttributes
+            name="Bonus Attack Range"
+            value="372"/>
+        <abilityAttributes
+            name="Bonus Speed Bonus"
+            value="25"/>
+        <abilityAttributes
+            name="Dragon Tail Cast Range Bonus"
+            value="250"/>
+        <abilityAttributes
+            name="Duration"
+            value="60"/>
+        <blackKingBar description="Splash attack and level 3 MS/AS slows pierce Spell Immunity." />
+        <diffusalBlade description="Corrosive Breath and Frost Breath can be purged, the actual form can't." />
+        <altDescription description="The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm." />
+        <notes>
+            <note>Dragon Knight has 315 base movement speed, 500 attack range, 1.7 Base Attack Time and 0.5/0.4 attack animation while in Dragon Form. The projectile has a 900 missile speed.</note>
+            <note>Level 1 Elder Dragon is a Green Dragon that has the following ability: &#13;&#10;Corrosive Breath: Deals 20 non-lethal damage per second for 5 seconds. Works on structures. Fully stacks with Unique Attack Modifier. Damage type: Magical.</note>
+            <note>Level 2 Elder Dragon is a Red Dragon that has the following abilities: &#13;&#10;Corrosive Breath: Deals 20 non-lethal damage per second for 5 seconds. Works on structures. Fully stacks with Unique Attack Modifier. Damage type: Magical. &#13;&#10;Splash Attack: Deals 100% damage in a 100 AoE, 75% damage in a 200 AoE and 50% damage in a 250 AoE around the attacked target. Corrosive Breath is applied to the main target only. Splash does not damage buildings.</note>
+            <note>Level 3 Elder Dragon is a Blue Dragon that has the following abilities: &#13;&#10;Frost Breath: Slows units for 30% movement speed and 20 attack speed. Lasts for 3 seconds. Affects all enemy units inside Splash Attack's AoE. Does not affect buildings. Fully stacks with Unique Attack Modifier. &#13;&#10;Splash Attack: Deals 100% damage in a 100 AoE, 75% damage in a 200 AoE and 50% damage in a 250 AoE around the attacked target. Splash does not damage buildings.</note>
+            <note>When an attack misses, units around the attacked target still take splash damage. Frost Breath slow however is not applied when the attack misses.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Dragon Knight is one of the few heroes with no cast-time on his abilities, so spellcasts can be squeezed in between attacks on the backswing animation.</tip>
+        <tip>Dragon Tail is a powerful ability to have and should be taken before other abilities, but it levels poorly. Some players even choose to take Attribute Bonus over further levels in it.</tip>
+        <tip>Many guides recommend not levelling Elder Dragon Form at lvl 11, but those guides are outdated. Prior to version 6.78, the Red Dragon did not carry over the corrosive effect from the Green Dragon, which made it inferior at pushing down towers. Due to the recent patch, it is no longer necessary to skip levelling the ultimate at lvl 11.</tip>
+        <tip>Soul Ring is a useful item on Dragon Knight, as it allows him to farm using Breathe Fire constantly, and the extra regeneration from Soul Ring and Dragon Blood offsets the health loss.</tip>
+    </tips>
+</hero>

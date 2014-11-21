@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Faceless Void</name>
+    <damageType>Melee</damageType>
+    <attribute>Agility</attribute>
+    <faction>Dire</faction>
+    <description>Darkterror the Faceless Void is a melee agility hard carry hero. Given a little time, he becomes a terrifyingly powerful hero capable of destroying entire enemy teams in seconds.&#13;&#10;&#13;&#10;Wielding his cosmically powered mace, each hit can lock his foes in time, stopping them in place. He can jump into or out of combat using Time Walk, and passively can avoid any damage with Backtrack which even works against Monkey King Bar. His ultimate, Chronosphere, locks time for everything within its area of effect, giving him time to strike down any enemies caught within with near impunity for several seconds. Faceless Void is a hard carry and, as such, scales heavily from items and reaches his full potential in late game, growing into one of the most powerful and destructive Heroes.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Initiator</role>
+        <role>Disabler</role>
+        <role>Escape</role>
+    </roles>
+    <attributes>
+        <strengthBase>23</strengthBase>
+        <strengthGain>1.6</strengthGain>
+        <agilityBase>22</agilityBase>
+        <agilityGain>2.65</agilityGain>
+        <intelligenceBase>15</intelligenceBase>
+        <intelligenceGain>1.5</intelligenceGain>
+        <damageMinimum>58</damageMinimum>
+        <damageMaximum>64</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>3.94</baseArmor>
+    </attributes>
+    <ability
+        name="Time Walk"
+        description="Rushes to a target location while slowing the movement and attack speed of all enemies along its path for 3 seconds."
+        ability="Target Point"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="19/17/15/13"
+        mana="90">
+        <abilityAttributes
+            name="Cast Range"
+            value="700/900/1100/1300"/>
+        <abilityAttributes
+            name="Max Travel Distance"
+            value="700/900/1100/1300"/>
+        <abilityAttributes
+            name="Slow Radius"
+            value="300"/>
+        <abilityAttributes
+            name="Move Speed Slow"
+            value="20%/30%/40%/50%"/>
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="20/30/40/50"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="3"/>
+        <altDescription description="Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant." />
+        <notes>
+            <note>Time Walk moves Faceless Void with a speed of 3000.</note>
+            <note>Faceless Void is invulnerable during Time Walk.</note>
+            <note>Time Walk does not disjoint projectiles upon cast.</note>
+            <note>The slow from Time Walk can hit units up to 1000/1200/1400/1600 range away.</note>
+            <note>Does not travel the full distance, when targeting closer than its max distance.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Backtrack"
+        description="Faceless Void dodges damage by jumping backward in time, eluding both physical and magical attacks."
+        ability="Passive"
+        affects="Self"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Proc Chance"
+            value="10%/15%/20%/25%"/>
+        <altDescription description="Darkterror sees what has yet to be seen." />
+        <notes>
+            <note>Backtrack is not evasion.</note>
+            <note>When an attack has e.g. Diffusal Blade and Backtrack triggers on the attack, the damage is avoided, but the mana burn still takes effect.</note>
+            <note>This also means that Monkey King Bar will not stop Backtrack from avoiding attack damage.</note>
+            <note>When Backtrack triggers on an attack, it will not display the red "Miss" message.</note>
+            <note>Evasion has priority over Backtrack. When evasion procs, Backtrack can't proc on that attack.</note>
+            <note>Backtrack can only avoid damage. Other effects of spells (e.g. stun or slow) will not be evaded.</note>
+            <note>Backtrack cannot avoid the HP loss from Armlet of Mordiggian or the damage from Poison Sting.</note>
+            <note>Backtrack is disabled by an Aghanim's Scepter upgraded Doom.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Time Lock"
+        description="Adds the chance for an attack to lock an enemy unit in time, stunning it and dealing bonus damage. The duration is twice as long against creeps."
+        ability="Passive"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Proc Chance"
+            value="10%/15%/20%/25%"/>
+        <abilityAttributes
+            name="Damage"
+            value="40/50/60/70"/>
+        <abilityAttributes
+            name="Hero Duration"
+            value="1"/>
+        <abilityAttributes
+            name="Creep Duration"
+            value="2"/>
+        <altDescription description="The strike of the Faceless Void lands with dimension shifting force." />
+        <notes>
+            <note>Time Lock does not stack with Skull Basher and Abyssal Blade. These items cannot be purchased by Faceless Void for this reason.</note>
+            <note>Time Lock deals 80/100/120/140 damage when it procs on a target in Chronosphere.</note>
+            <note>Faceless Void can lifeleech the damage dealt by Time Lock with Lifesteal. However, it cannot crit or cleave.</note>
+            <note>The damage can be reduced by e.g. Enfeeble orStatic Link. However it cannot be amplified by e.g. Empower or the Double Damage rune.</note>
+            <note>Adds an average 4/7.5/12/17.5 (8/15/24/35 inside Chronosphere) damage to every attack.</note>
+            <note>Time Lock is disabled by an Aghanim's Scepter upgraded Doom.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Chronosphere"
+        description="Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it. Only Faceless Void and any units he controls are unaffected. Invisible units in the sphere will be revealed."
+        ability="Target Point"
+        affects="Units"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        cooldown="130/110/90 (60*)"
+        mana="150/175/200">
+        <abilityAttributes
+            name="Cast Range"
+            value="600"/>
+        <abilityAttributes
+            name="Radius"
+            value="425"/>
+        <abilityAttributes
+            name="Duration"
+            value="4/4.5/5 (4/5/6*)"/>
+        <aghanims description="Increases duration and decreases cooldown." />
+        <altDescription description="When a rift opens to Claszureme, all poor souls caught within will likely never return." />
+        <notes>
+            <note>Chronosphere affects all units which are not owned by Faceless Void, including buildings, wards and allies.</note>
+            <note>Chronosphere Does not affect Couriers and invulnerable units.</note>
+            <note>While in the Chronosphere, Faceless Void and any units he controls have 1000 movement speed and are phased. Slows will also have no effect on them.</note>
+            <note>Faceless Void and illusions of him (be it own, enemy or allied illusions) are never disabled by any Chronosphere.</note>
+            <note>However, the movement speed and phase is only provided to the caster of Chronosphere.</note>
+            <note>The only exception is illusions from an allied Replicate icon.png Replicate, which will also gain the movement speed from the Chronosphere.</note>
+            <note>Chronosphere provides 450 radius flying vision and True Sight over the whole affected area for its duration.</note>
+            <note>Affected units are stunned. When other units walk inside the area, they also will be affected for its remaining duration.</note>
+            <note>Cancels most pseudo-blinks or moving effects from spells as soon as the unit gets inside the area (e.g. Leap, Skewer, Boulder Smash).</note>
+            <note>Units inside Chronosphere can be pulled out by various spells. Force Staff and Geomagnetic Grip cannot move units out of Chronosphere.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Mask of Madness will allow Faceless Void better to utilize Chronosphere throughout game, as does almost any item that gives attack speed or damage. A BKB is usually a good choice after getting a MoM as nukers outside the chronosphere can be ignored, while they otherwise burst the fragile Void very easily.</tip>
+        <tip>When using Chronosphere it's important that you prioritize the targets to deal maximum damage. Important targets include carries and spellcasters.</tip>
+        <tip>Chronosphere is able to pause units under the effect of Invoker's Tornado.</tip>
+        <tip>If you want to play your lane aggressively, level Time Lock first, conversely if you need to play defensively, level Backtrack after getting at least one level of Time Walk as it is still your primary escape mechanism, while also having some offensive potential.</tip>
+        <tip>Chronosphere will pause friendly units (exception : units under control of Faceless Void) and heroes as well as foes. Try to position it so enemies are within the sphere and allies are outside and can reach enemies inside without having to enter the Chronosphere itself.</tip>
+        <tip>Using later levels of Time Walk and Chronosphere in tandem can easily catch entire enemy teams off guard.</tip>
+        <tip>Faceless Void goes together well with heroes that have ranged ultimates, such as Lich, Jakiro, Witch Doctor and Gyrocopter. Chronosphere can trap enemy heroes in place for several seconds.</tip>
+        <tip>If you are trying to decide on what item build is best for Faceless Void remember that his main goal is to do the most damage and hopefully kill at least one key enemy hero inside his Chronosphere where he has a 5 second free rein to attack a target without any chance of retaliation.</tip>
+        <tip>While Aghanim's Scepter may diminish your carry potential sometimes it might come in handy as it increases your Chronosphere duration to 6 seconds and reduces its cooldown to only 60 seconds, allowing your ultimate to be ready in almost any team fight and while it may not contribute to your damage output very much it does increase your survivability by granting you stats and HP.</tip>
+        <tip>Juggernaut's Omnislash is not stopped inside your Chronosphere, provided Juggernaut wasn't caught in the Chronosphere in the first place.</tip>
+        <tip>A Black King Bar is very crucial item if you find yourself interrupted by magic attacks from units not caught in your Chronosphere e.g. stuns and disables. Every second counts when the Chronosphere is in use, and getting stunned or hexed from outside interference can result with your Chronosphere expiring without any enemies getting killed.</tip>
+        <tip>A Refresher Orb combined with Aghanim's Scepter will allow you to lock down the entire enemy team for 12 seconds at Level 3 Chronosphere and will provide the longest hard Crowd Control in the game, provided you have the initial manapool to cast Chronosphere twice and use Refresher's active. This is more than enough time to kill two or three enemies, even without damage items, and allows you to make use of the full duration of Mask of Madness active. While it is not viable in most circumstances, if purchased fast enough after Aghanim's Scepter, it will allow you to wholly dominate the enemy team.</tip>
+        <tip>Battlefury gives you good damage with health and mana regeneration. It is also great when you use Chronosphere and have multiple heroes caught inside it. Its cleave enables you to deal damage to multiple foes rather than one target at a time. If Faceless Void is powerful enough, he can kill an entire team caught inside the Chronosphere with Battlefury.</tip>
+    </tips>
+</hero>

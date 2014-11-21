@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Enchantress</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Radiant</faction>
+    <description>Aiushtha the Enchantress is a ranged intelligence Hero who uses her abilities to push through lanes and gank with relative ease. Enchantress works well as a jungler in the early game, as it maximizes the effectiveness of her Enchant and Untouchable abilities. On first glance, she may be just a support, serving her allies with powerful heals, creep abilities and slows, but as time goes on, her power increases and once she has her ultimate, Enchantress' regular attacks are strong enough to kill most heroes with a couple of attacks, if they stand far enough, and make her a potential carry.</description>
+    <roles>
+        <role>Support</role>
+        <role>Pusher</role>
+        <role>Durable</role>
+        <role>Jungler</role>
+    </roles>
+    <attributes>
+        <strengthBase>16</strengthBase>
+        <strengthGain>1.0</strengthGain>
+        <agilityBase>19</agilityBase>
+        <agilityGain>1.8</agilityGain>
+        <intelligenceBase>16</intelligenceBase>
+        <intelligenceGain>2.8</intelligenceGain>
+        <damageMinimum>47</damageMinimum>
+        <damageMaximum>57</damageMaximum>
+        <baseMoveSpeed>315</baseMoveSpeed>
+        <baseArmor>0.66</baseArmor>
+    </attributes>
+    <ability
+        name="Untouchable"
+        description="Enchantress beguiles her enemies, slowing their attacks when she is attacked. Lasts 4 seconds."
+        ability="Passive"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="30/60/90/120"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="4"/>
+        <altDescription description="After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty." />
+        <notes>
+            <note>Untouchable is triggered whenever a unit starts an attack or starts casting a targeted spell on her.</note>
+            <note>This means they will still be slowed even when they cancel the attack or the cast.</note>
+            <note>This also means even when the attack misses, or the spell is blocked by Linken's Sphere, it still will trigger.</note>
+            <note>The distance of enemies doesn't matter. Global ranged single target spells will still trigger it.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Enchant"
+        description="Enchantress charms an enemy, bringing it under her control (if a creep) or slowing it (if a hero)."
+        ability="Target Unit"
+        affects="Enemies"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="30/25/20/15"
+        mana="65">
+        <abilityAttributes
+            name="Cast Range"
+            value="700"/>
+        <abilityAttributes
+            name="Move Speed Slow"
+            value="20%/30%/40%/50%"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="5.5"/>
+        <abilityAttributes
+            name="Enchant Duration"
+            value="80"/>
+        <diffusalBlade description="Slow on heroes can be purged off. Enchanted creeps take Purge damage." />
+        <altDescription description="A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs." />
+        <notes>
+            <note>Casting Enchant on heroes (including Meepo clones) or Lone Druid's Spirit Bear will slow them.</note>
+            <note>Casting Enchant on any other enemy unit which is not a ward or building will convert it. This includes illusions.</note>
+            <note>Cannot be casted on ancient creeps, Roshan, Warlock's Golem and the Primal Split spirits.</note>
+            <note>There is no limit to how many creeps can be converted. Can have up to 2/3/3/4 creeps at a time with the current cooldown and duration.</note>
+            <note>When a converted creep's duration ends, it dies instantly.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Nature's Attendants"
+        description="A cloud of wisps heals Enchantress and any friendly units nearby. Lasts 10 seconds."
+        ability="No Target"
+        affects="Allies"
+        blackKingBar="0"
+        diffusalBlade="0"
+        cooldown="45"
+        mana="125/140/155/170">
+        <abilityAttributes
+            name="Search Radius"
+            value="275"/>
+        <abilityAttributes
+            name="Number of Wisps"
+            value="3/5/7/9"/>
+        <abilityAttributes
+            name="Heal Per Wisp"
+            value="10"/>
+        <abilityAttributes
+            name="Duration"
+            value="10"/>
+        <altDescription description="Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers." />
+        <notes>
+            <note>Each second, each wisp chooses a random allied unit to heal. So it is possible to heal up to 3/5/7/9 allies at a time.</note>
+            <note>There are no priorities. Units are selected at completely random. So it is quite possible that all wisps heal one target in one interval and then not at all in the next interval.</note>
+            <note>Wisps will never select units with already full health. They also cannot heal ancient creeps, buildings, wards, Warlock's Golem and the Primal Split spirits.</note>
+            <note>Wisps can heal spell immune or invulnerable units, but not hidden units.</note>
+            <note>The area of effect is centered around Enchantress' current location, not where the spell was cast.</note>
+            <note>When Enchantress dies, the wisps will continue to heal units nearby.</note>
+            <note>Can heal a total of 30/50/70/90 health per second and a total of 300/500/700/900 over its duration.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Impetus"
+        description="Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is. The farther the target, the greater the damage dealt."
+        ability="Auto-Cast"
+        affects="Enemy Heroes"
+        damage="Pure"
+        orbOfVenom="1"
+        blackKingBar="2"
+        mana="55/60/65">
+        <abilityAttributes
+            name="Cast Range"
+            value="550 (740*)"/>
+        <abilityAttributes
+            name="Distance as Damage"
+            value="15%/20%/25%"/>
+        <aghanims description="Increases attack range and cast range of Impetus." />
+        <altDescription description="While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her." />
+        <notes>
+            <note>Impetus can be disjointed.</note>
+            <note>The distance is calculated as the projectile hits the target. This means moving away from the target will cause it to deal more damage on impact. Moving closer to it decreases the damage.</note>
+            <note>Impetus deals its damage in a seperate damage instance. So it is unaffected by any attack modifying effect.</note>
+            <note>Impetus deals its damage before the attack damage is applied, but still depends on the attack hitting the target.</note>
+            <note>The damage is capped at 2500 distance (375/500/625 damage).</note>
+            <note>With Aghanim's Scepter, Enchantress has a higher attack range than towers, allowing her to attack them without them being able to attack back.</note>
+            <note>Her attack acquisition range stays at 800 even after acquiring Aghanim's Scepter.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Enchant allows the Enchantress to micromanage just like Chen. Micromanaging is a crucial ability to master for heroes like Enchantress and Chen.</tip>
+        <tip>Untouchable makes Enchantress nearly immune to auto-attacks, but be careful, she still has a low health pool and can be easily focused down by spells.</tip>
+        <tip>A few levels invested into Untouchable will slow Roshan's attacks to a crawl, making Enchantress an ideal tank against Roshan.</tip>
+        <tip>Enchantress is an effective jungle Hero but you should focus on ganking and pushing in early stages of the game.</tip>
+        <tip>Try to get Alpha Wolf in late game as its damage aura scales with your allies' attack damage.</tip>
+        <tip>Enchantress is effective in all stages of the game.</tip>
+        <tip>Her heal is very powerful in surviving ganks, as it can be used before getting stunned and if she's the only target, only heavy nukers are capable of killing her.</tip>
+        <tip>Remember that Impetus scales very well into late game, especially with attack speed.</tip>
+        <tip>Power Treads and Urn of Shadows are highly recommended for Enchantress.</tip>
+        <tip>Buying Mana Regeneration Items like Orchid Malevolence, Scythe of Vyse, and Bloodstone are helpful for Enchantress since Impetus burns a lot of mana, even if you have a lot of mana regeneration.</tip>
+        <tip>Building Force Staff is a very good choice on Enchantress; as aside from the intelligence it gives her it can be used to put some distance between her and her enemy (thus empowering Impetus); or even if very well-timed to use it on Impetus' target while Impetus itself is mid-air; thus hugely increasing its damage. Note however that this will make escaping easier for the enemy if your very powerful Impetus does not kill them.</tip>
+        <tip>Also a teamwork and combo with an allied Pudge's Meat Hook can also maximize your Impetus to its full damage when also combined with Force Staff.</tip>
+    </tips>
+</hero>

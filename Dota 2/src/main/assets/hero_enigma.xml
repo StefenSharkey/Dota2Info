@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Enigma</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Radiant</faction>
+    <description>Enigma is a ranged intelligence hero who uses his abilities to cripple his enemies, supported by a seemingly inexhaustible army of creeps. His fearsome abilities can bind entire teams under his might. Enigma is also a formidable jungler and pusher owing to his ability to create creeps.&#13;&#10;The deliverance of his ultimate, Black Hole, engulfs an area around him with dark energies and disables enemies caught within it, making him an extremely powerful yet conditional initiator and disabler. His Midnight Pulse consumes sections of enemies' life in a region over time and his Malefice stuns targets. His trademark ability is Demonic Conversion, which splits a creep into three eidolons under his control. If they can land enough attacks on an enemy unit before their expiration, they multiply and are healed to full health.</description>
+    <roles>
+        <role>Disabler</role>
+        <role>Initiator</role>
+        <role>Jungler</role>
+        <role>Pusher</role>
+    </roles>
+    <attributes>
+        <strengthBase>17</strengthBase>
+        <strengthGain>2.1</strengthGain>
+        <agilityBase>14</agilityBase>
+        <agilityGain>1</agilityGain>
+        <intelligenceBase>20</intelligenceBase>
+        <intelligenceGain>3.4</intelligenceGain>
+        <damageMinimum>42</damageMinimum>
+        <damageMaximum>48</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>3.96</baseArmor>
+    </attributes>
+    <ability
+        name="Malefice"
+        description="Focuses Enigma's power on a target, causing it to take damage and become repeatedly stunned for multiple instances. An instance strikes every 2 seconds."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="0"
+        cooldown="15"
+        mana="110/130/150/170">
+        <abilityAttributes
+            name="Cast Range"
+            value="600"/>
+        <abilityAttributes
+            name="Number of Instances"
+            value="3"/>
+        <abilityAttributes
+            name="Damage per Instance"
+            value="25/40/55/70"/>
+        <abilityAttributes
+            name="Stun Duration per Instance"
+            value="0.25/0.5/0.75/1"/>
+        <abilityAttributes
+            name="Malefice Duration"
+            value="4"/>
+        <linkensSphere description="Blocked completely only upon cast. The instances are not blocked when Linkens got equipped after cast." />
+        <altDescription description="Strange gravities pull at the core of those who would oppose you, holding them in place." />
+        <notes>
+            <note>Hits the target in 2 second intervals, starting immediately as the debuff is placed, resulting in 3 strikes.</note>
+            <note>Can deal up to 75/120/165/210 damage (before reductions).</note>
+        </notes>
+    </ability>
+    <ability
+        name="Demonic Conversion"
+        description="Transforms a creep into three fragments of Enigma himself. These eidolons are all under Enigma's control, and repeated successful attacks cause them to multiply. When this happens, the eidolons have their health restored."
+        ability="Target Unit"
+        affects="Units"
+        blackKingBar="1"
+        diffusalBlade="2"
+        cooldown="35"
+        mana="170">
+        <abilityAttributes
+            name="Cast Range"
+            value="700"/>
+        <abilityAttributes
+            name="Number of Eidolons"
+            value="3"/>
+        <abilityAttributes
+            name="Attacks to Multiply"
+            value="6"/>
+        <abilityAttributes
+            name="Duration"
+            value="35"/>
+        <blackKingBar description="Can be cast on spell immune allied units, but not on spell immune enemy units." />
+        <diffusalBlade description="Eidolons take Purge damage." />
+        <altDescription description="Enigma is capable of drawing aspects of himself from other dimensions - the result is a trio of dark eidolons that hunt the corporeal plane." />
+        <notes>
+            <note>Demonic Conversion kills the target unit, granting the gold and experience bounty, or resulting in a deny when cast on allied units.</note>
+            <note>Eidolons multiply when they release their 7th attack, not 6th. It doesn't matter if the attacks actually hit their target or not.</note>
+            <note>Attacking buildings or allied units does not count, but attacking wards does.</note>
+            <note>When multiplying, the Eidolon's health is refreshed. Their duration is not refreshed.</note>
+            <note>Eidolons will only multiply once. Multiplied Eidolons cannot multiply further.</note>
+            <note>Eidolons spawned by multiplying will last about a half second to a second longer than un-multiplied Eidolons.</note>
+            <note>This allows Enigma to convert his own Eidolons, but only if they multiplied themselves, since their normal duration (35) is the same as the cooldown of the spell (35).</note>
+            <note>Cannot be cast on ancient creeps, Roshan, couriers, wards, Lone Druid's Spirit Bear, Visage's Familiars, Warlock's Golem, the Primal Split spirits, Beastmaster's Greater Hawk, Lesser Boar and Greater Boar, Necronomicon warriors and archers, Centaur Conqueror, Satyr Tormenter, Wildwing Ripper, Dark Troll Summoner, Hellbear Smasher and Mud Golem.</note>
+            <note>Can be cast on siege creeps.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Midnight Pulse"
+        description="Steeps an area in black resonance, damaging enemy units based on their max HP."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Pure"
+        blackKingBar="0"
+        linkensSphere="0"
+        cooldown="35"
+        mana="95/110/125/140">
+        <abilityAttributes
+            name="Cast Range"
+            value="700"/>
+        <abilityAttributes
+            name="Radius"
+            value="600"/>
+        <abilityAttributes
+            name="Max Health as Damage"
+            value="3%/3.75%/4.5%/5.25%"/>
+        <abilityAttributes
+            name="Duration"
+            value="11"/>
+        <altDescription description="A section of the world slowly descends into the void." />
+        <notes>
+            <note>Midnight Pulse deals damage in 1 second instances, starting 1 second after cast, resulting in 11 instances.</note>
+            <note>Can deal up to 33%/41.25%/49.5%/57.75% of the affected units' maximum health as damage (before reductions).</note>
+            <note>Does not affect ancient creeps, Roshan, couriers, Warlock's Golem and the Primal Split spirits.</note>
+            <note>Successive casts of Midnight Pulse on the same area work fully independent form each other. They fully stack.</note>
+            <note>Destroys trees within 600 radius at the target location upon cast.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Black Hole"
+        description="-Summons a vortex that sucks in nearby enemy units. Enemies affected by Black Hole cannot move, attack, or cast spells. The closer units get to the center, the more damage is dealt."
+        ability="Target Point/Channeled"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="0"
+        diffusalBlade="0"
+        mana="275/350/425"
+        cooldown="200/190/180">
+        <abilityAttributes
+            name="Cast Range"
+            value="275"/>
+        <abilityAttributes
+            name="Max Channel Time"
+            value="4"/>
+        <abilityAttributes
+            name="Disable Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Far Damage Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Close Damage Radius"
+            value="200"/>
+        <abilityAttributes
+            name="Far Damage"
+            value="25/50/75 (+ Midnight Pulse damage*)"/>
+        <abilityAttributes
+            name="Close Damage"
+            value="50/100/150 (+ Midnight Pulse damage*)"/>
+        <aghanims description="Adds Midnight Pulse damage to the Black Hole." />
+        <altDescription description="The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds." />
+        <notes>
+            <note>Disables all caught enemies.</note>
+            <note>Pulls affected units towards the center at a speed of 40, resulting in a maximum possible distance of 160.</note>
+            <note>Can pull affected units over impassable terrain and through trees without destroying them.</note>
+            <note>Caught enemies cannot be pulled out by Force Staff or Geomagnetic Grip.</note>
+            <note>Other position changing spells like Meat Hook can push or pull units out of Black Hole.</note>
+            <note>The pull and disable are provided by an aura, which lingers for 0.5 seconds, or until the channeling stops, whichever is shorter.</note>
+            <note>Deals damage in 1 second intervals, starting 1 second after cast, resulting in 4 instances.</note>
+            <note>The Midnight Pulse damage added by Aghanim's Scepter deals its damage in the same intervals as a separate instances.</note>
+            <note>The damage added by Aghanim's Scepter stacks with the damage of Midnight Pulse.</note>
+            <note>Can deal up to 200/400/600 (+12%/15%/18%/21% of max health*) damage (100/200/300 (+12%/15%/18%/21% of max health*) if only the far damage hits) per unit (before reductions).</note>
+            <note>The damage added by Aghanim's Scepter applies to the whole radius.</note>
+            <note>Aghanim's Scepter only adds the current level Midnight Pulse damage as pure damage to Black Hole, it does not cause Midnight Pulse to get cast on the same area.</note>
+            <note>This means it does not destroy trees upon cast, does not last 11 seconds and the added damage affects all units which are affected by Black Hole.</note>
+            <note>Unlike a regular Midnight Pulse, the upgrade's pulse damage hits ancient creeps, couriers, Warlock's Golem and the Primal Split spirits.</note>
+            <note>Black Hole does not affect wards, buildings and siege creeps.</note>
+            <note>Provides 800 range ground vision at the targeted point for 4 seconds upon cast.</note>
+        </notes>
+    </ability>
+</hero>

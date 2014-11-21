@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Crystal Maiden</name>
+    <damageType>Ranged</damageType>
+    <attribute>Intelligence</attribute>
+    <faction>Radiant</faction>
+    <description>Rylai the Crystal Maiden is a ranged intelligence Hero used as a hard support and disabler. She is perhaps best known for her powerful global mana regeneration aura. This aura allows mana dependent allies to excel during the early to mid game and the laning phase, and allows her to constantly activate her own spells without needing to worry much about the mana costs. She also has a high amount of early game presence with just a few points in her Crystal Nova and Frostbite abilities. Crystal Nova is a powerful area-of-effect nuke that slows both attack and movement speeds of enemies within an area for several seconds, while Frostbite encases an enemy in a block of ice for several seconds, immobilizing it and doing moderate damage per second. Combining these two abilities together along with a laning partner's own spells often results in the quick death of an enemy hero. Although her strong early game presence is quickly lost due to her extreme frailty and poor mobility, she can still inflict a heavy amount of damage in teamfights later on if she is able to channel her deadly ultimate, Freezing Field. Her Arcane Aura, strong disabling and nuking prowess, relative ease of usage, and almost complete lack of item dependence makes her a reliable support caster that can be useful in any team.</description>
+    <roles>
+        <role>Support</role>
+        <role>Disabler</role>
+        <role>Nuker</role>
+        <role>Lane Support</role>
+    </roles>
+    <attributes>
+        <strengthBase>16</strengthBase>
+        <strengthGain>1.7</strengthGain>
+        <agilityBase>16</agilityBase>
+        <agilityGain>1.6</agilityGain>
+        <intelligenceBase>16</intelligenceBase>
+        <intelligenceGain>2.9</intelligenceGain>
+        <damageMinimum>35</damageMinimum>
+        <damageMaximum>41</damageMaximum>
+        <baseMoveSpeed>280</baseMoveSpeed>
+        <baseArmor>1.24</baseArmor>
+    </attributes>
+    <ability
+        name="Crystal Nova"
+        description="A burst of damaging frost slows enemy movement and attack rate in the targeted area."
+        ability="Target Point"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="2"
+        cooldown="15"
+        mana="100/120/140/160">
+        <abilityAttributes
+            name="Range"
+            value="700"/>
+        <abilityAttributes
+            name="Radius"
+            value="400"/>
+        <abilityAttributes
+            name="Damage"
+            value="100/150/200/250"/>
+        <abilityAttributes
+            name="Duration"
+            value="3.5/4/4.5/5"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="30%"/>
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="20"/>
+        <altDescription description="The air temperature around Rylai drops rapidly, chilling all around her to the core." />
+        <notes>
+            <note>Provides ground vision of 900 radius within the target area for 6 seconds.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Frostbite"
+        description="Encases an enemy unit in ice, prohibiting movement and attack, while dealing 50 damage every half-second. Lasts 10 seconds on creeps level 6 or lower."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="10"
+        mana="115/125/140/150">
+        <abilityAttributes
+            name="Range"
+            value="500"/>
+        <abilityAttributes
+            name="Damage Per Half-Second"
+            value="50"/>
+        <abilityAttributes
+            name="Hero Duration"
+            value="1.5/2/2.5/3"/>
+        <abilityAttributes
+            name="Creep Duration"
+            value="10"/>
+        <altDescription description="Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice." />
+        <notes>
+            <note>Applies an initial mini-stun to the target before the rest of Frostbite's effects.</note>
+            <note>True blink abilities cannot be used while under the effects of Frostbite.</note>
+            <note>Frostbite does not prevent Phantom Strike, Duel, or Sun Ray's Toggle Movement. It interrupts Icarus Dive during its effect, but does not prevent it from being cast.</note>
+            <note>Unique Attack Modifier abilities cannot be cast while Frostbite is active.</note>
+            <note>Provides True Sight upon the unit that affected by Frostbite for duration of the spell.</note>
+            <note>Damage is done in 0.5 second intervals starting at 0, dealing 150/200/250/300 total damage (or 1000 damage on creeps).</note>
+        </notes>
+    </ability>
+    <ability
+        name="Arcane Aura"
+        description="Gives additional mana regeneration to all friendly units on the map. This bonus is doubled on Crystal Maiden."
+        ability="Aura"
+        affects="Allies"
+        mantaStyle="2">
+        <abilityAttributes
+            name="Radius"
+            value="Global"/>
+        <abilityAttributes
+            name="Mana Regeneration"
+            value="1/1.5/2/2.5"/>
+        <abilityAttributes
+            name="Crystal Maiden Mana Regeneration"
+            value="2/3/4/5"/>
+        <altDescription description="Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance." />
+        <notes>
+            <note>Stacks with Ring of Basilius aura, Ring of Aquila aura or Vladmir's Offering aura (the stronger effect will take place).</note>
+            <note>The bonus is not increased by items that give a percentage increase to mana regen.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Freezing Field"
+        description="CHANNELED - Surrounds Crystal Maiden with random icy explosions that slow enemies and deal massive damage. Lasts 7 seconds."
+        ability="No Target/Channeled"
+        affects="Enemies"
+        damage="Magical"
+        cooldown="150/120/90"
+        mana="200/400/600">
+        <abilityAttributes
+            name="Radius"
+            value="685"/>
+        <abilityAttributes
+            name="Explosion Radius"
+            value="250"/>
+        <abilityAttributes
+            name="Movement Speed Slow"
+            value="30% (50%*)"/>
+        <abilityAttributes
+            name="Attack Speed Slow"
+            value="30 (50*)"/>
+        <abilityAttributes
+            name="Damage"
+            value="105/170/250 (170/250/310*)"/>
+        <aghanims description="Increases damage and slow." />
+        <altDescription description="Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught." />
+        <notes>
+            <note>The slow is applied on all enemies in the radius, even if they are not hit by an explosion (lasts 1 second).</note>
+            <note>Every 0.1 second an explosion occurs, for a total of 70 explosions.</note>
+            <note>Explosions occurs in closest range of 195 and most distant of 635 from Crystal Maiden.</note>
+            <note>If an enemy remain in the radius for the entire duration of the spell he will take an average of 1505/2437/3584 (2437/3584/4444*) damage.</note>
+            <note>The explosions occur around Crystal Maiden, and are not based on the place of initial cast. Thus the area of damage of the spell can be modified by using certain position changing spells on Crystal Maiden (e.g. allied Meat Hook, Force Staff).</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Crystal Nova is a large area of effect nuke that also slows your enemies. You can hit enemies from 1100 units away with it (700 casting range + 400 radius).</tip>
+        <tip>Frostbite is a great disable which prevents the target from moving or attacking. It also interrupts channelling spells and teleports. Unfortunately, it does not prevent enemy heroes from casting spells (except for True blinks).</tip>
+        <tip>Arcane Aura benefits the whole team greatly, especially one with a strong caster/ganker line-up, as it grants them a better lane presence due to the increased number of spells they can use.</tip>
+        <tip>Generally, 3 points in Arcane Aura, with 2 levels taken early, are sufficient for most of the game. Adjust your ability build to the needs of your team.</tip>
+        <tip>This bonus is doubled on Rylai herself, granting a whopping +5 bonus mana/second at level 4.</tip>
+        <tip>Freezing Field is an incredibly strong spell. However, it can be unpredictable and usually gets interrupted by your enemies very quickly. Freezing Field consumes a lot of mana, so use it sparingly.</tip>
+        <tip>Many players choose not to level Freezing Field until quite late in the game, as it is a situational spell that is most effective in large clashes; and its use consumes a huge amount of mana. However, its slow and gigantic (if unpredictable) damage can be very useful in early game, especially against enemies that lack the means to interrupt it. Let your decision be informed by enemy line-up as well as laning composition.</tip>
+        <tip>Crystal Maiden's potent spells grant her an incredible early-game roaming and ganking presence, particularly when her slow movement speed is offset with Tranquil Boots.</tip>
+        <tip>Frostbite's 10 second duration on creeps can be used to earn Crystal Maiden some spending cash in the jungle, either during roams or while her carry's lane is uncontested.</tip>
+        <tip>Observer Wards and Sentry Wards should be bought over and over again to provide map control throughout the match.</tip>
+        <tip>Later on, Crystal Nova may be used to help push a lane without contesting carries for last hits, as the damage is not quite enough to kill a wave of creeps. However, make sure to keep it off cooldown in the possibility of an upcoming teamfight.</tip>
+        <tip>In teamfights, cast Crystal Nova early to reduce incoming damage due to the attack speed slow.</tip>
+        <tip>If you have a few coins to spare, buy items that boost your survivability, or get yourself an escape/positioning mechanism such as Blink Dagger or Force Staff.</tip>
+        <tip>Freezing Field must be used at the right time to avoid interruption and being focused. Generally speaking, in an encounter it is best used after the initial nuking phase; when the enemy's stuns are on cooldown (building a Black King Bar will provide immunity to stuns; but Crystal Maiden does not typically get much gold and this can be very difficult to build in a game where your team is not getting a lot of kills). If your team has an initiator with the capability to disable a group of enemies, such as Tidehunter or Enigma, Freezing Field should be used in synchronization with their mass disable. Using Freezing Field very often results in Rylai's death, and she rarely is able to channel it for its full duration, but if she can maintain it even for a few seconds it will be useful for her team.</tip>
+        <tip>Although Freezing Field's damage can be upgraded with Aghanim's Scepter, to do so is to gild the lily; Freezing Field at level 3 is staggeringly powerful even without a scepter and it's wiser to build items that improve her chances of channeling it.</tip>
+    </tips>
+</hero>
