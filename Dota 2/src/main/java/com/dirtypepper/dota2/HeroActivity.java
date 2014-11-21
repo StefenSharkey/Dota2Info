@@ -77,21 +77,23 @@ public class HeroActivity extends Activity {
                 builder.setTitle(currentHero.getName() + " " + getResources().getString(R.string.description));
                 Log.d("currentHero.getDescription()", currentHero.getDescription());
                 builder.setMessage(currentHero.getDescription());
-                builder.setNegativeButton(R.string.tips, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
-                        builder1.setTitle(currentHero.getName() + " " + getResources().getString(R.string.tips));
-                        builder1.setMessage(Html.fromHtml(formatTips()));
-                        builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.dismiss();
-                            }
-                        });
-                        builder1.create().show();
-                    }
-                });
+                if (currentHero.getTips().size() != 0) {
+                    builder.setNegativeButton(R.string.tips, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            AlertDialog.Builder builder1 = new AlertDialog.Builder(HeroActivity.this);
+                            builder1.setTitle(currentHero.getName() + " " + getResources().getString(R.string.tips));
+                            builder1.setMessage(Html.fromHtml(formatTips()));
+                            builder1.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.dismiss();
+                                }
+                            });
+                            builder1.create().show();
+                        }
+                    });
+                }
                 builder.setPositiveButton(R.string.wiki, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
