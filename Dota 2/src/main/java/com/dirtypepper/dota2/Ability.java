@@ -26,10 +26,6 @@ public class Ability {
     private String aghanims;
     private ArrayList<String> notes;
 
-    public Ability() {
-
-    }
-
     public Ability(String name, String description, String ability, String affects, String damage, Map<String, String> attributes, boolean orbOfVenom, int blackKingBar, int linkensSphere, int diffusalBlade, int mantaStyle, String cooldown, String mana, String blackKingBarDescription, String diffusalBladeDescription, String linkensSphereDescription, String mantaStyleDescription, String altDescription, String aghanims, ArrayList<String> notes) {
         this.name = name;
         this.description = description;
