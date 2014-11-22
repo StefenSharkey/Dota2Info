@@ -31,6 +31,8 @@ import java.util.Map;
 
 public class HeroActivity extends Activity {
 
+    private final String GAMEPEDIA = "http://dota2.gamepedia.com/";
+
     private Hero currentHero;
     private TextView textView;
 
@@ -124,7 +126,7 @@ public class HeroActivity extends Activity {
                 builder.setPositiveButton(R.string.wiki, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://dota2.gamepedia.com/" + Utilities.nameToWebsite(currentHero.getName())));
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(GAMEPEDIA + Utilities.nameToWebsite(currentHero.getName())));
                         startActivity(intent);
                     }
                 });
