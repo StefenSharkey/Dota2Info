@@ -86,7 +86,6 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textSize="14sp"
-                    android:paddingStart="7dp"
                     android:paddingLeft="7dp"
                     android:drawableStart="@drawable/attribute_damage"
                     android:drawableLeft="@drawable/attribute_damage"
