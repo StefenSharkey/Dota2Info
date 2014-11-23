@@ -146,7 +146,7 @@ public class HeroActivity extends Activity {
         try {
             XmlPullParserFactory pullParserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = pullParserFactory.newPullParser();
-            InputStream inputStream = getApplicationContext().getAssets().open("hero_" + Utilities.nameToResource(heroName) +  ".xml");
+            InputStream inputStream = getApplicationContext().getAssets().open(Utilities.getHero(heroName));
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             parser.setInput(inputStream, null);
             parseHeroXML(parser);

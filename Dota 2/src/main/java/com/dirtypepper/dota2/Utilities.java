@@ -172,6 +172,10 @@ public class Utilities {
         }
     }
 
+    public static String getHero(String heroName) {
+        return nameToResource("hero", heroName) + ".xml";
+    }
+
     public static int getHeight(WindowManager windowManager) {
         Display display = windowManager.getDefaultDisplay();
         Point point = new Point();
