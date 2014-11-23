@@ -296,8 +296,7 @@ public class HeroActivity extends Activity {
                         currentHero.addAttributes("baseStats", misc);
                         printHeroes(currentHero);
                         return;
-                    } else if (heroName.equalsIgnoreCase("ability") && currentHero != null && currentHero.getName()
-                        .equals(textView.getText())) {
+                    } else if (heroName.equalsIgnoreCase("ability") && currentHero != null && currentHero.getName().equals(textView.getText())) {
                         currentHero.addAbility(name, description, ability, affects, damage, attributes, orbOfVenom, blackKingBar, linkensSphere, diffusalBlade, mantaStyle, cooldown, mana, blackKingBarDescription, diffusalBladeDescription, linkensSphereDescription, mantaStyleDescription, altDescription, aghanims, notes);
 
                         name = null;
@@ -561,8 +560,7 @@ public class HeroActivity extends Activity {
         if (ability.getAffects() != null) {
             heroAbilityAffects.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAffects.setOrientation(LinearLayout.VERTICAL);
-            heroAbilityAffects
-                .setPadding(Utilities.dpToPx(5, getResources()), 0, Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityAffects.setPadding(Utilities.dpToPx(5, getResources()), 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityAffectsText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             heroAbilityAffectsText.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -702,8 +700,7 @@ public class HeroActivity extends Activity {
             heroAbilityLinkensSphere.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityLinkensSpherePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityLinkensSpherePicture
-                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityLinkensSpherePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             heroAbilityLinkensSpherePicture.setImageDrawable(heroAbilityLinkensSphereIcon.getDrawable());
 
             heroAbilityLinkensSphereDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -720,8 +717,7 @@ public class HeroActivity extends Activity {
             heroAbilityDiffusalBlade.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityDiffusalBladePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityDiffusalBladePicture
-                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityDiffusalBladePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             heroAbilityDiffusalBladePicture.setImageDrawable(heroAbilityDiffusalBladeIcon.getDrawable());
 
             heroAbilityDiffusalBladeDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -738,8 +734,7 @@ public class HeroActivity extends Activity {
             heroAbilityMantaStyle.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityMantaStylePicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityMantaStylePicture
-                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityMantaStylePicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             if (heroAbilityMantaStyleIcon.getDrawable() != null) {
                 heroAbilityMantaStylePicture.setImageDrawable(heroAbilityMantaStyleIcon.getDrawable());
             } else {
@@ -760,8 +755,7 @@ public class HeroActivity extends Activity {
             heroAbilityAghanimsScepter.setPadding(0, 0, Utilities.dpToPx(5, getResources()), 0);
 
             heroAbilityAghanimsScepterPicture.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            heroAbilityAghanimsScepterPicture
-                .setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
+            heroAbilityAghanimsScepterPicture.setPadding(0, Utilities.dpToPx(5, getResources()), Utilities.dpToPx(5, getResources()), 0);
             heroAbilityAghanimsScepterPicture.setImageResource(R.drawable.ability_aghanims_scepter);
 
             heroAbilityAghanimsScepterDescription.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
