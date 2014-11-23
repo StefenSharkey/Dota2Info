@@ -15,10 +15,12 @@ public class Utilities {
 
     public static final Stack<Class<?>> parents = new Stack<>();
 
+    private static final String SEPARATOR = "_";
+
     public static String nameToResource(String name) {
         return name
-            .replaceAll(" ", "_")
-            .replaceAll("-", "_")
+            .replaceAll(" ", SEPARATOR)
+            .replaceAll("-", SEPARATOR)
             .replaceAll("'", "")
             .replaceAll("\\(", "")
             .replaceAll("\\)", "")
@@ -28,112 +30,34 @@ public class Utilities {
     }
 
     public static String nameToResource(TextView name) {
-        return String.valueOf(name.getText())
-            .replaceAll(" ", "_")
-            .replaceAll("-", "_")
-            .replaceAll("'", "")
-            .replaceAll("\\(", "")
-            .replaceAll("\\)", "")
-            .replaceAll("\\?", "")
-            .replaceAll("!", "")
-            .toLowerCase();
+        return nameToResource(name.getText().toString());
     }
 
     public static String nameToResource(String prefix, String name) {
-        return prefix
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase()
-               + "_" + name
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase();
+        return nameToResource(prefix) + SEPARATOR + nameToResource(name);
     }
 
     public static String nameToResource(String prefix, TextView name) {
-        return prefix
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase()
-               + "_" + String.valueOf(name.getText())
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase();
+        return nameToResource(prefix, name.getText().toString());
     }
 
     public static String nameToResource(String prefix, String name, String suffix) {
-        return prefix
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase()
-               + "_" + name
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase()
-               + "_" + suffix;
+        return nameToResource(prefix, name) + SEPARATOR + nameToResource(suffix);
     }
 
     public static String nameToResource(String prefix, TextView name, String suffix) {
-        return prefix
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase()
-               + "_" + String.valueOf(name.getText())
-                   .replaceAll(" ", "_")
-                   .replaceAll("-", "_")
-                   .replaceAll("'", "")
-                   .replaceAll("\\(", "")
-                   .replaceAll("\\)", "")
-                   .replaceAll("\\?", "")
-                   .replaceAll("!", "")
-                   .toLowerCase()
-               + "_" + suffix;
+        return nameToResource(prefix, name.getText().toString(), suffix);
     }
 
     public static String nameToWebsite(String name) {
         return name
-            .replaceAll(" ", "_")
+            .replaceAll(" ", SEPARATOR)
             .replaceAll("'", "%27");
     }
 
     public static String nameToWebsite(TextView name) {
-        return String.valueOf(name.getText())
-            .replaceAll(" ", "_")
+        return name.getText().toString()
+            .replaceAll(" ", SEPARATOR)
             .replaceAll("'", "%27")
             .replaceAll("\\(", "")
             .replaceAll("\\)", "");
