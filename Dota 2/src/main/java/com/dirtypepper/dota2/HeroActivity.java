@@ -275,6 +275,10 @@ public class HeroActivity extends Activity {
                                     mantaStyleDescription = parser.getAttributeValue(null, "description");
                                     Log.d("Ability.toString()", description);
                                     break;
+                                case "aghanims":
+                                    aghanims = parser.getAttributeValue(null, "description");
+                                    Log.d("Ability.toString()", description);
+                                    break;
                                 case "altDescription":
                                     altDescription = parser.getAttributeValue(null, "description");
                                     Log.d("Ability.toString()", description);
