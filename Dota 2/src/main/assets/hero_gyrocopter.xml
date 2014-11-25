@@ -20,7 +20,7 @@
         <damageMinimum>41</damageMinimum>
         <damageMaximum>51</damageMaximum>
         <baseMoveSpeed>315</baseMoveSpeed>
-        <baseArmor>315</baseArmor>
+        <baseArmor>3.15</baseArmor>
     </attributes>
     <ability
         name="Rocket Barrage"
