@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+    <name>Huskar</name>
+    <damageType>Ranged</damageType>
+    <attribute>Strength</attribute>
+    <faction>Radiant</faction>
+    <description>Huskar the Sacred Warrior is a ranged Strength hero who is an effective ganker and carry, with both great benefits and risks offered. He is known to be a powerful adversary in most games, as his damage per second can easily kill other heroes at any point in the game assuming no one is near by to save them. Unlike most heroes, he doesn't use mana much to use his abilities, rather, he sacrifices his own health to inflict the highest damage possible. His passive Berserker's Blood defines the power of sacrifice; he gets more dangerous the more he gets hurt. This gives him increased magic resistance and attack speed depending how much life is missing, and the given magic resistance and attack speed are staggering, potentially having the highest damage output in the earliest stage. Huskar can use his own life force to attack using Burning Spears which scorches foes and gives him an advantage early on. Due to the health cost of Burning Spears, his Berserker's Blood activates, granting him the ability to decimate any target. Inner Vitality magically heals Huskar or his allies, regenerating health each second based upon the target's primary attribute, and heals more when the health is on a critical level. His Life Break is his most dangerous ability and a risky one too. Charging towards his target, Huskar sheds a large amount of life force to cut a target's current HP to fractions. This is great to use as an initiation spell, as it deals immense damage based on the target's current health, breaking it down, allowing Huskar and his allies to feel the pain that the Sacred Warrior felt. Courageous and fearless, Huskar is powerful at any stage of the game, and is willing to suffer and face death, for him to contribute and deliver a marvelous victory to his team.</description>
+    <roles>
+        <role>Carry</role>
+        <role>Initiator</role>
+        <role>Durable</role>
+    </roles>
+    <attributes>
+        <strengthBase>21</strengthBase>
+        <strengthGain>2.4</strengthGain>
+        <agilityBase>15</agilityBase>
+        <agilityGain>1.4</agilityGain>
+        <intelligenceBase>18</intelligenceBase>
+        <intelligenceGain>1.5</intelligenceGain>
+        <damageMinimum>42</damageMinimum>
+        <damageMaximum>51</damageMaximum>
+        <baseMoveSpeed>300</baseMoveSpeed>
+        <baseArmor>1.1</baseArmor>
+    </attributes>
+    <ability
+        name="Inner Vitality"
+        description="Unlocks the regenerative power of a friendly unit, with healing based upon its primary attribute. If the target is below 40% it will heal faster. Lasts 16 seconds."
+        ability="Target Unit"
+        affects="Allied Heroes"
+        blackKingBar="0"
+        diffusalBlade="2"
+        cooldown="25/22/19/16"
+        mana="170">
+        <abilityAttributes
+            name="Cast Range"
+            value="550"/>
+        <abilityAttributes
+            name="Health Regen Bonus"
+            value="2/4/6/8"/>
+        <abilityAttributes
+            name="Main Attribute as Regen Above Threshold"
+            value="5%/10%/15%/20%"/>
+        <abilityAttributes
+            name="Main Attribute as Regen Below Threshold"
+            value="30%/45%/60%/75%"/>
+        <abilityAttributes
+            name="Health Threshold"
+            value="40%"/>
+        <abilityAttributes
+            name="Duration"
+            value="16"/>
+        <altDescription description="While Huskar has little use for magic, this minor enchantment was learned from the Dazzle and the Dezun priests, to be used in times of great injury." />
+        <notes>
+            <note>The HP percentage and the primary stats are checked periodically and the regeneration adjusted instantly.</note>
+            <note>Can be cast on Spirit Bear, Familiars, Warlock Golems and Primal Split spirits, but without effect.</note>
+            <note>Over the full duration it will heal 32/64/96/128 health and between 80/160/240/320% to 480/720/960/1200% of their primary attribute.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Burning Spear"
+        description="Huskar sets his spears aflame, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Each attack drains some of Huskar's health. Lasts 8 seconds."
+        ability="Auto-Cast"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="2"
+        linkensSphere="0"
+        diffusalBlade="0">
+        <abilityAttributes
+            name="Cast Range"
+            value="450"/>
+        <abilityAttributes
+            name="Health Cost"
+            value="15"/>
+        <abilityAttributes
+            name="Damage per Second"
+            value="5/10/15/20"/>
+        <abilityAttributes
+            name="Duration"
+            value="8"/>
+        <altDescription description="The Sacred Warrior ignites his weaponry after marking it with his own blood - causing far greater pain than he himself feels." />
+        <notes>
+            <note>Burning Spear is not a unique attack modifier.</note>
+            <note>Damage type on self is HP removal.</note>
+            <note>Burning Spears stacks additively when used multiple times on one target.</note>
+            <note>It places 1 debuff on the target, which shows how many instances are stacked on the target (a number is visible on the icon).</note>
+            <note>Every instance's duration is completely independant from other instances. They do not prolong or refresh each other.</note>
+            <note>The damage however is summed up to 1 damage instance and happens every second after the 1st attack which placed the debuff. This means that 4/2/2/1 stacks are enough to make the dot cancel consumables.</note>
+            <note>Huskar cannot kill himself using this ability.</note>
+            <note>Cannot be dispelled by anything.</note>
+            <note>Deals a total of 40/80/120/160 damage per burning spear instance.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Berserker's Blood"
+        description="Huskar's injuries feed his power, giving increased attack speed and magic resistance based on missing health."
+        ability="Passive"
+        affects="Self"
+        blackKingBar="0"
+        diffusalBlade="0"
+        mantaStyle="0">
+        <abilityAttributes
+            name="Attack Speed Bonus per Stack"
+            value="14/16/18/20"/>
+        <abilityAttributes
+            name="Magic Resistance Bonus per Stack"
+            value="4%/5%/6%/7%"/>
+        <altDescription description="After losing his birthright, Huskar gained a lethality in physical combat that is only heightened as his own blood is spilled." />
+        <notes>
+            <note>Huskar's size increases, his skin color darkens and he glows red, the more stacks he has. At 25% hp or less, he also stops using his attack stance and use his default animations.</note>
+            <note>First stack lasts from 100% to 87% of Huskar's maximum HP. Each following stack is added for each 7% max hp missing.</note>
+            <note>The maximum bonus (14 stacks) is achieved when Huskar has strictly less than 3% of his maximum HP, which will provide bonus 196/224/252/280 attack speed and 56%/70%/84%/98% magic resistance.</note>
+            <note>The HP percentage is checked periodically and the effects adapted instantly.</note>
+            <note>Doom will disable this passive if upgraded with Aghanim's Scepter.</note>
+        </notes>
+    </ability>
+    <ability
+        name="Life Break"
+        description="Huskar draws upon his health to break an enemy's life, leaping at a target within attack range to inflict a percentage of that hero's current HP, and slow at the cost of his own vitality. While leaping, Huskar is spell immune. Upgradable by Aghanim's Scepter."
+        ability="Target Unit"
+        affects="Enemies"
+        damage="Magical"
+        blackKingBar="0"
+        linkensSphere="2"
+        diffusalBlade="2"
+        cooldown="12 (4*)">
+        <abilityAttributes
+            name="Cast Range"
+            value="550"/>
+        <abilityAttributes
+            name="Current Health as Cost"
+            value="35%"/>
+        <abilityAttributes
+            name="Target's Current Health as Damage"
+            value="35% (65%*)"/>
+        <abilityAttributes
+            name="Move Speed Slow"
+            value="40%/50%/60%"/>
+        <abilityAttributes
+            name="Slow Duration"
+            value="4/5/6"/>
+        <linkensSphere description="Blocked on impact. However, Huskar takes no damage." />
+        <diffusalBlade description="The slow can be purged." />
+        <aghanims description="Increases damage dealt, reduces cooldown." />
+        <altDescription description="No matter the danger, Huskar thrusts himself into melees that only he can survive." />
+        <notes>
+            <note>Huskar leaps at a speed of 1000 and cannot be disjointed.</note>
+            <note>Most debuffs will be removed upon cast.</note>
+            <note>The damage to self is magical as well. Thus, it can be reduced by magic resistance (including the effect from Berserker's Blood).</note>
+            <note>Huskar can use items and spells during the leap, but can't attack.</note>
+            <note>If Huskar is disabled during the leap or the target moves more than 1400 units in 0.015 seconds, the leap stops.</note>
+            <note>With base magic resistance included,the targeted enemy will lose 26.25%(48.75*) of his current HP, if it's not Visage or Meepo.</note>
+            <note>Meepo, with his 35% magic resistance, will lose 22.75% (42.25*) and Visage 29.75% (55.25*) of their current hp.</note>
+        </notes>
+    </ability>
+    <tips>
+        <tip>Remember that Huskar becomes more powerful with less health, but can still die. Figure out when enough is enough.</tip>
+        <tip>You can use Inner Vitality on yourself before jumping into a fight to counteract the damage you take.</tip>
+        <tip>Burning Spear and Life Break both use up health, and feed your Berserker's Blood.</tip>
+        <tip>Remember that Burning Spears will stack on an enemy. Switch it to auto-attack and burn them down!</tip>
+        <tip>Life Break lowers the target's current HP by 1/4 (1/2 if upgraded), and lets Huskar jump to his target immediately. Consider between chasing a wounded enemy and dealing damage to a tough one.</tip>
+        <tip>You should be warned not to use your ultimate on a hero who has an active spell immunity or else you lose a percentage of your health while the target does not. However, the slow will still pass through spell immunity.</tip>
+        <tip>Huskar's Berserker's Blood increases your survivability significantly. At 30% health, and level 4 Berserker's Blood, you have 83% magic resistance, allowing you to keep your HP in place while taking physical attacks if you have lifesteal and decent damage from items. It is also worth noting that with enough stacks and HP left, it can help you survive execution spells that deal magic damage such as Sniper's Assassinate and Necrophos' Reaper's Scythe.</tip>
+        <tip>Black King Bar is important to keep in mind on Huskar since you don't lose a percentage of your health when you use your ultimate, and allows you to kill pure damage based Heroes like Timbersaw without the risk of death.</tip>
+        <tip>Some players only level Burning Spears to level 1 (for early harassment), and then go on to max Berserker's blood and pick up an early Morbid Mask (later Helm of the Dominator and eventually Satanic). You will absorb more HP and deal more damage the lower your hp is, and the Helm of the Dominator is a great tool for jungling, but ever since latest buff to Burning Spears, this build (or not taking the ability at all) is considered outdated.</tip>
+        <tip>Huskar is effective at dealing with lone targets, but often time struggles when enemies are grouped up. Don't get too cocky, even if you can take on anybody on the enemy team. It's usually best to let somebody else initiate, and then come into the fight when the enemies are spread out, that way, you can take them on one at a time and most likely win each of the duels.</tip>
+        <tip>One can build a Maelstrom or Mjollnir to take advantage of Huskar's fast attack speed, and proc Chain Lightning, giving Huskar decent teamfight ability.</tip>
+        <tip>Use Inner Vitality before you use Life Break because Inner Vitality has a fairly long duration.</tip>
+        <tip>While with Berserker's Blood Huskar is nigh impossible to be killed by spell casters, be very cautious of pure damage and HP removal. Dealing with heroes such as Bane and Timbersaw can result in death, as using Life Break in their presence can have dire consequences, since their spells aren't reduced by magic resistance.</tip>
+        <tip>Huskar's armor is relatively low even until the middle stages of the game and thus if your ultimate is used carelessly the enemy team will only require one or two disables to allow their own carries to kill you. In this respect you must pay special attention to heroes with long duration disables such as Bane, Alchemist, Shadow Shaman, Dragon Knight etc.</tip>
+        <tip>As Life Break deals Magical damage to an enemy relative to his current HP, it is possible through damage amplification to kill any enemy in one hit provided it is not spell immune or has access to very high Magical resistance (e.g. Spell Shield).</tip>
+        <tip>It is possible to use certain combinations of items and heroes together with Huskar to kill any hero instantly. For example applying the effects of Veil of Discord, Ethereal Blade, Orchid Malevolence to a target and then hitting them with an Aghanim's Scepter upgraded Life Break will cause an instant death. However building all these utility items onto Huskar himself will destroy a great deal of his carry potential. This same effect can be achieved using Shadow Demon's Soul Catcher instead of Veil of Discord or Pugna's Decrepify instead of Ethereal Blade.</tip>
+        <tip>When faced with fed physical damage dealing carries and you have no counter-pick on your team, it is wise to build items that specifically counter them so that you can duel them such as Heaven's Halberd or in special cases Orchid Malevolence for heroes with escapes like Storm Spirit or Anti-Mage.</tip>
+        <tip>BEWARE of heroes with Blade Mail as they can destroy you if you use Life Break on them recklessly. A special mention goes to Axe who can use Culling Blade immediately after countering your Life Break. A similar case is Nyx Assassin who can reflect Life Break using Spiked Carapace and then follow up with Vendetta. Also it is worth noting that any hero using Blade Mail with sufficiently high HP will kill you if you use Life Break on them assuming that you don't have spell immunity.</tip>
+    </tips>
+</hero>
